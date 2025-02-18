@@ -810,7 +810,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Double Jump| AND (|Homer Attack| OR |Homer Ground Pound|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Double Jump| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
         "id": 122383
     },
     {
@@ -819,7 +819,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Double Jump| AND (|Homer Attack| OR |Homer Ground Pound|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Double Jump| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
         "id": 122384
     },
     {
@@ -828,7 +828,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Double Jump| AND (|Homer Attack| OR |Homer Ground Pound|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Double Jump| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
         "id": 122385
     },
     {
@@ -1116,7 +1116,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122417
     },
     {
@@ -1170,7 +1170,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122423
     },
     {
@@ -1188,7 +1188,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122425
     },
     {
@@ -1197,7 +1197,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122426
     },
     {
@@ -1206,7 +1206,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122427
     },
     {
@@ -1224,7 +1224,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122429
     },
     {
@@ -1233,7 +1233,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122430
     },
     {
@@ -1251,7 +1251,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122432
     },
     {
@@ -1638,7 +1638,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack| OR |Lisa Ground Pound|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
         "id": 122475
     },
     {
@@ -1647,7 +1647,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack| OR |Lisa Ground Pound|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
         "id": 122476
     },
     {
@@ -1656,7 +1656,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack| OR |Lisa Ground Pound|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
         "id": 122477
     },
     {
@@ -1692,7 +1692,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack| OR |Lisa Ground Pound|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
         "id": 122481
     },
     {
@@ -2340,7 +2340,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122553
     },
     {
@@ -2349,7 +2349,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122554
     },
     {
@@ -2358,7 +2358,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122555
     },
     {
@@ -2376,7 +2376,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122557
     },
     {
@@ -2385,7 +2385,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122558
     },
     {
@@ -2394,7 +2394,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122559
     },
     {
@@ -2421,7 +2421,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122562
     },
     {
@@ -2430,7 +2430,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122563
     },
     {
@@ -2439,7 +2439,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122564
     },
     {
@@ -2475,7 +2475,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack| OR |Apu Ground Pound|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122568
     },
     {
@@ -2781,7 +2781,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122601
     },
     {
@@ -2790,7 +2790,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122602
     },
     {
@@ -2799,7 +2799,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122603
     },
     {
@@ -2808,7 +2808,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122604
     },
     {
@@ -2835,7 +2835,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack| OR |Bart Ground Pound|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122607
     },
     {
