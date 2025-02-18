@@ -29,7 +29,7 @@ def allMissionsAccessible(world: World, multiworld: MultiWorld, state: Collectio
             if category in location.get('category', []) and state.can_reach_location(location['name'], player)
         ]
 
-    return len(allMissions) >= 78
+    return len(allMissions) >= 77
 
 def allStoryMissionsAccessible(world: World, multiworld: MultiWorld, state: CollectionState, player: int):
     """Has the player finished all story missions?"""
