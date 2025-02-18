@@ -102,7 +102,9 @@
       "Level 6",
       "Level 7"
     ],
-  }
+
+    "requires": []
+  },
   "Main Menu": {
 
 		"starting": true,

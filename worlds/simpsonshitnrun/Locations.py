@@ -3479,12 +3479,10 @@ location_table = [
     },
     {
         "name": "Goal: Final Mission(L7M7)",
-        "region": "Level 7",
-        "category": [
-            "Final Mission Goal"
-        ],
+        "region": "Manual",
+        "category": [],
         "victory": True,
-        "requires": "{collectedWasps()} AND {collectedCards()}",
+        "requires": "|Level 7| AND {collectedWasps()} AND {collectedCards()}",
         "id": 122679
     },
     {
