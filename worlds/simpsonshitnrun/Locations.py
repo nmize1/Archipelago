@@ -398,7 +398,7 @@ location_table = [
         "category": [
             "Level 5 Mission"
         ],
-        "requires": "|Car Built for Homer|",
+        "requires": "|Car Built For Homer|",
         "id": 122335
     },
     {
@@ -3478,19 +3478,11 @@ location_table = [
         "id": 122678
     },
     {
-        "name": "Goal: Final Mission(L7M7)",
-        "region": "Manual",
-        "category": [],
-        "victory": True,
-        "requires": "|Level 7| AND {collectedWasps()} AND {collectedCards()}",
-        "id": 122679
-    },
-    {
         "name": "Goal: All Missions Complete!",
         "category": [],
         "victory": True,
         "requires": "{allMissionsAccessible()} AND {collectedWasps()} AND {collectedCards()}",
-        "id": 122680,
+        "id": 122679,
         "region": "Manual"
     },
     {
@@ -3498,8 +3490,16 @@ location_table = [
         "category": [],
         "victory": True,
         "requires": "{allStoryMissionsAccessible()} AND {collectedWasps()} AND {collectedCards()}",
-        "id": 122681,
+        "id": 122680,
         "region": "Manual"
+    },
+    {
+        "name": "Goal: Final Mission(L7M7)",
+        "region": "Manual",
+        "category": [],
+        "victory": True,
+        "requires": "|Level 7| AND {collectedWasps()} AND {collectedCards()}",
+        "id": 122681
     },
     {
         "name": "Goal: Wasps and Cards Collected!",

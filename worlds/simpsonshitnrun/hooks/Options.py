@@ -44,19 +44,36 @@ class MoveRando(Toggle):
        as well as L7M4 requiring Homer Double Jump.
        """
 
+    default = True
     display_name = "Move Randomizer"
 
+class EnableWaspPercent(Toggle):
+    """Whether to include Wasps in goal requirements.
+       This setting is always treated as true if your
+       goal is Goal: Wasps and Cards Collected!"""
+
+    default = True
+    display_name = "Enable Wasp Requirements"
+
 class WaspPercent(Range):
-    """ Percent of Wasps required to goal. If your goal is not Wasps and Cards, then this will be in addition to your goal."""
+    """ Percent of Wasps required to goal if Wasp Requirements are enabled."""
     display_name = "Required Wasp Percent"
-    range_start = 0
+    range_start = 10
     range_end = 100
     default = 50
 
+class EnableCardPercent(Toggle):
+    """Whether to include Cards in goal requirements.
+       This setting is always treated as true if your
+       goal is Goal: Wasps and Cards Collected!"""
+
+    default = True
+    display_name = "Enable Card Requirements"
+
 class CardPercent(Range):
-    """Percent of Cards required to goal. If your goal is not Wasps and Cards, then this will be in addition to your goal."""
+    """Percent of Cards required to goal if Card Requirements are enabled."""
     display_name = "Required Card Percent"
-    range_start = 0
+    range_start = 10
     range_end = 100
     default = 50
 
@@ -66,7 +83,9 @@ class CardPercent(Range):
 def before_options_defined(options: dict) -> dict:
     options["levelsanity"] = LevelSanity
     options["moverandomizer"] = MoveRando
+    options["EnableWaspPercent"] = EnableWaspPercent
     options["wasppercent"] = WaspPercent
+    options["EnableCardPercent"] = EnableCardPercent
     options["cardpercent"] = CardPercent
     return options
 
