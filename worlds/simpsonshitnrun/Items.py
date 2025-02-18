@@ -669,7 +669,7 @@ item_table = [
         "name": "Duff Trap",
         "category": ["Filler"],
         "trap": True,
-        "id": 121878,
+        "id": 121879,
         "progression": False
     }
 ]
