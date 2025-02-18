@@ -564,35 +564,35 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Homer Kick",
+        "name": "Homer Attack",
         "category": ["Moves"],
         "progression": True,
         "id": 121860
     },
     {
         "count": 1,
-        "name": "Bart Kick",
+        "name": "Bart Attack",
         "category": ["Moves"],
         "progression": True,
         "id": 121861
     },
     {
         "count": 1,
-        "name": "Lisa Kick",
+        "name": "Lisa Attack",
         "category": ["Moves"],
         "progression": True,
         "id": 121862
     },
     {
         "count": 1,
-        "name": "Marge Kick",
+        "name": "Marge Attack",
         "category": ["Moves"],
         "progression": True,
         "id": 121863
     },
     {
         "count": 1,
-        "name": "Apu Kick",
+        "name": "Apu Attack",
         "category": ["Moves"],
         "progression": True,
         "id": 121864

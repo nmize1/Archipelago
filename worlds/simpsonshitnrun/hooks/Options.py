@@ -39,8 +39,9 @@ class LevelSanity(Choice):
 
 class MoveRando(Toggle):
     """Choose whether or not to shuffle moves into the item pool.
-       Moves that are shuffled are Double Jump, Kick, and Ground Pound
-       and have logical implications for wasp and card collection.
+       Moves that are shuffled are Double Jump and Attack.
+       These have logical implications for wasp and card collection
+       as well as L7M4 requiring Homer Double Jump.
        """
 
     display_name = "Move Randomizer"
