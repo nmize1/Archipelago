@@ -313,11 +313,12 @@ class SimpsonsHitAndRunWorld(World):
 
         return slot_data
 
+    # Probably don't need this, but maybe it'd be useful for distributing custom launcher 
     def generate_output(self, output_directory: str):
-        data = self.client_data()
-        filename = f"{self.multiworld.get_out_file_name_base(self.player)}.apmanual"
-        with open(os.path.join(output_directory, filename), 'wb') as f:
-            f.write(b64encode(bytes(json.dumps(data), 'utf-8')))
+        #data = self.client_data()
+        #filename = f"{self.multiworld.get_out_file_name_base(self.player)}.apmanual"
+        #with open(os.path.join(output_directory, filename), 'wb') as f:
+        #    f.write(b64encode(bytes(json.dumps(data), 'utf-8')))
 
     def write_spoiler(self, spoiler_handle):
         before_write_spoiler(self, self.multiworld, spoiler_handle)
