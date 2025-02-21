@@ -2569,7 +2569,7 @@ location_table = [
         "id": 122578
     },
     {
-        "name": "(LVL 5) GAG - Blind an Old man at the DMV",
+        "name": "(LVL 5) GAG - Blind Hans Moleman at the DMV",
         "region": "Collectables",
         "category": [
             "Level 5 GAG"

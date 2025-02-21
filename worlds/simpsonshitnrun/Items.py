@@ -643,8 +643,7 @@ item_table = [
     {
         "count": 50,
         "name": "Hit N Run Reset",
-        "category": ["Filler"],
-        "useful": True,
+        "category": ["Filler"], 
         "id": 121876,
         "progression": False
     },
@@ -652,7 +651,6 @@ item_table = [
         "count": 100,
         "name": "10 Coins",
         "category": ["Filler"],
-        "useful": True,
         "id": 121877,
         "progression": False
     },
