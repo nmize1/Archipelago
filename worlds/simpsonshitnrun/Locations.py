@@ -1021,7 +1021,7 @@ location_table = [
         "id": 122406
     },
     {
-        "name": "(LVL 1) COSTUME - Casual Homer",
+        "name": "(LVL 1) Costume Shop Item 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1030,7 +1030,7 @@ location_table = [
         "id": 122407
     },
     {
-        "name": "(LVL 1) COSTUME - MuuMuu Homer",
+        "name": "(LVL 1) Costume Shop Item 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1039,7 +1039,7 @@ location_table = [
         "id": 122408
     },
     {
-        "name": "(LVL 1) COSTUME - The Chosen One",
+        "name": "(LVL 1) Costume Shop Item 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1048,7 +1048,7 @@ location_table = [
         "id": 122409
     },
     {
-        "name": "(LVL 1) CAR - Duff Truck",
+        "name": "(LVL 1) Gil Shop Item 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1057,7 +1057,7 @@ location_table = [
         "id": 122410
     },
     {
-        "name": "(LVL 1) CAR - Surveillance Van",
+        "name": "(LVL 1) Gil Shop Item 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1066,7 +1066,7 @@ location_table = [
         "id": 122411
     },
     {
-        "name": "(LVL 1) CAR - Plow King",
+        "name": "(LVL 1) Gil Shop Item 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1417,7 +1417,7 @@ location_table = [
         "id": 122450
     },
     {
-        "name": "(LVL 2) COSTUME - Tall Bart",
+        "name": "(LVL 2) Costume Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1426,7 +1426,7 @@ location_table = [
         "id": 122451
     },
     {
-        "name": "(LVL 2) COSTUME - Ninja Bart",
+        "name": "(LVL 2) Costume Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1435,7 +1435,7 @@ location_table = [
         "id": 122452
     },
     {
-        "name": "(LVL 2) COSTUME - Football Bart",
+        "name": "(LVL 2) Costume Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1444,7 +1444,7 @@ location_table = [
         "id": 122453
     },
     {
-        "name": "(LVL 2) CAR - Mr. Plow",
+        "name": "(LVL 2) Gil Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1453,7 +1453,7 @@ location_table = [
         "id": 122454
     },
     {
-        "name": "(LVL 2) CAR - Limo",
+        "name": "(LVL 2) Gil Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1462,7 +1462,7 @@ location_table = [
         "id": 122455
     },
     {
-        "name": "(LVL 2) CAR - Fire Truck",
+        "name": "(LVL 2) Gil Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1471,7 +1471,7 @@ location_table = [
         "id": 122456
     },
     {
-        "name": "(LVL 3) COSTUME - Cool Lisa",
+        "name": "(LVL 3) Costume Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1480,7 +1480,7 @@ location_table = [
         "id": 122457
     },
     {
-        "name": "(LVL 3) COSTUME - Floreda Lisa ",
+        "name": "(LVL 3) Costume Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1489,7 +1489,7 @@ location_table = [
         "id": 122458
     },
     {
-        "name": "(LVL 3) COSTUME - Hockey Lisa",
+        "name": "(LVL 3) Costume Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1498,7 +1498,7 @@ location_table = [
         "id": 122459
     },
     {
-        "name": "(LVL 3) CAR - Nerd Car",
+        "name": "(LVL 3) Gil Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1507,7 +1507,7 @@ location_table = [
         "id": 122460
     },
     {
-        "name": "(LVL 3) CAR - Donut Truck",
+        "name": "(LVL 3) Gil Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1516,7 +1516,7 @@ location_table = [
         "id": 122461
     },
     {
-        "name": "(LVL 3) CAR - School Bus",
+        "name": "(LVL 3) Gil Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2245,7 +2245,7 @@ location_table = [
         "id": 122542
     },
     {
-        "name": "(LVL 4) COSTUME - Inmate Marge",
+        "name": "(LVL 4) Costume Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2254,7 +2254,7 @@ location_table = [
         "id": 122543
     },
     {
-        "name": "(LVL 4) COSTUME - Classy Marge",
+        "name": "(LVL 4) Costume Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2263,7 +2263,7 @@ location_table = [
         "id": 122544
     },
     {
-        "name": "(LVL 4) COSTUME - Police Marge",
+        "name": "(LVL 4) Costume Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2272,7 +2272,7 @@ location_table = [
         "id": 122545
     },
     {
-        "name": "(LVL 4) CAR - Krusty\u2019s Limo",
+        "name": "(LVL 4) Gil Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2281,7 +2281,7 @@ location_table = [
         "id": 122546
     },
     {
-        "name": "(LVL 4) CAR - Scottish Willy\u2019s Tractor",
+        "name": "(LVL 4) Gil Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2290,7 +2290,7 @@ location_table = [
         "id": 122547
     },
     {
-        "name": "(LVL 4) CAR - Curator",
+        "name": "(LVL 4) Gil Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2596,7 +2596,7 @@ location_table = [
         "id": 122682 #Latest Added
     },
     {
-        "name": "(LVL 5) COSTUME - Army Apu",
+        "name": "(LVL 5) Costume Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2605,7 +2605,7 @@ location_table = [
         "id": 122581
     },
     {
-        "name": "(LVL 5) COSTUME - American Apu",
+        "name": "(LVL 5) Costume Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2614,7 +2614,7 @@ location_table = [
         "id": 122582
     },
     {
-        "name": "(LVL 5) COSTUME - B-Sharps Apu",
+        "name": "(LVL 5) Costume Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2623,7 +2623,7 @@ location_table = [
         "id": 122583
     },
     {
-        "name": "(LVL 5) CAR - Car Built for Homer",
+        "name": "(LVL 5) Gil Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2632,7 +2632,7 @@ location_table = [
         "id": 122584
     },
     {
-        "name": "(LVL 5) CAR - Police Car",
+        "name": "(LVL 5) Gil Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2641,7 +2641,7 @@ location_table = [
         "id": 122585
     },
     {
-        "name": "(LVL 5) CAR - Cola Truck",
+        "name": "(LVL 5) Gil Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2650,7 +2650,7 @@ location_table = [
         "id": 122586
     },
     {
-        "name": "(LVL 6) CAR - Armored Truck",
+        "name": "(LVL 6) Gil Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2659,7 +2659,7 @@ location_table = [
         "id": 122587
     },
     {
-        "name": "(LVL 6) CAR - Chase Sedan",
+        "name": "(LVL 6) Gil Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2668,7 +2668,7 @@ location_table = [
         "id": 122588
     },
     {
-        "name": "(LVL 6) CAR - Super Villain Globex Car",
+        "name": "(LVL 6) Gil Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3019,7 +3019,7 @@ location_table = [
         "id": 122627
     },
     {
-        "name": "(LVL 6) COSTUME - Hugo Bart",
+        "name": "(LVL 6) Costume Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3028,7 +3028,7 @@ location_table = [
         "id": 122628
     },
     {
-        "name": "(LVL 6) COSTUME - Cadet Bart",
+        "name": "(LVL 6) Costume Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3037,7 +3037,7 @@ location_table = [
         "id": 122629
     },
     {
-        "name": "(LVL 6) COSTUME - Bartman",
+        "name": "(LVL 6) Costume Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3046,7 +3046,7 @@ location_table = [
         "id": 122630
     },
     {
-        "name": "(LVL 7) CAR - Zombie Car",
+        "name": "(LVL 7) Gil Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3055,7 +3055,7 @@ location_table = [
         "id": 122631
     },
     {
-        "name": "(LVL 7) CAR - Hover Bike",
+        "name": "(LVL 7) Gil Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3064,7 +3064,7 @@ location_table = [
         "id": 122632
     },
     {
-        "name": "(LVL 7) CAR - Hearse",
+        "name": "(LVL 7) Gil Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
