@@ -308,7 +308,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Scottish Willie's Tractor",
+        "name": "Tractor",
         "category": ["Cars", "Level 4 Cars"],
         "useful": True,
         "id": 121826,
@@ -643,7 +643,7 @@ item_table = [
     {
         "count": 50,
         "name": "Hit N Run Reset",
-        "category": ["Filler"], 
+        "category": ["Filler"],
         "id": 121876,
         "progression": False
     },
