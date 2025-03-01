@@ -214,7 +214,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Cletus' Truck",
+        "name": "Pickup Truck",
         "category": ["Cars", "Level 1 Cars"],
         "useful": True,
         "id": 121814,
@@ -222,7 +222,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Electarus",
+        "name": "Electaurus",
         "category": ["Cars", "Level 1 Cars"],
         "useful": True,
         "id": 121815,
@@ -253,7 +253,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "WW2 Vehicle",
+        "name": "WWII Vehicle",
         "category": ["Cars", "Level 2 Cars"],
         "useful": True,
         "id": 121819,
@@ -261,7 +261,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Moe's Sedan",
+        "name": "Sedan",
         "category": ["Cars", "Level 2 Cars"],
         "useful": True,
         "id": 121820,
@@ -292,7 +292,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Skinner's Sedan",
+        "name": "Sedan",
         "category": ["Cars", "Level 3 Cars"],
         "useful": True,
         "id": 121824,
@@ -418,7 +418,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "36 Strutz Bearat",
+        "name": "36 Stutz Bearcat",
         "category": ["Cars", "Level 6 Cars"],
         "useful": True,
         "id": 121840,
@@ -441,7 +441,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Mr. Burns Limo",
+        "name": "Mr. Burns' Limo",
         "category": ["Cars", "Level 7 Cars"],
         "useful": True,
         "id": 121843,
@@ -631,6 +631,41 @@ item_table = [
         "category": ["Moves"],
         "progression": True,
         "id": 121869
+    },
+    {
+        "count": 1,
+        "name": "Homer E-Brake",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121870
+    },
+    {
+        "count": 1,
+        "name": "Bart E-Brake",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121871
+    },
+    {
+        "count": 1,
+        "name": "Lisa E-Brake",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121872
+    },
+    {
+        "count": 1,
+        "name": "Marge E-Brake",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121873
+    },
+    {
+        "count": 1,
+        "name": "Apu E-Brake",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121874
     },
     {
         "count": 50,

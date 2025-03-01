@@ -39,13 +39,23 @@ class LevelSanity(Choice):
 
 class MoveRando(Toggle):
     """Choose whether or not to shuffle moves into the item pool.
-       Moves that are shuffled are Double Jump and Attack.
+       Moves that are shuffled are Double Jump and Attack for each character.
        These have logical implications for wasp and card collection
        as well as L7M4 requiring Homer Double Jump.
        """
 
     default = True
     display_name = "Move Randomizer"
+
+class ShuffleEBrakes(Toggle):
+    """Choose whether or not to shuffle ability to use the E-Brake
+       for each character into the item pool. *WARNING* This is not
+       considered in logic and has not been heavily tested.
+       It may create unreasonably hard seeds.
+       """
+
+    default = True
+    display_name = "Shuffle E-Brake"
 
 class EnableWaspPercent(Toggle):
     """Whether to include Wasps in goal requirements.
@@ -79,10 +89,12 @@ class CardPercent(Range):
 
 
 
+
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict) -> dict:
     options["levelsanity"] = LevelSanity
     options["moverandomizer"] = MoveRando
+    options["shuffleebrake"] = ShuffleEBrakes
     options["EnableWaspPercent"] = EnableWaspPercent
     options["wasppercent"] = WaspPercent
     options["EnableCardPercent"] = EnableCardPercent

@@ -132,6 +132,18 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     else:
         raise OptionError("Levelsanity option not recognized.")
 
+    if worlds.shuffleebrake == False:
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Homer E-Brake"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Homer E-Brake"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Bart E-Brake"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Bart E-Brake"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Lisa E-Brake"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Lisa E-Brake"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Marge E-Brake"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Marge E-Brake"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Apu E-Brake"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Apu E-Brake"))
+
     # Use this hook to remove items from the item pool
     itemNamesToRemove = [] # List of item names
 
