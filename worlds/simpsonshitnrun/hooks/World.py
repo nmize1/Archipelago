@@ -132,7 +132,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     else:
         raise OptionError("Levelsanity option not recognized.")
 
-    if worlds.shuffleebrake == False:
+    if world.shuffleebrake == False:
         multiworld.push_precollected(next(item for item in item_pool if item.name == "Homer E-Brake"))
         item_pool.remove(next(item for item in item_pool if item.name == "Homer E-Brake"))
         multiworld.push_precollected(next(item for item in item_pool if item.name == "Bart E-Brake"))
