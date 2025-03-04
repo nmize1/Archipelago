@@ -704,6 +704,62 @@ item_table = [
         "trap": True,
         "id": 121879,
         "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Speed Rocket",
+        "category": ["Cars", "Level 1 Cars"],
+        "useful": True,
+        "id": 121880,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Monorail Car",
+        "category": ["Cars", "Level 2 Cars"],
+        "useful": True,
+        "id": 121881,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Knight Boat",
+        "category": ["Cars", "Level 3 Cars"],
+        "useful": True,
+        "id": 121882,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "ATV",
+        "category": ["Cars", "Level 4 Cars"],
+        "useful": True,
+        "id": 121883,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Obliteratatron Big Wheel Truck",
+        "category": ["Cars", "Level 5 Cars"],
+        "useful": True,
+        "id": 121884,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Planet Hype 50's Car",
+        "category": ["Cars", "Level 6 Cars"],
+        "useful": True,
+        "id": 121885,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "R/C Buggy",
+        "category": ["Cars", "Level 1 Cars"],
+        "useful": True,
+        "id": 121886,
+        "progression": False
     }
 ]
 
