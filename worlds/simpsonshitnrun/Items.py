@@ -691,7 +691,7 @@ item_table = [
     },
     {
         "count": 20,
-        "name": "Flippable Cars",
+        "name": "Hit N Run",
         "category": ["Filler"],
         "trap": True,
         "id": 121878,

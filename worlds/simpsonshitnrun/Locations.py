@@ -1,4 +1,4 @@
-from BaseClasses import Location
+ from BaseClasses import Location
 from .Data import location_table
 from .hooks.Locations import before_location_table_processed
 
@@ -657,7 +657,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122366
     },
     {
@@ -666,7 +666,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122367
     },
     {
@@ -675,7 +675,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122368
     },
     {
@@ -684,7 +684,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122369
     },
     {
@@ -693,7 +693,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122370
     },
     {
@@ -702,7 +702,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122371
     },
     {
@@ -711,7 +711,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122372
     },
     {
@@ -720,7 +720,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122373
     },
     {
@@ -729,7 +729,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122374
     },
     {
@@ -738,7 +738,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122375
     },
     {
@@ -747,7 +747,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122376
     },
     {
@@ -756,7 +756,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122377
     },
     {
@@ -765,7 +765,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122378
     },
     {
@@ -774,7 +774,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122379
     },
     {
@@ -783,7 +783,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122380
     },
     {
@@ -792,7 +792,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122381
     },
     {
@@ -801,7 +801,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122382
     },
     {
@@ -1021,7 +1021,7 @@ location_table = [
         "id": 122406
     },
     {
-        "name": "(LVL 1) Costume Shop Item 1",
+        "name": "(LVL 1) Shop Item 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1030,7 +1030,7 @@ location_table = [
         "id": 122407
     },
     {
-        "name": "(LVL 1) Costume Shop Item 2",
+        "name": "(LVL 1) Shop Item 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1039,7 +1039,7 @@ location_table = [
         "id": 122408
     },
     {
-        "name": "(LVL 1) Costume Shop Item 3",
+        "name": "(LVL 1) Shop Item 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1048,7 +1048,7 @@ location_table = [
         "id": 122409
     },
     {
-        "name": "(LVL 1) Gil Shop Item 1",
+        "name": "(LVL 1) Shop Item 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1057,7 +1057,7 @@ location_table = [
         "id": 122410
     },
     {
-        "name": "(LVL 1) Gil Shop Item 2",
+        "name": "(LVL 1) Shop Item 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1066,7 +1066,7 @@ location_table = [
         "id": 122411
     },
     {
-        "name": "(LVL 1) Gil Shop Item 3",
+        "name": "(LVL 1) Shop Item 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1080,7 +1080,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122413
     },
     {
@@ -1089,7 +1089,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122414
     },
     {
@@ -1098,7 +1098,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122415
     },
     {
@@ -1107,7 +1107,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122416
     },
     {
@@ -1125,7 +1125,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122418
     },
     {
@@ -1134,7 +1134,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122419
     },
     {
@@ -1143,7 +1143,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122420
     },
     {
@@ -1152,7 +1152,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122421
     },
     {
@@ -1161,7 +1161,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122422
     },
     {
@@ -1179,7 +1179,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122424
     },
     {
@@ -1215,7 +1215,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122428
     },
     {
@@ -1242,7 +1242,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122431
     },
     {
@@ -1417,7 +1417,7 @@ location_table = [
         "id": 122450
     },
     {
-        "name": "(LVL 2) Costume Shop Check 1",
+        "name": "(LVL 2) Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1426,7 +1426,7 @@ location_table = [
         "id": 122451
     },
     {
-        "name": "(LVL 2) Costume Shop Check 2",
+        "name": "(LVL 2) Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1435,7 +1435,7 @@ location_table = [
         "id": 122452
     },
     {
-        "name": "(LVL 2) Costume Shop Check 3",
+        "name": "(LVL 2) Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1444,7 +1444,7 @@ location_table = [
         "id": 122453
     },
     {
-        "name": "(LVL 2) Gil Shop Check 1",
+        "name": "(LVL 2) Shop Check 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1453,7 +1453,7 @@ location_table = [
         "id": 122454
     },
     {
-        "name": "(LVL 2) Gil Shop Check 2",
+        "name": "(LVL 2) Shop Check 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1462,7 +1462,7 @@ location_table = [
         "id": 122455
     },
     {
-        "name": "(LVL 2) Gil Shop Check 3",
+        "name": "(LVL 2) Shop Check 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1471,7 +1471,7 @@ location_table = [
         "id": 122456
     },
     {
-        "name": "(LVL 3) Costume Shop Check 1",
+        "name": "(LVL 3) Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1480,7 +1480,7 @@ location_table = [
         "id": 122457
     },
     {
-        "name": "(LVL 3) Costume Shop Check 2",
+        "name": "(LVL 3) Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1489,7 +1489,7 @@ location_table = [
         "id": 122458
     },
     {
-        "name": "(LVL 3) Costume Shop Check 3",
+        "name": "(LVL 3) Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1498,7 +1498,7 @@ location_table = [
         "id": 122459
     },
     {
-        "name": "(LVL 3) Gil Shop Check 1",
+        "name": "(LVL 3) Shop Check 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1507,7 +1507,7 @@ location_table = [
         "id": 122460
     },
     {
-        "name": "(LVL 3) Gil Shop Check 2",
+        "name": "(LVL 3) Shop Check 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1516,7 +1516,7 @@ location_table = [
         "id": 122461
     },
     {
-        "name": "(LVL 3) Gil Shop Check 3",
+        "name": "(LVL 3) Shop Check 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1530,7 +1530,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122463
     },
     {
@@ -1539,7 +1539,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122464
     },
     {
@@ -1548,7 +1548,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122465
     },
     {
@@ -1557,7 +1557,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122466
     },
     {
@@ -1566,7 +1566,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122467
     },
     {
@@ -1575,7 +1575,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122468
     },
     {
@@ -1584,7 +1584,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122469
     },
     {
@@ -1593,7 +1593,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122470
     },
     {
@@ -1602,7 +1602,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122471
     },
     {
@@ -1611,7 +1611,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122472
     },
     {
@@ -1620,7 +1620,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122473
     },
     {
@@ -1629,7 +1629,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122474
     },
     {
@@ -1665,7 +1665,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122478
     },
     {
@@ -1674,7 +1674,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122479
     },
     {
@@ -1683,7 +1683,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122480
     },
     {
@@ -1701,7 +1701,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "|Lisa Attack| OR (|Lisa Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Lisa Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122482
     },
     {
@@ -1872,7 +1872,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122501
     },
     {
@@ -1881,7 +1881,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122502
     },
     {
@@ -1890,7 +1890,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122503
     },
     {
@@ -1899,7 +1899,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122504
     },
     {
@@ -1908,7 +1908,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122505
     },
     {
@@ -1917,7 +1917,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122506
     },
     {
@@ -1926,7 +1926,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122507
     },
     {
@@ -1935,7 +1935,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122508
     },
     {
@@ -1944,7 +1944,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122509
     },
     {
@@ -1953,7 +1953,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122510
     },
     {
@@ -1962,7 +1962,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122511
     },
     {
@@ -1971,7 +1971,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122512
     },
     {
@@ -1980,7 +1980,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122513
     },
     {
@@ -1989,7 +1989,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122514
     },
     {
@@ -1998,7 +1998,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122515
     },
     {
@@ -2007,7 +2007,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122516
     },
     {
@@ -2016,7 +2016,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122517
     },
     {
@@ -2025,7 +2025,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122518
     },
     {
@@ -2034,7 +2034,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122519
     },
     {
@@ -2043,7 +2043,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "|Marge Attack| OR (|Marge Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Marge Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122520
     },
     {
@@ -2245,7 +2245,7 @@ location_table = [
         "id": 122542
     },
     {
-        "name": "(LVL 4) Costume Shop Check 1",
+        "name": "(LVL 4) Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2254,7 +2254,7 @@ location_table = [
         "id": 122543
     },
     {
-        "name": "(LVL 4) Costume Shop Check 2",
+        "name": "(LVL 4) Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2263,7 +2263,7 @@ location_table = [
         "id": 122544
     },
     {
-        "name": "(LVL 4) Costume Shop Check 3",
+        "name": "(LVL 4) Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2272,7 +2272,7 @@ location_table = [
         "id": 122545
     },
     {
-        "name": "(LVL 4) Gil Shop Check 1",
+        "name": "(LVL 4) Shop Check 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2281,7 +2281,7 @@ location_table = [
         "id": 122546
     },
     {
-        "name": "(LVL 4) Gil Shop Check 2",
+        "name": "(LVL 4) Shop Check 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2290,7 +2290,7 @@ location_table = [
         "id": 122547
     },
     {
-        "name": "(LVL 4) Gil Shop Check 3",
+        "name": "(LVL 4) Shop Check 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2304,7 +2304,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122549
     },
     {
@@ -2313,7 +2313,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122550
     },
     {
@@ -2322,7 +2322,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122551
     },
     {
@@ -2331,7 +2331,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122552
     },
     {
@@ -2367,7 +2367,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122556
     },
     {
@@ -2403,7 +2403,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122560
     },
     {
@@ -2412,7 +2412,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122561
     },
     {
@@ -2448,7 +2448,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122565
     },
     {
@@ -2457,7 +2457,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122566
     },
     {
@@ -2466,7 +2466,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "|Apu Attack| OR (|Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122567
     },
     {
@@ -2596,7 +2596,7 @@ location_table = [
         "id": 122682 #Latest Added
     },
     {
-        "name": "(LVL 5) Costume Shop Check 1",
+        "name": "(LVL 5) Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2605,7 +2605,7 @@ location_table = [
         "id": 122581
     },
     {
-        "name": "(LVL 5) Costume Shop Check 2",
+        "name": "(LVL 5) Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2614,7 +2614,7 @@ location_table = [
         "id": 122582
     },
     {
-        "name": "(LVL 5) Costume Shop Check 3",
+        "name": "(LVL 5) Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2623,7 +2623,7 @@ location_table = [
         "id": 122583
     },
     {
-        "name": "(LVL 5) Gil Shop Check 1",
+        "name": "(LVL 5) Shop Check 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2632,7 +2632,7 @@ location_table = [
         "id": 122584
     },
     {
-        "name": "(LVL 5) Gil Shop Check 2",
+        "name": "(LVL 5) Shop Check 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2641,7 +2641,7 @@ location_table = [
         "id": 122585
     },
     {
-        "name": "(LVL 5) Gil Shop Check 3",
+        "name": "(LVL 5) Shop Check 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2650,7 +2650,7 @@ location_table = [
         "id": 122586
     },
     {
-        "name": "(LVL 6) Gil Shop Check 1",
+        "name": "(LVL 6) Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2659,7 +2659,7 @@ location_table = [
         "id": 122587
     },
     {
-        "name": "(LVL 6) Gil Shop Check 2",
+        "name": "(LVL 6) Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2668,7 +2668,7 @@ location_table = [
         "id": 122588
     },
     {
-        "name": "(LVL 6) Gil Shop Check 3",
+        "name": "(LVL 6) Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -2682,7 +2682,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122590
     },
     {
@@ -2691,7 +2691,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122591
     },
     {
@@ -2700,7 +2700,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122592
     },
     {
@@ -2709,7 +2709,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122593
     },
     {
@@ -2718,7 +2718,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122594
     },
     {
@@ -2727,7 +2727,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122595
     },
     {
@@ -2736,7 +2736,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122596
     },
     {
@@ -2745,7 +2745,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122597
     },
     {
@@ -2754,7 +2754,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122598
     },
     {
@@ -2763,7 +2763,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122599
     },
     {
@@ -2772,7 +2772,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122600
     },
     {
@@ -2817,7 +2817,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122605
     },
     {
@@ -2826,7 +2826,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122606
     },
     {
@@ -2844,7 +2844,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122608
     },
     {
@@ -2853,7 +2853,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "|Bart Attack| OR (|Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122609
     },
     {
@@ -2862,7 +2862,7 @@ location_table = [
         "category": [
             "Level 6 CARD"
         ],
-        "requires": [],
+        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
         "id": 122610
     },
     {
@@ -3019,7 +3019,7 @@ location_table = [
         "id": 122627
     },
     {
-        "name": "(LVL 6) Costume Shop Check 1",
+        "name": "(LVL 6) Shop Check 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3028,7 +3028,7 @@ location_table = [
         "id": 122628
     },
     {
-        "name": "(LVL 6) Costume Shop Check 2",
+        "name": "(LVL 6) Shop Check 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3037,7 +3037,7 @@ location_table = [
         "id": 122629
     },
     {
-        "name": "(LVL 6) Costume Shop Check 3",
+        "name": "(LVL 6) Shop Check 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3046,7 +3046,7 @@ location_table = [
         "id": 122630
     },
     {
-        "name": "(LVL 7) Gil Shop Check 1",
+        "name": "(LVL 7) Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3055,7 +3055,7 @@ location_table = [
         "id": 122631
     },
     {
-        "name": "(LVL 7) Gil Shop Check 2",
+        "name": "(LVL 7) Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3064,7 +3064,7 @@ location_table = [
         "id": 122632
     },
     {
-        "name": "(LVL 7) Gil Shop Check 3",
+        "name": "(LVL 7) Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3078,7 +3078,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122634
     },
     {
@@ -3087,7 +3087,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122635
     },
     {
@@ -3096,7 +3096,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122636
     },
     {
@@ -3105,7 +3105,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122637
     },
     {
@@ -3114,7 +3114,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122638
     },
     {
@@ -3123,7 +3123,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122639
     },
     {
@@ -3141,7 +3141,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122641
     },
     {
@@ -3150,7 +3150,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122642
     },
     {
@@ -3159,7 +3159,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122643
     },
     {
@@ -3168,7 +3168,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122644
     },
     {
@@ -3177,7 +3177,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122645
     },
     {
@@ -3186,7 +3186,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122646
     },
     {
@@ -3195,7 +3195,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122647
     },
     {
@@ -3240,7 +3240,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR (|Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
         "id": 122652
     },
     {
@@ -3451,7 +3451,7 @@ location_table = [
         "id": 122675
     },
     {
-        "name": "(LVL 7) COSTUME - Dirty Homer",
+        "name": "(LVL 7) Shop Check 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3460,7 +3460,7 @@ location_table = [
         "id": 122676
     },
     {
-        "name": "(LVL 7) COSTUME - Devil Homer",
+        "name": "(LVL 7) Shop Check 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3469,7 +3469,7 @@ location_table = [
         "id": 122677
     },
     {
-        "name": "(LVL 7) COSTUME - Donut Homer",
+        "name": "(LVL 7) Shop Check 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -3478,11 +3478,74 @@ location_table = [
         "id": 122678
     },
     {
+        "name": "(LVL 1) Talk to Barney",
+        "region": "Level 1",
+        "category": [
+            "Level 1 Mission"
+        ],
+        "requires": [],
+        "id": 122679
+    },
+    {
+        "name": "(LVL 2) Talk to Homer",
+        "region": "Level 2",
+        "category": [
+            "Level 2 Mission"
+        ],
+        "requires": [],
+        "id": 122680
+    },
+    {
+        "name": "(LVL 3) Talk to Otto",
+        "region": "Level 3",
+        "category": [
+            "Level 3 Mission"
+        ],
+        "requires": [],
+        "id": 122681
+    },
+    {
+        "name": "(LVL 4) Talk to Willie",
+        "region": "Level 4",
+        "category": [
+            "Level 4 Mission"
+        ],
+        "requires": [],
+        "id": 122682
+    },
+    {
+        "name": "(LVL 5) Talk to Homer",
+        "region": "Level 5",
+        "category": [
+            "Level 5 Mission"
+        ],
+        "requires": [],
+        "id": 122683
+    },
+    {
+        "name": "(LVL 6) Talk to Kearney",
+        "region": "Level 6",
+        "category": [
+            "Level 6 Mission"
+        ],
+        "requires": [],
+        "id": 122684
+    },
+    {
+        "name": "(LVL 7) Talk to Graveyard Zombie",
+        "region": "Level 7",
+        "category": [
+            "Level 7 Mission"
+        ],
+        "requires": [],
+        "id": 122685
+    },
+    {
         "name": "Goal: All Missions Complete!",
         "category": [],
         "victory": True,
         "requires": "{allMissionsAccessible()} AND {collectedWasps()} AND {collectedCards()}",
-        "id": 122679,
+        "id": 122686,
         "region": "Manual"
     },
     {
@@ -3490,7 +3553,7 @@ location_table = [
         "category": [],
         "victory": True,
         "requires": "{allStoryMissionsAccessible()} AND {collectedWasps()} AND {collectedCards()}",
-        "id": 122680,
+        "id": 122687,
         "region": "Manual"
     },
     {
@@ -3499,14 +3562,14 @@ location_table = [
         "category": [],
         "victory": True,
         "requires": "|Level 7| AND {collectedWasps()} AND {collectedCards()}",
-        "id": 122681
+        "id": 122688
     },
     {
         "name": "Goal: Wasps and Cards Collected!",
         "category": [],
         "victory": True,
         "requires": "{collectedWasps()} AND {collectedCards()}",
-        "id": 122682,
+        "id": 122689,
         "region": "Manual"
     }
 ]
