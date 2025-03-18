@@ -18,4 +18,4 @@ Access to missions for each level, access to attack, double jump, and e-brake fo
 
 ## How do I install the mod for a this game?
 
-Instructions for mod installation can be found here. (Link to be added)
+Instructions for mod installation can be found [here](https://github.com/nmize1/Archipelago/blob/main/worlds/simpsonshitnrun/docs/setup_en.md)
