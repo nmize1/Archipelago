@@ -217,6 +217,10 @@ def before_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld,
 # This is called after slot data is set and provides the slot data at the time, in case you want to check and modify it after Manual is done with it
 def after_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld, player: int) -> dict:
     slot_data["id"] = str(uuid.uuid4())
+
+    # Generate costs for shops
+    slot_data["costs"] = [random.randint(100, 1000) for _ in range(42)]
+
     return slot_data
 
 # This is called right at the end, in case you want to write stuff to the spoiler log

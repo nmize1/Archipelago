@@ -205,7 +205,7 @@ class SimpsonsHitAndRunWorld(World):
 
     def generate_basic(self):
         before_generate_basic(self, self.multiworld, self.player)
-                
+
         # Handle item forbidding
         manual_locations_with_forbid = {location['name']: location for location in location_name_to_location.values() if "dont_place_item" in location or "dont_place_item_category" in location}
         locations_with_forbid = [l for l in self.multiworld.get_unfilled_locations(player=self.player) if l.name in manual_locations_with_forbid.keys()]

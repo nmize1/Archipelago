@@ -1,4 +1,4 @@
- from BaseClasses import Location
+from BaseClasses import Location
 from .Data import location_table
 from .hooks.Locations import before_location_table_processed
 
@@ -515,6 +515,7 @@ location_table = [
         "category": [
             "Level 6 Mission"
         ],
+        "requires": "|Globex Super Villain Car|",
         "id": 122349
     },
     {
