@@ -5,6 +5,7 @@
 - [Archipelago](https://archipelago.gg/)
 - The latest release of the [client/memory manager and the lmlm mod](https://github.com/nmize1/AP-SHARRandomizer/releases/tag/v0.1.0a)
 - The latest release of the [apworld](https://github.com/nmize1/Archipelago/releases/tag/v0.1.0a).
+- [.NET 8](https://dotnet.microsoft.com/en-us/download)
 
 # Install Lucas' Mod Manager, the lmlm mod, and the client/memory monitor mod.
 
@@ -13,6 +14,7 @@
 - Enable SHARAP.lmlm by clicking the checkbox on the Mods List. Currently, no other major mods are supported.
 - Check [here](https://docs.donutteam.com/docs/lucasmodlauncher/mods/installing-mods) for more help installing mods.
 - Under the "Settings" tab of the mod launcher, there are several optional but recommended mods. Read through the list and enable anything you think you'd like. I **highly** suggest No Automatic Saved Game Load. This will prevent accidentally sending checks on the main menu from old saved games. Free Roam, Never Busted, No Jump Limit, No Time Limits, No Traffic, No Wrenches, One Tap Player Car Death, Repair Car on Reset, and Starting Coins are all incompatible or highly discouraged. They will break the intended experience even if they do work.
+- Install .NET 8 from the link above.
 - Finally, extract SHARRandomizer.zip where ever you'd like.
 
 # Connecting and Playing
