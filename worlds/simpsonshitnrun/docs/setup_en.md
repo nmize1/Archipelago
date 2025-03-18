@@ -22,3 +22,7 @@
 - Launch the game via Lucas' Mod Launcher ensuring the above steps have been completed.
 
 - Enjoy!
+
+# I'm having issues!
+
+This is currently very early development! Please do not bring this to syncs/asyncs unless the host explicitly approves it! Check the pinned FAQ and/or ask for help in the [Discord channel](https://discord.com/channels/731205301247803413/1158211913495359548) 
