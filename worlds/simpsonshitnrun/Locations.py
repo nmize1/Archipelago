@@ -118,7 +118,7 @@ location_table = [
         "id": 122301
     },
     {
-        "name": "(L2M3) Voc Nerduli",
+        "name": "(L2M3) Vox Nerduli",
         "region": "Level 2",
         "category": [
             "Level 2 Mission"
@@ -1020,6 +1020,15 @@ location_table = [
         ],
         "requires": [],
         "id": 122406
+    },
+    {
+        "name": "(LVL 1) GAG - ATM in Kwik-E-Mart",
+        "region": "Collectables",
+        "category": [
+            "Level 1 GAG"
+        ],
+        "requires": [],
+        "id": 122689 #Highest ID 
     },
     {
         "name": "(LVL 1) Shop Item 1",
