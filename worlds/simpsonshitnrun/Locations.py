@@ -1028,7 +1028,7 @@ location_table = [
             "Level 1 GAG"
         ],
         "requires": [],
-        "id": 122689 #Highest ID 
+        "id": 122689 #Highest ID
     },
     {
         "name": "(LVL 1) Shop Item 1",
@@ -2603,7 +2603,7 @@ location_table = [
             "Level 5 GAG"
         ],
         "requires": [],
-        "id": 122682 #Latest Added
+        "id": 122690 #Highest ID 
     },
     {
         "name": "(LVL 5) Shop Check 1",
