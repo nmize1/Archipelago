@@ -354,7 +354,7 @@ location_table = [
     },
     {
         "region": "Level 4",
-        "name": "(LVL 4) CheckPoint Race",
+        "name": "(LVL 4) Checkpoint Race",
         "category": [
             "Bonus Mission"
         ],
@@ -629,7 +629,7 @@ location_table = [
         "id": 122362
     },
     {
-        "name": "(LVL 7) CheckPoint Race",
+        "name": "(LVL 7) Time Trial Race",
         "region": "Level 7",
         "category": [
             "Bonus Mission"
@@ -637,7 +637,7 @@ location_table = [
         "id": 122363
     },
     {
-        "name": "(LVL 7) Time Trial Race",
+        "name": "(LVL 7) Circuit Race",
         "region": "Level 7",
         "category": [
             "Bonus Mission"
@@ -645,7 +645,7 @@ location_table = [
         "id": 122364
     },
     {
-        "name": "(LVL 7) Circuit Race",
+        "name": "(LVL 7) Checkpoint Race",
         "region": "Level 7",
         "category": [
             "Bonus Mission"
@@ -1028,7 +1028,7 @@ location_table = [
             "Level 1 GAG"
         ],
         "requires": [],
-        "id": 122689 #Highest ID
+        "id": 122689
     },
     {
         "name": "(LVL 1) Shop Item 1",
@@ -2603,7 +2603,7 @@ location_table = [
             "Level 5 GAG"
         ],
         "requires": [],
-        "id": 122690 #Highest ID 
+        "id": 122690 #Highest ID
     },
     {
         "name": "(LVL 5) Shop Check 1",
