@@ -462,7 +462,7 @@ location_table = [
         "id": 122342
     },
     {
-        "name": "(LVL 5) Time Trial",
+        "name": "(LVL 5) Time Trial Race",
         "region": "Level 5",
         "category": [
             "Bonus Mission"
