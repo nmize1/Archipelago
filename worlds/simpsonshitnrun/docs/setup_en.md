@@ -3,8 +3,8 @@
 - Simpsons Hit And Run - Created and tested on the English release but *may* work on other versions.
 - [Lucas' Mod Manager](https://modbakery.donutteam.com/releases/view/6)
 - [Archipelago](https://archipelago.gg/)
-- The latest release of the [client/memory manager and the lmlm mod](https://github.com/nmize1/AP-SHARRandomizer/releases/tag/v0.1.0a)
-- The latest release of the [apworld](https://github.com/nmize1/Archipelago/releases/tag/v0.1.0a).
+- The latest release of the [client/memory manager and the lmlm mod](https://github.com/nmize1/AP-SHARRandomizer/releases/latest)
+- The latest release of the [apworld](https://github.com/nmize1/Archipelago/releases/latest).
 - [.NET 8 (x86)](https://dotnet.microsoft.com/en-us/download)
 
 # Install Lucas' Mod Manager, the lmlm mod, and the client/memory monitor mod.
