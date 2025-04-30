@@ -1432,7 +1432,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade|",
         "id": 122451
     },
     {
@@ -1441,7 +1441,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade|",
         "id": 122452
     },
     {
@@ -1450,7 +1450,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade|",
         "id": 122453
     },
     {
@@ -1459,7 +1459,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade|",
         "id": 122454
     },
     {
@@ -1468,7 +1468,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade|",
         "id": 122455
     },
     {
@@ -1477,7 +1477,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade|",
         "id": 122456
     },
     {
@@ -1486,7 +1486,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:2|",
         "id": 122457
     },
     {
@@ -1495,7 +1495,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:2|",
         "id": 122458
     },
     {
@@ -1504,7 +1504,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:2|",
         "id": 122459
     },
     {
@@ -1513,7 +1513,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:2|",
         "id": 122460
     },
     {
@@ -1522,7 +1522,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:2|",
         "id": 122461
     },
     {
@@ -1531,7 +1531,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:2|",
         "id": 122462
     },
     {
@@ -2260,7 +2260,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:3|",
         "id": 122543
     },
     {
@@ -2269,7 +2269,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:3|",
         "id": 122544
     },
     {
@@ -2278,7 +2278,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:3|",
         "id": 122545
     },
     {
@@ -2287,7 +2287,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:3|",
         "id": 122546
     },
     {
@@ -2296,7 +2296,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:3|",
         "id": 122547
     },
     {
@@ -2305,7 +2305,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:3|",
         "id": 122548
     },
     {
@@ -2611,7 +2611,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:4|",
         "id": 122581
     },
     {
@@ -2620,7 +2620,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:4|",
         "id": 122582
     },
     {
@@ -2629,7 +2629,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:4|",
         "id": 122583
     },
     {
@@ -2638,7 +2638,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:4|",
         "id": 122584
     },
     {
@@ -2647,7 +2647,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:4|",
         "id": 122585
     },
     {
@@ -2656,7 +2656,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:4|",
         "id": 122586
     },
     {
@@ -2665,7 +2665,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:5|",
         "id": 122587
     },
     {
@@ -2674,7 +2674,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:5|",
         "id": 122588
     },
     {
@@ -2683,7 +2683,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:5|",
         "id": 122589
     },
     {
@@ -3034,7 +3034,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:5|",
         "id": 122628
     },
     {
@@ -3043,7 +3043,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:5|",
         "id": 122629
     },
     {
@@ -3052,7 +3052,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:5|",
         "id": 122630
     },
     {
@@ -3061,7 +3061,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:6|",
         "id": 122631
     },
     {
@@ -3070,7 +3070,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:6|",
         "id": 122632
     },
     {
@@ -3079,7 +3079,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:6|",
         "id": 122633
     },
     {
@@ -3466,7 +3466,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:6|",
         "id": 122676
     },
     {
@@ -3475,7 +3475,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:6|",
         "id": 122677
     },
     {
@@ -3484,7 +3484,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": [],
+        "requires": "|Wallet Upgrade:6|",
         "id": 122678
     },
     {

@@ -66,7 +66,7 @@ class EnableWaspPercent(Toggle):
     display_name = "Enable Wasp Requirements"
 
 class WaspPercent(Range):
-    """ Percent of Wasps required to goal if Wasp Requirements are enabled."""
+    """ Percent of Wasps required to goal if Wasp Requirements is enabled."""
     display_name = "Required Wasp Percent"
     range_start = 10
     range_end = 100
@@ -81,11 +81,33 @@ class EnableCardPercent(Toggle):
     display_name = "Enable Card Requirements"
 
 class CardPercent(Range):
-    """Percent of Cards required to goal if Card Requirements are enabled."""
+    """Percent of Cards required to goal if Card Requirements is enabled."""
     display_name = "Required Card Percent"
     range_start = 10
     range_end = 100
     default = 50
+
+class MinShopPrice(Range):
+    """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
+    display_name = "Min Shop Price"
+    range_start = 0
+    range_end = 1000
+    default = 100
+
+class MaxShopPrice(Range):
+    """The maximum cost of any item in Gil's Shop."""
+    display_name = "Max Shop Price"
+    range_start = 0
+    range_end = 500
+    default = 300
+
+class ShopScaleMod(Range):
+    """The multiplier for shop costs per levels
+       L2 costs = L1 * multiplier, L3 = L1 * 2(multiplier), etc"""
+    display_name = "Shop Price Level Scale Multiplier"
+    range_start = 1
+    range_end = 5
+    default = 2
 
 
 
@@ -99,6 +121,9 @@ def before_options_defined(options: dict) -> dict:
     options["wasppercent"] = WaspPercent
     options["EnableCardPercent"] = EnableCardPercent
     options["cardpercent"] = CardPercent
+    options["minprice"] = MinShopPrice
+    options["maxprice"] = MaxShopPrice
+    options["shopscalemod"] = ShopScaleMod
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options

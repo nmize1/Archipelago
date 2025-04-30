@@ -144,6 +144,30 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
         multiworld.push_precollected(next(item for item in item_pool if item.name == "Apu E-Brake"))
         item_pool.remove(next(item for item in item_pool if item.name == "Apu E-Brake"))
 
+    if world.options.moverandomizer == False:
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Homer Double Jump"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Homer Double Jump"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Bart Double Jump"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Bart Double Jump"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Lisa Double Jump"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Lisa Double Jump"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Marge Double Jump"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Marge Double Jump"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Apu Double Jump"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Apu Double Jump"))
+
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Homer Attack"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Homer Attack"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Bart Attack"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Bart Attack"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Lisa Attack"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Lisa Attack"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Marge Attack"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Marge Attack"))
+        multiworld.push_precollected(next(item for item in item_pool if item.name == "Apu Attack"))
+        item_pool.remove(next(item for item in item_pool if item.name == "Apu Attack"))
+
+
     # Use this hook to remove items from the item pool
     itemNamesToRemove = [] # List of item names
 
@@ -219,7 +243,22 @@ def after_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld, 
     slot_data["id"] = str(uuid.uuid4())
 
     # Generate costs for shops
-    slot_data["costs"] = [random.randint(100, 1000) for _ in range(42)]
+    min = world.options.minprice
+    max = world.options.maxprice
+    if min > max:
+        print(f"Simpsons: Min shop price {min} is greater than max shop price {max}. Setting min and max to {max}.")
+        min = max
+    scale = world.options.shopscalemod
+
+    slot_data["costs"] = [
+        random.randint(
+            min * (1 if level == 1 else (level - 1) * scale),
+            max * (1 if level == 1 else (level - 1) * scale)
+        )
+        for level in range(1, 8)
+        for _ in range(6)
+    ]
+
 
     return slot_data
 

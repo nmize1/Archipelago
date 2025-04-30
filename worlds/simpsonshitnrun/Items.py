@@ -760,6 +760,13 @@ item_table = [
         "useful": True,
         "id": 121886,
         "progression": False
+    },
+    {
+        "count": 6,
+        "name": "Progressive Wallet Upgrade",
+        "category": ["Progression"],
+        "id": 121887,
+        "progression": True
     }
 ]
 
