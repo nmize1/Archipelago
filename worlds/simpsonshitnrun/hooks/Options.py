@@ -29,8 +29,9 @@ from ..Helpers import is_option_enabled, get_option_value
 
 class LevelSanity(Choice):
     """Choose how you want missions to be sent in the multiworld. Levels logically require the level access item and at least 1 car from that level or higher. You're guaranteed to start with a level and it's default car with either option.
-       Linear will remove levels from the pool. Instead, you will start at the tutorial mission and play through the game in order. LxM7 will always reward you the next level instead of a random item. You'll still need to find a car from the next level.
-       Levels will add levels to the pool. You'll start the game with a random level and it's required items and receive levels from the multiworld. Missions will still be played in order for each level.
+       Linear will add progressive levels to the pool. You'll start with Level 1 and the Family Sedan, then get the next level each time you receive a progressive level item.
+       Levels will add levels to the pool. You'll start the game with a random level and it's required items and receive levels from the multiworld.
+       Regardless of your choice, missions can be played in any order on an unlocked level.
        """
     display_name = "Levelsanity"
     option_linear = 0

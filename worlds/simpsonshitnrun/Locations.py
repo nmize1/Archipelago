@@ -901,7 +901,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122393
     },
     {
@@ -910,7 +910,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122394
     },
     {
@@ -919,7 +919,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122395
     },
     {
@@ -928,7 +928,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122396
     },
     {
@@ -937,7 +937,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122397
     },
     {
@@ -946,7 +946,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122398
     },
     {
@@ -955,7 +955,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122399
     },
     {
@@ -964,7 +964,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122400
     },
     {
@@ -973,7 +973,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122401
     },
     {
@@ -982,7 +982,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122402
     },
     {
@@ -991,7 +991,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122403
     },
     {
@@ -1000,7 +1000,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122404
     },
     {
@@ -1009,7 +1009,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122405
     },
     {
@@ -1018,7 +1018,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122406
     },
     {
@@ -1027,7 +1027,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": [],
+        "requires": "|Level 1|",
         "id": 122691
     },
     {
@@ -1333,7 +1333,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122440
     },
     {
@@ -1342,7 +1342,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122441
     },
     {
@@ -1351,7 +1351,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122442
     },
     {
@@ -1360,7 +1360,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122443
     },
     {
@@ -1369,7 +1369,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122444
     },
     {
@@ -1378,7 +1378,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122445
     },
     {
@@ -1387,7 +1387,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Level 2| OR |Progressive Level:1|) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
         "id": 122446
     },
     {
@@ -1396,7 +1396,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122447
     },
     {
@@ -1405,7 +1405,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122448
     },
     {
@@ -1414,7 +1414,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122449
     },
     {
@@ -1423,7 +1423,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 2| OR |Progressive Level:1|)",
         "id": 122450
     },
     {
@@ -1432,7 +1432,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade|",
+        "requires": "|Progressive Wallet Upgrade|",
         "id": 122451
     },
     {
@@ -1441,7 +1441,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade|",
+        "requires": "|Progressive Wallet Upgrade|",
         "id": 122452
     },
     {
@@ -1450,7 +1450,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade|",
+        "requires": "|Progressive Wallet Upgrade|",
         "id": 122453
     },
     {
@@ -1459,7 +1459,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade|",
+        "requires": "|Progressive Wallet Upgrade|",
         "id": 122454
     },
     {
@@ -1468,7 +1468,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade|",
+        "requires": "|Progressive Wallet Upgrade|",
         "id": 122455
     },
     {
@@ -1477,7 +1477,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade|",
+        "requires": "|Progressive Wallet Upgrade|",
         "id": 122456
     },
     {
@@ -1486,7 +1486,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:2|",
+        "requires": "|Progressive Wallet Upgrade:2|",
         "id": 122457
     },
     {
@@ -1495,7 +1495,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:2|",
+        "requires": "|Progressive Wallet Upgrade:2|",
         "id": 122458
     },
     {
@@ -1504,7 +1504,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:2|",
+        "requires": "|Progressive Wallet Upgrade:2|",
         "id": 122459
     },
     {
@@ -1513,7 +1513,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:2|",
+        "requires": "|Progressive Wallet Upgrade:2|",
         "id": 122460
     },
     {
@@ -1522,7 +1522,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:2|",
+        "requires": "|Progressive Wallet Upgrade:2|",
         "id": 122461
     },
     {
@@ -1531,7 +1531,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:2|",
+        "requires": "|Progressive Wallet Upgrade:2|",
         "id": 122462
     },
     {
@@ -1783,7 +1783,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122490
     },
     {
@@ -1792,7 +1792,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122491
     },
     {
@@ -1801,7 +1801,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122492
     },
     {
@@ -1810,7 +1810,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122493
     },
     {
@@ -1819,7 +1819,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122494
     },
     {
@@ -1828,7 +1828,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122495
     },
     {
@@ -1837,7 +1837,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122496
     },
     {
@@ -1846,7 +1846,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122497
     },
     {
@@ -1855,7 +1855,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122498
     },
     {
@@ -1864,7 +1864,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122499
     },
     {
@@ -1873,7 +1873,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 3| OR |Progressive Level:2|)",
         "id": 122500
     },
     {
@@ -2125,7 +2125,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122528
     },
     {
@@ -2134,7 +2134,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122529
     },
     {
@@ -2143,7 +2143,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122530
     },
     {
@@ -2151,7 +2151,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "region": "Collectables",
         "id": 122531
     },
@@ -2161,7 +2161,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122532
     },
     {
@@ -2170,7 +2170,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122533
     },
     {
@@ -2179,7 +2179,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122534
     },
     {
@@ -2188,7 +2188,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122535
     },
     {
@@ -2197,7 +2197,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122536
     },
     {
@@ -2206,7 +2206,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122537
     },
     {
@@ -2215,7 +2215,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122538
     },
     {
@@ -2224,7 +2224,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122539
     },
     {
@@ -2233,7 +2233,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122540
     },
     {
@@ -2242,7 +2242,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122541
     },
     {
@@ -2251,7 +2251,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 4| OR |Progressive Level:3|)",
         "id": 122542
     },
     {
@@ -2260,7 +2260,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:3|",
+        "requires": "|Progressive Wallet Upgrade:3|",
         "id": 122543
     },
     {
@@ -2269,7 +2269,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:3|",
+        "requires": "|Progressive Wallet Upgrade:3|",
         "id": 122544
     },
     {
@@ -2278,7 +2278,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:3|",
+        "requires": "|Progressive Wallet Upgrade:3|",
         "id": 122545
     },
     {
@@ -2287,7 +2287,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:3|",
+        "requires": "|Progressive Wallet Upgrade:3|",
         "id": 122546
     },
     {
@@ -2296,7 +2296,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:3|",
+        "requires": "|Progressive Wallet Upgrade:3|",
         "id": 122547
     },
     {
@@ -2305,7 +2305,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:3|",
+        "requires": "|Progressive Wallet Upgrade:3|",
         "id": 122548
     },
     {
@@ -2557,7 +2557,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 5| OR |Progressive Level:4|)",
         "id": 122576
     },
     {
@@ -2566,7 +2566,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 5| OR |Progressive Level:4|)",
         "id": 122577
     },
     {
@@ -2575,7 +2575,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 5| OR |Progressive Level:4|)",
         "id": 122578
     },
     {
@@ -2584,7 +2584,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 5| OR |Progressive Level:4|)",
         "id": 122579
     },
     {
@@ -2593,7 +2593,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 5| OR |Progressive Level:4|)",
         "id": 122580
     },
     {
@@ -2602,7 +2602,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 5| OR |Progressive Level:4|)",
         "id": 122690
     },
     {
@@ -2611,7 +2611,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:4|",
+        "requires": "|Progressive Wallet Upgrade:4|",
         "id": 122581
     },
     {
@@ -2620,7 +2620,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:4|",
+        "requires": "|Progressive Wallet Upgrade:4|",
         "id": 122582
     },
     {
@@ -2629,7 +2629,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:4|",
+        "requires": "|Progressive Wallet Upgrade:4|",
         "id": 122583
     },
     {
@@ -2638,7 +2638,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:4|",
+        "requires": "|Progressive Wallet Upgrade:4|",
         "id": 122584
     },
     {
@@ -2647,7 +2647,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:4|",
+        "requires": "|Progressive Wallet Upgrade:4|",
         "id": 122585
     },
     {
@@ -2656,7 +2656,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:4|",
+        "requires": "|Progressive Wallet Upgrade:4|",
         "id": 122586
     },
     {
@@ -2665,7 +2665,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:5|",
+        "requires": "|Progressive Wallet Upgrade:5|",
         "id": 122587
     },
     {
@@ -2674,7 +2674,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:5|",
+        "requires": "|Progressive Wallet Upgrade:5|",
         "id": 122588
     },
     {
@@ -2683,7 +2683,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:5|",
+        "requires": "|Progressive Wallet Upgrade:5|",
         "id": 122589
     },
     {
@@ -2935,7 +2935,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122617
     },
     {
@@ -2944,7 +2944,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122618
     },
     {
@@ -2953,7 +2953,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122619
     },
     {
@@ -2962,7 +2962,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122620
     },
     {
@@ -2971,7 +2971,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Level 6| OR |Progressive Level:5|) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
         "id": 122621
     },
     {
@@ -2980,7 +2980,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122622
     },
     {
@@ -2989,7 +2989,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122623
     },
     {
@@ -2998,7 +2998,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122624
     },
     {
@@ -3007,7 +3007,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122625
     },
     {
@@ -3016,7 +3016,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122626
     },
     {
@@ -3025,7 +3025,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 6| OR |Progressive Level:5|)",
         "id": 122627
     },
     {
@@ -3034,7 +3034,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:5|",
+        "requires": "|Progressive Wallet Upgrade:5|",
         "id": 122628
     },
     {
@@ -3043,7 +3043,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:5|",
+        "requires": "|Progressive Wallet Upgrade:5|",
         "id": 122629
     },
     {
@@ -3052,7 +3052,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:5|",
+        "requires": "|Progressive Wallet Upgrade:5|",
         "id": 122630
     },
     {
@@ -3061,7 +3061,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:6|",
+        "requires": "|Progressive Wallet Upgrade:6|",
         "id": 122631
     },
     {
@@ -3070,7 +3070,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:6|",
+        "requires": "|Progressive Wallet Upgrade:6|",
         "id": 122632
     },
     {
@@ -3079,7 +3079,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:6|",
+        "requires": "|Progressive Wallet Upgrade:6|",
         "id": 122633
     },
     {
@@ -3331,7 +3331,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122661
     },
     {
@@ -3340,7 +3340,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122662
     },
     {
@@ -3349,7 +3349,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122663
     },
     {
@@ -3358,7 +3358,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122664
     },
     {
@@ -3367,7 +3367,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122665
     },
     {
@@ -3376,7 +3376,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122666
     },
     {
@@ -3385,7 +3385,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122667
     },
     {
@@ -3394,7 +3394,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122668
     },
     {
@@ -3403,7 +3403,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122669
     },
     {
@@ -3412,7 +3412,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122670
     },
     {
@@ -3421,7 +3421,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122671
     },
     {
@@ -3430,7 +3430,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122672
     },
     {
@@ -3439,7 +3439,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122673
     },
     {
@@ -3448,7 +3448,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122674
     },
     {
@@ -3457,7 +3457,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": [],
+        "requires": "(|Level 7| OR |Progressive Level:6|)",
         "id": 122675
     },
     {
@@ -3466,7 +3466,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:6|",
+        "requires": "|Progressive Wallet Upgrade:6|",
         "id": 122676
     },
     {
@@ -3475,7 +3475,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:6|",
+        "requires": "|Progressive Wallet Upgrade:6|",
         "id": 122677
     },
     {
@@ -3484,7 +3484,7 @@ location_table = [
         "category": [
             "Shop"
         ],
-        "requires": "|Wallet Upgrade:6|",
+        "requires": "|Progressive Wallet Upgrade:6|",
         "id": 122678
     },
     {
@@ -3571,7 +3571,7 @@ location_table = [
         "region": "Manual",
         "category": [],
         "victory": True,
-        "requires": "|Level 7| AND {collectedWasps()} AND {collectedCards()}",
+        "requires": "(|Level 7| OR |Progressive Level:6|) AND {collectedWasps()} AND {collectedCards()}",
         "id": 122688
     },
     {

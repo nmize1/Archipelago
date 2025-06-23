@@ -59,38 +59,19 @@ def before_create_items_starting(item_pool: list, world: World, multiworld: Mult
 # The item pool after starting items are processed but before filler is added, in case you want to see the raw item pool at that stage
 def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
     #Add starting items and set locations for linear setting
-    #Linear: Place level 1 and family sedan in start inventory. Ensure final level x mission reward is level x + 1
+    #Linear: Place level 1 and family sedan in start inventory. Remove regular level items.
     if world.options.levelsanity == 0:
         multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 1"))
         multiworld.push_precollected(next(item for item in item_pool if item.name == "Family Sedan"))
         item_pool.remove(next(item for item in item_pool if item.name == "Level 1"))
         item_pool.remove(next(item for item in item_pool if item.name == "Family Sedan"))
-        #level 1 to 2
-        loc = multiworld.get_location("(L1M7) The Fat and the Furious", player)
-        lvl = next(item for item in item_pool if item.name == "Level 2")
-        loc.place_locked_item(lvl)
-        #level 2 to 3
-        loc = multiworld.get_location("(L2M7) Cell-Outs", player)
-        lvl = next(item for item in item_pool if item.name == "Level 3")
-        loc.place_locked_item(lvl)
-        #level 3 to 4
-        loc = multiworld.get_location("(L3M7) The Old Pirate of the Sea", player)
-        lvl = next(item for item in item_pool if item.name == "Level 4")
-        loc.place_locked_item(lvl)
-        #level 4 to 5
-        loc = multiworld.get_location("(L4M7) From Outer Space", player)
-        lvl = next(item for item in item_pool if item.name == "Level 5")
-        loc.place_locked_item(lvl)
-        #level 5 to 6
-        loc = multiworld.get_location("(L5M7) Curious Curator", player)
-        lvl = next(item for item in item_pool if item.name == "Level 6")
-        loc.place_locked_item(lvl)
-        #level 6 to 7
-        loc = multiworld.get_location("(L6M7) Kang and Kodos Strike Back", player)
-        lvl = next(item for item in item_pool if item.name == "Level 7")
-        loc.place_locked_item(lvl)
 
-    #level: Place random level and it's starting car in start inventory and we're done
+        itemNamesToRemove = ["Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7"]
+        for itemName in itemNamesToRemove:
+            item = next(i for i in item_pool if i.name == itemName)
+            item_pool.remove(item)
+
+    #level: Place random level and it's starting car in start inventory and remove progressive level items
     elif world.options.levelsanity == 1:
         lvl = random.randrange(6)
         if lvl == 0:
@@ -128,6 +109,8 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
             multiworld.push_precollected(next(item for item in item_pool if item.name == "70's Sports Car"))
             item_pool.remove(next(item for item in item_pool if item.name == "Level 7"))
             item_pool.remove(next(item for item in item_pool if item.name == "70's Sports Car"))
+
+        item_pool = [item for item in item_pool if not item.name.startswith("Progressive Level")]
 
     else:
         raise OptionError("Levelsanity option not recognized.")

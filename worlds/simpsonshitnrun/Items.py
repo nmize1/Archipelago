@@ -767,7 +767,14 @@ item_table = [
         "category": ["Progression"],
         "id": 121887,
         "progression": True
-    }
+    },
+    {
+        "count": 6,
+        "name": "Progressive Level",
+        "category": ["Progression"],
+        "id": 121888,
+        "progression": True
+    },
 ]
 
 for item in item_table:
