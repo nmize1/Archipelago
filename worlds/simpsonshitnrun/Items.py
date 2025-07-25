@@ -261,7 +261,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Sedan",
+        "name": "Moe's Sedan",
         "category": ["Cars", "Level 2 Cars"],
         "useful": True,
         "id": 121820,
@@ -292,7 +292,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Sedan",
+        "name": "Skinner's Sedan",
         "category": ["Cars", "Level 3 Cars"],
         "useful": True,
         "id": 121824,

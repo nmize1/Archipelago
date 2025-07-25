@@ -69,7 +69,9 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
         itemNamesToRemove = ["Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7"]
         for itemName in itemNamesToRemove:
             item = next(i for i in item_pool if i.name == itemName)
+            print(item.name)
             item_pool.remove(item)
+        print(item_pool)
 
     #level: Place random level and it's starting car in start inventory and remove progressive level items
     elif world.options.levelsanity == 1:

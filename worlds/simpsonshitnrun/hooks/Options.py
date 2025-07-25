@@ -92,7 +92,7 @@ class MinShopPrice(Range):
     """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
     display_name = "Min Shop Price"
     range_start = 0
-    range_end = 1000
+    range_end = 500
     default = 100
 
 class MaxShopPrice(Range):

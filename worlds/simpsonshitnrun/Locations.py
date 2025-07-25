@@ -416,7 +416,7 @@ location_table = [
         "category": [
             "Level 5 Mission"
         ],
-        "requires": "",
+        "requires": "|Apu - Double Jump|",
         "id": 122337
     },
     {
@@ -1031,7 +1031,7 @@ location_table = [
         "id": 122691
     },
     {
-        "name": "(LVL 1) Shop Item 1",
+        "name": "(LVL 1) Shop Check 1",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1040,7 +1040,7 @@ location_table = [
         "id": 122407
     },
     {
-        "name": "(LVL 1) Shop Item 2",
+        "name": "(LVL 1) Shop Check 2",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1049,7 +1049,7 @@ location_table = [
         "id": 122408
     },
     {
-        "name": "(LVL 1) Shop Item 3",
+        "name": "(LVL 1) Shop Check 3",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1058,7 +1058,7 @@ location_table = [
         "id": 122409
     },
     {
-        "name": "(LVL 1) Shop Item 4",
+        "name": "(LVL 1) Shop Check 4",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1067,7 +1067,7 @@ location_table = [
         "id": 122410
     },
     {
-        "name": "(LVL 1) Shop Item 5",
+        "name": "(LVL 1) Shop Check 5",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1076,7 +1076,7 @@ location_table = [
         "id": 122411
     },
     {
-        "name": "(LVL 1) Shop Item 6",
+        "name": "(LVL 1) Shop Check 6",
         "region": "Collectables",
         "category": [
             "Shop"
@@ -1166,7 +1166,7 @@ location_table = [
         "id": 122421
     },
     {
-        "name": "(LVL 2) WASP - UpStair Beside Monorail",
+        "name": "(LVL 2) WASP - Upstair Beside Monorail",
         "region": "Collectables",
         "category": [
             "Level 2 WASP"
@@ -1216,7 +1216,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "|Bart Attack|",
         "id": 122427
     },
     {
@@ -1252,7 +1252,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "|Bart Attack| OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Bart Attack| AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122431
     },
     {
@@ -1904,7 +1904,7 @@ location_table = [
         "id": 122503
     },
     {
-        "name": "(LVL 4) WASP - Wiggums Backyard",
+        "name": "(LVL 4) WASP - Wiggum's Backyard 1",
         "region": "Collectables",
         "category": [
             "Level 4 WASP"
@@ -1913,7 +1913,7 @@ location_table = [
         "id": 122504
     },
     {
-        "name": "(LVL 4) WASP - Wiggums Backyard 2",
+        "name": "(LVL 4) WASP - Wiggum's Backyard 2",
         "region": "Collectables",
         "category": [
             "Level 4 WASP"
@@ -2111,12 +2111,12 @@ location_table = [
         "id": 122526
     },
     {
-        "name": "(LVL 4) CARD - TrailerPark",
+        "name": "(LVL 4) CARD - Trailer Park",
         "region": "Collectables",
         "category": [
             "Level 4 CARD"
         ],
-        "requires": [],
+        "requires": ["|Marge Double Jump|"],
         "id": 122527
     },
     {
@@ -2534,7 +2534,7 @@ location_table = [
         "id": 122573
     },
     {
-        "name": "(LVL 5) CARD - Firetruck",
+        "name": "(LVL 5) CARD - Billboard With Falling Ledges",
         "region": "Collectables",
         "category": [
             "Level 5 CARD"
@@ -3187,7 +3187,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Homer Attack| AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122645
     },
     {
@@ -3196,7 +3196,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "|Homer Attack| OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Homer Attack| AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122646
     },
     {
@@ -3268,7 +3268,7 @@ location_table = [
         "category": [
             "Level 7 CARD"
         ],
-        "requires": [],
+        "requires": ["|Homer Double Jump|"],
             "id": 122654
     },
     {
