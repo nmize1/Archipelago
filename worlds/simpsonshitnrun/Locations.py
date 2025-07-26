@@ -416,7 +416,7 @@ location_table = [
         "category": [
             "Level 5 Mission"
         ],
-        "requires": "|Apu - Double Jump|",
+        "requires": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
         "id": 122337
     },
     {
@@ -2116,7 +2116,7 @@ location_table = [
         "category": [
             "Level 4 CARD"
         ],
-        "requires": ["|Marge Double Jump|"],
+        "requires": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
         "id": 122527
     },
     {
@@ -3268,7 +3268,7 @@ location_table = [
         "category": [
             "Level 7 CARD"
         ],
-        "requires": ["|Homer Double Jump|"],
+        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
             "id": 122654
     },
     {
