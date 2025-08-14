@@ -706,6 +706,14 @@ item_table = [
         "progression": False
     },
     {
+        "count": 20,
+        "name": "Eject",
+        "category": ["Filler"],
+        "trap": True,
+        "id": 121889, #highest currently
+        "progression": False
+    },
+    {
         "count": 1,
         "name": "Speed Rocket",
         "category": ["Cars", "Level 1 Cars"],
