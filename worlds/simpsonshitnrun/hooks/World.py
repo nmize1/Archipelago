@@ -16,7 +16,6 @@ from ..Helpers import is_option_enabled, get_option_value
 
 # calling logging.info("message") anywhere below in this file will output the message to both console and log file
 import logging
-import random
 import uuid
 
 ########################################################################################
@@ -73,9 +72,9 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
             item_pool.remove(item)
         print(item_pool)
 
-    #level: Place random level and it's starting car in start inventory and remove progressive level items
+    #level: Place  level and it's starting car in start inventory and remove progressive level items
     elif world.options.levelsanity == 1:
-        lvl = random.randrange(6)
+        lvl = world.random.randrange(6)
         if lvl == 0:
             multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 1"))
             multiworld.push_precollected(next(item for item in item_pool if item.name == "Family Sedan"))
@@ -236,7 +235,7 @@ def after_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld, 
     scale = world.options.shopscalemod
 
     slot_data["costs"] = [
-        random.randint(
+        world.random.randint(
             min * (1 if level == 1 else (level - 1) * scale),
             max * (1 if level == 1 else (level - 1) * scale)
         )
