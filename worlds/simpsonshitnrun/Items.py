@@ -507,7 +507,7 @@ item_table = [
     },
     {
         "count": 20,
-        "name": "Reset Car",
+        "name": "Launch Car",
         "category": ["Filler"],
         "trap": True,
         "id": 121852,

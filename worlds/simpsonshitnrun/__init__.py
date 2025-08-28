@@ -103,7 +103,14 @@ class SimpsonsHitAndRunWorld(World):
             item = self.item_name_to_item[name]
             item_count = int(item.get("count", 1))
 
-            if item.get("trap"):
+            trap_options = {
+                "Eject": "eject",
+                "Launch Car": "launch",
+                "Duff Trap": "duff",
+                "Hit N Run": "hnr"
+            }
+
+            if name in trap_options and get_option_value(self.multiworld, self.player, trap_options[name]):
                 traps.append(name)
 
             if "category" in item:
@@ -333,6 +340,7 @@ class SimpsonsHitAndRunWorld(World):
 
     def adjust_filler_items(self, item_pool, traps):
         extras = len(self.multiworld.get_unfilled_locations(player=self.player)) - len(item_pool)
+
         if extras > 0:
             trap_percent = get_option_value(self.multiworld, self.player, "filler_traps")
             if not traps:

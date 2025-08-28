@@ -110,6 +110,25 @@ class ShopScaleMod(Range):
     range_end = 5
     default = 2
 
+class EjectTraps(Toggle):
+    """Whether to include Eject traps in the item pool."""
+    default = True
+    display_name = "Enable Eject Traps"
+
+class DuffTraps(Toggle):
+    """Whether to include Duff traps in the item pool."""
+    default = True
+    display_name = "Enable Duff Traps"
+
+class LaunchTraps(Toggle):
+    """Whether to include Launch traps in the item pool."""
+    default = True
+    display_name = "Enable Launch Traps"
+
+class HNRTraps(Toggle):
+    """Whether to include Hit N Run traps in the item pool."""
+    default = True
+    display_name = "Enable Hit N Run Traps"
 
 
 
@@ -125,6 +144,10 @@ def before_options_defined(options: dict) -> dict:
     options["minprice"] = MinShopPrice
     options["maxprice"] = MaxShopPrice
     options["shopscalemod"] = ShopScaleMod
+    options["eject"] = EjectTraps
+    options["duff"] = DuffTraps
+    options["launch"] = LaunchTraps
+    options["hnr"] = HNRTraps
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options
