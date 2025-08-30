@@ -735,7 +735,7 @@ item_table = [
         "name": "Apu Gagfinder",
         "category": ["Gags"],
         "progression": True,
-        "id": 121899
+        "id": 121899 #highest id
     },
     {
         "count": 50,
