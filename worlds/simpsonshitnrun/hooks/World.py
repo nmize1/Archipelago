@@ -58,108 +58,67 @@ def before_create_items_starting(item_pool: list, world: World, multiworld: Mult
 
 # The item pool after starting items are processed but before filler is added, in case you want to see the raw item pool at that stage
 def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
+    # Use this hook to remove items from the item pool
+    itemNamesToRemove = [] # List of item names
+    itemNamesToStart = []
+
     #Add starting items and set locations for linear setting
     #Linear: Place level 1 and family sedan in start inventory. Remove regular level items.
     if world.options.levelsanity == 0:
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 1"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Family Sedan"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Level 1"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Family Sedan"))
-
-        itemNamesToRemove = ["Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7"]
-        for itemName in itemNamesToRemove:
-            item = next(i for i in item_pool if i.name == itemName)
-            print(item.name)
-            item_pool.remove(item)
-        print(item_pool)
+        itemNamesToStart.extend("Level 1", "Family Sedan")
+        itemNamesToRemove.extend(["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Family Sedan"])
+        #print(item_pool)
 
     #level: Place random level and it's starting car in start inventory and remove progressive level items
     elif world.options.levelsanity == 1:
         lvl = random.randrange(6)
         if lvl == 0:
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 1"))
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Family Sedan"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Level 1"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Family Sedan"))
+            itemNamesToStart.extend(["Level 1", "Family Sedan"])
+            itemNamesToRemove.extend(["Level 1", "Family Sedan"])
         elif lvl == 1:
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 2"))
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Honor Roller"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Level 2"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Honor Roller"))
+            itemNamesToStart.extend(["Level 2", "Honor Roller"])
+            itemNamesToRemove.extend(["Level 2", "Honor Roller"])
         elif lvl == 2:
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 3"))
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Malibu Stacy Car"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Level 3"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Malibu Stacy Car"))
+            itemNamesToStart.extend(["Level 3", "Malibu Stacy Car"])
+            itemNamesToRemove.extend(["Level 3", "Malibu Stacy Car"])
         elif lvl == 3:
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 4"))
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Canyonero"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Level 4"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Canyonero"))
+            itemNamesToStart.extend(["Level 4", "Canyonero"])
+            itemNamesToRemove.extend(["Level 4", "Canyonero"])
         elif lvl == 4:
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 5"))
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Longhorn"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Level 5"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Longhorn"))
+            itemNamesToStart.extend(["Level 5", "Longhorn"])
+            itemNamesToRemove.extend(["Level 5", "Longhorn"])
         elif lvl == 5:
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 6"))
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Ferrini - Red"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Level 6"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Ferrini - Red"))
+            itemNamesToStart.extend(["Level 6", "Ferrini - Red"])
+            itemNamesToRemove.extend(["Level 6", "Ferrini - Red"])
         elif lvl == 6:
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "Level 7"))
-            multiworld.push_precollected(next(item for item in item_pool if item.name == "70's Sports Car"))
-            item_pool.remove(next(item for item in item_pool if item.name == "Level 7"))
-            item_pool.remove(next(item for item in item_pool if item.name == "70's Sports Car"))
+            itemNamesToStart.extend(["Level 7", "70s Sports Car"])
+            itemNamesToRemove.extend(["Level 7", "70s Sports Car"])
 
-        item_pool = [item for item in item_pool if not item.name.startswith("Progressive Level")]
+        for i in range(6):
+            itemNamesToRemove.append("Progressive Level")
 
     else:
         raise OptionError("Levelsanity option not recognized.")
 
     if world.options.shuffleebrake == False:
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Homer E-Brake"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Homer E-Brake"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Bart E-Brake"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Bart E-Brake"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Lisa E-Brake"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Lisa E-Brake"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Marge E-Brake"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Marge E-Brake"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Apu E-Brake"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Apu E-Brake"))
+        itemNamesToStart.extend(["Homer E-Brake", "Bart E-Brake", "Lisa E-Brake", "Marge E-Brake", "Apu E-Brake"])
+        itemNamesToRemove.extend(["Homer E-Brake", "Bart E-Brake", "Lisa E-Brake", "Marge E-Brake", "Apu E-Brake"])
 
     if world.options.moverandomizer == False:
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Homer Double Jump"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Homer Double Jump"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Bart Double Jump"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Bart Double Jump"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Lisa Double Jump"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Lisa Double Jump"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Marge Double Jump"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Marge Double Jump"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Apu Double Jump"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Apu Double Jump"))
+        itemNamesToStart.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack",
+                                 "Homer Double Jump", "Bart Double Jump", "Lisa Double Jump", "Marge Double Jump", "Apu Double Jump"])
+        itemNamesToRemove.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack",
+                                  "Homer Double Jump", "Bart Double Jump", "Lisa Double Jump", "Marge Double Jump", "Apu Double Jump"])
 
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Homer Attack"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Homer Attack"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Bart Attack"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Bart Attack"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Lisa Attack"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Lisa Attack"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Marge Attack"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Marge Attack"))
-        multiworld.push_precollected(next(item for item in item_pool if item.name == "Apu Attack"))
-        item_pool.remove(next(item for item in item_pool if item.name == "Apu Attack"))
+    if world.options.shufflegagfinder == False:
+        itemNamesToRemove.extend(["Homer Gagfinder", "Bart Gagfinder", "Lisa Gagfinder", "Marge Gagfinder", "Apu Gagfinder"])
 
+    if world.options.shufflecheckeredflags == False:
+        itemNamesToRemove.extend(["Homer Checkered Flag", "Bart Checkered Flag", "Lisa Checkered Flag", "Marge Checkered Flag", "Apu Checkered Flag"])
 
-    # Use this hook to remove items from the item pool
-    itemNamesToRemove = [] # List of item names
-
-    # Add your code here to calculate which items to remove.
-    #
-    # Because multiple copies of an item can exist, you need to add an item name
-    # to the list multiple times if you want to remove multiple copies of it.
+    for itemName in itemNamesToStart:
+        item = next(i for i in item_pool if i.name == itemName)
+        multiworld.push_precollected(next(i for i in item_pool if i == item))
 
     for itemName in itemNamesToRemove:
         item = next(i for i in item_pool if i.name == itemName)

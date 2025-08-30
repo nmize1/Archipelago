@@ -28,9 +28,13 @@ from ..Helpers import is_option_enabled, get_option_value
 #
 
 class LevelSanity(Choice):
-    """Choose how you want missions to be sent in the multiworld. Levels logically require the level access item and at least 1 car from that level or higher. You're guaranteed to start with a level and it's default car with either option.
-       Linear will add progressive levels to the pool. You'll start with Level 1 and the Family Sedan, then get the next level each time you receive a progressive level item.
-       Levels will add levels to the pool. You'll start the game with a random level and it's required items and receive levels from the multiworld.
+    """Choose how you want missions to be sent in the multiworld. Levels logically
+       require the level access item and at least 1 car from that level or higher.
+       You're guaranteed to start with a level and it's default car with either option.
+       Linear will add progressive levels to the pool. You'll start with Level 1 and
+       the Family Sedan, then get the next level each time you receive a progressive
+       level item. Levels will add levels to the pool. You'll start the game with
+       a random level and it's required items and receive levels from the multiworld.
        Regardless of your choice, missions can be played in any order on an unlocked level.
        """
     display_name = "Levelsanity"
@@ -47,6 +51,24 @@ class MoveRando(Toggle):
 
     default = True
     display_name = "Move Randomizer"
+
+class ShuffleGagfinder(Toggle):
+    """If enabled, add a Gagfinder to the pool for each Character that will be
+       required to unlock gags as that character. If disabled, gags will instead
+       be locked until you receive their Level.
+       """
+
+    default = True
+    display_name = "Shuffle Gagfinder"
+
+class ShuffleCheckeredFlags(Toggle):
+    """If enabled, add a Checkered Flag to the pool for each Character that will be
+       required to unlock races as that character. If disabled, races will instead
+       be locked until you receive their Level.
+       """
+
+    default = True
+    display_name = "Shuffle Checkered Flags"
 
 class ShuffleEBrakes(Toggle):
     """Choose whether or not to shuffle ability to use the E-Brake
@@ -136,6 +158,8 @@ class HNRTraps(Toggle):
 def before_options_defined(options: dict) -> dict:
     options["levelsanity"] = LevelSanity
     options["moverandomizer"] = MoveRando
+    options["shufflegagfinder"] = ShuffleGagfinder
+    options["shufflecheckeredflags"] = ShuffleCheckeredFlags
     options["shuffleebrake"] = ShuffleEBrakes
     options["EnableWaspPercent"] = EnableWaspPercent
     options["wasppercent"] = WaspPercent
