@@ -668,6 +668,76 @@ item_table = [
         "id": 121874
     },
     {
+        "count": 1,
+        "name": "Homer Checkered Flag",
+        "category": ["Races"],
+        "progression": True,
+        "id": 121890
+    },
+    {
+        "count": 1,
+        "name": "Bart Checkered Flag",
+        "category": ["Races"],
+        "progression": True,
+        "id": 121891
+    },
+    {
+        "count": 1,
+        "name": "Lisa Checkered Flag",
+        "category": ["Races"],
+        "progression": True,
+        "id": 121892
+    },
+    {
+        "count": 1,
+        "name": "Marge Checkered Flag",
+        "category": ["Races"],
+        "progression": True,
+        "id": 121893
+    },
+    {
+        "count": 1,
+        "name": "Apu Checkered Flag",
+        "category": ["Races"],
+        "progression": True,
+        "id": 121894
+    },
+    {
+        "count": 1,
+        "name": "Homer Gagfinder",
+        "category": ["Gags"],
+        "progression": True,
+        "id": 121895
+    },
+    {
+        "count": 1,
+        "name": "Bart Gagfinder",
+        "category": ["Gags"],
+        "progression": True,
+        "id": 121896
+    },
+    {
+        "count": 1,
+        "name": "Lisa Gagfinder",
+        "category": ["Gags"],
+        "progression": True,
+        "id": 121897
+    },
+    {
+        "count": 1,
+        "name": "Marge Gagfinder",
+        "category": ["Gags"],
+        "progression": True,
+        "id": 121898
+    },
+    {
+        "count": 1,
+        "name": "Apu Gagfinder",
+        "category": ["Gags"],
+        "progression": True,
+        "id": 121899
+    },
+    {
         "count": 50,
         "name": "Wrench",
         "category": ["Filler"],
@@ -710,7 +780,7 @@ item_table = [
         "name": "Eject",
         "category": ["Filler"],
         "trap": True,
-        "id": 121889, #highest currently
+        "id": 121889,
         "progression": False
     },
     {
