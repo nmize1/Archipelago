@@ -116,6 +116,18 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     if world.options.shufflecheckeredflags == False:
         itemNamesToRemove.extend(["Homer Checkered Flag", "Bart Checkered Flag", "Lisa Checkered Flag", "Marge Checkered Flag", "Apu Checkered Flag"])
 
+    if world.options.eject == False:
+        itemNamesToRemove.extend(["Eject"] * 20)
+
+    if world.options.duff == False:
+        itemNamesToRemove.extend(["Duff Trap"] * 20)
+
+    if world.options.hnr == False:
+        itemNamesToRemove.extend(["Hit N Run"] * 20)
+
+    if world.options.launch == False:
+        itemNamesToRemove.extend(["Launch"] * 20)
+
     for itemName in itemNamesToStart:
         item = next(i for i in item_pool if i.name == itemName)
         multiworld.push_precollected(next(i for i in item_pool if i == item))
