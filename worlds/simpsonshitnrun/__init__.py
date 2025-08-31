@@ -99,16 +99,16 @@ class SimpsonsHitAndRunWorld(World):
         traps = []
         configured_item_names = self.item_id_to_name.copy()
 
+        trap_options = {
+            "Eject": "eject",
+            "Launch": "launch",
+            "Duff Trap": "duff",
+            "Hit N Run": "hnr"
+        }
+
         for name in configured_item_names.values():
             item = self.item_name_to_item[name]
             item_count = int(item.get("count", 1))
-
-            trap_options = {
-                "Eject": "eject",
-                "Launch Car": "launch",
-                "Duff Trap": "duff",
-                "Hit N Run": "hnr"
-            }
 
             if name in trap_options and get_option_value(self.multiworld, self.player, trap_options[name]):
                 traps.append(name)
