@@ -64,7 +64,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     #Add starting items and set locations for linear setting
     #Linear: Place level 1 and family sedan in start inventory. Remove regular level items.
     if world.options.levelsanity == 0:
-        itemNamesToStart.extend("Level 1", "Family Sedan")
+        itemNamesToStart.extend(["Level 1", "Family Sedan"])
         itemNamesToRemove.extend(["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Family Sedan"])
         #print(item_pool)
 
