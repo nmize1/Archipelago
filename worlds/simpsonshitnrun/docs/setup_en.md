@@ -1,6 +1,6 @@
 # Required Software
 
-- Simpsons Hit And Run - Created and tested on the English release but *should* work on other versions.
+- Simpsons Hit And Run PC release - Created and tested on the English release but *should* work on other versions.
 - [Lucas' Mod Manager](https://modbakery.donutteam.com/releases/view/6)
 - [Archipelago](https://archipelago.gg/)
 - The latest release of the [client/memory manager and the lmlm mod](https://github.com/nmize1/AP-SHARRandomizer/releases/latest)
