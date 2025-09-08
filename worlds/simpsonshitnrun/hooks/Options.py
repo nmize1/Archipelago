@@ -110,6 +110,14 @@ class CardPercent(Range):
     range_end = 100
     default = 50
 
+class ShuffleCards(Toggle):
+    """Randomize card locations. This option adds several possible locations for
+       cards. There will still be 49 total cards with 7 in each level.
+       ***THIS OPTION IS UNIMPLEMENTED***"""
+
+    default = True
+    display_name = "Shuffle Cards"
+
 class MinShopPrice(Range):
     """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
     display_name = "Min Shop Price"
@@ -153,7 +161,6 @@ class HNRTraps(Toggle):
     display_name = "Enable Hit N Run Traps"
 
 
-
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict) -> dict:
     options["levelsanity"] = LevelSanity
@@ -165,6 +172,7 @@ def before_options_defined(options: dict) -> dict:
     options["wasppercent"] = WaspPercent
     options["EnableCardPercent"] = EnableCardPercent
     options["cardpercent"] = CardPercent
+    options["shufflecards"] = ShuffleCards
     options["minprice"] = MinShopPrice
     options["maxprice"] = MaxShopPrice
     options["shopscalemod"] = ShopScaleMod
