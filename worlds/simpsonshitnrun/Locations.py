@@ -83,7 +83,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Homer Checkered Flag|) OR |Level 1|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)}  AND |Homer Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 1|)",
         "id": 122297
     },
     {
@@ -92,7 +92,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Homer Checkered Flag|) OR |Level 1|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)}  AND |Homer Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 1|)",
         "id": 122298
     },
     {
@@ -101,7 +101,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Homer Checkered Flag|) OR |Level 1|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)}  AND |Homer Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 1|)",
         "id": 122299
     },
     {
@@ -176,7 +176,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Bart Checkered Flag|) OR |Level 2|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Bart Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 2|)",
         "id": 122308
     },
     {
@@ -185,7 +185,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Bart Checkered Flag|) OR |Level 2|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Bart Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 2|)",
         "id": 122309
     },
     {
@@ -194,7 +194,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Bart Checkered Flag|) OR |Level 2|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Bart Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 2|)",
         "id": 122310
     },
     {
@@ -271,7 +271,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Lisa Checkered Flag|) OR |Level 3| ",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Lisa Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 3|)",
         "id": 122319
     },
     {
@@ -280,7 +280,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Lisa Checkered Flag|) OR |Level 3| ",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Lisa Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 3|)",
         "id": 122320
     },
     {
@@ -289,7 +289,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Lisa Checkered Flag|) OR |Level 3| ",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Lisa Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 3|)",
         "id": 122321
     },
     {
@@ -367,7 +367,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Marge Checkered Flag|) OR |Level 4|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Marge Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 4|)",
         "id": 122330
     },
     {
@@ -376,7 +376,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Marge Checkered Flag|) OR |Level 4|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Marge Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 4|)",
         "id": 122331
     },
     {
@@ -385,7 +385,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Marge Checkered Flag|) OR |Level 4|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Marge Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 4|)",
         "id": 122332
     },
     {
@@ -463,7 +463,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Apu Checkered Flag|) OR |Level 5|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Apu Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 5|)",
         "id": 122341
     },
     {
@@ -472,7 +472,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Apu Checkered Flag|) OR |Level 5|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Apu Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 5|)",
         "id": 122342
     },
     {
@@ -481,7 +481,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Apu Checkered Flag|) OR |Level 5|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Apu Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 5|)",
         "id": 122343
     },
     {
@@ -555,7 +555,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Bart Checkered Flag|) OR |Level 6|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Bart Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 6|)",
         "id": 122352
     },
     {
@@ -564,7 +564,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Bart Checkered Flag|) OR |Level 6|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Bart Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 6|)",
         "id": 122353
     },
     {
@@ -573,7 +573,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Bart Checkered Flag|) OR |Level 6|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Bart Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 6|)",
         "id": 122354
     },
     {
@@ -652,7 +652,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Homer Checkered Flag|) OR |Level 7|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Homer Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 7|)",
         "id": 122363
     },
     {
@@ -661,7 +661,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Homer Checkered Flag|) OR |Level 7|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Homer Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 7|)",
         "id": 122364
     },
     {
@@ -670,7 +670,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
-        "requires": "(yamlenabled(shufflecheckeredflags) AND |Homer Checkered Flag|) OR |Level 7|",
+        "requires": "({YamlEnabled(shufflecheckeredflags)} AND |Homer Checkered Flag|) OR ({YamlDisabled(shufflecheckeredflags)} AND |Level 7|)",
         "id": 122365
     },
     {
@@ -922,7 +922,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122393
     },
     {
@@ -931,7 +931,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122394
     },
     {
@@ -940,7 +940,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122395
     },
     {
@@ -949,7 +949,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122396
     },
     {
@@ -958,7 +958,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122397
     },
     {
@@ -967,7 +967,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122398
     },
     {
@@ -976,7 +976,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122399
     },
     {
@@ -985,7 +985,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122400
     },
     {
@@ -994,7 +994,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122401
     },
     {
@@ -1003,7 +1003,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122402
     },
     {
@@ -1012,7 +1012,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122403
     },
     {
@@ -1021,7 +1021,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122404
     },
     {
@@ -1030,7 +1030,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122405
     },
     {
@@ -1039,7 +1039,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122406
     },
     {
@@ -1048,7 +1048,7 @@ location_table = [
         "category": [
             "Level 1 GAG"
         ],
-        "requires": "|Level 1| OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND |Level 1|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122691
     },
     {
@@ -1354,7 +1354,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122440
     },
     {
@@ -1363,7 +1363,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122441
     },
     {
@@ -1372,7 +1372,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122442
     },
     {
@@ -1381,7 +1381,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122443
     },
     {
@@ -1390,7 +1390,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122444
     },
     {
@@ -1399,7 +1399,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122445
     },
     {
@@ -1408,7 +1408,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "((|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
+        "requires": "(({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
         "id": 122446
     },
     {
@@ -1417,7 +1417,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122447
     },
     {
@@ -1426,7 +1426,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122448
     },
     {
@@ -1435,7 +1435,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122449
     },
     {
@@ -1444,7 +1444,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(|Level 2| OR |Progressive Level:1|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122450
     },
     {
@@ -1804,7 +1804,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122490
     },
     {
@@ -1813,7 +1813,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122491
     },
     {
@@ -1822,7 +1822,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122492
     },
     {
@@ -1831,7 +1831,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122493
     },
     {
@@ -1840,7 +1840,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122494
     },
     {
@@ -1849,7 +1849,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122495
     },
     {
@@ -1858,7 +1858,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122496
     },
     {
@@ -1867,7 +1867,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122497
     },
     {
@@ -1876,7 +1876,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122498
     },
     {
@@ -1885,7 +1885,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122499
     },
     {
@@ -1894,7 +1894,7 @@ location_table = [
         "category": [
             "Level 3 GAG"
         ],
-        "requires": "(|Level 3| OR |Progressive Level:2|) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 3| OR |Progressive Level:2|)) OR ({YamlEnabled(shufflegagfinder)} AND |Lisa Gagfinder|)",
         "id": 122500
     },
     {
@@ -2146,7 +2146,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122528
     },
     {
@@ -2155,7 +2155,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122529
     },
     {
@@ -2164,7 +2164,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122530
     },
     {
@@ -2172,7 +2172,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "region": "Collectables",
         "id": 122531
     },
@@ -2182,7 +2182,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122532
     },
     {
@@ -2191,7 +2191,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122533
     },
     {
@@ -2200,7 +2200,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122534
     },
     {
@@ -2209,7 +2209,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122535
     },
     {
@@ -2218,7 +2218,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122536
     },
     {
@@ -2227,7 +2227,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122537
     },
     {
@@ -2236,7 +2236,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122538
     },
     {
@@ -2245,7 +2245,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122539
     },
     {
@@ -2254,7 +2254,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122540
     },
     {
@@ -2263,7 +2263,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122541
     },
     {
@@ -2272,7 +2272,7 @@ location_table = [
         "category": [
             "Level 4 GAG"
         ],
-        "requires": "(|Level 4| OR |Progressive Level:3|) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 4| OR |Progressive Level:3|)) OR ({YamlEnabled(shufflegagfinder)} AND |Marge Gagfinder|)",
         "id": 122542
     },
     {
@@ -2578,7 +2578,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": "(|Level 5| OR |Progressive Level:4|) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 5| OR |Progressive Level:4|)) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
         "id": 122576
     },
     {
@@ -2587,7 +2587,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": "(|Level 5| OR |Progressive Level:4|) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 5| OR |Progressive Level:4|)) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
         "id": 122577
     },
     {
@@ -2596,7 +2596,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": "(|Level 5| OR |Progressive Level:4|) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 5| OR |Progressive Level:4|)) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
         "id": 122578
     },
     {
@@ -2605,7 +2605,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": "(|Level 5| OR |Progressive Level:4|) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 5| OR |Progressive Level:4|)) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
         "id": 122579
     },
     {
@@ -2614,7 +2614,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": "(|Level 5| OR |Progressive Level:4|) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 5| OR |Progressive Level:4|)) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
         "id": 122580
     },
     {
@@ -2623,7 +2623,7 @@ location_table = [
         "category": [
             "Level 5 GAG"
         ],
-        "requires": "(|Level 5| OR |Progressive Level:4|) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 5| OR |Progressive Level:4|)) OR ({YamlEnabled(shufflegagfinder)} AND |Apu Gagfinder|)",
         "id": 122690
     },
     {
@@ -2956,7 +2956,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122617
     },
     {
@@ -2965,7 +2965,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122618
     },
     {
@@ -2974,7 +2974,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122619
     },
     {
@@ -2983,7 +2983,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122620
     },
     {
@@ -2992,7 +2992,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "((|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
+        "requires": "(({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
         "id": 122621
     },
     {
@@ -3001,7 +3001,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122622
     },
     {
@@ -3010,7 +3010,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122623
     },
     {
@@ -3019,7 +3019,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122624
     },
     {
@@ -3028,7 +3028,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122625
     },
     {
@@ -3037,7 +3037,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122626
     },
     {
@@ -3046,7 +3046,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(|Level 6| OR |Progressive Level:5|) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)",
         "id": 122627
     },
     {
@@ -3352,7 +3352,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122661
     },
     {
@@ -3361,7 +3361,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122662
     },
     {
@@ -3370,7 +3370,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122663
     },
     {
@@ -3379,7 +3379,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122664
     },
     {
@@ -3388,7 +3388,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122665
     },
     {
@@ -3397,7 +3397,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122666
     },
     {
@@ -3406,7 +3406,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122667
     },
     {
@@ -3415,7 +3415,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122668
     },
     {
@@ -3424,7 +3424,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122669
     },
     {
@@ -3433,7 +3433,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122670
     },
     {
@@ -3442,7 +3442,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122671
     },
     {
@@ -3451,7 +3451,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122672
     },
     {
@@ -3460,7 +3460,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122673
     },
     {
@@ -3469,7 +3469,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122674
     },
     {
@@ -3478,7 +3478,7 @@ location_table = [
         "category": [
             "Level 7 GAG"
         ],
-        "requires": "(|Level 7| OR |Progressive Level:6|) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
+        "requires": "({YamlDisabled(shufflegagfinder)} AND (|Level 7| OR |Progressive Level:6|)) OR ({YamlEnabled(shufflegagfinder)} AND |Homer Gagfinder|)",
         "id": 122675
     },
     {
