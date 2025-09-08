@@ -391,7 +391,7 @@ class SimpsonsHitAndRunWorld(World):
     def client_data(self):
         return {
             "game": self.game,
-            'apworld_version': "Beta 0.2.6"
+            'apworld_version': "Beta 0.2.6",
             'player_name': self.multiworld.get_player_name(self.player),
             'player_id': self.player,
             'items': self.item_name_to_item,

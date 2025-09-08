@@ -8,7 +8,8 @@
       "Level 5",
       "Level 6",
       "Level 7",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
 
 		"requires": "|Level 1| AND |@Cars:1|"
@@ -22,7 +23,8 @@
       "Level 5",
       "Level 6",
       "Level 7",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
     "requires": "(|Level 2| OR |Progressive Level:1|) AND (|@Level 2 Cars:1| OR |@Level 3 Cars:1| OR |@Level 4 Cars:1| OR |@Level 5 Cars:1| OR |@Level 6 Cars:1| OR |@Level 7 Cars:1|)"
   },
@@ -35,7 +37,8 @@
       "Level 5",
       "Level 6",
       "Level 7",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
     "requires": "(|Level 3| OR |Progressive Level:2|) AND (|@Level 3 Cars:1| OR |@Level 4 Cars:1| OR |@Level 5 Cars:1| OR |@Level 6 Cars:1| OR |@Level 7 Cars:1|)"
   },
@@ -48,7 +51,8 @@
       "Level 5",
       "Level 6",
       "Level 7",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
     "requires": "(|Level 4| OR |Progressive Level:3|) AND (|@Level 4 Cars:1| OR |@Level 5 Cars:1| OR |@Level 6 Cars:1| OR |@Level 7 Cars:1|)"
   },
@@ -61,7 +65,8 @@
       "Level 4",
       "Level 6",
       "Level 7",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
     "requires": "(|Level 5| OR |Progressive Level:4|) AND (|@Level 5 Cars:1| OR |@Level 6 Cars:1| OR |@Level 7 Cars:1|)"
   },
@@ -74,7 +79,8 @@
       "Level 4",
       "Level 5",
       "Level 7",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
     "requires": "(|Level 6| OR |Progressive Level:5|) AND (|@Level 6 Cars:1| OR |@Level 7 Cars:1|)"
   },
@@ -87,7 +93,8 @@
       "Level 4",
       "Level 5",
       "Level 6",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
     "requires": "(|Level 7| OR |Progressive Level:6|) AND |@Level 7 Cars:1|"
   },
@@ -100,7 +107,23 @@
       "Level 4",
       "Level 5",
       "Level 6",
-      "Level 7"
+      "Level 7",
+      "Races"
+    ],
+
+    "requires": []
+  },
+  "Races": {
+
+    "connects_to": [
+      "Level 1",
+      "Level 2",
+      "Level 3",
+      "Level 4",
+      "Level 5",
+      "Level 6",
+      "Level 7",
+      "Collectables"
     ],
 
     "requires": []
@@ -117,7 +140,8 @@
       "Level 5",
       "Level 6",
       "Level 7",
-      "Collectables"
+      "Collectables",
+      "Races"
     ],
 
 		"requires": []
