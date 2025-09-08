@@ -17,7 +17,7 @@ from .DataValidation import runGenerationDataValidation, runPreFillDataValidatio
 from .Regions import create_regions
 from .Items import ManualItem
 from .Rules import set_rules
-from .Options import manual_options_data
+from .Options import SimpsonsHitAndRunOptions
 from .Helpers import is_option_enabled, is_item_enabled, get_option_value
 
 from BaseClasses import ItemClassification, Tutorial, Item
@@ -38,7 +38,7 @@ class SimpsonsHitAndRunWorld(World):
     game = "The Simpsons Hit And Run"
     web = world_webworld
 
-    options_dataclass = manual_options_data
+    options_dataclass = SimpsonsHitAndRunOptions
     data_version = 2
     required_client_version = (0, 5, 0)
 
