@@ -2,8 +2,8 @@ from dataclasses import dataclass
 from Options import (Toggle, Choice, Range, PerGameCommonOptions, DeathLink)
 
 class FillerTrapPercent(Range):
-    diplay_name = "Filler Traps"
     """How many fillers will be replaced with traps. 0 means no additional traps, 100 means all fillers are traps."""
+    display_name = "Filler Traps"
     range_end = 100
 
 
