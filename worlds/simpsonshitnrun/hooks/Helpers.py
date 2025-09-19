@@ -1,7 +1,7 @@
 from typing import Optional
 from BaseClasses import MultiWorld
 from ..Locations import ManualLocation
-from ..Items import ManualItem
+from ..Items import SHARItem
 
 
 # Use this if you want to override the default behavior of is_option_enabled
@@ -11,7 +11,7 @@ def before_is_category_enabled(multiworld: MultiWorld, player: int, category_nam
 
 # Use this if you want to override the default behavior of is_option_enabled
 # Return True to enable the item, False to disable it, or None to use the default behavior
-def before_is_item_enabled(multiworld: MultiWorld, player: int, item: ManualItem) -> Optional[bool]:
+def before_is_item_enabled(multiworld: MultiWorld, player: int, item: SHARItem) -> Optional[bool]:
     return None
 
 # Use this if you want to override the default behavior of is_option_enabled

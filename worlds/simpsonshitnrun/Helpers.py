@@ -2,7 +2,7 @@ from BaseClasses import MultiWorld, Item
 from typing import Optional, List
 from worlds.AutoWorld import World
 from .Data import category_table
-from .Items import ManualItem
+from .Items import SHARItem
 from .Locations import ManualLocation
 from .hooks.Helpers import before_is_category_enabled, before_is_item_enabled, before_is_location_enabled
 
@@ -53,7 +53,7 @@ def is_item_name_enabled(multiworld: MultiWorld, player: int, item_name: str) ->
 
     return is_item_enabled(multiworld, player, item)
 
-def is_item_enabled(multiworld: MultiWorld, player: int, item: ManualItem) -> bool:
+def is_item_enabled(multiworld: MultiWorld, player: int, item: SHARItem) -> bool:
     """Check if an item has been disabled by a yaml option."""
     hook_result = before_is_item_enabled(multiworld, player, item)
     if hook_result is not None:
