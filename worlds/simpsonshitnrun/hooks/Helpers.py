@@ -1,6 +1,6 @@
 from typing import Optional
 from BaseClasses import MultiWorld
-from ..Locations import ManualLocation
+from ..Locations import SHARLocation
 from ..Items import SHARItem
 
 
@@ -16,5 +16,5 @@ def before_is_item_enabled(multiworld: MultiWorld, player: int, item: SHARItem) 
 
 # Use this if you want to override the default behavior of is_option_enabled
 # Return True to enable the location, False to disable it, or None to use the default behavior
-def before_is_location_enabled(multiworld: MultiWorld, player: int, location: ManualLocation) -> Optional[bool]:
+def before_is_location_enabled(multiworld: MultiWorld, player: int, location: SHARLocation) -> Optional[bool]:
     return None

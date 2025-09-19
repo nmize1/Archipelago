@@ -3633,5 +3633,5 @@ location_name_to_id = {name: id for id, name in location_id_to_name.items()}
 ######################
 
 
-class ManualLocation(Location):
-    game = "Manual"
+class SHARLocation(Location):
+    game = "Simpsons Hit and Run"

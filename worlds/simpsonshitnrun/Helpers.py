@@ -3,7 +3,7 @@ from typing import Optional, List
 from worlds.AutoWorld import World
 from .Data import category_table
 from .Items import SHARItem
-from .Locations import ManualLocation
+from .Locations import SHARLocation
 from .hooks.Helpers import before_is_category_enabled, before_is_item_enabled, before_is_location_enabled
 
 from typing import Union
@@ -69,7 +69,7 @@ def is_location_name_enabled(multiworld: MultiWorld, player: int, location_name:
 
     return is_location_enabled(multiworld, player, location)
 
-def is_location_enabled(multiworld: MultiWorld, player: int, location: ManualLocation) -> bool:
+def is_location_enabled(multiworld: MultiWorld, player: int, location: SHARLocation) -> bool:
     """Check if a location has been disabled by a yaml option."""
     hook_result = before_is_location_enabled(multiworld, player, location)
     if hook_result is not None:
