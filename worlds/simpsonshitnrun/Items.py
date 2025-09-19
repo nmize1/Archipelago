@@ -883,5 +883,5 @@ item_name_to_id = {name: id for id, name in item_id_to_name.items()}
 ######################
 
 
-class SHARItem(Item):
+class SimpsonsHitAndRunItem(Item):
     game = "Simpsons Hit and Run"

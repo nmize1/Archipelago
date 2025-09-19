@@ -1,7 +1,7 @@
 from BaseClasses import Entrance, MultiWorld, Region
 from .Helpers import is_category_enabled, is_location_enabled
 from .Data import region_table
-from .Locations import SHARLocation, location_name_to_location
+from .Locations import SimpsonsHitAndRunLocation, location_name_to_location
 from worlds.AutoWorld import World
 from .hooks.Regions import before_region_table_processed
 
@@ -60,7 +60,7 @@ def create_region(world: World, multiworld: MultiWorld, player: int, name: str, 
     if locations:
         for location in locations:
             loc_id = world.location_name_to_id.get(location, 0)
-            locationObj = SHARLocation(player, location, loc_id, ret)
+            locationObj = SimpsonsHitAndRunLocation(player, location, loc_id, ret)
             if location_name_to_location[location].get('prehint'):
                 world.options.start_location_hints.value.add(location)
             ret.locations.append(locationObj)
