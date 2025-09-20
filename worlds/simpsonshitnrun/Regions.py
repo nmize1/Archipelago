@@ -4,6 +4,8 @@ from .Data import region_table
 from .Locations import SimpsonsHitAndRunLocation, location_name_to_location
 from worlds.AutoWorld import World
 from .hooks.Regions import before_region_table_processed
+import json
+import pkgutil
 
 if not region_table:
     region_table = {}
@@ -34,6 +36,7 @@ def create_regions(world: World, multiworld: MultiWorld, player: int):
             exit_array = None
 
         locations = []
+
         for location in world.location_table:
             if "region" in location and location["region"] == region:
                 if is_location_enabled(multiworld, player, location):

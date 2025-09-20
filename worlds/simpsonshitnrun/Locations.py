@@ -2,6 +2,40 @@ from BaseClasses import Location
 from .Data import location_table
 from .hooks.Locations import before_location_table_processed
 
+
+import json
+import pkgutil
+
+def add_cards(level, n_id, location_table):
+    cards_data = json.loads(pkgutil.get_data(__name__, "data\\cards.json").decode())
+
+    level_cards = cards_data[level]
+    for card in level_cards:
+        if "Desc" not in card:
+            print("Card missing 'Desc':", card)
+
+    id = n_id
+
+    for card in level_cards:
+        carless = f" AND {card['carless']})" if card['carless'] and card['carless'] != "N/A" else ")"
+        car = f" AND {card['car']})" if card['car'] and card['car'] != "N/A" else ")"
+        glitched = f" AND {card['glitched']})" if card['glitched'] and card['glitched'] != "N/A" else ")"
+
+        location_table.append({
+            "name": card["Desc"],
+            "region": f"{level}",
+            "category": [f"{level} CARD"],
+            "requires": f"({{YamlCompare(cardlogic==carless)}}{carless} OR "
+                        f"({{YamlCompare(cardlogic==cars)}}{car} OR "
+                        f"({{YamlCompare(cardlogic==glitched)}}{glitched}",
+            "id": id
+        })
+
+        id += 1
+
+    return id
+
+
 location_table = before_location_table_processed(location_table)
 victory_names: list[str] = []
 # Replaced manual code with hardcoded ids which are preferable for editing later.
@@ -78,7 +112,7 @@ location_table = [
         "id": 122296
     },
     {
-        "name": "(LVL1) Time Trial Race",
+        "name": "(LVL 1) Time Trial Race",
         "region": "Races",
         "category": [
             "Bonus Mission"
@@ -87,7 +121,7 @@ location_table = [
         "id": 122297
     },
     {
-        "name": "(LVL1) Circuit Race",
+        "name": "(LVL 1) Circuit Race",
         "region": "Races",
         "category": [
             "Bonus Mission"
@@ -96,7 +130,7 @@ location_table = [
         "id": 122298
     },
     {
-        "name": "(LVL1) Checkpoint Race",
+        "name": "(LVL 1) Checkpoint Race",
         "region": "Races",
         "category": [
             "Bonus Mission"
@@ -129,7 +163,7 @@ location_table = [
         "id": 122302
     },
     {
-        "name": "(L2M4) Bart \u2018n\u2019 Frink",
+        "name": "(L2M4) Bart 'n' Frink",
         "region": "Level 2",
         "category": [
             "Level 2 Mission"
@@ -145,7 +179,7 @@ location_table = [
         "id": 122304
     },
     {
-        "name": "(L2M6) Monkey See Monkey D\u2019oh",
+        "name": "(L2M6) Monkey See Monkey D'oh",
         "region": "Level 2",
         "category": [
             "Level 2 Mission"
@@ -397,7 +431,7 @@ location_table = [
         "id": 122333
     },
     {
-        "name": "(L5M2) \u2026and Baby Makes 8",
+        "name": "(L5M2) ...and Baby Makes 8",
         "region": "Level 5",
         "category": [
             "Level 5 Mission"
@@ -485,7 +519,7 @@ location_table = [
         "id": 122343
     },
     {
-        "name": "(L6M1) Going to the Lu\u2019",
+        "name": "(L6M1) Going to the Lu'",
         "region": "Level 6",
         "category": [
             "Level 6 Mission"
@@ -603,7 +637,7 @@ location_table = [
         "id": 122357
     },
     {
-        "name": "(L7M4) There\u2019s Something About Monty",
+        "name": "(L7M4) There's Something About Monty",
         "region": "Level 7",
         "category": [
             "Level 7 Mission"
@@ -612,7 +646,7 @@ location_table = [
         "id": 122358
     },
     {
-        "name": "(L7M5) Alien \u201cAuto\u201dtopsy Part 1",
+        "name": "(L7M5) Alien \"Auto\"topsy Part 1",
         "region": "Level 7",
         "category": [
             "Level 7 Mission"
@@ -621,7 +655,7 @@ location_table = [
         "id": 122359
     },
     {
-        "name": "(L7M6) Alien \u201cAuto\u201dtopsy Part 2",
+        "name": "(L7M6) Alien \"Auto\"topsy Part 2",
         "region": "Level 7",
         "category": [
             "Level 7 Mission"
@@ -630,7 +664,7 @@ location_table = [
         "id": 122360
     },
     {
-        "name": "(L7M7) Alien \u201cAuto\u201dtopsy Part 3",
+        "name": "(L7M7) Alien \"Auto\"topsy Part 3",
         "region": "Level 7",
         "category": [
             "Level 7 Mission"
@@ -701,7 +735,7 @@ location_table = [
         "id": 122368
     },
     {
-        "name": "(LVL 1) WASP - Wiggum\u2019s Backyard",
+        "name": "(LVL 1) WASP - Wiggum's Backyard",
         "region": "Collectables",
         "category": [
             "Level 1 WASP"
@@ -852,69 +886,6 @@ location_table = [
         ],
         "requires": "|Homer Double Jump| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
         "id": 122385
-    },
-    {
-        "name": "(LVL 1) CARD - Simpsons Backyard",
-        "region": "Collectables",
-        "category": [
-            "Level 1 CARD"
-        ],
-        "requires": [],
-        "id": 122386
-    },
-    {
-        "name": "(LVL 1) CARD - Kwik-E-Mart Roof",
-        "region": "Collectables",
-        "category": [
-            "Level 1 CARD"
-        ],
-        "requires": [],
-        "id": 122387
-    },
-    {
-        "name": "(LVL 1) CARD - Wiggum\u2019s Backyard",
-        "region": "Collectables",
-        "category": [
-            "Level 1 CARD"
-        ],
-        "requires": [],
-        "id": 122388
-    },
-    {
-        "name": "(LVL 1) CARD - Corner Outside Near StoneCutter Entrance",
-        "region": "Collectables",
-        "category": [
-            "Level 1 CARD"
-        ],
-        "requires": [],
-        "id": 122389
-    },
-    {
-        "name": "(LVL 1) CARD - Above StoneCutters Table",
-        "region": "Collectables",
-        "category": [
-            "Level 1 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122390
-    },
-    {
-        "name": "(LVL 1) CARD - Highest Platform in PowerPlant",
-        "region": "Collectables",
-        "category": [
-            "Level 1 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122391
-    },
-    {
-        "name": "(LVL 1) CARD - TrailerPark",
-        "region": "Collectables",
-        "category": [
-            "Level 1 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122392
     },
     {
         "name": "(LVL 1) GAG - Simpsons TV",
@@ -1250,7 +1221,7 @@ location_table = [
         "id": 122428
     },
     {
-        "name": "(LVL 2) WASP - Legitimate Businessman\u2019s Rooftop 1",
+        "name": "(LVL 2) WASP - Legitimate Businessman's Rooftop 1",
         "region": "Collectables",
         "category": [
             "Level 2 WASP"
@@ -1259,7 +1230,7 @@ location_table = [
         "id": 122429
     },
     {
-        "name": "(LVL 2) WASP - Legitimate Businessman\u2019s Rooftop 2",
+        "name": "(LVL 2) WASP - Legitimate Businessman's Rooftop 2",
         "region": "Collectables",
         "category": [
             "Level 2 WASP"
@@ -1268,7 +1239,7 @@ location_table = [
         "id": 122430
     },
     {
-        "name": "(LVL 2) WASP - Roof Next to Moe\u2019s",
+        "name": "(LVL 2) WASP - Roof Next to Moe's",
         "region": "Collectables",
         "category": [
             "Level 2 WASP"
@@ -1284,69 +1255,6 @@ location_table = [
         ],
         "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
         "id": 122432
-    },
-    {
-        "name": "(LVL 2) CARD - Statue",
-        "region": "Collectables",
-        "category": [
-            "Level 2 CARD"
-        ],
-        "requires": [],
-        "id": 122433
-    },
-    {
-        "name": "(LVL 2) CARD - Roof Across Monkey Building",
-        "region": "Collectables",
-        "category": [
-            "Level 2 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122434
-    },
-    {
-        "name": "(LVL 2) CARD - Legitimate Businessman\u2019s Rooftop",
-        "region": "Collectables",
-        "category": [
-            "Level 2 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122435
-    },
-    {
-        "name": "(LVL 2) CARD - Car Wash",
-        "region": "Collectables",
-        "category": [
-            "Level 2 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122436
-    },
-    {
-        "name": "(LVL 2) CARD - Train Wagon",
-        "region": "Collectables",
-        "category": [
-            "Level 2 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122437
-    },
-    {
-        "name": "(LVL 2) CARD - Alleyway Behind Krusty Burger",
-        "region": "Collectables",
-        "category": [
-            "Level 2 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122438
-    },
-    {
-        "name": "(LVL 2) CARD - Fountain At Stadium",
-        "region": "Collectables",
-        "category": [
-            "Level 2 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122439
     },
     {
         "name": "(LVL 2) GAG - CATapult",
@@ -1403,7 +1311,7 @@ location_table = [
         "id": 122445
     },
     {
-        "name": "(LVL 2) GAG - Rat\u2019s Milk Machine atop Legitimate Businessman\u2019s Roof",
+        "name": "(LVL 2) GAG - Rat's Milk Machine atop Legitimate Businessman's Roof",
         "region": "Collectables",
         "category": [
             "Level 2 GAG"
@@ -1601,7 +1509,7 @@ location_table = [
         "id": 122467
     },
     {
-        "name": "(LVL 3) WASP - Exit of Kamp Krusty\u2019s Well",
+        "name": "(LVL 3) WASP - Exit of Kamp Krusty's Well",
         "region": "Collectables",
         "category": [
             "Level 3 WASP"
@@ -1736,69 +1644,6 @@ location_table = [
         "id": 122482
     },
     {
-        "name": "(LVL 3) CARD - Above Bowling",
-        "region": "Collectables",
-        "category": [
-            "Level 3 CARD"
-        ],
-        "requires": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122483
-    },
-    {
-        "name": "(LVL 3) CARD - Atop Lighthouse",
-        "region": "Collectables",
-        "category": [
-            "Level 3 CARD"
-        ],
-        "requires": [],
-        "id": 122484
-    },
-    {
-        "name": "(LVL 3) CARD - Edge of the Boat",
-        "region": "Collectables",
-        "category": [
-            "Level 3 CARD"
-        ],
-        "requires": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122485
-    },
-    {
-        "name": "(LVL 3) CARD - Balcony of Krusty Studio",
-        "region": "Collectables",
-        "category": [
-            "Level 3 CARD"
-        ],
-        "requires": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122486
-    },
-    {
-        "name": "(LVL 3) CARD - Above Below the Dam Railing",
-        "region": "Collectables",
-        "category": [
-            "Level 3 CARD"
-        ],
-        "requires": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122487
-    },
-    {
-        "name": "(LVL 3) CARD - Broken Bridge",
-        "region": "Collectables",
-        "category": [
-            "Level 3 CARD"
-        ],
-        "requires": [],
-        "id": 122488
-    },
-    {
-        "name": "(LVL 3) CARD - Comic Book Guy's Rooftop",
-        "region": "Collectables",
-        "category": [
-            "Level 3 CARD"
-        ],
-        "requires": [],
-        "id": 122489
-    },
-    {
         "name": "(LVL 3) GAG - Comic Book Guy Robot",
         "region": "Collectables",
         "category": [
@@ -1889,7 +1734,7 @@ location_table = [
         "id": 122499
     },
     {
-        "name": "(LVL 3) GAG - Boar\u2019s Head at Kamp Krusty",
+        "name": "(LVL 3) GAG - Boar's Head at Kamp Krusty",
         "region": "Collectables",
         "category": [
             "Level 3 GAG"
@@ -1916,7 +1761,7 @@ location_table = [
         "id": 122502
     },
     {
-        "name": "(LVL 4) WASP - Flander\u2019s Backyard",
+        "name": "(LVL 4) WASP - Flander's Backyard",
         "region": "Collectables",
         "category": [
             "Level 4 WASP"
@@ -2006,7 +1851,7 @@ location_table = [
         "id": 122512
     },
     {
-        "name": "(LVL 4) WASP - Outside of Homer\u2019s Workstation",
+        "name": "(LVL 4) WASP - Outside of Homer's Workstation",
         "region": "Collectables",
         "category": [
             "Level 4 WASP"
@@ -2078,69 +1923,6 @@ location_table = [
         "id": 122520
     },
     {
-        "name": "(LVL 4) CARD - Far End of Gas Station Roof",
-        "region": "Collectables",
-        "category": [
-            "Level 4 CARD"
-        ],
-        "requires": [],
-        "id": 122521
-    },
-    {
-        "name": "(LVL 4) CARD - Mr. Burns Hidden Naked Picture behind Secret Passage",
-        "region": "Collectables",
-        "category": [
-            "Level 4 CARD"
-        ],
-        "requires": [],
-        "id": 122522
-    },
-    {
-        "name": "(LVL 4) CARD - Atop of Bridge Frame by Krusty Burger",
-        "region": "Collectables",
-        "category": [
-            "Level 4 CARD"
-        ],
-        "requires": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122523
-    },
-    {
-        "name": "(LVL 4) CARD - Tower By Broken Bridge",
-        "region": "Collectables",
-        "category": [
-            "Level 4 CARD"
-        ],
-        "requires": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122524
-    },
-    {
-        "name": "(LVL 4) CARD - Rooftop Jump Before Mansion",
-        "region": "Collectables",
-        "category": [
-            "Level 4 CARD"
-        ],
-        "requires": [],
-        "id": 122525
-    },
-    {
-        "name": "(LVL 4) CARD - Simpsons Treehouse",
-        "region": "Collectables",
-        "category": [
-            "Level 4 CARD"
-        ],
-        "requires": [],
-        "id": 122526
-    },
-    {
-        "name": "(LVL 4) CARD - Trailer Park",
-        "region": "Collectables",
-        "category": [
-            "Level 4 CARD"
-        ],
-        "requires": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122527
-    },
-    {
         "name": "(LVL 4) GAG - Simpson TV",
         "region": "Collectables",
         "category": [
@@ -2204,7 +1986,7 @@ location_table = [
         "id": 122534
     },
     {
-        "name": "(LVL 4) GAG - Homer\u2019s Workstation Meltdown",
+        "name": "(LVL 4) GAG - Homer's Workstation Meltdown",
         "region": "Collectables",
         "category": [
             "Level 4 GAG"
@@ -2375,7 +2157,7 @@ location_table = [
         "id": 122553
     },
     {
-        "name": "(LVL 5) WASP - Legitimate Businessman\u2019s Rooftop 1",
+        "name": "(LVL 5) WASP - Legitimate Businessman's Rooftop 1",
         "region": "Collectables",
         "category": [
             "Level 5 WASP"
@@ -2384,7 +2166,7 @@ location_table = [
         "id": 122554
     },
     {
-        "name": "(LVL 5) WASP - Legitimate Businessman\u2019s Rooftop 2",
+        "name": "(LVL 5) WASP - Legitimate Businessman's Rooftop 2",
         "region": "Collectables",
         "category": [
             "Level 5 WASP"
@@ -2508,69 +2290,6 @@ location_table = [
         ],
         "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
         "id": 122568
-    },
-    {
-        "name": "(LVL 5) CARD - Construction Beam Platforming",
-        "region": "Collectables",
-        "category": [
-            "Level 5 CARD"
-        ],
-        "requires": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122569
-    },
-    {
-        "name": "(LVL 5) CARD - The Legitimate Businessman's Stairs",
-        "region": "Collectables",
-        "category": [
-            "Level 5 CARD"
-        ],
-        "requires": [],
-        "id": 122570
-    },
-    {
-        "name": "(LVL 5) CARD - Moe\u2019s Rooftop",
-        "region": "Collectables",
-        "category": [
-            "Level 5 CARD"
-        ],
-        "requires": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122571
-    },
-    {
-        "name": "(LVL 5) CARD - Watertower",
-        "region": "Collectables",
-        "category": [
-            "Level 5 CARD"
-        ],
-        "requires": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122572
-    },
-    {
-        "name": "(LVL 5) CARD - Unfinished Highway One Way Ramp",
-        "region": "Collectables",
-        "category": [
-            "Level 5 CARD"
-        ],
-        "requires": [],
-        "id": 122573
-    },
-    {
-        "name": "(LVL 5) CARD - Billboard With Falling Ledges",
-        "region": "Collectables",
-        "category": [
-            "Level 5 CARD"
-        ],
-        "requires": [],
-        "id": 122574
-    },
-    {
-        "name": "(LVL 5) CARD - Monorail",
-        "region": "Collectables",
-        "category": [
-            "Level 5 CARD"
-        ],
-        "requires": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122575
     },
     {
         "name": "(LVL 5) GAG - Pickled Egg in Moe's",
@@ -2888,69 +2607,6 @@ location_table = [
         "id": 122609
     },
     {
-        "name": "(LVL 6) CARD - High Above Street BallPit House",
-        "region": "Collectables",
-        "category": [
-            "Level 6 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122610
-    },
-    {
-        "name": "(LVL 6) CARD - Casino Ramp",
-        "region": "Collectables",
-        "category": [
-            "Level 6 CARD"
-        ],
-        "requires": [],
-        "id": 122611
-    },
-    {
-        "name": "(LVL 6) CARD - Planet Hype Sign",
-        "region": "Collectables",
-        "category": [
-            "Level 6 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122612
-    },
-    {
-        "name": "(LVL 6) CARD - Atop Front of Boat",
-        "region": "Collectables",
-        "category": [
-            "Level 6 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122613
-    },
-    {
-        "name": "(LVL 6) CARD - Duff Blimp",
-        "region": "Collectables",
-        "category": [
-            "Level 6 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122614
-    },
-    {
-        "name": "(LVL 6) CARD - Hidden in Bush Next to Kamp Krusty Well Exit",
-        "region": "Collectables",
-        "category": [
-            "Level 6 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122615
-    },
-    {
-        "name": "(LVL 6) CARD - Broken Bridge",
-        "region": "Collectables",
-        "category": [
-            "Level 6 CARD"
-        ],
-        "requires": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
-        "id": 122616
-    },
-    {
         "name": "(LVL 6) GAG - Comic Book Guy Robot",
         "region": "Collectables",
         "category": [
@@ -3041,7 +2697,7 @@ location_table = [
         "id": 122626
     },
     {
-        "name": "(LVL 6) GAG - Boar\u2019s Head at Kamp Krusty",
+        "name": "(LVL 6) GAG - Boar's Head at Kamp Krusty",
         "region": "Collectables",
         "category": [
             "Level 6 GAG"
@@ -3122,7 +2778,7 @@ location_table = [
         "id": 122635
     },
     {
-        "name": "(LVL 7) WASP - Simpsons\u2019 Backyard",
+        "name": "(LVL 7) WASP - Simpsons' Backyard",
         "region": "Collectables",
         "category": [
             "Level 7 WASP"
@@ -3131,7 +2787,7 @@ location_table = [
         "id": 122636
     },
     {
-        "name": "(LVL 7) WASP - Flanders\u2019 Backyard",
+        "name": "(LVL 7) WASP - Flanders' Backyard",
         "region": "Collectables",
         "category": [
             "Level 7 WASP"
@@ -3140,7 +2796,7 @@ location_table = [
         "id": 122637
     },
     {
-        "name": "(LVL 7) WASP - Wiggums\u2019 Backyard",
+        "name": "(LVL 7) WASP - Wiggums' Backyard",
         "region": "Collectables",
         "category": [
             "Level 7 WASP"
@@ -3284,69 +2940,6 @@ location_table = [
         "id": 122653
     },
     {
-        "name": "(LVL 7) CARD - Flanders\u2019 Bomb Shelter",
-        "region": "Collectables",
-        "category": [
-            "Level 7 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-            "id": 122654
-    },
-    {
-        "name": "(LVL 7) CARD - Blue House Haunted Playground",
-        "region": "Collectables",
-        "category": [
-            "Level 7 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-            "id": 122655
-    },
-    {
-        "name": "(LVL 7) CARD - School Playground",
-        "region": "Collectables",
-        "category": [
-            "Level 7 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-            "id": 122656
-    },
-    {
-        "name": "(LVL 7) CARD - Atop of Lard Lad",
-        "region": "Collectables",
-        "category": [
-            "Level 7 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-            "id": 122657
-    },
-    {
-        "name": "(LVL 7) CARD - Cemetery Moat",
-        "region": "Collectables",
-        "category": [
-            "Level 7 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-            "id": 122658
-    },
-    {
-        "name": "(LVL 7) CARD - Barn Silo",
-        "region": "Collectables",
-        "category": [
-            "Level 7 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-            "id": 122659
-    },
-    {
-        "name": "(LVL 7) CARD - Mr. Burns Office",
-        "region": "Collectables",
-        "category": [
-            "Level 7 CARD"
-        ],
-        "requires": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
-            "id": 122660
-    },
-    {
         "name": "(LVL 7) GAG - Simpsons TV",
         "region": "Collectables",
         "category": [
@@ -3374,7 +2967,7 @@ location_table = [
         "id": 122663
     },
     {
-        "name": "(LVL 7) GAG - Krusty Lamp (Bart\u2019s Room)",
+        "name": "(LVL 7) GAG - Krusty Lamp (Bart's Room)",
         "region": "Collectables",
         "category": [
             "Level 7 GAG"
@@ -3383,7 +2976,7 @@ location_table = [
         "id": 122664
     },
     {
-        "name": "(LVL 7) GAG - Clown Bed (Bart\u2019s Room)",
+        "name": "(LVL 7) GAG - Clown Bed (Bart's Room)",
         "region": "Collectables",
         "category": [
             "Level 7 GAG"
@@ -3392,7 +2985,7 @@ location_table = [
         "id": 122665
     },
     {
-        "name": "(LVL 7) GAG - Flanders\u2019 Bomb Shelter",
+        "name": "(LVL 7) GAG - Flanders' Bomb Shelter",
         "region": "Collectables",
         "category": [
             "Level 7 GAG"
@@ -3604,6 +3197,24 @@ location_table = [
         "region": "Manual"
     }
 ]
+
+# Empty 7 length location numbers to fill with later new locations from removing cards from the middle
+#card_start_ids = {
+#    1: 122386,
+#    2: 122433,
+#    3: 122483,
+#    4: 122521,
+#    5: 122569,
+#    6: 122610,
+#    7: 122654
+#}
+
+next_id = 122692
+logic_level = "carless"
+
+for level_num in range(1, 8):
+    level_name = f"Level {level_num}"
+    next_id = add_cards(level_name, next_id, location_table)
 
 for key, _ in enumerate(location_table):
     if "victory" in location_table[key] and location_table[key]["victory"]:

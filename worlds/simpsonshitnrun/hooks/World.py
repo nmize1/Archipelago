@@ -1,7 +1,7 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState
-
+from ..Locations import location_name_to_location
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
 from ..Items import SimpsonsHitAndRunItem
 from ..Locations import SimpsonsHitAndRunLocation
@@ -30,18 +30,47 @@ import uuid
 ## The fill_slot_data method will be used to send data to the Manual client for later use, like deathlink.
 ########################################################################################
 
-
+card_table = []
 
 # Called before regions and locations are created. Not clear why you'd want this, but it's here. Victory location is included, but Victory event is not placed yet.
 def before_create_regions(world: World, multiworld: MultiWorld, player: int):
     pass
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
-def after_create_regions(world: World, multiworld: MultiWorld, player: int):
+def after_create_regions(world: World, multiworld: MultiWorld, player: int, cards_data):
     # Use this hook to remove locations from the world
     locationNamesToRemove = [] # List of location names
 
-    # Add your code here to calculate which locations to remove
+    all_chosen_card_names = []
+
+    if world.options.cardlogic == 0:
+        logic = 'carless'
+    elif world.options.cardlogic == 1:
+        logic = 'car'
+    elif world.options.cardlogic == 2:
+        logic = 'glitched'
+
+    for level, level_cards in cards_data.items():
+        valid_cards = [card for card in level_cards if card.get(logic) != "N/A"]
+
+        c_cards = world.random.sample(valid_cards, 7)
+
+        for card in c_cards:
+            card_table.append({
+                "id": location_name_to_location[card["Desc"]]["id"],
+                "level": level,
+                "name": card["Desc"],
+                "X": card["X"],
+                "Y": card["Y"],
+                "Z": card["Z"],
+                "category": [f"{level} CARD"]
+            })
+            all_chosen_card_names.append(card["Desc"])
+
+    locationNamesToRemove = [
+        loc["name"] for loc in world.location_table
+        if "CARD" in loc["name"] and loc["name"] not in all_chosen_card_names
+    ]
 
     for region in multiworld.regions:
         if region.player == player:

@@ -108,6 +108,20 @@ class ShuffleCards(Toggle):
     default = True
     display_name = "Shuffle Cards"
 
+class CardLogic(Choice):
+    """Choose logic level for cards and wasps.
+       Carless: Cars are not considered at all in this logic level and cards that cannot be reached without them
+                are not available locations for ShuffleCards.
+                Note that the card on Level 6 that requires the Itchy and Scratchy Truck will still require it if ShuffleCards is false.
+       Cars: Cars are considered in whether you can reach a card.
+       Glitched: Glitches and speedrunning tricks are considered in whether you can reach a card.
+       ***CURRENTLY ONLY CARLESS LOGIC LEVEL IS SUPPORTED, OTHER OPTIONS WILL RAISE AN ERROR AND FAIL GENERATION"""
+
+    display_name = "Card and Wasp Logic"
+    option_carless = 0
+    option_cars = 1
+    option_glitched = 2
+    default = 0
 
 class MinShopPrice(Range):
     """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
@@ -163,6 +177,8 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     wasppercent: WaspPercent
     EnableCardPercent: EnableCardPercent
     cardpercent: CardPercent
+    shufflecards: ShuffleCards
+    cardlogic: CardLogic
     minprice: MinShopPrice
     maxprice: MaxShopPrice
     shopscalemod: ShopScaleMod
