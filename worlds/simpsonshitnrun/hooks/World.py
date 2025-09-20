@@ -51,9 +51,11 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
         logic = 'glitched'
 
     for level, level_cards in cards_data.items():
-        valid_cards = [card for card in level_cards if card.get(logic) != "N/A"]
-
-        c_cards = world.random.sample(valid_cards, 7)
+        if world.options.shufflecards:
+            valid_cards = [card for card in level_cards if card.get(logic) != "N/A"]
+            c_cards = world.random.sample(valid_cards, 7)
+        else:
+            c_cards = level_cards[:7]
 
         for card in c_cards:
             card_table.append({
