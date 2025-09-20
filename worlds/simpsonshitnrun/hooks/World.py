@@ -3,8 +3,8 @@ from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState
 
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
-from ..Items import ManualItem
-from ..Locations import ManualLocation
+from ..Items import SimpsonsHitAndRunItem
+from ..Locations import SimpsonsHitAndRunLocation
 
 # Raw JSON data from the Manual apworld, respectively:
 #          data/game.json, data/items.json, data/locations.json, data/regions.json
@@ -178,7 +178,7 @@ def before_create_item(item_name: str, world: World, multiworld: MultiWorld, pla
     return item_name
 
 # The item that was created is provided after creation, in case you want to modify the item
-def after_create_item(item: ManualItem, world: World, multiworld: MultiWorld, player: int) -> ManualItem:
+def after_create_item(item: SimpsonsHitAndRunItem, world: World, multiworld: MultiWorld, player: int) -> SimpsonsHitAndRunItem:
     return item
 
 # This method is run towards the end of pre-generation, before the place_item options have been handled and before AP generation occurs

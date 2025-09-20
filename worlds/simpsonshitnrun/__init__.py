@@ -15,7 +15,7 @@ from .Items import item_table, item_id_to_name, item_name_to_id, item_name_to_it
 from .DataValidation import runGenerationDataValidation, runPreFillDataValidation
 
 from .Regions import create_regions
-from .Items import ManualItem
+from .Items import SimpsonsHitAndRunItem
 from .Rules import set_rules
 from .Options import SimpsonsHitAndRunOptions
 from .Helpers import is_option_enabled, is_item_enabled, get_option_value
@@ -90,7 +90,7 @@ class SimpsonsHitAndRunWorld(World):
             unused_goal.parent_region.locations.remove(unused_goal)
 
         location_game_complete.place_locked_item(
-            ManualItem("__Victory__", ItemClassification.progression, None, player=self.player))
+            SimpsonsHitAndRunItem("__Victory__", ItemClassification.progression, None, player=self.player))
         after_create_regions(self, self.multiworld, self.player)
 
     def create_items(self):
@@ -196,8 +196,8 @@ class SimpsonsHitAndRunWorld(World):
         if "progression_skip_balancing" in item and item["progression_skip_balancing"]:
             classification = ItemClassification.progression_skip_balancing
 
-        item_object = ManualItem(name, classification,
-                        self.item_name_to_id[name], player=self.player)
+        item_object = SimpsonsHitAndRunItem(name, classification,
+                                            self.item_name_to_id[name], player=self.player)
 
         item_object = after_create_item(item_object, self, self.multiworld, self.player)
 
