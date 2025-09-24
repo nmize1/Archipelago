@@ -18,6 +18,9 @@
 - Finally, extract SHARRandomizer.zip where ever you'd like.
 
 # Connecting and Playing
+- Download the Config file by going to the Archipelago Room link and clicking "Download Patch File"
+
+- Extract the "SHAR.ini" file from the downloaded .zip and place it in "Documents\My Games\Lucas' Simpsons Hit & Run Mod Launcher\Saved Games\APSHARRandomizer" If that folder doesn't exist, create it.
 
 - Run SHARRandomizer.exe in the extracted SHARRandomizer folder. In the command prompt that opens, input your connection info. You *can* use this window as a client, but its currently missing several features of the standard client and will be filled with several dev messages so I **highly** suggest using the standard text client also. This is required if you want to hint because the game client doesn't currently support input after connection.
 
