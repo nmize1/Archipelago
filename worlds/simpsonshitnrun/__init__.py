@@ -314,6 +314,7 @@ class SimpsonsHitAndRunWorld(World):
     def fill_slot_data(self):
         slot_data = before_fill_slot_data({}, self, self.multiworld, self.player)
 
+        slot_data["version"] = "0.3.0"
         # slot_data["DeathLink"] = bool(self.multiworld.death_link[self.player].value)
         common_options = set(PerGameCommonOptions.type_hints.keys())
         for option_key, _ in self.options_dataclass.type_hints.items():
@@ -395,7 +396,6 @@ class SimpsonsHitAndRunWorld(World):
     def client_data(self):
         return {
             "game": self.game,
-            'apworld_version': "Beta 0.2.7",
             'player_name': self.multiworld.get_player_name(self.player),
             'player_id': self.player,
             'items': self.item_name_to_item,
