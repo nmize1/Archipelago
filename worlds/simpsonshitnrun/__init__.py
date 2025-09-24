@@ -321,6 +321,8 @@ class SimpsonsHitAndRunWorld(World):
                 continue
             slot_data[option_key] = get_option_value(self.multiworld, self.player, option_key)
 
+        slot_data["card_locations"] = [card["id"] for card in card_table]
+
         slot_data = after_fill_slot_data(slot_data, self, self.multiworld, self.player)
 
         return slot_data
@@ -398,7 +400,6 @@ class SimpsonsHitAndRunWorld(World):
             'player_id': self.player,
             'items': self.item_name_to_item,
             'locations': self.location_name_to_location,
-            'card_locations': [card["id"] for card in card_table],
             # todo: extract connections out of multiworld.get_regions() instead, in case hooks have modified the regions.
             'regions': region_table,
             'categories': category_table

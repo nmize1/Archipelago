@@ -4,6 +4,7 @@ from BaseClasses import MultiWorld, CollectionState
 from ..Locations import location_name_to_location
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
 from ..Items import SimpsonsHitAndRunItem
+from Options import OptionError
 from ..Locations import SimpsonsHitAndRunLocation
 
 # Raw JSON data from the Manual apworld, respectively:
@@ -43,6 +44,9 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
 
     all_chosen_card_names = []
 
+    if world.options.cardlogic != 0:
+        raise OptionError("Chosen cardlogic level is not implemented.")
+
     if world.options.cardlogic == 0:
         logic = 'carless'
     elif world.options.cardlogic == 1:
@@ -68,6 +72,9 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
                 "category": [f"{level} CARD"]
             })
             all_chosen_card_names.append(card["Desc"])
+
+    card_table.sort(key=lambda c: (int(c["level"].split()[-1]), c["id"]))
+
 
     locationNamesToRemove = [
         loc["name"] for loc in world.location_table

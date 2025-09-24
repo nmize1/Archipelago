@@ -18,10 +18,22 @@ class SHARContainer(APPlayerContainer):
 
     def write_contents(self, opened_zipfile: zipfile.ZipFile):
         safe_player = str(self.player).replace(" ", "_")
-        filename = f"{safe_player}_SHAR.json"
+        filename = f"SHAR.ini"
 
-        json_data = json.dumps({"Cards": self.card_table}, indent=4)
-        opened_zipfile.writestr(filename, json_data)
+        ini_data = ""
+        i = 1
+        for card in self.card_table:
+            ini_data += "[CARD]\n"
+            ini_data += f"Name=card{card['level'][-1]}{i}\n"
+            ini_data += f"CardName={card['name']}\n"
+            ini_data += f"X={card['X']}\n"
+            ini_data += f"Y={card['Y']}\n"
+            ini_data += f"Z={card['Z']}\n"
+            ini_data += f"APID={card['id']}\n\n"
+            i = i + 1 if i < 7 else 1
+
+
+        opened_zipfile.writestr(filename, ini_data)
         super().write_contents(opened_zipfile)
 
 def gen(output_directory, mod_name, card_table, player):
