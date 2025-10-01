@@ -40,7 +40,6 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int, cards_data):
     # Use this hook to remove locations from the world
-    locationNamesToRemove = [] # List of location names
 
     all_chosen_card_names = []
 
@@ -56,12 +55,27 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
 
     for level, level_cards in cards_data.items():
         if world.options.shufflecards:
-            valid_cards = [card for card in level_cards if card.get(logic) != "N/A"]
+            valid_cards = [card for card in level_cards if card[logic] != "N/A"]
             c_cards = world.random.sample(valid_cards, 7)
         else:
             c_cards = level_cards[:7]
 
         for card in c_cards:
+            if card[logic] == "" and world.random.randrange(0, 100) > world.options.raisecards:
+                card["Y"] = card["Y"] + 10 #random number, need to test
+                lnum = int(level.split()[-1])
+                if lnum == 1 or lnum == 7:
+                    character = "Homer"
+                elif lnum == 2 or lnum == 6:
+                    character = "Bart"
+                elif lnum == 3:
+                    character = "Lisa"
+                elif lnum == 4:
+                    character = "Marge"
+                elif lnum == 5:
+                    character = "Apu"
+                card[logic] = f"|{character} Progressive Jump:2|"
+
             card_table.append({
                 "id": location_name_to_location[card["Desc"]]["id"],
                 "level": level,
@@ -75,17 +89,21 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
 
     card_table.sort(key=lambda c: (int(c["level"].split()[-1]), c["id"]))
 
-
-    locationNamesToRemove = [
-        loc["name"] for loc in world.location_table
-        if "CARD" in loc["name"] and loc["name"] not in all_chosen_card_names
-    ]
+    if not hasattr(multiworld, "generation_is_fake"):
+        locationNamesToRemove = [
+            loc["name"] for loc in world.location_table
+            if "CARD" in loc["name"] and loc["name"] not in all_chosen_card_names
+        ]
+    else:
+        print("FAKE GENERATION")
+        locationNamesToRemove = []
 
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
                 if location.name in locationNamesToRemove:
                     region.locations.remove(location)
+
     if hasattr(multiworld, "clear_location_cache"):
         multiworld.clear_location_cache()
 
@@ -142,10 +160,20 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
         itemNamesToRemove.extend(["Homer E-Brake", "Bart E-Brake", "Lisa E-Brake", "Marge E-Brake", "Apu E-Brake"])
 
     if world.options.moverandomizer == False:
-        itemNamesToStart.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack",
-                                 "Homer Double Jump", "Bart Double Jump", "Lisa Double Jump", "Marge Double Jump", "Apu Double Jump"])
-        itemNamesToRemove.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack",
-                                  "Homer Double Jump", "Bart Double Jump", "Lisa Double Jump", "Marge Double Jump", "Apu Double Jump"])
+        itemNamesToStart.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack"])
+        itemNamesToRemove.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack"])
+        for i in range(2):
+            itemNamesToStart.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
+                                      "Marge Progressive Jump", "Apu Progressive Jump"])
+            itemNamesToRemove.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
+                                      "Marge Progressive Jump", "Apu Progressive Jump"])
+
+    if world.options.startjumplevel > 0 and world.options.moverandomizer == True:
+        for i in range(world.options.startjumplevel):
+            itemNamesToStart.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
+                                      "Marge Progressive Jump", "Apu Progressive Jump"])
+            itemNamesToRemove.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
+                                      "Marge Progressive Jump", "Apu Progressive Jump"])
 
     if world.options.shufflegagfinder == False:
         itemNamesToRemove.extend(["Homer Gagfinder", "Bart Gagfinder", "Lisa Gagfinder", "Marge Gagfinder", "Apu Gagfinder"])

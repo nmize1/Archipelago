@@ -73,7 +73,7 @@ location_table = [
         "category": [
             "Level 1 Mission"
         ],
-        "requires": "",
+        "requires": "|Homer Progressive Jump:1|",
         "id": 122292
     },
     {
@@ -184,7 +184,7 @@ location_table = [
         "category": [
             "Level 2 Mission"
         ],
-        "requires": "|Mr. Plow|",
+        "requires": "|Mr. Plow| AND |Bart Progressive Jump:2|",
         "id": 122305
     },
     {
@@ -375,7 +375,7 @@ location_table = [
         "category": [
             "Level 4 Mission"
         ],
-        "requires": "|Marge - Police|",
+        "requires": "|Marge - Police| AND |Marge Progressive Jump:2|",
         "id": 122327
     },
     {
@@ -393,6 +393,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
+        "requires": "|Marge Progressive Jump:1|",
         "id": 122329
     },
     {
@@ -462,7 +463,7 @@ location_table = [
         "category": [
             "Level 5 Mission"
         ],
-        "requires": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
         "id": 122337
     },
     {
@@ -642,7 +643,7 @@ location_table = [
         "category": [
             "Level 7 Mission"
         ],
-        "requires": "|Homer Double Jump|",
+        "requires": "|Homer Progressive Jump:2|",
         "id": 122358
     },
     {
@@ -678,6 +679,7 @@ location_table = [
         "category": [
             "Bonus Mission"
         ],
+        "requires": "|Homer Progressive Jump:1|",
         "id": 122362
     },
     {
@@ -866,7 +868,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Double Jump| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Progressive Jump:2| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
         "id": 122383
     },
     {
@@ -875,7 +877,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Double Jump| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Progressive Jump:2| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
         "id": 122384
     },
     {
@@ -884,7 +886,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "|Homer Double Jump| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "|Homer Progressive Jump:2| AND (|Homer Attack|) OR {YamlDisabled(moverandomizer)}",
         "id": 122385
     },
     {
@@ -1118,7 +1120,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|)",
         "id": 122417
     },
     {
@@ -1172,7 +1174,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|)",
         "id": 122423
     },
     {
@@ -1190,7 +1192,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|)",
         "id": 122425
     },
     {
@@ -1199,7 +1201,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|)",
         "id": 122426
     },
     {
@@ -1226,7 +1228,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|)",
         "id": 122429
     },
     {
@@ -1235,7 +1237,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|)",
         "id": 122430
     },
     {
@@ -1244,7 +1246,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "(|Bart Attack| AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Bart Attack| AND |Bart Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122431
     },
     {
@@ -1253,7 +1255,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|)",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|)",
         "id": 122432
     },
     {
@@ -1316,7 +1318,7 @@ location_table = [
         "category": [
             "Level 2 GAG"
         ],
-        "requires": "(({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
+        "requires": "(({YamlDisabled(shufflegagfinder)} AND (|Level 2| OR |Progressive Level:1|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)})",
         "id": 122446
     },
     {
@@ -1577,7 +1579,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Progressive Jump:2|)",
         "id": 122475
     },
     {
@@ -1586,7 +1588,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Progressive Jump:2|)",
         "id": 122476
     },
     {
@@ -1595,7 +1597,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Progressive Jump:2|)",
         "id": 122477
     },
     {
@@ -1631,7 +1633,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "((|Lisa Attack|) AND |Lisa Double Jump|)",
+        "requires": "((|Lisa Attack|) AND |Lisa Progressive Jump:2|)",
         "id": 122481
     },
     {
@@ -2153,7 +2155,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122553
     },
     {
@@ -2162,7 +2164,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122554
     },
     {
@@ -2171,7 +2173,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122555
     },
     {
@@ -2189,7 +2191,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122557
     },
     {
@@ -2198,7 +2200,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122558
     },
     {
@@ -2207,7 +2209,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122559
     },
     {
@@ -2234,7 +2236,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122562
     },
     {
@@ -2243,7 +2245,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122563
     },
     {
@@ -2252,7 +2254,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122564
     },
     {
@@ -2288,7 +2290,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "((|Apu Attack|) AND |Apu Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Apu Attack|) AND |Apu Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122568
     },
     {
@@ -2531,7 +2533,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122601
     },
     {
@@ -2540,7 +2542,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122602
     },
     {
@@ -2549,7 +2551,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122603
     },
     {
@@ -2558,7 +2560,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122604
     },
     {
@@ -2585,7 +2587,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "((|Bart Attack|) AND |Bart Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Bart Attack|) AND |Bart Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122607
     },
     {
@@ -2648,7 +2650,7 @@ location_table = [
         "category": [
             "Level 6 GAG"
         ],
-        "requires": "(({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Double Jump| OR {YamlDisabled(moverandomizer)})",
+        "requires": "(({YamlDisabled(shufflegagfinder)} AND (|Level 6| OR |Progressive Level:5|)) OR ({YamlEnabled(shufflegagfinder)} AND |Bart Gagfinder|)) AND (|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)})",
         "id": 122621
     },
     {
@@ -2819,7 +2821,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "((|Homer Attack|) AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Homer Attack|) AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122640
     },
     {
@@ -2864,7 +2866,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "(|Homer Attack| AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Homer Attack| AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122645
     },
     {
@@ -2873,7 +2875,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "(|Homer Attack| AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "(|Homer Attack| AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122646
     },
     {
@@ -2891,7 +2893,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "((|Homer Attack|) AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Homer Attack|) AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122648
     },
     {
@@ -2900,7 +2902,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "((|Homer Attack|) AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Homer Attack|) AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122649
     },
     {
@@ -2909,7 +2911,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "((|Homer Attack|) AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Homer Attack|) AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122650
     },
     {
@@ -2918,7 +2920,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "((|Homer Attack|) AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Homer Attack|) AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122651
     },
     {
@@ -2936,7 +2938,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "((|Homer Attack|) AND |Homer Double Jump|) OR {YamlDisabled(moverandomizer)}",
+        "requires": "((|Homer Attack|) AND |Homer Progressive Jump:2|) OR {YamlDisabled(moverandomizer)}",
         "id": 122653
     },
     {

@@ -598,36 +598,36 @@ item_table = [
         "id": 121864
     },
     {
-        "count": 1,
-        "name": "Homer Double Jump",
+        "count": 2,
+        "name": "Homer Progressive Jump",
         "category": ["Moves"],
         "progression": True,
         "id": 121865
     },
     {
-        "count": 1,
-        "name": "Bart Double Jump",
+        "count": 2,
+        "name": "Bart Progressive Jump",
         "category": ["Moves"],
         "progression": True,
         "id": 121866
     },
     {
-        "count": 1,
-        "name": "Lisa Double Jump",
+        "count": 2,
+        "name": "Lisa Progressive Jump",
         "category": ["Moves"],
         "progression": True,
         "id": 121867
     },
     {
-        "count": 1,
-        "name": "Marge Double Jump",
+        "count": 2,
+        "name": "Marge Progressive Jump",
         "category": ["Moves"],
         "progression": True,
         "id": 121868
     },
     {
-        "count": 1,
-        "name": "Apu Double Jump",
+        "count": 2,
+        "name": "Apu Progressive Jump",
         "category": ["Moves"],
         "progression": True,
         "id": 121869

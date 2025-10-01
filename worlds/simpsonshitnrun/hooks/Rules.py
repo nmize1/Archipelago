@@ -68,11 +68,11 @@ def collectedWasps(world: World, multiworld: MultiWorld, state: CollectionState,
         "Level 7 WASP",
     ]
 
-    for category in wasp_categories:
-        allWasps += [
-            location['name'] for location in world.location_table
-            if category in location.get('category', []) and state.can_reach_location(location['name'], player)
-        ]
+    for region in multiworld.regions:
+        if region.player == player:
+            for location in list(region.locations):
+                if "WASP - " in location.name and state.can_reach_location(location.name, player):
+                    allWasps.append(location.name)
 
     return len(allWasps) >= (140 * world.options.wasppercent * .01)
 
@@ -90,11 +90,11 @@ def collectedCards(world: World, multiworld: MultiWorld, state: CollectionState,
         "Level 7 CARD",
     ]
 
-    for category in card_categories:
-        allCards += [
-            location['name'] for location in card_table
-            if category in location.get('category', []) and state.can_reach_location(location['name'], player)
-        ]
+    for region in multiworld.regions:
+        if region.player == player:
+            for location in list(region.locations):
+                if "CARD - " in location.name and state.can_reach_location(location.name, player):
+                    allCards.append(location.name)
 
     return len(allCards) >= (49 * world.options.cardpercent * .01)
 

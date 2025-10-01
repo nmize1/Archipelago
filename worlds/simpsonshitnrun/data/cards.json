@@ -41,7 +41,7 @@
       "Y": 11.47218609,
       "Z": 68.02241516,
       "Desc": "(LVL 1) CARD - Above StoneCutters Table",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -59,7 +59,7 @@
       "Y": 4.237263203,
       "Z": 413.0883484,
       "Desc": "(LVL 1) CARD - Trailer Park",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -122,7 +122,7 @@
       "Y": 12.16088,
       "Z": -309.1079,
       "Desc": "(LVL 1) CARD - Gas Station Roof",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -275,7 +275,7 @@
       "Y": 10.55477,
       "Z": -112.1667,
       "Desc": "(LVL 1) CARD - Above Wiggum's",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -392,7 +392,7 @@
       "Y": 3.681816,
       "Z": 448.8213,
       "Desc": "(LVL 1) CARD - Above Trailer Park",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -401,7 +401,7 @@
       "Y": 2.594809,
       "Z": 398.571,
       "Desc": "(LVL 1) CARD - Above Street Near Barn",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -428,7 +428,7 @@
       "Y": 4.134574,
       "Z": 271.6018,
       "Desc": "(LVL 1) CARD - Power Plant Parking Lot 1",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -482,7 +482,7 @@
       "Y": 2.815575,
       "Z": 213.5138,
       "Desc": "(LVL 1) CARD - Above Nuclear Waste Bridge",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -509,7 +509,7 @@
       "Y": 11.06927,
       "Z": -210.0845,
       "Desc": "(LVL 1) CARD - Roof Across of House Across From Gold Mansion",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -518,7 +518,7 @@
       "Y": 8.182633,
       "Z": -83.89222,
       "Desc": "(LVL 1) CARD - Outside Burns Mansion Gate",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -527,7 +527,7 @@
       "Y": 11.6007,
       "Z": -434.9627,
       "Desc": "(LVL 1) CARD - Broken Bridge",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -536,7 +536,7 @@
       "Y":3.499542,
       "Z":-214.6881,
       "Desc":"(LVL 1) CARD - Rocket Car",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     }
@@ -556,7 +556,7 @@
       "Y": 12.20567513,
       "Z": 53.21571732,
       "Desc": "(LVL 2) CARD - Roof Across Monkey Building",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -574,7 +574,7 @@
       "Y": 13.33571148,
       "Z": 128.0328369,
       "Desc": "(LVL 2) CARD - Car Wash",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -601,7 +601,7 @@
       "Y": 20.94735336,
       "Z": 310.2424316,
       "Desc": "(LVL 2) CARD - Fountain At Stadium",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -655,7 +655,7 @@
       "Y": 9.672896,
       "Z": 63.75338,
       "Desc": "(LVL 2) CARD - Above Street Near Hospital Parking Lot",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -718,7 +718,7 @@
       "Y": 46.02802,
       "Z": 330.0675,
       "Desc": "(LVL 2) CARD - Fire Truck Jump",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -727,7 +727,7 @@
       "Y": 35.29134,
       "Z": 411.7525,
       "Desc": "(LVL 2) CARD - Tree By Krusty Burger Downtown",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -754,7 +754,7 @@
       "Y": 46.41557,
       "Z": 469.6947,
       "Desc": "(LVL 2) CARD - Monorail",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -763,7 +763,7 @@
       "Y": 46.32622,
       "Z": 496.0256,
       "Desc": "(LVL 2) CARD - Corner of Monorail Station",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1015,7 +1015,7 @@
       "Y": 12.00677,
       "Z": 15.0882,
       "Desc": "(LVL 2) CARD - Stop Sign Across From Moe's",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1078,7 +1078,7 @@
       "Y": 8.957676,
       "Z": 107.3958,
       "Desc": "(LVL 2) CARD - Monkey Box",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1087,7 +1087,7 @@
       "Y": 9.803634,
       "Z": 2.872383,
       "Desc": "(LVL 2) CARD - Hospital Sign",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1114,7 +1114,7 @@
       "Y": 36.09132,
       "Z": 454.555,
       "Desc": "(LVL 2) CARD - Tree Outside Police Station",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1179,7 +1179,7 @@
       "Y": -27.26276016,
       "Z": -153.8770447,
       "Desc": "(LVL 3) CARD - Above Bowling",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1206,7 +1206,7 @@
       "Y": -51.41551971,
       "Z": 239.2312012,
       "Desc": "(LVL 3) CARD - Balcony of Krusty Studio",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1305,7 +1305,7 @@
       "Y": -72.85205,
       "Z": -62.04324,
       "Desc": "(LVL 3) CARD - Big Boat on Beach",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1458,7 +1458,7 @@
       "Y": -0.5914119,
       "Z": -38.64098,
       "Desc": "(LVL 3) CARD - Lumber King Billboard",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1548,7 +1548,7 @@
       "Y": -64.25409,
       "Z": 104.4379,
       "Desc": "(LVL 3) CARD - Rail Near C-Spanker",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1566,7 +1566,7 @@
       "Y": -51.57324,
       "Z": 56.16277,
       "Desc": "(LVL 3) CARD - C-Spanker Crane",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1584,7 +1584,7 @@
       "Y": -49.41329,
       "Z": 94.9608,
       "Desc": "(LVL 3) CARD - C-Spanker Inside Cargo Container",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1620,7 +1620,7 @@
       "Y": -42.90388,
       "Z": 271.672,
       "Desc": "(LVL 3) CARD - KrustyLu Studios Sign",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1629,7 +1629,7 @@
       "Y": -48.06821,
       "Z": 273.4845,
       "Desc": "(LVL 3) CARD - Behind KrustyLu Studios Sign",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1665,7 +1665,7 @@
       "Y": -22.63221,
       "Z": 403.1651,
       "Desc": "(LVL 3) CARD - Motel Awning",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1755,7 +1755,7 @@
       "Y": -60.31354,
       "Z": -48.91807,
       "Desc": "(LVL 3) CARD - Captain Chum 'N' Stuff",
-      "carless": "|Lisa Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Lisa Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1775,7 +1775,7 @@
       "Y": 12.13956642,
       "Z": -335.0282898,
       "Desc": "(LVL 4) CARD - Gas Station Roof 1",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1793,7 +1793,7 @@
       "Y": 13.25281429,
       "Z": 185.3733826,
       "Desc": "(LVL 4) CARD - Big Bridge",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1802,7 +1802,7 @@
       "Y": 24.5202446,
       "Z": -461.4142456,
       "Desc": "(LVL 4) CARD - Atop Tower Before Broken Bridge",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1811,7 +1811,7 @@
       "Y": 16.97104263,
       "Z": -192.0013885,
       "Desc": "(LVL 4) CARD - Roof of House Across From Gold Mansion",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1829,7 +1829,7 @@
       "Y": 3.275217056,
       "Z": 473.0612488,
       "Desc": "(LVL 4) CARD - End of Trailer Park",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1892,7 +1892,7 @@
       "Y": 12.16088,
       "Z": -309.1079,
       "Desc": "(LVL 4) CARD - Gas Station Roof 2",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -1973,7 +1973,7 @@
       "Y": 5.036113,
       "Z": -601.6844,
       "Desc": "(LVL 4) CARD - Dumpster Behind Krusty Burger Near School",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2081,7 +2081,7 @@
       "Y": 13.0195,
       "Z": 185.549,
       "Desc": "(LVL 4) CARD - Big Bridge 2",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2162,7 +2162,7 @@
       "Y": 3.681816,
       "Z": 448.8213,
       "Desc": "(LVL 4) CARD - Above Trailer Park",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2171,7 +2171,7 @@
       "Y": 2.594809,
       "Z": 398.571,
       "Desc": "(LVL 4) CARD - Above Street Near Barn",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2198,7 +2198,7 @@
       "Y": 4.134574,
       "Z": 271.6018,
       "Desc": "(LVL 4) CARD - Power Plant Parking Lot 1",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2252,7 +2252,7 @@
       "Y": 2.815575,
       "Z": 213.5138,
       "Desc": "(LVL 4) CARD - Above Nuclear Waste Bridge",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2279,7 +2279,7 @@
       "Y": 11.06927,
       "Z": -210.0845,
       "Desc": "(LVL 4) CARD - Roof Across of House Across From Gold Mansion",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2288,7 +2288,7 @@
       "Y": 8.182633,
       "Z": -83.89222,
       "Desc": "(LVL 4) CARD - Outside Burns Mansion Gate",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2297,7 +2297,7 @@
       "Y": 11.6007,
       "Z": -434.9627,
       "Desc": "(LVL 4) CARD - Broken Bridge",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2306,7 +2306,7 @@
       "Y": 3.499542,
       "Z": -214.6881,
       "Desc": "(LVL 4) CARD - Rocket Car",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2333,7 +2333,7 @@
       "Y": 5.353024,
       "Z": 231.3109,
       "Desc": "(LVL 4) CARD - Chessboard",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     }
@@ -2371,7 +2371,7 @@
       "Y": 16.65348434,
       "Z": 154.7894287,
       "Desc": "(LVL 5) CARD - On Top of Train Across Water Tower",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2398,7 +2398,7 @@
       "Y": 43.4577446,
       "Z": 451.8656006,
       "Desc": "(LVL 5) CARD - Monorail Track",
-      "carless": "|Marge Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Marge Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2407,7 +2407,7 @@
       "Y": 11.255,
       "Z": -19.41399,
       "Desc": "(LVL 5) CARD - Courthouse Light Pole",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2452,7 +2452,7 @@
       "Y": 9.672896,
       "Z": 63.75338,
       "Desc": "(LVL 5) CARD - Above Street Near Hospital Parking Lot",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2470,7 +2470,7 @@
       "Y": 16.48423,
       "Z": 316.4002,
       "Desc": "(LVL 5) CARD - Stadium Behind Duff Mascot",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2515,7 +2515,7 @@
       "Y": 46.02802,
       "Z": 330.0675,
       "Desc": "(LVL 5) CARD - Fire Truck Jump",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2524,7 +2524,7 @@
       "Y": 35.29134,
       "Z": 411.7525,
       "Desc": "(LVL 5) CARD - Tree By Krusty Burger Downtown",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2551,7 +2551,7 @@
       "Y": 46.41557,
       "Z": 469.6947,
       "Desc": "(LVL 5) CARD - Monorail",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2560,7 +2560,7 @@
       "Y": 46.32622,
       "Z": 496.0256,
       "Desc": "(LVL 5) CARD - Corner of Monorail Station",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2812,7 +2812,7 @@
       "Y": 17.63057,
       "Z": 29.87975,
       "Desc": "(LVL 5) CARD - Glen's Grocery Roof",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2875,7 +2875,7 @@
       "Y": 7.15206,
       "Z": -28.957,
       "Desc": "(LVL 5) CARD - Gazebo Between Museum & Court House",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2884,7 +2884,7 @@
       "Y": 8.957676,
       "Z": 107.3958,
       "Desc": "(LVL 5) CARD - Monkey Box",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2911,7 +2911,7 @@
       "Y": 32.54769,
       "Z": 458.634,
       "Desc": "(LVL 5) CARD - Police Station",
-      "carless": "|Apu Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Apu Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -2985,7 +2985,7 @@
       "Y": -54.8744812,
       "Z": -71.76339722,
       "Desc": "(LVL 6) CARD - Planet Hype Sign",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3003,7 +3003,7 @@
       "Y": -52.51371765,
       "Z": 356.0994873,
       "Desc": "(LVL 6) CARD - Duff Blimp",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3012,7 +3012,7 @@
       "Y": -44.19477081,
       "Z": 327.3461914,
       "Desc": "(LVL 6) CARD - Hidden in Bush Next to Kamp Krusty Well Exit",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3021,7 +3021,7 @@
       "Y": -6.715759277,
       "Z": 258.8165283,
       "Desc": "(LVL 6) CARD - Broken Bridge",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3102,7 +3102,7 @@
       "Y": -72.85205,
       "Z": -62.04324,
       "Desc": "(LVL 6) CARD - Big Boat on Beach",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3255,7 +3255,7 @@
       "Y": -0.5914119,
       "Z": -38.64098,
       "Desc": "(LVL 6) CARD - Lumber King Billboard",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3345,7 +3345,7 @@
       "Y": -64.25409,
       "Z": 104.4379,
       "Desc": "(LVL 6) CARD - Rail Near C-Spanker",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3363,7 +3363,7 @@
       "Y": -51.57324,
       "Z": 56.16277,
       "Desc": "(LVL 6) CARD - C-Spanker Crane",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3381,7 +3381,7 @@
       "Y": -49.41329,
       "Z": 94.9608,
       "Desc": "(LVL 6) CARD - C-Spanker Inside Cargo Container",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3417,7 +3417,7 @@
       "Y": -42.90388,
       "Z": 271.672,
       "Desc": "(LVL 6) CARD - KrustyLu Studios Sign",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3426,7 +3426,7 @@
       "Y": -48.06821,
       "Z": 273.4845,
       "Desc": "(LVL 6) CARD - Behind KrustyLu Studios Sign",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3462,7 +3462,7 @@
       "Y": -22.63221,
       "Z": 403.1651,
       "Desc": "(LVL 6) CARD - Motel Awning",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3552,7 +3552,7 @@
       "Y": -60.31354,
       "Z": -48.91807,
       "Desc": "(LVL 6) CARD - Captain Chum 'N' Stuff",
-      "carless": "|Bart Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Bart Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3581,7 +3581,7 @@
       "Y": 11.52599144,
       "Z": -190.9246216,
       "Desc": "(LVL 7) CARD - Blue House Haunted Playground",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3590,7 +3590,7 @@
       "Y": 8.85051918,
       "Z": -608.887207,
       "Desc": "(LVL 7) CARD - School Playground",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3608,7 +3608,7 @@
       "Y": 9.406603813,
       "Z": 39.41314697,
       "Desc": "(LVL 7) CARD - Cemetery Moat",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3617,7 +3617,7 @@
       "Y": 11.20742035,
       "Z": 463.2613831,
       "Desc": "(LVL 7) CARD - Barn Silo",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3626,7 +3626,7 @@
       "Y": 33.78709793,
       "Z": 288.3930969,
       "Desc": "(LVL 7) CARD - Mr. Burns Office",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3770,7 +3770,7 @@
       "Y": 5.036113,
       "Z": -601.6844,
       "Desc": "(LVL 7) CARD - Dumpster Behind Krusty Burger Near School",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3788,7 +3788,7 @@
       "Y": 13.64513,
       "Z": -589.4341,
       "Desc": "(LVL 7) CARD - Back of School Roof",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3806,7 +3806,7 @@
       "Y": 4.093623,
       "Z": -498.9688,
       "Desc": "(LVL 7) CARD - Grocery Store's Dumpster",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3842,7 +3842,7 @@
       "Y": 10.55477,
       "Z": -112.1667,
       "Desc": "(LVL 7) CARD - Above Wiggum's",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3878,7 +3878,7 @@
       "Y": 13.0195,
       "Z": 185.549,
       "Desc": "(LVL 7) CARD - Big Bridge",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3959,7 +3959,7 @@
       "Y": 3.681816,
       "Z": 448.8213,
       "Desc": "(LVL 7) CARD - Above Trailer Park",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -3968,7 +3968,7 @@
       "Y": 2.594809,
       "Z": 398.571,
       "Desc": "(LVL 7) CARD - Above Street Near Barn",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -4013,7 +4013,7 @@
       "Y": 17.75314,
       "Z": 288.0947,
       "Desc": "(LVL 7) CARD - Power Plant Wreckage 1",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -4022,7 +4022,7 @@
       "Y": 22.89287,
       "Z": 304.972,
       "Desc": "(LVL 7) CARD - Power Plant Wreckage 2",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -4031,7 +4031,7 @@
       "Y": 29.23816,
       "Z": 291.1941,
       "Desc": "(LVL 7) CARD - Power Plant Wreckage 3",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -4040,7 +4040,7 @@
       "Y": 35.75295,
       "Z": 306.3725,
       "Desc": "(LVL 7) CARD - Burns' Office Chair",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
@@ -4058,7 +4058,7 @@
       "Y": 14.31366,
       "Z": -4.618032,
       "Desc": "(LVL 7) CARD - Cemetery Crypt",
-      "carless": "|Homer Double Jump| OR {YamlDisabled(moverandomizer)}",
+      "carless": "|Homer Progressive Jump:2| OR {YamlDisabled(moverandomizer)}",
       "car": "",
       "glitched": ""
     },
