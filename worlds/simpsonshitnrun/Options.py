@@ -44,12 +44,12 @@ class MoveRando(Toggle):
 
 class StartingJumpLevel(Range):
     """Choose how many Progressive Jump items to start with for each character.
-       Starting with more unlocked jumps will likely lead to larger initial Spheres,
-       especially with CardShuffle enabled. This option is always 2 if MoveRando is False."""
+       This option is always 2 if MoveRando is False. CARD LOGIC IS CURRENTLY INCORRECT
+       IF STARTING WITH 0 JUMPS"""
     display_name = "Starting Jump Level"
     range_start = 0
     range_end = 2
-    default = 0
+    default = 1
 
 class ShuffleGagfinder(Toggle):
     """If enabled, add a Gagfinder to the pool for each Character that will be
@@ -134,7 +134,8 @@ class CardLogic(Choice):
 class RaiseCards(Range):
     """Many of the available card locations for shuffling have low logical requirements. This option will choose a number
        of cards based on the percent set here and increase their height so that they require Double Jump to reach. This option
-       does nothing if ShuffleCards is set to False."""
+       does nothing if ShuffleCards is set to False.
+       THIS OPTION IS CURRENTLY UNIMPLEMENTED, IT WILL HAVE NO EFFECT"""
     display_name = "Raise Cards"
     range_start = 0
     range_end = 100
