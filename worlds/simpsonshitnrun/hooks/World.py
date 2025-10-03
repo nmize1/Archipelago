@@ -61,21 +61,6 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
             c_cards = level_cards[:7]
 
         for card in c_cards:
-            if card[logic] == "" and world.random.randrange(0, 100) > world.options.raisecards:
-                card["Y"] = card["Y"] + 10 #random number, need to test
-                lnum = int(level.split()[-1])
-                if lnum == 1 or lnum == 7:
-                    character = "Homer"
-                elif lnum == 2 or lnum == 6:
-                    character = "Bart"
-                elif lnum == 3:
-                    character = "Lisa"
-                elif lnum == 4:
-                    character = "Marge"
-                elif lnum == 5:
-                    character = "Apu"
-                card[logic] = f"|{character} Progressive Jump:2|"
-
             card_table.append({
                 "id": location_name_to_location[card["Desc"]]["id"],
                 "level": level,

@@ -131,16 +131,6 @@ class CardLogic(Choice):
     option_glitched = 2
     default = 0
 
-class RaiseCards(Range):
-    """Many of the available card locations for shuffling have low logical requirements. This option will choose a number
-       of cards based on the percent set here and increase their height so that they require Double Jump to reach. This option
-       does nothing if ShuffleCards is set to False.
-       THIS OPTION IS CURRENTLY UNIMPLEMENTED, IT WILL HAVE NO EFFECT"""
-    display_name = "Raise Cards"
-    range_start = 0
-    range_end = 100
-    default = 50
-
 class MinShopPrice(Range):
     """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
     display_name = "Min Shop Price"
@@ -207,7 +197,6 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     cardpercent: CardPercent
     shufflecards: ShuffleCards
     cardlogic: CardLogic
-    raisecards: RaiseCards
     minprice: MinShopPrice
     maxprice: MaxShopPrice
     shopscalemod: ShopScaleMod
