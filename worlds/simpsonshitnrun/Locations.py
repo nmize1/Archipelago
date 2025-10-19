@@ -23,7 +23,7 @@ def add_cards(level, n_id, location_table):
 
         location_table.append({
             "name": card["Desc"],
-            "region": f"{level}",
+            "region": f"{level} CARD",
             "category": [f"{level} CARD"],
             "requires": f"({{YamlCompare(cardlogic==carless)}}{carless} OR "
                         f"({{YamlCompare(cardlogic==cars)}}{car} OR "

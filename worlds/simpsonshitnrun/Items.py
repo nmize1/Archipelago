@@ -186,7 +186,8 @@ item_table = [
         "count": 1,
         "name": "Family Sedan",
         "category": ["Level 1 Cars", "Cars"],
-        "progression": True,
+        "progression": False,
+        "useful": True,
         "id": 121810
     },
     {
@@ -467,42 +468,48 @@ item_table = [
         "count": 1,
         "name": "Honor Roller",
         "category": ["Cars", "Level 2 Cars"],
-        "progression": True,
+        "progression": False,
+        "useful": True,
         "id": 121846
     },
     {
         "count": 1,
         "name": "Malibu Stacy Car",
         "category": ["Cars", "Level 3 Cars"],
-        "progression": True,
+        "progression": False,
+        "useful": True,
         "id": 121847
     },
     {
         "count": 1,
         "name": "Canyonero",
         "category": ["Cars", "Level 4 Cars"],
-        "progression": True,
+        "progression": False,
+        "useful": True,
         "id": 121848
     },
     {
         "count": 1,
         "name": "Longhorn",
         "category": ["Cars", "Level 5 Cars"],
-        "progression": True,
+        "progression": False,
+        "useful": True,
         "id": 121849
     },
     {
         "count": 1,
         "name": "Ferrini - Red",
         "category": ["Cars", "Level 6 Cars"],
-        "progression": True,
+        "progression": False,
+        "useful": True,
         "id": 121850
     },
     {
         "count": 1,
         "name": "70's Sports Car",
         "category": ["Cars", "Level 7 Cars"],
-        "progression": True,
+        "progression": False,
+        "useful": True,
         "id": 121851
     },
     {
@@ -735,7 +742,7 @@ item_table = [
         "name": "Apu Gagfinder",
         "category": ["Gags"],
         "progression": True,
-        "id": 121899 #highest id
+        "id": 121899
     },
     {
         "count": 50,
@@ -746,14 +753,14 @@ item_table = [
         "progression": False
     },
     {
-        "count": 50,
+        "count": 40,
         "name": "Hit N Run Reset",
         "category": ["Filler"],
         "id": 121876,
         "progression": False
     },
     {
-        "count": 100,
+        "count": 50,
         "name": "10 Coins",
         "category": ["Filler"],
         "id": 121877,
@@ -852,6 +859,251 @@ item_table = [
         "category": ["Progression"],
         "id": 121888,
         "progression": True
+    },
+    {
+        "count": 1,
+        "name": "Mini School Bus",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121900,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Glass Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121901,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Minivan",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121902,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Pizza Van",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121903,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Taxi",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121904,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Sedan B",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121905,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Fish Van",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121906,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Garbage Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121907,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Nuclear Waste Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121908,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Vote Quimby Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121904,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Ambulance",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121905,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Sports Car B",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121906,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Itchy and Scratchy Movie Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121907,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Burns Armored Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121908,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Pickup",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121909,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Sports Car A",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121910,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Compact Car",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121911,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "SUV",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121912,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Hallo Hearse",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121913,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Coffin Car",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121914,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Ghost Ship",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121915,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Witch Broom",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121916,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Sedan A",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121917,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Station Wagon",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121918,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Ice Cream Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121919,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Bonestorm Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121920,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Cell Phone Car",                                                                                                                                                                                                    "name": "Ghost Ship",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121921,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Milk Truck",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121922,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Nonuplets Van",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121923,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Ferrini - Black",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121924,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Homer Frink-o-Matic Wasp Bumper",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121925
+    },
+    {
+        "count": 1,
+        "name": "Bart Frink-o-Matic Wasp Bumper",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121926
+    },
+    {
+        "count": 1,
+        "name": "Lisa Frink-o-Matic Wasp Bumper",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121927
+    },
+    {
+        "count": 1,
+        "name": "Marge Frink-o-Matic Wasp Bumper",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121928
+    },
+    {
+        "count": 1,
+        "name": "Apu Frink-o-Matic Wasp Bumper",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121929  #highest id
     },
 ]
 

@@ -32,8 +32,15 @@ class LevelSanity(Choice):
     option_levels = 1
     default = 1
 
+class ShuffleStartingCar(Toggle):
+    """Choose whether to shuffle starting car between available cars from your starting level.
+       If disabled, you'll always start with your starting level's default car.
+        """
+    display_name = "Shuffle Starting Car"
+    default = True
+
 class MoveRando(Toggle):
-    """Choose whether or not to shuffle moves into the item pool.
+    """Choose whether to shuffle moves into the item pool.
        Moves that are shuffled are Double Jump and Attack for each character.
        These have logical implications for wasp and card collection
        as well as L7M4 requiring Homer Double Jump.
@@ -117,7 +124,7 @@ class ShuffleCards(Toggle):
     display_name = "Shuffle Cards"
 
 class CardLogic(Choice):
-    """Choose logic level for cards and wasps.
+    """Choose logic level for cards.
        Carless: Cars are not considered at all in this logic level and cards that cannot be reached without them
                 are not available locations for ShuffleCards.
                 Note that the card on Level 6 that requires the Itchy and Scratchy Truck will still require it if ShuffleCards is false.
@@ -125,11 +132,25 @@ class CardLogic(Choice):
        Glitched: Glitches and speedrunning tricks are considered in whether you can reach a card.
        ***CURRENTLY ONLY CARLESS LOGIC LEVEL IS SUPPORTED, OTHER OPTIONS WILL RAISE AN ERROR AND FAIL GENERATION"""
 
-    display_name = "Card and Wasp Logic"
+    display_name = "Card Logic"
     option_carless = 0
     option_cars = 1
     option_glitched = 2
     default = 0
+
+class WaspLogic(Choice):
+    """Choose logic level for wasps.
+       Strict: Wasps cannot be broken with cars.
+       Unlockable: Adds a "Frink-o-Matic Wasp Bumper" item for each character that allows them to break wasps with cars and logic considers your available cars. - NOT IMPLEMENTED YET.
+       Cars: Wasps logic considers your available cars. - NOT IMPLEMENTED YET
+       Open: Wasps are not in logic without Attack items but can be broken with cars."""
+
+    display_name = "Wasp Logic"
+    option_strict = 0
+    option_unlockable = 1
+    option_cars = 2
+    option_open = 3
+
 
 class MinShopPrice(Range):
     """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
@@ -162,6 +183,11 @@ class ShopScaleMod(Range):
     range_end = 5
     default = 2
 
+class ShuffleTraffic(Toggle):
+    """Randomize traffic per level"""
+    default = True
+    display_name = "Shuffle Traffic"
+
 class EjectTraps(Toggle):
     """Whether to include Eject traps in the item pool."""
     default = True
@@ -186,6 +212,7 @@ class HNRTraps(Toggle):
 class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     goal: Goal
     levelsanity: LevelSanity
+    startingcarshuffle: ShuffleStartingCar
     moverandomizer: MoveRando
     startjumplevel: StartingJumpLevel
     shufflegagfinder: ShuffleGagfinder
@@ -197,10 +224,12 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     cardpercent: CardPercent
     shufflecards: ShuffleCards
     cardlogic: CardLogic
+    wasplogic: WaspLogic
     minprice: MinShopPrice
     maxprice: MaxShopPrice
     shopscalemod: ShopScaleMod
     shophintpolicy: ShopHintPolicy
+    shuffletraffic: ShuffleTraffic
     filler_traps: FillerTrapPercent
     eject: EjectTraps
     duff: DuffTraps

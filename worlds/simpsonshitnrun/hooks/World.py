@@ -28,7 +28,7 @@ import uuid
 ##    5. pre_fill - Creates the victory location
 ##
 ## The create_item method is used by plando and start_inventory settings to create an item from an item name.
-## The fill_slot_data method will be used to send data to the Manual client for later use, like deathlink.
+## The fill_slot_data method will be used to send data to the client for later use, like deathlink.
 ########################################################################################
 
 card_table = []
@@ -45,6 +45,9 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
 
     if world.options.cardlogic != 0:
         raise OptionError("Chosen cardlogic level is not implemented.")
+
+    if world.options.wasplogic == 1 or world.options.wasplogic == 2:
+        raise OptionError("Chosen wasplogic level is not implemented.")
 
     if world.options.cardlogic == 0:
         logic = 'carless'
@@ -102,37 +105,40 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     itemNamesToRemove = [] # List of item names
     itemNamesToStart = []
 
+    cars = {
+        1: ["Family Sedan", "Pickup Truck", "Plow King", "Electaurus", "Surveilance Van", "Duff Truck", "Speed Rocket"],
+        2: ["Honor Roller", "WWII Vehicle", "Mr. Plow", "Moe's Sedan", "Limo", "Fire Truck", "Monorail Car"],
+        3: ["Malibu Stacy Car", "Skinner's Sedan", "School Bus", "Book Burning Van", "Nerd Car", "Donut Truck",
+            "Knight Boat"],
+        4: ["Canyonero", "Kremlin", "Tractor", "Clown Car", "Curator", "Krusty's Limo", "ATV"],
+        5: ["Longhorn", "Hover Car", "Car Built For Homer", "El Carro Loco", "Cola Truck", "Police Car",
+            "Obliteratatron Big Wheel Truck"],
+        6: ["Ferrini - Red", "Bandit", "Globex Super Villain Car", "36 Stutz Bearcat", "Armored Truck", "Chase Sedan",
+            "Planet Hype 50's Car"],
+        7: ["70's Sports Car", "Mr. Burns' Limo", "Zombie Car", "Open Wheel Race Car", "Hearse", "Hover Bike",
+            "R/C Buggy"]
+    }
+
     #Add starting items and set locations for linear setting
     #Linear: Place level 1 and family sedan in start inventory. Remove regular level items.
     if world.options.levelsanity == 0:
-        itemNamesToStart.extend(["Level 1", "Family Sedan"])
-        itemNamesToRemove.extend(["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Family Sedan"])
-        #print(item_pool)
+        if not world.options.startingcarshuffle:
+            car = cars[1][0]
+        else:
+            car = world.random.choice(cars[1])
+        itemNamesToStart.extend(["Level 1", car])
+        itemNamesToRemove.extend(["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", car])
 
-    #level: Place  level and it's starting car in start inventory and remove progressive level items
+    #level: Place level and it's starting car in start inventory and remove progressive level items
     elif world.options.levelsanity == 1:
-        lvl = world.random.randrange(6)
-        if lvl == 0:
-            itemNamesToStart.extend(["Level 1", "Family Sedan"])
-            itemNamesToRemove.extend(["Level 1", "Family Sedan"])
-        elif lvl == 1:
-            itemNamesToStart.extend(["Level 2", "Honor Roller"])
-            itemNamesToRemove.extend(["Level 2", "Honor Roller"])
-        elif lvl == 2:
-            itemNamesToStart.extend(["Level 3", "Malibu Stacy Car"])
-            itemNamesToRemove.extend(["Level 3", "Malibu Stacy Car"])
-        elif lvl == 3:
-            itemNamesToStart.extend(["Level 4", "Canyonero"])
-            itemNamesToRemove.extend(["Level 4", "Canyonero"])
-        elif lvl == 4:
-            itemNamesToStart.extend(["Level 5", "Longhorn"])
-            itemNamesToRemove.extend(["Level 5", "Longhorn"])
-        elif lvl == 5:
-            itemNamesToStart.extend(["Level 6", "Ferrini - Red"])
-            itemNamesToRemove.extend(["Level 6", "Ferrini - Red"])
-        elif lvl == 6:
-            itemNamesToStart.extend(["Level 7", "70s Sports Car"])
-            itemNamesToRemove.extend(["Level 7", "70s Sports Car"])
+        lvl = world.random.randrange(1, 8)
+        if not world.options.startingcarshuffle:
+            car = cars[lvl][0]
+        else:
+            car = world.random.choice(cars[lvl])
+
+        itemNamesToStart.extend([f"Level {lvl}", car])
+        itemNamesToRemove.extend([f"Level {lvl}", car])
 
         for i in range(6):
             itemNamesToRemove.append("Progressive Level")
@@ -165,6 +171,13 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
 
     if world.options.shufflecheckeredflags == False:
         itemNamesToRemove.extend(["Homer Checkered Flag", "Bart Checkered Flag", "Lisa Checkered Flag", "Marge Checkered Flag", "Apu Checkered Flag"])
+
+    if world.options.wasplogic == 0:
+        itemNamesToRemove.extend(["Homer Frink-o-Matic Wasp Bumper", "Bart Frink-o-Matic Wasp Bumper", "Lisa Frink-o-Matic Wasp Bumper",
+                                  "Marge Frink-o-Matic Wasp Bumper", "Apu Frink-o-Matic Wasp Bumper"])
+    elif world.options.wasplogic == 4:
+        itemNamesToStart.extend(["Homer Frink-o-Matic Wasp Bumper", "Bart Frink-o-Matic Wasp Bumper", "Lisa Frink-o-Matic Wasp Bumper",
+                                 "Marge Frink-o-Matic Wasp Bumper", "Apu Frink-o-Matic Wasp Bumper"])
 
     if world.options.eject == False:
         itemNamesToRemove.extend(["Eject"] * 20)
