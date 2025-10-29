@@ -191,6 +191,9 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     if world.options.launch == False:
         itemNamesToRemove.extend(["Launch"] * 20)
 
+    if world.options.traffictrap == False:
+        itemNamesToRemove.extend(["Traffic Trap"] * 20)
+
     for itemName in itemNamesToStart:
         item = next(i for i in item_pool if i.name == itemName)
         multiworld.push_precollected(next(i for i in item_pool if i == item))

@@ -760,7 +760,7 @@ item_table = [
         "progression": False
     },
     {
-        "count": 50,
+        "count": 30,
         "name": "10 Coins",
         "category": ["Filler"],
         "id": 121877,
@@ -1009,7 +1009,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Witch Broom",
+        "name": "Witch's Broom",
         "category": ["Cars", "Traffic", "Filler"],
         "id": 121916,
         "progression": False
@@ -1044,7 +1044,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Cell Phone Car",                                                                                                                                                                                                    "name": "Ghost Ship",
+        "name": "Cell Phone Car",
         "category": ["Cars", "Traffic", "Filler"],
         "id": 121921,
         "progression": False
@@ -1103,8 +1103,31 @@ item_table = [
         "name": "Apu Frink-o-Matic Wasp Bumper",
         "category": ["Moves"],
         "progression": True,
-        "id": 121929  #highest id
+        "id": 121929
     },
+    {
+        "count": 20,
+        "name": "Traffic Trap",
+        "category": ["Filler"],
+        "trap": True,
+        "id": 121930,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Cube Van",
+        "category": ["Cars", "Traffic", "Filler"],
+        "id": 121931,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "WWII Vehicle W/ Rocket",
+        "category": ["Cars", "Level 2 Cars"],
+        "useful": True,
+        "id": 121832, #highest id
+        "progression": False
+    }
 ]
 
 for item in item_table:

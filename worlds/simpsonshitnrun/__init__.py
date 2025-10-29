@@ -66,6 +66,91 @@ class SimpsonsHitAndRunWorld(World):
     location_name_groups = location_name_groups
     victory_names = victory_names
 
+    mission_locks = {}
+    vehicle_item_to_vehicle = {
+        "ambul": "Ambulance",
+        "apu_v": "Longhorn",
+        "atv_v": "ATV",
+        "bart_v": "Ferrini - Red",
+        "bbman_v": "El Carro Loco",
+        "bookb_v": "Book Burning Van",
+        "burns_v": "36 Stutz Bearcat",
+        "burnsarm": "Burns Armored Truck",
+        "carhom_v": "Car Built For Homer",
+        "cArmor": "Armored Truck",
+        "cBlbart": "Ferrini - Black",
+        "cBone": "Bonestorm Truck",
+        "cCellA": "Cell Phone Car",
+        "cCola": "Cola Truck",
+        "cCube": "Cube Van",
+        "cCurator": "Curator",
+        "cDonut": "Donut Truck",
+        "cDuff": "Duff Truck",
+        "cFire_v": "Fire Truck",
+        "cHears": "Hearse",
+        "cKlimo": "Krusty's Limo",
+        "cletu_v": "Pickup Truck",
+        "cLimo": "Limo",
+        "cMilk": "Milk Truck",
+        "cNerd": "Nerd Car",
+        "cNonup": "Nonuplets Van",
+        "coffin": "Coffin Car",
+        "comic_v": "Kremlin",
+        "compactA": "Compact Car",
+        "cSedan": "Chase Sedan",
+        "cVan": "Surveillance Van",
+        "dune_v": "R/C Buggy",
+        "elect_v": "Electaurus",
+        "famil_v": "Family Sedan",
+        "fishtruc": "Fish Van",
+        "fone_v": "Open Wheel Race Car",
+        "frink_v": "Hover Car",
+        "garbage": "Garbage Truck",
+        "glastruc": "Glass Truck",
+        "gramp_v": "WWII Vehicle",
+        "gramR_v": "WWII Vehicle W/ Rocket",
+        "hallo": "Hearse",
+        "hbike_v": "Hover Bike",
+        "homer_v": "70's Sports Car",
+        "honor_v": "Honor Roller",
+        "hype_v": "Planet Hype 50's Car",
+        "icecream": "Ice Cream Truck",
+        "IStruck": "Itchy and Scratchy Movie Truck",
+        "knigh_v": "Knight Boat",
+        "krust_v": "Clown Car",
+        "lisa_v": "Malibu Stacy Car",
+        "marge_v": "Canyonero",
+        "minivanA": "Minivan",
+        "moe_v": "Moe's Sedan",
+        "mono_v": "Monorail Car",
+        "mrplo_v": "Mr. Plow",
+        "nuctruck": "Nuclear Waste Truck",
+        "oblit_v": "Obliteratatron Big Wheel Truck",
+        "otto_v": "School Bus",
+        "pickupA": "Pickup",
+        "pizza": "Pizza Van",
+        "plowk_v": "Plow King",
+        "rocke_v": "Speed Rocket",
+        "schoolbu": "Mini School Bus",
+        "scorp_v": "Globex Super Villain Car",
+        "sedanA": "Sedan A",
+        "sedanB": "Sedan B",
+        "ship": "Ghost Ship",
+        "skinn_v": "Skinner's Sedan",
+        "smith_v": "Mr. Burns' Limo",
+        "snake_v": "Bandit",
+        "sportsA": "Sports Car A",
+        "sportsB": "Sports Car B",
+        "SUVA": "SUV",
+        "taxiA": "Taxi",
+        "votetruc": "Vote Quimby Truck",
+        "wagonA": "Station Wagon",
+        "wiggu_v": "Police Car",
+        "willi_v": "Tractor",
+        "witchcar": "Witch's Broom",
+        "zombi_v": "Zombie Car"
+    }
+
     def interpret_slot_data(self, slot_data: dict[str, any]):
         #this is called by tools like UT
 
@@ -119,13 +204,27 @@ class SimpsonsHitAndRunWorld(World):
         for item in item_name_to_item.values():
             for category in item.get("category", []):
                 match = re.match(r"Level ([1-7]) Car", category)
-                if match and not item.get("Progression", False):
+                if match and not item.get("progression", False):
                     level = int(match.group(1))
                     cars_by_level.setdefault(level, []).append(item)
 
         for car in [self.random.choice(cars) for cars in cars_by_level.values()]:
-            car["Progression"] = True
+            car["progression"] = True
 
+        if (self.options.missionlocks != 0):
+            carlocks = self.random.sample(
+                list(self.vehicle_item_to_vehicle.keys()),
+                int(len(self.vehicle_item_to_vehicle) * (self.options.missionlocks / 100))
+            )
+            missions = self.random.sample(range(1, 50), len(carlocks))
+
+            self.mission_locks = dict(zip(missions, carlocks))
+
+            for car in self.mission_locks.values():
+                item = self.item_name_to_item[self.vehicle_item_to_vehicle[car]]
+                item["progression"] = True
+        else:
+            self.mission_locks = {0 : "NO MISSIONLOCKS"}
 
         for name in configured_item_names.values():
             item = self.item_name_to_item[name]
@@ -314,21 +413,23 @@ class SimpsonsHitAndRunWorld(World):
 
     def generate_output(self, output_directory: str):
         filename = f"{self.multiworld.get_out_file_name_base(self.player)}_SHAR"
-        vehicles = [
-            "ambul", "apu_v", "atv_v", "bart_v", "bbman_v", "bookb_v", "burns_v", "burnsarm",
-            "carhom_v", "cArmor", "cBlbart", "cBone", "cCellA", "cCellB", "cCellC", "cCellD",
-            "cCola", "cCube", "cCurator", "cDonut", "cDuff", "cFire_v", "cHears", "cKlimo",
-            "cletu_v", "cLimo", "cMilk", "cNerd", "cNonup", "coffin", "comic_v", "compactA",
-            "cPolice", "cSedan", "cVan", "dune_v", "elect_v", "famil_v", "fishtruc", "fone_v",
-            "frink_v", "garbage", "glastruc", "gramp_v", "gramR_v", "hallo", "hbike_v", "homer_v",
-            "honor_v", "hype_v", "icecream", "IStruck", "knigh_v", "krust_v", "lisa_v", "marge_v",
-            "minivanA", "moe_v", "mono_v", "mrplo_v", "nuctruck", "oblit_v", "otto_v", "pickupA",
-            "pizza", "plowk_v", "redbrick", "rocke_v", "schoolbu", "scorp_v", "sedanA", "sedanB",
-            "ship", "skinn_m1", "skinn_v", "smith_v", "snake_v", "sportsA", "sportsB", "SUVA", "taxiA",
-            "votetruc", "wagonA", "wiggu_v", "willi_v", "witchcar", "zombi_v"
-        ]
-        traffic_table = self.random.sample(vehicles, 35) if self.options.shuffletraffic else ["NO TRAFFIC"]
-        gen(output_directory, filename, card_table, traffic_table, self.player)
+
+        traffic_table = (
+            self.random.sample(list(self.vehicle_item_to_vehicle.keys()), 35)
+            if self.options.shuffletraffic
+            else ["NO TRAFFIC"]
+        )
+
+        gen(
+            output_directory,
+            filename,
+            f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}",
+            f"AP-{self.multiworld.seed_name}-P{self.player}",
+            card_table,
+            traffic_table,
+            self.mission_locks,
+            self.player
+        )
 
     def write_spoiler(self, spoiler_handle):
         before_write_spoiler(self, self.multiworld, spoiler_handle)

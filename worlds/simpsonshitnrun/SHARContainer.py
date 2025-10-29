@@ -7,10 +7,13 @@ from worlds.Files import APPlayerContainer
 class SHARContainer(APPlayerContainer):
     game: str = "The Simpsons Hit And Run"
 
-    def __init__(self, card_table, traffic_table, base_path: str, output_directory: str,
+    def __init__(self, ID, TitleID, card_table, traffic_table, mission_locks, base_path: str, output_directory: str,
                  player=None, player_name: str = "", server: str = ""):
+        self.ID = ID
+        self.TitleID = TitleID
         self.card_table = card_table
         self.traffic_table = traffic_table
+        self.mission_locks = mission_locks
         self.output_directory = output_directory
         self.file_path = base_path
         container_path = os.path.join(output_directory, base_path)
@@ -21,7 +24,9 @@ class SHARContainer(APPlayerContainer):
         safe_player = str(self.player).replace(" ", "_")
         filename = f"SHAR.ini"
 
-        ini_data = ""
+        ini_data = f"[IDENTIFIER]\n"
+        ini_data += f"ID={self.ID}\n"
+        ini_data += f"TitleID={self.TitleID}\n\n"
         i = 1
         for card in self.card_table:
             ini_data += "[CARD]\n"
@@ -37,15 +42,22 @@ class SHARContainer(APPlayerContainer):
             ini_data += "[TRAFFIC]\n"
             ini_data += f"Name={car}\n\n"
 
+        for mission, car in self.mission_locks.items():
+            ini_data += "[MISSIONLOCK]\n"
+            ini_data += f"Mission={mission}\n"
+            ini_data += f"Car={car}\n\n"
 
         opened_zipfile.writestr(filename, ini_data)
         super().write_contents(opened_zipfile)
 
-def gen(output_directory, mod_name, card_table, traffic_table, player):
+def gen(output_directory, mod_name, ID, TitleID, card_table, traffic_table, mission_locks, player):
     mod_dir = os.path.join(output_directory, f"{mod_name}_{Utils.__version__}")
     mod = SHARContainer(
+        ID,
+        TitleID,
         card_table,
         traffic_table,
+        mission_locks,
         mod_dir,
         output_directory,
         player

@@ -151,6 +151,12 @@ class WaspLogic(Choice):
     option_cars = 2
     option_open = 3
 
+class AddMissionLocks(Range):
+    """Add car requirements to a percentage of missions"""
+
+    display_name = "Mission Locks"
+    range_start = 0
+    range_end = 100
 
 class MinShopPrice(Range):
     """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
@@ -208,6 +214,11 @@ class HNRTraps(Toggle):
     default = True
     display_name = "Enable Hit N Run Traps"
 
+class TrafficTraps(Toggle):
+    """Whether to include Traffic traps in the item pool."""
+    default = True
+    display_name = "Enable Traffic Traps"
+
 @dataclass
 class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     goal: Goal
@@ -225,6 +236,7 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     shufflecards: ShuffleCards
     cardlogic: CardLogic
     wasplogic: WaspLogic
+    missionlocks: AddMissionLocks
     minprice: MinShopPrice
     maxprice: MaxShopPrice
     shopscalemod: ShopScaleMod
@@ -235,6 +247,7 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     duff: DuffTraps
     launch: LaunchTraps
     hnr: HNRTraps
+    traffictrap: TrafficTraps
 
 
 SimpsonsHitAndRunOptions = SimpsonsHitAndRunOptions
