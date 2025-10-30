@@ -1125,7 +1125,15 @@ item_table = [
         "name": "WWII Vehicle W/ Rocket",
         "category": ["Cars", "Level 2 Cars"],
         "useful": True,
-        "id": 121832, #highest id
+        "id": 121932,
+        "progression": False
+    },
+    {
+        "count": 1,
+        "name": "Audi TT",
+        "category": ["Cars", "Level 2 Cars"],
+        "useful": True,
+        "id": 121933, #highest id
         "progression": False
     }
 ]

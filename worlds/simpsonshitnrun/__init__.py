@@ -46,7 +46,7 @@ class SimpsonsHitAndRunWorld(World):
     options_dataclass = SimpsonsHitAndRunOptions
     data_version = 2
     required_client_version = (0, 5, 0)
-    apworld_version = "0.3.4"
+    apworld_version = "0.3.5"
     # These properties are set from the imports of the same name above.
     item_table = item_table
     location_table = location_table # this is likely imported from Data instead of Locations because the Game Complete location should not be in here, but is used for lookups
@@ -148,7 +148,8 @@ class SimpsonsHitAndRunWorld(World):
         "wiggu_v": "Police Car",
         "willi_v": "Tractor",
         "witchcar": "Witch's Broom",
-        "zombi_v": "Zombie Car"
+        "zombi_v": "Zombie Car",
+        "tt": "Audi TT"
     }
 
     def interpret_slot_data(self, slot_data: dict[str, any]):
@@ -406,7 +407,7 @@ class SimpsonsHitAndRunWorld(World):
             slot_data[option_key] = get_option_value(self.multiworld, self.player, option_key)
 
         slot_data["card_locations"] = [card["id"] for card in card_table]
-        slot_data["TitleID"] = f"AP-{self.multiworld.seed_name}-P{self.player}"
+        slot_data["VerifyID"] = f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}"
 
         slot_data = after_fill_slot_data(slot_data, self, self.multiworld, self.player)
 
