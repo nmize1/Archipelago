@@ -172,6 +172,46 @@ class SimpsonsHitAndRunWorld(World):
     def create_regions(self):
         before_create_regions(self, self.multiworld, self.player)
 
+        if (self.options.missionlocks != 0):
+            carlocks = self.random.sample(
+                list(self.vehicle_item_to_vehicle.keys()),
+                int(len(self.vehicle_item_to_vehicle) * (self.options.missionlocks / 100))
+            )
+            missions = self.random.sample(range(1, 50), len(carlocks))
+
+            self.mission_locks = dict(zip(missions, carlocks))
+
+            level_bases = {
+                1: 122289,
+                2: 122300,
+                3: 122311,
+                4: 122322,
+                5: 122333,
+                6: 122344,
+                7: 122355,
+            }
+
+            for m, car in self.mission_locks.items():
+                item = self.item_name_to_item[self.vehicle_item_to_vehicle[car]]
+                item.pop("useful", None)
+                if "Filler" in item.get("category", []):
+                    item["category"].remove("Filler")
+                item["progression"] = True
+
+                level = (m - 1) // 7 + 1
+                mission = (m - 1) % 7 + 1
+                id_number = level_bases[level] + (mission - 1)
+
+                loc = self.location_name_to_location[self.location_id_to_name[id_number]]
+                req = loc.get("requires", "")
+                if not req:
+                    loc["requires"] = f"|{item["name"]}|"
+                else:
+                    loc["requires"] = f"{req} AND |{item["name"]}|"
+
+        else:
+            self.mission_locks = {0 : "NO MISSIONLOCKS"}
+
         create_regions(self, self.multiworld, self.player)
 
         location_game_complete = self.multiworld.get_location(victory_names[get_option_value(self.multiworld, self.player, 'goal')], self.player)
@@ -210,22 +250,8 @@ class SimpsonsHitAndRunWorld(World):
                     cars_by_level.setdefault(level, []).append(item)
 
         for car in [self.random.choice(cars) for cars in cars_by_level.values()]:
+            car.pop("useful", None)
             car["progression"] = True
-
-        if (self.options.missionlocks != 0):
-            carlocks = self.random.sample(
-                list(self.vehicle_item_to_vehicle.keys()),
-                int(len(self.vehicle_item_to_vehicle) * (self.options.missionlocks / 100))
-            )
-            missions = self.random.sample(range(1, 50), len(carlocks))
-
-            self.mission_locks = dict(zip(missions, carlocks))
-
-            for car in self.mission_locks.values():
-                item = self.item_name_to_item[self.vehicle_item_to_vehicle[car]]
-                item["progression"] = True
-        else:
-            self.mission_locks = {0 : "NO MISSIONLOCKS"}
 
         for name in configured_item_names.values():
             item = self.item_name_to_item[name]
@@ -435,6 +461,29 @@ class SimpsonsHitAndRunWorld(World):
 
     def write_spoiler(self, spoiler_handle):
         before_write_spoiler(self, self.multiworld, spoiler_handle)
+
+        if self.options.missionlocks:
+            level_bases = {
+                1: 122289,
+                2: 122300,
+                3: 122311,
+                4: 122322,
+                5: 122333,
+                6: 122344,
+                7: 122355,
+            }
+            spoiler_handle.write(f"\n{self.multiworld.get_file_safe_player_name(self.player)} Mission Locks\n")
+            for m, car in self.mission_locks.items():
+                item = self.item_name_to_item[self.vehicle_item_to_vehicle[car]]
+
+                level = (m - 1) // 7 + 1
+                mission = (m - 1) % 7 + 1
+                id_number = level_bases[level] + (mission - 1)
+
+                loc = self.location_name_to_location[self.location_id_to_name[id_number]]
+
+                spoiler_handle.write(f"{m}: {loc["name"]} requires {item["name"]}\n")
+
 
     ###
     # Non-standard AP world methods
