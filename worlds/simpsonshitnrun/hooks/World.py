@@ -43,12 +43,6 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int, card
 
     all_chosen_card_names = []
 
-    if world.options.cardlogic != 0:
-        raise OptionError("Chosen cardlogic level is not implemented.")
-
-    if world.options.wasplogic == 1 or world.options.wasplogic == 2:
-        raise OptionError("Chosen wasplogic level is not implemented.")
-
     if world.options.cardlogic == 0:
         logic = 'carless'
     elif world.options.cardlogic == 1:

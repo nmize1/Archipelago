@@ -4,6 +4,7 @@ import os
 import json
 import pkgutil
 import re
+from typing import Any, Dict, TextIO
 from pathlib import Path
 from typing import Callable, Optional
 
@@ -46,7 +47,7 @@ class SimpsonsHitAndRunWorld(World):
     options_dataclass = SimpsonsHitAndRunOptions
     data_version = 2
     required_client_version = (0, 5, 0)
-    apworld_version = "0.3.7"
+    apworld_version = "0.3.8"
     # These properties are set from the imports of the same name above.
     item_table = item_table
     location_table = location_table # this is likely imported from Data instead of Locations because the Game Complete location should not be in here, but is used for lookups
@@ -67,6 +68,7 @@ class SimpsonsHitAndRunWorld(World):
     victory_names = victory_names
 
     mission_locks = {}
+    progcars = []
     vehicle_item_to_vehicle = {
         "ambul": "Ambulance",
         "apu_v": "Longhorn",
@@ -93,7 +95,7 @@ class SimpsonsHitAndRunWorld(World):
         "cLimo": "Limo",
         "cMilk": "Milk Truck",
         "cNerd": "Nerd Car",
-        "cNonup": "Nonuplets Van",
+        "cNonup": "Nonuplets Minivan",
         "coffin": "Coffin Car",
         "comic_v": "Kremlin",
         "compactA": "Compact Car",
@@ -152,17 +154,33 @@ class SimpsonsHitAndRunWorld(World):
         "tt": "Audi TT"
     }
 
-    def interpret_slot_data(self, slot_data: dict[str, any]):
-        #this is called by tools like UT
+    ut_can_gen_without_yaml = True
+    @staticmethod
+    def interpret_slot_data(slot_data: Dict[str, Any]) -> Dict[str, Any]:
+        return slot_data
 
-        regen = False
-        for key, value in slot_data.items():
-            if key in self.options_dataclass.type_hints:
-                getattr(self.options, key).value = value
-                regen = True
+    def generate_early(self) -> None:
+        if world.options.cardlogic != 0:
+            raise OptionError("Chosen cardlogic level is not implemented.")
 
-        regen = hook_interpret_slot_data(self, self.player, slot_data) or regen
-        return regen
+        if world.options.wasplogic == 1 or world.options.wasplogic == 2:
+            raise OptionError("Chosen wasplogic level is not implemented.")
+
+        if hasattr(self.multiworld, "re_gen_passthrough"):
+            if self.game in self.multiworld.re_gen_passthrough:
+                print("Getting UT slot data.")
+                passthrough = self.multiworld.re_gen_passthrough[self.game]
+
+                for key in vars(self.options):
+                    if key in passthrough:
+                        option = getattr(self.options, key)
+                        if hasattr(option, "value"):
+                            option.value = passthrough[key]
+
+                self.mission_locks = passthrough["missionlocks"]
+                self.progcars = passthrough["progcars"]
+
+
 
     @classmethod
     def stage_assert_generate(cls, multiworld) -> None:
@@ -173,13 +191,14 @@ class SimpsonsHitAndRunWorld(World):
         before_create_regions(self, self.multiworld, self.player)
 
         if (self.options.missionlocks != 0):
-            carlocks = self.random.sample(
-                list(self.vehicle_item_to_vehicle.keys()),
-                int(len(self.vehicle_item_to_vehicle) * (self.options.missionlocks / 100))
-            )
-            missions = self.random.sample(range(1, 50), len(carlocks))
+            if not hasattr(self.multiworld, "generation_is_fake"):
+                carlocks = self.random.sample(
+                    list(self.vehicle_item_to_vehicle.keys()),
+                    int(len(self.vehicle_item_to_vehicle) * (self.options.missionlocks / 100))
+                )
+                missions = self.random.sample(range(1, 50), len(carlocks))
 
-            self.mission_locks = dict(zip(missions, carlocks))
+                self.mission_locks = dict(zip(missions, carlocks))
 
             level_bases = {
                 1: 122289,
@@ -192,6 +211,7 @@ class SimpsonsHitAndRunWorld(World):
             }
 
             for m, car in self.mission_locks.items():
+                m = int(m)
                 item = self.item_name_to_item[self.vehicle_item_to_vehicle[car]]
                 item.pop("useful", None)
                 if "Filler" in item.get("category", []):
@@ -208,6 +228,7 @@ class SimpsonsHitAndRunWorld(World):
                     loc["requires"] = f"|{item["name"]}|"
                 else:
                     loc["requires"] = f"{req} AND |{item["name"]}|"
+                print(loc["requires"])
 
         else:
             self.mission_locks = {0 : "NO MISSIONLOCKS"}
@@ -249,9 +270,15 @@ class SimpsonsHitAndRunWorld(World):
                     level = int(match.group(1))
                     cars_by_level.setdefault(level, []).append(item)
 
-        for car in [self.random.choice(cars) for cars in cars_by_level.values()]:
-            car.pop("useful", None)
-            car["progression"] = True
+        if not hasattr(self.multiworld, "generation_is_fake"):
+            for car in [self.random.choice(cars) for cars in cars_by_level.values()]:
+                car.pop("useful", None)
+                car["progression"] = True
+                self.progcars.append(car)
+        else:
+            for car in self.progcars:
+                car.pop("useful", None)
+                car["progression"] = True
 
         for name in configured_item_names.values():
             item = self.item_name_to_item[name]
@@ -433,6 +460,8 @@ class SimpsonsHitAndRunWorld(World):
             slot_data[option_key] = get_option_value(self.multiworld, self.player, option_key)
 
         slot_data["card_locations"] = [card["id"] for card in card_table]
+        slot_data["missionlocks"] = self.mission_locks
+        slot_data["progcars"] = self.progcars
         slot_data["VerifyID"] = f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}"
 
         slot_data = after_fill_slot_data(slot_data, self, self.multiworld, self.player)
@@ -531,7 +560,6 @@ class SimpsonsHitAndRunWorld(World):
                     logging.warning("Could not remove enough non-progression items from the pool.")
                     break
                 item_pool.remove(popped)
-
         return item_pool
 
     def get_item_counts(self, player: Optional[int] = None, reset: bool = False) -> dict[str, int]:

@@ -1058,7 +1058,7 @@ item_table = [
     },
     {
         "count": 1,
-        "name": "Nonuplets Van",
+        "name": "Nonuplets Minivan",
         "category": ["Cars", "Traffic", "Filler"],
         "id": 121923,
         "progression": False

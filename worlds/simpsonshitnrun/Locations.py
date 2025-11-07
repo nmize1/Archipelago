@@ -7,7 +7,7 @@ import json
 import pkgutil
 
 def add_cards(level, n_id, location_table):
-    cards_data = json.loads(pkgutil.get_data(__name__, "data\\cards.json").decode())
+    cards_data = json.loads(pkgutil.get_data(__name__, "data/cards.json").decode())
 
     level_cards = cards_data[level]
     for card in level_cards:
