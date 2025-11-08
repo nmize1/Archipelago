@@ -31,14 +31,12 @@ import uuid
 ## The fill_slot_data method will be used to send data to the client for later use, like deathlink.
 ########################################################################################
 
-card_table = []
-
 # Called before regions and locations are created. Not clear why you'd want this, but it's here. Victory location is included, but Victory event is not placed yet.
 def before_create_regions(world: World, multiworld: MultiWorld, player: int):
     pass
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
-def after_create_regions(world: World, multiworld: MultiWorld, player: int, cards_data):
+def after_create_regions(world: World, multiworld: MultiWorld, player: int, cards_data, card_table):
     # Use this hook to remove locations from the world
 
     all_chosen_card_names = []
