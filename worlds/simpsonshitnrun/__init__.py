@@ -34,7 +34,7 @@ from .hooks.World import \
     before_create_item, after_create_item, \
     before_set_rules, after_set_rules, \
     before_generate_basic, after_generate_basic, \
-    before_fill_slot_data, after_fill_slot_data, before_write_spoiler, card_table
+    before_fill_slot_data, after_fill_slot_data, before_write_spoiler
 from .hooks.Data import hook_interpret_slot_data
 
 from .SHARContainer import gen
@@ -67,6 +67,7 @@ class SimpsonsHitAndRunWorld(World):
     location_name_groups = location_name_groups
     victory_names = victory_names
 
+    card_table = []
     mission_locks = {}
     progcars = []
     vehicle_item_to_vehicle = {
@@ -160,10 +161,10 @@ class SimpsonsHitAndRunWorld(World):
         return slot_data
 
     def generate_early(self) -> None:
-        if world.options.cardlogic != 0:
+        if self.options.cardlogic != 0:
             raise OptionError("Chosen cardlogic level is not implemented.")
 
-        if world.options.wasplogic == 1 or world.options.wasplogic == 2:
+        if self.options.wasplogic == 1 or self.options.wasplogic == 2:
             raise OptionError("Chosen wasplogic level is not implemented.")
 
         if hasattr(self.multiworld, "re_gen_passthrough"):
@@ -189,6 +190,7 @@ class SimpsonsHitAndRunWorld(World):
 
     def create_regions(self):
         before_create_regions(self, self.multiworld, self.player)
+        locbk = {}
 
         if (self.options.missionlocks != 0):
             if not hasattr(self.multiworld, "generation_is_fake"):
@@ -197,7 +199,7 @@ class SimpsonsHitAndRunWorld(World):
                     int(len(self.vehicle_item_to_vehicle) * (self.options.missionlocks / 100))
                 )
                 missions = self.random.sample(range(1, 50), len(carlocks))
-
+                print(len(self.mission_locks))
                 self.mission_locks = dict(zip(missions, carlocks))
 
             level_bases = {
@@ -217,6 +219,7 @@ class SimpsonsHitAndRunWorld(World):
                 if "Filler" in item.get("category", []):
                     item["category"].remove("Filler")
                 item["progression"] = True
+                #self.multiworld.local_early_items[self.player][item["name"]] = 1
 
                 level = (m - 1) // 7 + 1
                 mission = (m - 1) % 7 + 1
@@ -224,12 +227,11 @@ class SimpsonsHitAndRunWorld(World):
 
                 loc = self.location_name_to_location[self.location_id_to_name[id_number]]
                 req = loc.get("requires", "")
+                locbk[loc["name"]] = req
                 if not req:
                     loc["requires"] = f"|{item["name"]}|"
                 else:
                     loc["requires"] = f"{req} AND |{item["name"]}|"
-                print(loc["requires"])
-
         else:
             self.mission_locks = {0 : "NO MISSIONLOCKS"}
 
@@ -246,8 +248,13 @@ class SimpsonsHitAndRunWorld(World):
 
         data_path = Path("data") / "cards.json"
         cards_data = json.loads(pkgutil.get_data(__name__, str(data_path)).decode())
+        self.card_table = []
 
-        after_create_regions(self, self.multiworld, self.player, cards_data)
+        for l, r in locbk.items():
+            loc = self.location_name_to_location[l]
+            loc["requires"] = r
+
+        after_create_regions(self, self.multiworld, self.player, cards_data, self.card_table)
 
     def create_items(self):
         # Generate item pool
@@ -459,7 +466,7 @@ class SimpsonsHitAndRunWorld(World):
                 continue
             slot_data[option_key] = get_option_value(self.multiworld, self.player, option_key)
 
-        slot_data["card_locations"] = [card["id"] for card in card_table]
+        slot_data["card_locations"] = [card["id"] for card in self.card_table]
         slot_data["missionlocks"] = self.mission_locks
         slot_data["progcars"] = self.progcars
         slot_data["VerifyID"] = f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}"
@@ -482,7 +489,7 @@ class SimpsonsHitAndRunWorld(World):
             filename,
             f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}",
             f"AP-{self.multiworld.seed_name}-P{self.player}",
-            card_table,
+            self.card_table,
             traffic_table,
             self.mission_locks,
             self.player
