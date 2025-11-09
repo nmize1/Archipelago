@@ -167,7 +167,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     if world.options.wasplogic == 0:
         itemNamesToRemove.extend(["Homer Frink-o-Matic Wasp Bumper", "Bart Frink-o-Matic Wasp Bumper", "Lisa Frink-o-Matic Wasp Bumper",
                                   "Marge Frink-o-Matic Wasp Bumper", "Apu Frink-o-Matic Wasp Bumper"])
-    elif world.options.wasplogic == 4:
+    elif world.options.wasplogic == 3:
         itemNamesToStart.extend(["Homer Frink-o-Matic Wasp Bumper", "Bart Frink-o-Matic Wasp Bumper", "Lisa Frink-o-Matic Wasp Bumper",
                                  "Marge Frink-o-Matic Wasp Bumper", "Apu Frink-o-Matic Wasp Bumper"])
 

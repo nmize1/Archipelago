@@ -7,6 +7,7 @@ import re
 from typing import Any, Dict, TextIO
 from pathlib import Path
 from typing import Callable, Optional
+from Options import OptionError
 
 import Utils
 from worlds.generic.Rules import forbid_items_for_player
@@ -196,7 +197,7 @@ class SimpsonsHitAndRunWorld(World):
             if not hasattr(self.multiworld, "generation_is_fake"):
                 carlocks = self.random.sample(
                     list(self.vehicle_item_to_vehicle.keys()),
-                    int(len(self.vehicle_item_to_vehicle) * (self.options.missionlocks / 100))
+                    int(49 * (self.options.missionlocks / 100))
                 )
                 missions = self.random.sample(range(1, 50), len(carlocks))
                 print(len(self.mission_locks))
