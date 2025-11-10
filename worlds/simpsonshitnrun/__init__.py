@@ -230,9 +230,9 @@ class SimpsonsHitAndRunWorld(World):
                 req = loc.get("requires", "")
                 locbk[loc["name"]] = req
                 if not req:
-                    loc["requires"] = f"|{item["name"]}|"
+                    loc["requires"] = f"|{item['name']}|"
                 else:
-                    loc["requires"] = f"{req} AND |{item["name"]}|"
+                    loc["requires"] = f"{req} AND |{item['name']}|"
         else:
             self.mission_locks = {0 : "NO MISSIONLOCKS"}
 
