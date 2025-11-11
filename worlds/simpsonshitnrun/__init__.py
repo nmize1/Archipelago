@@ -176,10 +176,13 @@ class SimpsonsHitAndRunWorld(World):
                 for key in vars(self.options):
                     if key in passthrough:
                         option = getattr(self.options, key)
+                        print(f"{key} : {option}")
                         if hasattr(option, "value"):
-                            option.value = passthrough[key]
+                            value = passthrough[key]
+                            option.value = value
+                            print(f"{key} : {option} : {value}")
 
-                self.mission_locks = passthrough["missionlocks"]
+                self.mission_locks = passthrough["missionlockdic"]
                 self.progcars = passthrough["progcars"]
 
 
@@ -193,7 +196,7 @@ class SimpsonsHitAndRunWorld(World):
         before_create_regions(self, self.multiworld, self.player)
         locbk = {}
 
-        if (self.options.missionlocks != 0):
+        if self.options.missionlocks != 0:
             if not hasattr(self.multiworld, "generation_is_fake"):
                 carlocks = self.random.sample(
                     list(self.vehicle_item_to_vehicle.keys()),
@@ -468,7 +471,7 @@ class SimpsonsHitAndRunWorld(World):
             slot_data[option_key] = get_option_value(self.multiworld, self.player, option_key)
 
         slot_data["card_locations"] = [card["id"] for card in self.card_table]
-        slot_data["missionlocks"] = self.mission_locks
+        slot_data["missionlockdic"] = self.mission_locks
         slot_data["progcars"] = self.progcars
         slot_data["VerifyID"] = f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}"
 
