@@ -2,6 +2,7 @@ from typing import Optional
 from worlds.AutoWorld import World
 from ..Helpers import clamp, get_items_with_value
 from BaseClasses import MultiWorld, CollectionState
+import ast
 
 import re
 
@@ -97,9 +98,49 @@ def collectedCards(world: World, multiworld: MultiWorld, state: CollectionState,
 
     return len(allCards) >= (49 * world.options.cardpercent * .01)
 
+def waspCarReq(world: World, multiworld: MultiWorld, state: CollectionState, player: int, character: str, badcars):
+
+    if world.options.wasplogic == 0 or world.options.wasplogic == 3:
+        return f"|{character} Attack|"
+
+    if isinstance(badcars, str):
+        try:
+            badcars = ast.literal_eval(badcars)
+        except:
+            badcars = [badcars]
+
+    cars = [
+        "Ambulance", "Longhorn", "ATV", "Ferrini - Red", "El Carro Loco", "Book Burning Van", "36 Stutz Bearcat",
+        "Burns Armored Truck", "Car Built For Homer", "Armored Truck", "Ferrini - Black", "Bonestorm Truck",
+        "Cell Phone Car", "Cola Truck", "Cube Van", "Curator", "Donut Truck", "Duff Truck", "Fire Truck", "Hearse",
+        "Krusty's Limo", "Pickup Truck", "Limo", "Milk Truck", "Nerd Car", "Nonuplets Minivan", "Coffin Car", "Kremlin",
+        "Compact Car", "Chase Sedan", "Surveillance Van", "Electaurus", "Family Sedan", "Fish Van", "Open Wheel Race Car",
+        "Hover Car", "Garbage Truck", "Glass Truck", "WWII Vehicle", "WWII Vehicle W/ Rocket", "Hearse", "Hover Bike",
+        "70's Sports Car", "Honor Roller", "Planet Hype 50's Car", "Ice Cream Truck", "Itchy and Scratchy Movie Truck",
+        "Knight Boat", "Clown Car", "Malibu Stacy Car", "Canyonero", "Minivan", "Moe's Sedan", "Monorail Car",
+        "Mr. Plow", "Nuclear Waste Truck", "Obliteratatron Big Wheel Truck", "School Bus", "Pickup", "Pizza Van", "Plow King",
+        "Speed Rocket", "Mini School Bus", "Globex Super Villain Car", "Sedan A", "Sedan B", "Ghost Ship", "Skinner's Sedan",
+        "Mr. Burns' Limo", "Bandit", "Sports Car A", "Sports Car B", "SUV", "Taxi", "Vote Quimby Truck", "Station Wagon",
+        "Police Car", "Tractor", "Zombie Car"
+    ]
+
+    if badcars != ["all"]:
+        parts = [f"|{car}|" for car in cars if car not in badcars]
+        ret = " OR ".join(parts)
+        if world.options.wasplogic == 1:
+            ret = f"(|{character} Frink-o-Matic Wasp Bumper| AND ({ret})) OR "
+    else:
+        ret = ""
+
+    ret = f"{ret}|{character} Attack|"
+
+    return ret
+
+
 # Rule to expose the can_reach_location core function
 def canReachLocation(world: World, multiworld: MultiWorld, state: CollectionState, player: int, location: str):
     """Can the player reach the given location?"""
     if state.can_reach_location(location, player):
         return True
     return False
+

@@ -185,7 +185,7 @@ item_table = [
     {
         "count": 1,
         "name": "Family Sedan",
-        "category": ["Level 1 Cars", "Cars"],
+        "category": ["Level 1 Cars", "Cars", "Small Cars"],
         "progression": False,
         "useful": True,
         "id": 121810
@@ -193,14 +193,14 @@ item_table = [
     {
         "count": 1,
         "name": "Plow King",
-        "category": ["Progression", "Level 1 Cars", "Cars"],
+        "category": ["Progression", "Level 1 Cars", "Cars", "Large Cars"],
         "progression": True,
         "id": 121811
     },
     {
         "count": 1,
         "name": "Duff Truck",
-        "category": ["Cars", "Level 1 Cars"],
+        "category": ["Cars", "Level 1 Cars", "Large Cars"],
         "useful": True,
         "id": 121812,
         "progression": False
@@ -208,7 +208,7 @@ item_table = [
     {
         "count": 1,
         "name": "Surveillance Van",
-        "category": ["Cars", "Level 1 Cars"],
+        "category": ["Cars", "Level 1 Cars", "Medium Cars"],
         "useful": True,
         "id": 121813,
         "progression": False
@@ -216,7 +216,7 @@ item_table = [
     {
         "count": 1,
         "name": "Pickup Truck",
-        "category": ["Cars", "Level 1 Cars"],
+        "category": ["Cars", "Level 1 Cars", "Medium Cars"],
         "useful": True,
         "id": 121814,
         "progression": False
@@ -224,7 +224,7 @@ item_table = [
     {
         "count": 1,
         "name": "Electaurus",
-        "category": ["Cars", "Level 1 Cars"],
+        "category": ["Cars", "Level 1 Cars", "Small Cars"],
         "useful": True,
         "id": 121815,
         "progression": False
@@ -232,14 +232,14 @@ item_table = [
     {
         "count": 1,
         "name": "Mr. Plow",
-        "category": ["Progression", "Level 2 Cars", "Cars"],
+        "category": ["Progression", "Level 2 Cars", "Cars", "Medium Cars"],
         "progression": True,
         "id": 121816
     },
     {
         "count": 1,
         "name": "Limo",
-        "category": ["Cars", "Level 2 Cars"],
+        "category": ["Cars", "Level 2 Cars", "Small Cars"],
         "useful": True,
         "id": 121817,
         "progression": False
@@ -247,7 +247,7 @@ item_table = [
     {
         "count": 1,
         "name": "Fire Truck",
-        "category": ["Cars", "Level 2 Cars"],
+        "category": ["Cars", "Level 2 Cars", "Large Cars"],
         "useful": True,
         "id": 121818,
         "progression": False
@@ -255,7 +255,7 @@ item_table = [
     {
         "count": 1,
         "name": "WWII Vehicle",
-        "category": ["Cars", "Level 2 Cars"],
+        "category": ["Cars", "Level 2 Cars", "Medium Cars"],
         "useful": True,
         "id": 121819,
         "progression": False
@@ -263,7 +263,7 @@ item_table = [
     {
         "count": 1,
         "name": "Moe's Sedan",
-        "category": ["Cars", "Level 2 Cars"],
+        "category": ["Cars", "Level 2 Cars", "Small Cars"],
         "useful": True,
         "id": 121820,
         "progression": False
@@ -271,14 +271,14 @@ item_table = [
     {
         "count": 1,
         "name": "School Bus",
-        "category": ["Progression", "Level 3 Cars"],
+        "category": ["Progression", "Level 3 Cars", "Large Cars"],
         "progression": True,
         "id": 121821
     },
     {
         "count": 1,
         "name": "Donut Truck",
-        "category": ["Cars", "Level 3 Cars"],
+        "category": ["Cars", "Level 3 Cars", "Medium Cars"],
         "useful": True,
         "id": 121822,
         "progression": False
@@ -286,7 +286,7 @@ item_table = [
     {
         "count": 1,
         "name": "Nerd Car",
-        "category": ["Cars", "Level 3 Cars"],
+        "category": ["Cars", "Level 3 Cars", "Small Cars"],
         "useful": True,
         "id": 121823,
         "progression": False
@@ -294,7 +294,7 @@ item_table = [
     {
         "count": 1,
         "name": "Skinner's Sedan",
-        "category": ["Cars", "Level 3 Cars"],
+        "category": ["Cars", "Level 3 Cars", "Medium Cars"],
         "useful": True,
         "id": 121824,
         "progression": False
@@ -302,7 +302,7 @@ item_table = [
     {
         "count": 1,
         "name": "Book Burning Van",
-        "category": ["Cars", "Level 3 Cars"],
+        "category": ["Cars", "Level 3 Cars", "Medium Cars"],
         "useful": True,
         "id": 121825,
         "progression": False
@@ -310,7 +310,7 @@ item_table = [
     {
         "count": 1,
         "name": "Tractor",
-        "category": ["Cars", "Level 4 Cars"],
+        "category": ["Cars", "Level 4 Cars", "Medium Cars"],
         "useful": True,
         "id": 121826,
         "progression": False
@@ -318,7 +318,7 @@ item_table = [
     {
         "count": 1,
         "name": "Curator",
-        "category": ["Cars", "Level 4 Cars"],
+        "category": ["Cars", "Level 4 Cars", "Small Cars"],
         "useful": True,
         "id": 121827,
         "progression": False
@@ -326,7 +326,7 @@ item_table = [
     {
         "count": 1,
         "name": "Krusty's Limo",
-        "category": ["Cars", "Level 4 Cars"],
+        "category": ["Cars", "Level 4 Cars", "Small Cars"],
         "useful": True,
         "id": 121828,
         "progression": False
@@ -334,7 +334,7 @@ item_table = [
     {
         "count": 1,
         "name": "Kremlin",
-        "category": ["Cars", "Level 4 Cars"],
+        "category": ["Cars", "Level 4 Cars", "Small Cars"],
         "useful": True,
         "id": 121829,
         "progression": False
@@ -342,7 +342,7 @@ item_table = [
     {
         "count": 1,
         "name": "Clown Car",
-        "category": ["Cars", "Level 4 Cars"],
+        "category": ["Cars", "Level 4 Cars", "Small Cars"],
         "useful": True,
         "id": 121830,
         "progression": False
@@ -350,14 +350,14 @@ item_table = [
     {
         "count": 1,
         "name": "Car Built For Homer",
-        "category": ["Progression", "Level 5 Cars"],
+        "category": ["Progression", "Level 5 Cars", "Small Cars"],
         "progression": True,
         "id": 121831
     },
     {
         "count": 1,
         "name": "Cola Truck",
-        "category": ["Cars", "Level 5 Cars"],
+        "category": ["Cars", "Level 5 Cars", "Large Cars"],
         "useful": True,
         "id": 121832,
         "progression": False
@@ -365,7 +365,7 @@ item_table = [
     {
         "count": 1,
         "name": "Police Car",
-        "category": ["Cars", "Level 5 Cars"],
+        "category": ["Cars", "Level 5 Cars", "Small Cars"],
         "useful": True,
         "id": 121833,
         "progression": False
@@ -373,7 +373,7 @@ item_table = [
     {
         "count": 1,
         "name": "Hover Car",
-        "category": ["Cars", "Level 5 Cars"],
+        "category": ["Cars", "Level 5 Cars", "Small Cars"],
         "useful": True,
         "id": 121834,
         "progression": False
@@ -381,7 +381,7 @@ item_table = [
     {
         "count": 1,
         "name": "El Carro Loco",
-        "category": ["Cars", "Level 5 Cars"],
+        "category": ["Cars", "Level 5 Cars", "Small Cars"],
         "useful": True,
         "id": 121835,
         "progression": False
@@ -389,14 +389,14 @@ item_table = [
     {
         "count": 1,
         "name": "Globex Super Villain Car",
-        "category": ["Progression", "Level 6 Cars", "Cars"],
+        "category": ["Progression", "Level 6 Cars", "Cars", "Small Cars"],
         "progression": True,
         "id": 121836
     },
     {
         "count": 1,
         "name": "Armored Truck",
-        "category": ["Cars", "Level 6 Cars"],
+        "category": ["Cars", "Level 6 Cars", "Large Cars"],
         "useful": True,
         "id": 121837,
         "progression": False
@@ -404,7 +404,7 @@ item_table = [
     {
         "count": 1,
         "name": "Chase Sedan",
-        "category": ["Cars", "Level 6 Cars"],
+        "category": ["Cars", "Level 6 Cars", "Small Cars"],
         "useful": True,
         "id": 121838,
         "progression": False
@@ -412,7 +412,7 @@ item_table = [
     {
         "count": 1,
         "name": "Bandit",
-        "category": ["Cars", "Level 6 Cars"],
+        "category": ["Cars", "Level 6 Cars", "Small Cars"],
         "useful": True,
         "id": 121839,
         "progression": False
@@ -420,7 +420,7 @@ item_table = [
     {
         "count": 1,
         "name": "36 Stutz Bearcat",
-        "category": ["Cars", "Level 6 Cars"],
+        "category": ["Cars", "Level 6 Cars", "Small Cars"],
         "useful": True,
         "id": 121840,
         "progression": False
@@ -428,14 +428,14 @@ item_table = [
     {
         "count": 1,
         "name": "Zombie Car",
-        "category": ["Progression", "Level 7 Cars", "Cars"],
+        "category": ["Progression", "Level 7 Cars", "Cars", "Small Cars"],
         "progression": True,
         "id": 121841
     },
     {
         "count": 1,
         "name": "Hearse",
-        "category": ["Cars", "Level 7 Cars"],
+        "category": ["Cars", "Level 7 Cars", "Small Cars"],
         "useful": True,
         "id": 121842,
         "progression": False
@@ -443,7 +443,7 @@ item_table = [
     {
         "count": 1,
         "name": "Mr. Burns' Limo",
-        "category": ["Cars", "Level 7 Cars"],
+        "category": ["Cars", "Level 7 Cars", "Medium Cars"],
         "useful": True,
         "id": 121843,
         "progression": False
@@ -451,7 +451,7 @@ item_table = [
     {
         "count": 1,
         "name": "Hover Bike",
-        "category": ["Cars", "Level 7 Cars"],
+        "category": ["Cars", "Level 7 Cars", "Small Cars"],
         "useful": True,
         "id": 121844,
         "progression": False
@@ -459,7 +459,7 @@ item_table = [
     {
         "count": 1,
         "name": "Open Wheel Race Car",
-        "category": ["Cars", "Level 7 Cars"],
+        "category": ["Cars", "Level 7 Cars", "Small Cars"],
         "useful": True,
         "id": 121845,
         "progression": False
@@ -467,7 +467,7 @@ item_table = [
     {
         "count": 1,
         "name": "Honor Roller",
-        "category": ["Cars", "Level 2 Cars"],
+        "category": ["Cars", "Level 2 Cars", "Small Cars"],
         "progression": False,
         "useful": True,
         "id": 121846
@@ -475,7 +475,7 @@ item_table = [
     {
         "count": 1,
         "name": "Malibu Stacy Car",
-        "category": ["Cars", "Level 3 Cars"],
+        "category": ["Cars", "Level 3 Cars", "Small Cars"],
         "progression": False,
         "useful": True,
         "id": 121847
@@ -483,7 +483,7 @@ item_table = [
     {
         "count": 1,
         "name": "Canyonero",
-        "category": ["Cars", "Level 4 Cars"],
+        "category": ["Cars", "Level 4 Cars", "Medium Cars"],
         "progression": False,
         "useful": True,
         "id": 121848
@@ -491,7 +491,7 @@ item_table = [
     {
         "count": 1,
         "name": "Longhorn",
-        "category": ["Cars", "Level 5 Cars"],
+        "category": ["Cars", "Level 5 Cars", "Small Cars"],
         "progression": False,
         "useful": True,
         "id": 121849
@@ -499,7 +499,7 @@ item_table = [
     {
         "count": 1,
         "name": "Ferrini - Red",
-        "category": ["Cars", "Level 6 Cars"],
+        "category": ["Cars", "Level 6 Cars", "Small Cars"],
         "progression": False,
         "useful": True,
         "id": 121850
@@ -507,7 +507,7 @@ item_table = [
     {
         "count": 1,
         "name": "70's Sports Car",
-        "category": ["Cars", "Level 7 Cars"],
+        "category": ["Cars", "Level 7 Cars", "Small Cars"],
         "progression": False,
         "useful": True,
         "id": 121851
@@ -863,210 +863,210 @@ item_table = [
     {
         "count": 1,
         "name": "Mini School Bus",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars"],
         "id": 121900,
         "progression": False
     },
     {
         "count": 1,
         "name": "Glass Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars"],
         "id": 121901,
         "progression": False
     },
     {
         "count": 1,
         "name": "Minivan",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars"],
         "id": 121902,
         "progression": False
     },
     {
         "count": 1,
         "name": "Pizza Van",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars"],
         "id": 121903,
         "progression": False
     },
     {
         "count": 1,
         "name": "Taxi",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars"],
         "id": 121904,
         "progression": False
     },
     {
         "count": 1,
         "name": "Sedan B",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars"],
         "id": 121905,
         "progression": False
     },
     {
         "count": 1,
         "name": "Fish Van",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 3 Cars"],
         "id": 121906,
         "progression": False
     },
     {
         "count": 1,
         "name": "Garbage Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 4 Cars"],
         "id": 121907,
         "progression": False
     },
     {
         "count": 1,
         "name": "Nuclear Waste Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 4 Cars"],
         "id": 121908,
         "progression": False
     },
     {
         "count": 1,
         "name": "Vote Quimby Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 5 Cars"],
         "id": 121904,
         "progression": False
     },
     {
         "count": 1,
         "name": "Ambulance",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 5 Cars"],
         "id": 121905,
         "progression": False
     },
     {
         "count": 1,
         "name": "Sports Car B",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars", "Level 5 Cars"],
         "id": 121906,
         "progression": False
     },
     {
         "count": 1,
         "name": "Itchy and Scratchy Movie Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 6 Cars"],
         "id": 121907,
         "progression": False
     },
     {
         "count": 1,
         "name": "Burns Armored Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 6 Cars"],
         "id": 121908,
         "progression": False
     },
     {
         "count": 1,
         "name": "Pickup",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars", "Level 3 Cars", "Level 6 Cars"],
         "id": 121909,
         "progression": False
     },
     {
         "count": 1,
         "name": "Sports Car A",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 3 Cars"],
         "id": 121910,
         "progression": False
     },
     {
         "count": 1,
         "name": "Compact Car",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 3 Cars", "Level 4 Cars", "Level 6 Cars"],
         "id": 121911,
         "progression": False
     },
     {
         "count": 1,
         "name": "SUV",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 4 Cars", "Level 5 Cars"],
         "id": 121912,
         "progression": False
     },
     {
         "count": 1,
         "name": "Hallo Hearse",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars"],
         "id": 121913,
         "progression": False
     },
     {
         "count": 1,
         "name": "Coffin Car",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars"],
         "id": 121914,
         "progression": False
     },
     {
         "count": 1,
         "name": "Ghost Ship",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars"],
         "id": 121915,
         "progression": False
     },
     {
         "count": 1,
         "name": "Witch's Broom",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars"],
         "id": 121916,
         "progression": False
     },
     {
         "count": 1,
         "name": "Sedan A",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121917,
         "progression": False
     },
     {
         "count": 1,
         "name": "Station Wagon",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121918,
         "progression": False
     },
     {
         "count": 1,
         "name": "Ice Cream Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121919,
         "progression": False
     },
     {
         "count": 1,
         "name": "Bonestorm Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121920,
         "progression": False
     },
     {
         "count": 1,
         "name": "Cell Phone Car",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121921,
         "progression": False
     },
     {
         "count": 1,
         "name": "Milk Truck",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121922,
         "progression": False
     },
     {
         "count": 1,
         "name": "Nonuplets Minivan",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121923,
         "progression": False
     },
     {
         "count": 1,
         "name": "Ferrini - Black",
-        "category": ["Cars", "Traffic", "Filler"],
+        "category": ["Cars", "Traffic", "Filler", "Level Any Cars"],
         "id": 121924,
         "progression": False
     },

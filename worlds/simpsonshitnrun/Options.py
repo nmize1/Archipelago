@@ -140,10 +140,11 @@ class CardLogic(Choice):
 
 class WaspLogic(Choice):
     """Choose logic level for wasps.
-       Strict: Wasps cannot be broken with cars.
-       Unlockable: Adds a "Frink-o-Matic Wasp Bumper" item for each character that allows them to break wasps with cars and logic considers your available cars. - NOT IMPLEMENTED YET.
-       Cars: Wasps logic considers your available cars. - NOT IMPLEMENTED YET
-       Open: Wasps are not in logic without Attack items but can be broken with cars."""
+       Strict: Wasps cannot be broken with cars and logically require Attack items.
+       Unlockable: Adds a "Frink-o-Matic Wasp Bumper" item for each character that allows them to break wasps with cars.
+                   Wasps logically require the bumper and a car that can reach them or Attack items.
+       Cars: Wasps logically require a car that can reach them or Attack items.
+       Open: Wasps logically require Attack items but can be broken with cars."""
 
     display_name = "Wasp Logic"
     option_strict = 0

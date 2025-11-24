@@ -165,9 +165,6 @@ class SimpsonsHitAndRunWorld(World):
         if self.options.cardlogic != 0:
             raise OptionError("Chosen cardlogic level is not implemented.")
 
-        if self.options.wasplogic == 1 or self.options.wasplogic == 2:
-            raise OptionError("Chosen wasplogic level is not implemented.")
-
         if hasattr(self.multiworld, "re_gen_passthrough"):
             if self.game in self.multiworld.re_gen_passthrough:
                 print("Getting UT slot data.")
