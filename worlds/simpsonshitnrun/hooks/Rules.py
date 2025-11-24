@@ -98,6 +98,30 @@ def collectedCards(world: World, multiworld: MultiWorld, state: CollectionState,
 
     return len(allCards) >= (49 * world.options.cardpercent * .01)
 
+def jumpsRequired(world: World, multiworld: MultiWorld, state: CollectionState, player: int, character: str, jumps: int, carsize: str):
+    ret = "("
+
+    if jumps > 0:
+        ret += f"|{character} Progressive Jump:{jumps}|"
+
+    if carsize != "none":
+        sizes = ["Small", "Medium", "Large"]
+        try:
+            idx = sizes.index(carsize)
+        except ValueError:
+            print(f"{carsize} is not a valid carsize")
+            return ""
+
+        if jumps > 0:
+            ret += " "
+        ret += " OR ".join(f"|@{s} Cars|" for s in sizes[idx:])
+        ret += f") OR |{character} Progressive Jump:{jumps + 1}|"
+
+        return ret
+
+    ret += ")"
+    return ret
+
 def waspCarReq(world: World, multiworld: MultiWorld, state: CollectionState, player: int, character: str, badcars):
 
     if world.options.wasplogic == 0 or world.options.wasplogic == 3:

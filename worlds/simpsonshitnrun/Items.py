@@ -841,7 +841,7 @@ item_table = [
     {
         "count": 1,
         "name": "R/C Buggy",
-        "category": ["Cars", "Level 1 Cars", "Small Cars"],
+        "category": ["Cars", "Level 1 Cars", "Extra Small Cars"],
         "useful": True,
         "id": 121886,
         "progression": False
