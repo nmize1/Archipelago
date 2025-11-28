@@ -100,10 +100,11 @@ def collectedCards(world: World, multiworld: MultiWorld, state: CollectionState,
 
 def jumpsRequired(world: World, multiworld: MultiWorld, state: CollectionState, player: int, character: str, jumps: int, carsize: str):
     ret = "("
-
+    jumps = int(jumps)
     if jumps > 0:
         ret += f"|{character} Progressive Jump:{jumps}|"
 
+    carsize = carsize.strip().strip("[]{}(),\"'")
     if carsize != "none":
         sizes = ["Small", "Medium", "Large"]
         try:
@@ -113,17 +114,19 @@ def jumpsRequired(world: World, multiworld: MultiWorld, state: CollectionState, 
             return ""
 
         if jumps > 0:
-            ret += " "
+            ret += " AND "
         ret += " OR ".join(f"|@{s} Cars|" for s in sizes[idx:])
         ret += f") OR |{character} Progressive Jump:{jumps + 1}|"
 
         return ret
 
     ret += ")"
+    if ret == "()":
+        ret = f"|{character} Progressive Jump:{0}|"
+
     return ret
 
 def waspCarReq(world: World, multiworld: MultiWorld, state: CollectionState, player: int, character: str, badcars):
-
     if world.options.wasplogic == 0 or world.options.wasplogic == 3:
         return f"|{character} Attack|"
 

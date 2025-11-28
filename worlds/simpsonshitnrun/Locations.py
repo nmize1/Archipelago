@@ -715,7 +715,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122366
     },
     {
@@ -724,7 +724,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{waspCarReq(Homer,[])}",
+        "requires": "{waspCarReq(Homer,[''])}",
         "id": 122367
     },
     {
@@ -742,7 +742,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer,['all'])}",
         "id": 122369
     },
     {
@@ -751,7 +751,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122370
     },
     {
@@ -760,7 +760,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122371
     },
     {
@@ -769,7 +769,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer,['all'])}",
         "id": 122372
     },
     {
@@ -778,7 +778,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, Large} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, Large)} AND {waspCarReq(Homer,['all'])}",
         "id": 122373
     },
     {
@@ -787,7 +787,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer,['Honor Roller', 'Malibu Stacy Car', 'Ferrini - Red', 'Bandit', 'Open Wheel Race Car', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer,['Honor Roller', 'Malibu Stacy Car', 'Ferrini - Red', 'Bandit', 'Open Wheel Race Car', 'Ferrini - Black'])}",
         "id": 122374
     },
     {
@@ -796,7 +796,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122375
     },
     {
@@ -805,7 +805,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122376
     },
     {
@@ -814,7 +814,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122377
     },
     {
@@ -823,7 +823,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer,['ATV'])}",
+        "requires": "{jumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer,['ATV'])}",
         "id": 122378
     },
     {
@@ -832,7 +832,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[''])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[''])}",
         "id": 122379
     },
     {
@@ -841,7 +841,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[''])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[''])}",
         "id": 122380
     },
     {
@@ -850,7 +850,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['Family Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Open Wheel Race Car', 'Hover Bike', 'Coffin Car'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['Family Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Open Wheel Race Car', 'Hover Bike', 'Coffin Car'])}",
         "id": 122381
     },
     {
@@ -859,7 +859,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['Nerd Car', '70's Sports Car', 'Open Wheel Race Car'])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,['Nerd Car', '70\'s Sports Car', 'Open Wheel Race Car'])}",
         "id": 122382
     },
     {
@@ -868,7 +868,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, Large)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 1, Large)} AND {waspCarReq(Homer,['all'])}",
         "id": 122383
     },
     {
@@ -877,7 +877,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122384
     },
     {
@@ -886,7 +886,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer,['all'])}",
+        "requires": "{jumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer,['all'])}",
         "id": 122385
     },
     {
@@ -1084,7 +1084,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Krusty's Limo', '36 Stutz Bearcat', 'Bandit', 'Hover Bike'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Moe\'s Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Krusty\'s Limo', '36 Stutz Bearcat', 'Bandit', 'Hover Bike'])}",
         "id": 122413
     },
     {
@@ -1093,7 +1093,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Honor Roller', 'Sedan', 'Malibu Stacy Car', 'Clown Car', 'Krusty's Limo', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'Hearse', 'Ghost Ship', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Honor Roller', 'Moe\'s Sedan', 'Malibu Stacy Car', 'Clown Car', 'Krusty\'s Limo', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'Hearse', 'Ghost Ship', 'Ferrini - Black'])}",
         "id": 122414
     },
     {
@@ -1102,7 +1102,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Sedan', 'Mailibu Stacy Car', 'Nerd Car', 'Kremlin', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Knight Boat', 'ATV', 'Planet Hype 50's Car', Taxi', 'Sedan B', 'Sports Car B', 'Sports Car A', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'Sedan A', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Moe\'s Sedan', 'Mailibu Stacy Car', 'Nerd Car', 'Kremlin', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Knight Boat', 'ATV', 'Planet Hype 50\'s Car', Taxi', 'Sedan B', 'Sports Car B', 'Sports Car A', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'Sedan A', 'Ferrini - Black'])}",
         "id": 122415
     },
     {
@@ -1111,7 +1111,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Electaurus', 'Honor Roller', 'Sedan', 'Mailibu Stacy Car', 'Nerd Car', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'Compact Car', 'Coffin Car', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Electaurus', 'Honor Roller', 'Moe\'s Sedan', 'Mailibu Stacy Car', 'Nerd Car', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'Compact Car', 'Coffin Car', 'Ferrini - Black'])}",
         "id": 122416
     },
     {
@@ -1120,7 +1120,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, Large)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 1, Large)} AND {waspCarReq(Bart,['all'])}",
         "id": 122417
     },
     {
@@ -1129,7 +1129,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Honor Roller', 'Malibu Stacy Car', 'Clown Car', 'Krusty's Limo', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Hearse', 'Ghost Ship'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Honor Roller', 'Malibu Stacy Car', 'Clown Car', 'Krusty\'s Limo', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Hearse', 'Ghost Ship'])}",
         "id": 122418
     },
     {
@@ -1138,7 +1138,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Honor Roller', 'Malibu Stacy Car', 'Clown Car', 'Krusty's Limo', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Hearse', 'Ghost Ship'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Honor Roller', 'Malibu Stacy Car', 'Clown Car', 'Krusty\'s Limo', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Hearse', 'Ghost Ship'])}",
         "id": 122419
     },
     {
@@ -1147,7 +1147,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Open Wheel Race Car', 'Knight Boat', 'ATV', 'Coffin Car'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Open Wheel Race Car', 'Knight Boat', 'ATV', 'Coffin Car'])}",
         "id": 122420
     },
     {
@@ -1156,7 +1156,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
         "id": 122421
     },
     {
@@ -1165,7 +1165,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, Medium)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 0, Medium)} AND {waspCarReq(Bart,['all'])}",
         "id": 122422
     },
     {
@@ -1174,7 +1174,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 2, none)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 2, none)} AND {waspCarReq(Bart,['all'])}",
         "id": 122423
     },
     {
@@ -1183,7 +1183,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
         "id": 122424
     },
     {
@@ -1192,7 +1192,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
         "id": 122425
     },
     {
@@ -1201,7 +1201,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 2, none)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 2, none)} AND {waspCarReq(Bart,['all'])}",
         "id": 122426
     },
     {
@@ -1210,7 +1210,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,[''])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,[''])}",
         "id": 122427
     },
     {
@@ -1219,7 +1219,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Sedan', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Knight Boat', ''Coffin Car', 'Ghost Ship', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,['Family Sedan', 'Moe\'s Sedan', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Knight Boat', 'Coffin Car', 'Ghost Ship', 'Ferrini - Black'])}",
         "id": 122428
     },
     {
@@ -1228,7 +1228,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, Medium)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 1, Medium)} AND {waspCarReq(Bart,['all'])}",
         "id": 122429
     },
     {
@@ -1237,7 +1237,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, Medium)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 1, Medium)} AND {waspCarReq(Bart,['all'])}",
         "id": 122430
     },
     {
@@ -1246,7 +1246,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart,['all'])}",
         "id": 122431
     },
     {
@@ -1255,7 +1255,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, Large)} AND {waspCarReq(Bart,['all']",
+        "requires": "{jumpsRequired(Bart, 1, Large)} AND {waspCarReq(Bart,['all'])}",
         "id": 122432
     },
     {
@@ -1471,7 +1471,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122463
     },
     {
@@ -1480,7 +1480,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122464
     },
     {
@@ -1489,7 +1489,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122465
     },
     {
@@ -1498,7 +1498,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122466
     },
     {
@@ -1507,7 +1507,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122467
     },
     {
@@ -1516,7 +1516,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['ATV'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['ATV'])}",
         "id": 122468
     },
     {
@@ -1525,7 +1525,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['Limo', 'Fire Truck', 'Longhorn', '36 Stutz Bearcat', 'ATV', 'Garbage Truck', 'Itchy and Scratchy Movie Truck', 'Coffin Car'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['Limo', 'Fire Truck', 'Longhorn', '36 Stutz Bearcat', 'ATV', 'Garbage Truck', 'Itchy and Scratchy Movie Truck', 'Coffin Car'])}",
         "id": 122469
     },
     {
@@ -1534,7 +1534,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['Coffin Car'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['Coffin Car'])}",
         "id": 122470
     },
     {
@@ -1543,7 +1543,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['ATV', 'Coffin Car'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['ATV', 'Coffin Car'])}",
         "id": 122471
     },
     {
@@ -1552,7 +1552,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['ATV', 'Coffin Car'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['ATV', 'Coffin Car'])}",
         "id": 122472
     },
     {
@@ -1561,7 +1561,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122473
     },
     {
@@ -1570,7 +1570,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122474
     },
     {
@@ -1579,7 +1579,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, Small)} AND {waspCarReq(Lisa,['Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck'])}",
+        "requires": "{jumpsRequired(Lisa, 0, Small)} AND {waspCarReq(Lisa,['Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck'])}",
         "id": 122475
     },
     {
@@ -1588,7 +1588,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, Small)} AND {waspCarReq(Lisa,['Hover Bike', 'Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck'])}",
+        "requires": "{jumpsRequired(Lisa, 0, Small)} AND {waspCarReq(Lisa,['Hover Bike', 'Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck'])}",
         "id": 122476
     },
     {
@@ -1597,7 +1597,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, Small)} AND {waspCarReq(Lisa,['Sedan', 'Nerd Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Lisa, 0, Small)} AND {waspCarReq(Lisa,['Skinner\'s Sedan', 'Nerd Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck', 'Ferrini - Black'])}",
         "id": 122477
     },
     {
@@ -1606,7 +1606,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['Family Sedan', 'Honor Roller', 'Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Hearse', 'WWII Vehicle W/ Rocket', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Lisa, 0, none)} AND {waspCarReq(Lisa,['Family Sedan', 'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Hearse', 'WWII Vehicle W// Rocket', 'Ferrini - Black'])}",
         "id": 122478
     },
     {
@@ -1615,7 +1615,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122479
     },
     {
@@ -1624,7 +1624,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['Family Sedan', 'Electaurus', 'Pickup Truck', 'Surveillance Van', 'Honor Roller', 'Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Mr. Burn's Limo', 'Zombie Car', 'Hover Bike', 'Hearse', 'Knight Boat', 'ATV', 'Obliteratron Big Wheel Truck', 'Planet Hype 50's Car', 'Taxi', 'Sedan B', 'Nuclear Waste Truck', 'Sports Car B', 'Sports Car A', 'Compact Car', 'SUV', 'Hallo Hearse', 'Coffin Car', 'Ghost Ship', 'Sedan A', 'Station Wagon', 'Cell Phone Car A', 'Milk Truck', 'WWI Vehicle W/ Rocket', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['Family Sedan', 'Electaurus', 'Pickup Truck', 'Surveillance Van', 'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Mr. Burns\' Limo', 'Zombie Car', 'Hover Bike', 'Hearse', 'Knight Boat', 'ATV', 'Obliteratron Big Wheel Truck', 'Planet Hype 50\'s Car', 'Taxi', 'Sedan B', 'Nuclear Waste Truck', 'Sports Car B', 'Sports Car A', 'Compact Car', 'SUV', 'Hallo Hearse', 'Coffin Car', 'Ghost Ship', 'Sedan A', 'Station Wagon', 'Cell Phone Car A', 'Milk Truck', 'WWI Vehicle W/ Rocket', 'Ferrini - Black'])}",
         "id": 122480
     },
     {
@@ -1633,7 +1633,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 0, Large)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 0, Large)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122481
     },
     {
@@ -1642,7 +1642,7 @@ location_table = [
         "category": [
             "Level 3 WASP"
         ],
-        "requires": "{defJumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
+        "requires": "{jumpsRequired(Lisa, 1, none)} AND {waspCarReq(Lisa,['all'])}",
         "id": 122482
     },
     {
@@ -1750,7 +1750,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Malibu Stacy Car', 'Nerd Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Malibu Stacy Car', 'Nerd Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Ferrini - Black'])}",
         "id": 122501
     },
     {
@@ -1759,7 +1759,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Malibu Stacy Car', 'Nerd Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Malibu Stacy Car', 'Nerd Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Open Wheel Race Car', 'Hover Bike', 'Ferrini - Black'])}",
         "id": 122502
     },
     {
@@ -1768,7 +1768,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122503
     },
     {
@@ -1777,7 +1777,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, Medium)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 0, Medium)} AND {waspCarReq(Marge,['all'])}",
         "id": 122504
     },
     {
@@ -1786,7 +1786,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122505
     },
     {
@@ -1795,7 +1795,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122506
     },
     {
@@ -1804,7 +1804,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122507
     },
     {
@@ -1813,7 +1813,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122508
     },
     {
@@ -1822,7 +1822,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
         "id": 122509
     },
     {
@@ -1831,7 +1831,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
         "id": 122510
     },
     {
@@ -1840,7 +1840,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Electaurus', 'Pickup Truck', 'Plow King', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Limo', 'Book Burning Van', 'School Bus', 'Donut Truck', 'Nerd Car', 'Canyonero', 'Kremlin', 'Tractor', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', 'Cola Truck', 'Globex Super Villain Car', 'Armored Truck', 'Chase Sedan', 'Mr. Burns' Limo', 'Zombie Car', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Obliteratatron Big Wheel Truck', 'Planet Hype 50's Car', 'Mini School Bus', 'Glass Truck', 'Minivan', 'Pizza Van', 'Taxi', 'Sedan B', 'Fish Van', 'Garbage Truck', 'Nuclear Waste Truck', 'Vote Quimby Truck', 'Ambulance', 'Sports Car B', 'Itchy and Scratchy Movie Truck', 'Burns Armored Truck' ,'Pickup', 'Sports Car A',' Compact Car', 'SUV', 'Hallo Hearse', 'Sedan A', 'Station Wagon', 'Ice Cream Truck', 'Cell Phone Car A', 'Cube Van', 'Milk Truck', 'Nonuplets Minivan'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Electaurus', 'Pickup Truck', 'Plow King', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Limo', 'Book Burning Van', 'School Bus', 'Donut Truck', 'Nerd Car', 'Canyonero', 'Kremlin', 'Tractor', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', 'Cola Truck', 'Globex Super Villain Car', 'Armored Truck', 'Chase Sedan', 'Mr. Burns\' Limo', 'Zombie Car', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Obliteratatron Big Wheel Truck', 'Planet Hype 50\'s Car', 'Mini School Bus', 'Glass Truck', 'Minivan', 'Pizza Van', 'Taxi', 'Sedan B', 'Fish Van', 'Garbage Truck', 'Nuclear Waste Truck', 'Vote Quimby Truck', 'Ambulance', 'Sports Car B', 'Itchy and Scratchy Movie Truck', 'Burns Armored Truck' ,'Pickup', 'Sports Car A',' Compact Car', 'SUV', 'Hallo Hearse', 'Sedan A', 'Station Wagon', 'Ice Cream Truck', 'Cell Phone Car A', 'Cube Van', 'Milk Truck', 'Nonuplets Minivan'])}",
         "id": 122511
     },
     {
@@ -1849,7 +1849,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Electaurus', 'Pickup Truck', 'Plow King', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Limo', 'Book Burning Van', 'School Bus', 'Donut Truck', 'Nerd Car', 'Canyonero', 'Kremlin', 'Tractor', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', 'Cola Truck', 'Globex Super Villain Car', 'Armored Truck', 'Chase Sedan', 'Mr. Burns' Limo', 'Zombie Car', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Obliteratatron Big Wheel Truck', 'Planet Hype 50's Car', 'Mini School Bus', 'Glass Truck', 'Minivan', 'Pizza Van', 'Taxi', 'Sedan B', 'Fish Van', 'Garbage Truck', 'Nuclear Waste Truck', 'Vote Quimby Truck', 'Ambulance', 'Sports Car B', 'Itchy and Scratchy Movie Truck', 'Burns Armored Truck' ,'Pickup', 'Sports Car A',' Compact Car', 'SUV', 'Hallo Hearse', 'Sedan A', 'Station Wagon', 'Ice Cream Truck', 'Cell Phone Car A', 'Cube Van', 'Milk Truck', 'Nonuplets Minivan'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Electaurus', 'Pickup Truck', 'Plow King', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Limo', 'Book Burning Van', 'School Bus', 'Donut Truck', 'Nerd Car', 'Canyonero', 'Kremlin', 'Tractor', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', 'Cola Truck', 'Globex Super Villain Car', 'Armored Truck', 'Chase Sedan', 'Mr. Burns\' Limo', 'Zombie Car', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Obliteratatron Big Wheel Truck', 'Planet Hype 50\'s Car', 'Mini School Bus', 'Glass Truck', 'Minivan', 'Pizza Van', 'Taxi', 'Sedan B', 'Fish Van', 'Garbage Truck', 'Nuclear Waste Truck', 'Vote Quimby Truck', 'Ambulance', 'Sports Car B', 'Itchy and Scratchy Movie Truck', 'Burns Armored Truck' ,'Pickup', 'Sports Car A',' Compact Car', 'SUV', 'Hallo Hearse', 'Sedan A', 'Station Wagon', 'Ice Cream Truck', 'Cell Phone Car A', 'Cube Van', 'Milk Truck', 'Nonuplets Minivan'])}",
         "id": 122512
     },
     {
@@ -1858,7 +1858,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
         "id": 122513
     },
     {
@@ -1867,7 +1867,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122514
     },
     {
@@ -1876,7 +1876,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Open Wheel Race Car'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['Open Wheel Race Car'])}",
         "id": 122515
     },
     {
@@ -1885,7 +1885,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, Medium)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, Medium)} AND {waspCarReq(Marge,['all'])}",
         "id": 122516
     },
     {
@@ -1894,7 +1894,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['ATV'])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,['ATV'])}",
         "id": 122517
     },
     {
@@ -1903,7 +1903,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122518
     },
     {
@@ -1912,7 +1912,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122519
     },
     {
@@ -1921,7 +1921,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{defJumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
+        "requires": "{jumpsRequired(Marge, 1, none)} AND {waspCarReq(Marge,['all'])}",
         "id": 122520
     },
     {
@@ -2119,7 +2119,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu ,['Family Sedan', 'Electaurus', 'Pickup Truck', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Sedan', 'WWII Vehicle', 'Mr. Plow', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70's Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Planet Hype 50's Car', 'Compact Car', 'Coffin Car', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu ,['Family Sedan', 'Electaurus', 'Pickup Truck', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Mr. Plow', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70\'s Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Planet Hype 50\'s Car', 'Compact Car', 'Coffin Car', 'Ferrini - Black'])}",
         "id": 122549
     },
     {
@@ -2128,7 +2128,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 0, none)} AND {waspCarReq(Apu ,['Family Sedan', 'Electaurus', 'Honor Roller', 'WWII Vehicle', 'Malibu Stacy Car', 'Nerd Car', 'Curator', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Planet 50's Hype Car', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'WWII Vehicle W/ Rocket', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Apu, 0, none)} AND {waspCarReq(Apu ,['Family Sedan', 'Electaurus', 'Honor Roller', 'WWII Vehicle', 'Malibu Stacy Car', 'Nerd Car', 'Curator', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Planet 50's Hype Car', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'WWII Vehicle W// Rocket', 'Ferrini - Black'])}",
         "id": 122550
     },
     {
@@ -2137,7 +2137,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 0, none)} AND {waspCarReq(Apu ,['Malibu Stacy Car', 'Curator', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Vote Quimby Truck', 'Itchy and Scratchy Movie Truck', 'Compact Car', 'Ghost Ship', 'Station Wagon', 'Ferrini - Black'])}",
+        "requires": "{jumpsRequired(Apu, 0, none)} AND {waspCarReq(Apu ,['Malibu Stacy Car', 'Curator', 'Longhorn', 'Ferrini - Red', '36 Stutz Bearcat', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Vote Quimby Truck', 'Itchy and Scratchy Movie Truck', 'Compact Car', 'Ghost Ship', 'Station Wagon', 'Ferrini - Black'])}",
         "id": 122551
     },
     {
@@ -2146,7 +2146,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Family Sedan', 'Electaurus', 'Pickup Truck', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Moe's Sedan', 'WWII Vehicle', 'Mr. Plow', 'Limo', 'Malibu Stacy Car', 'Skinner's Sedan', 'Donut Truck', 'Nerd Car', 'Canyonero', 'Clown Car', 'Kremlin', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', ' Car Built For Homer', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcast', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70's Sports Car', 'Open Wheel Race Car', 'Mr. Burns' Limo, 'Zombie Car', 'Hover Bike', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Knight Boat', 'ATV', 'Planet Hype 50's Car', 'Vote Quimby Truck', 'Sports Car B', 'Sports Car A', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'Station Wagon', 'Cell Phone Car', 'WWII Vehicle W/ Rocket', 'Ferrini - Black]}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Family Sedan', 'Electaurus', 'Pickup Truck', 'Duff Truck', 'Surveillance Van', 'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Mr. Plow', 'Limo', 'Malibu Stacy Car', 'Skinner\'s Sedan', 'Donut Truck', 'Nerd Car', 'Canyonero', 'Clown Car', 'Kremlin', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', ' Car Built For Homer', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcast', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70\'s Sports Car', 'Open Wheel Race Car', 'Mr. Burns\' Limo, 'Zombie Car', 'Hover Bike', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Knight Boat', 'ATV', 'Planet Hype 50\'s Car', 'Vote Quimby Truck', 'Sports Car B', 'Sports Car A', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'Station Wagon', 'Cell Phone Car', 'WWII Vehicle W// Rocket', 'Ferrini - Black])}",
         "id": 122552
     },
     {
@@ -2155,7 +2155,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, Medium)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, Medium)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122553
     },
     {
@@ -2164,7 +2164,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, Medium)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, Medium)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122554
     },
     {
@@ -2173,7 +2173,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, Medium)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, Medium)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122555
     },
     {
@@ -2182,7 +2182,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122556
     },
     {
@@ -2191,7 +2191,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122557
     },
     {
@@ -2200,7 +2200,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122558
     },
     {
@@ -2209,7 +2209,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122559
     },
     {
@@ -2218,7 +2218,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 0, none)} AND {waspCarReq(Apu, ['WWII Vehicle', 'Malibu Stacy Car', 'Donut Truck', 'Nerd Car', 'Clown Car', 'Tractor', 'Curator', '36 Stutz Bearcat', '70's Sports Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Planet Hype 50's Car', 'Mini School Bus', 'Vote Quimby Truck', 'Coffin Car', 'Ghost Ship', 'WWII Vehicle w\ Rocket', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Apu, 0, none)} AND {waspCarReq(Apu, ['WWII Vehicle', 'Malibu Stacy Car', 'Donut Truck', 'Nerd Car', 'Clown Car', 'Tractor', 'Curator', '36 Stutz Bearcat', '70\'s Sports Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Planet Hype 50\'s Car', 'Mini School Bus', 'Vote Quimby Truck', 'Coffin Car', 'Ghost Ship', 'WWII Vehicle W//  Rocket', 'Ferrini - Black'])}",
         "id": 122560
     },
     {
@@ -2227,7 +2227,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122561
     },
     {
@@ -2236,7 +2236,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122562
     },
     {
@@ -2245,7 +2245,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122563
     },
     {
@@ -2254,7 +2254,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 2, none)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122564
     },
     {
@@ -2263,7 +2263,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Electaurus', 'Malibu Stacy Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Compact Car', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Electaurus', 'Malibu Stacy Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Compact Car', 'Ferrini - Black'])}",
         "id": 122565
     },
     {
@@ -2272,7 +2272,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Electaurus', 'Malibu Stacy Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Compact Car', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Electaurus', 'Malibu Stacy Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Compact Car', 'Ferrini - Black'])}",
         "id": 122566
     },
     {
@@ -2281,7 +2281,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Electaurus', 'Malibu Stacy Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Compact Car', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Apu, 1, none)} AND {waspCarReq(Apu, ['Electaurus', 'Malibu Stacy Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Compact Car', 'Ferrini - Black'])}",
         "id": 122567
     },
     {
@@ -2290,7 +2290,7 @@ location_table = [
         "category": [
             "Level 5 WASP"
         ],
-        "requires": "{defJumpsRequired(Apu, 1, Large)} AND {waspCarReq(Apu, ['all']}",
+        "requires": "{jumpsRequired(Apu, 1, Large)} AND {waspCarReq(Apu, ['all'])}",
         "id": 122568
     },
     {
@@ -2434,7 +2434,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122590
     },
     {
@@ -2443,7 +2443,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122591
     },
     {
@@ -2452,7 +2452,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122592
     },
     {
@@ -2461,7 +2461,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122593
     },
     {
@@ -2470,7 +2470,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122594
     },
     {
@@ -2479,7 +2479,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122595
     },
     {
@@ -2488,7 +2488,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Moe's Sedan', 'WWII Vehicle', 'Limo', 'Fire Truck', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Cola Truck', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Obliteratatron Big Wheel Truck', 'Planet Hype 50's Car', 'Taxi', 'Garbage Truck', 'Vote Quimby Truck', 'Itchy and Scratchy movie Truck', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Limo', 'Fire Truck', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Cola Truck', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'ATV', 'Obliteratatron Big Wheel Truck', 'Planet Hype 50\'s Car', 'Taxi', 'Garbage Truck', 'Vote Quimby Truck', 'Itchy and Scratchy movie Truck', 'Compact Car', 'Coffin Car', 'Ghost Ship', 'Ferrini - Black'])}",
         "id": 122596
     },
     {
@@ -2497,7 +2497,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Honor Roller', 'Moe's Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Hover Bike' , 'ATV', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Honor Roller', 'Moe\'s Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Hover Bike' , 'ATV', 'Ferrini - Black'])}",
         "id": 122597
     },
     {
@@ -2506,7 +2506,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Surveillance Van' ,'Honor Roller', 'Moe's Sedan', 'WWII Vehicle', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Car Built For Homer', 'Police Car', 'Ferrini - Red', '36 Sttuz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70's Sports Car', 'Open Wheel Race Car', 'Mr. Burns' Limo', 'Zombie Car', 'Hover Bike', Hearse', 'ATV', 'Sports Car A', 'Coffin Car', 'Ghost Ship', 'WWII Vehicle W/ Rocket', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Surveillance Van' ,'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Car Built For Homer', 'Police Car', 'Ferrini - Red', '36 Sttuz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70\'s Sports Car', 'Open Wheel Race Car', 'Mr. Burns\' Limo', 'Zombie Car', 'Hover Bike', Hearse', 'ATV', 'Sports Car A', 'Coffin Car', 'Ghost Ship', 'WWII Vehicle W// Rocket', 'Ferrini - Black'])}",
         "id": 122598
     },
     {
@@ -2515,7 +2515,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122599
     },
     {
@@ -2524,7 +2524,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122600
     },
     {
@@ -2533,7 +2533,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122601
     },
     {
@@ -2542,7 +2542,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, Small)} AND {waspCarReq(Bart, ['Moe's Sedan', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck']}",
+        "requires": "{jumpsRequired(Bart, 0, Small)} AND {waspCarReq(Bart, ['Moe\'s Sedan', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Garbage Truck', 'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck'])}",
         "id": 122602
     },
     {
@@ -2551,7 +2551,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, Small)} AND {waspCarReq(Bart, ['Honor Roller', 'Moe's Sedan', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Longhorn', 'El Carro Loco', '36 Stutz Bearcat', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Garbage Truck',  'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck']}",
+        "requires": "{jumpsRequired(Bart, 0, Small)} AND {waspCarReq(Bart, ['Honor Roller', 'Moe\'s Sedan', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Longhorn', 'El Carro Loco', '36 Stutz Bearcat', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Garbage Truck',  'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck'])}",
         "id": 122603
     },
     {
@@ -2560,7 +2560,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, Small)} AND {waspCarReq(Bart, ['Honor Roller', 'Moe's Sedan', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Longhorn', 'El Carro Loco', '36 Stutz Bearcat', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Garbage Truck',  'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck']}",
+        "requires": "{jumpsRequired(Bart, 0, Small)} AND {waspCarReq(Bart, ['Honor Roller', 'Moe\'s Sedan', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Longhorn', 'El Carro Loco', '36 Stutz Bearcat', 'Globex Super Villain Car', 'Open Wheel Race Car', 'Hover Bike', 'ATV', 'Garbage Truck',  'Vote Quimby Truck', 'Burns Armored Truck', 'Bonestorm Truck'])}",
         "id": 122604
     },
     {
@@ -2569,7 +2569,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Moe's Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Kremlin', 'Krusty's Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70's Sports Car', 'Open Wheel Race Car', 'Mr. Burns' Limo', 'Zombie Car', 'Hover Bike', 'Hearse', 'ATV', 'Sports Car B', 'Ghost Ship, 'WWII Vehicle W/ Rocket', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Clown Car', 'Kremlin', 'Krusty\'s Limo', 'Curator', 'Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70\'s Sports Car', 'Open Wheel Race Car', 'Mr. Burns\' Limo', 'Zombie Car', 'Hover Bike', 'Hearse', 'ATV', 'Sports Car B', 'Ghost Ship, 'WWII Vehicle W// Rocket', 'Ferrini - Black'])}",
         "id": 122605
     },
     {
@@ -2578,7 +2578,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122606
     },
     {
@@ -2587,7 +2587,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122607
     },
     {
@@ -2596,7 +2596,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122608
     },
     {
@@ -2605,7 +2605,7 @@ location_table = [
         "category": [
             "Level 6 WASP"
         ],
-        "requires": "{defJumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all']}",
+        "requires": "{jumpsRequired(Bart, 1, none)} AND {waspCarReq(Bart, ['all'])}",
         "id": 122609
     },
     {
@@ -2767,7 +2767,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer, ['Family Sedan', 'Honor Roller', 'Moe's Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Car Built For Homer', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Knight Boat', 'ATV', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer, ['Family Sedan', 'Honor Roller', 'Moe\'s Sedan', 'Malibu Stacy Car', 'Nerd Car', 'Curator', 'Longhorn', 'El Carro Loco', 'Car Built For Homer', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Zombie Car', 'Hover Bike', 'Knight Boat', 'ATV', 'Ferrini - Black'])}",
         "id": 122634
     },
     {
@@ -2776,7 +2776,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122635
     },
     {
@@ -2785,7 +2785,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122636
     },
     {
@@ -2794,7 +2794,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122637
     },
     {
@@ -2803,7 +2803,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, Medium)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 1, Medium)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122638
     },
     {
@@ -2812,7 +2812,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122639
     },
     {
@@ -2821,7 +2821,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122640
     },
     {
@@ -2830,7 +2830,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 0, Medium)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122641
     },
     {
@@ -2839,7 +2839,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, Small)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 0, Small)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122642
     },
     {
@@ -2848,7 +2848,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, Large)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 0, Large)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122643
     },
     {
@@ -2857,7 +2857,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122644
     },
     {
@@ -2866,7 +2866,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122645
     },
     {
@@ -2875,7 +2875,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122646
     },
     {
@@ -2884,7 +2884,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Moe's Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Book Burning Van', 'Skinner's Sedan', 'Donut Truck', 'Nerd Car', 'Clown Car', 'Kremlin', 'Tractor', Krusty's Limo', 'Curator', Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70's Sports Car', 'Open Wheel Race Car', 'Mr. Burns' Limo','Zombie Car', Hover Bike', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Knight Boat', 'ATV', 'Planet Hype 50's Car', 'Taxi', 'Sedan B', 'Sports Car B', 'Sports Car A', 'Compact Car', 'SUV', 'Ghost Ship', 'Sedan A', 'Station Wagon','Cell Phone Car', 'WWII Vehicle W/ Rocket', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Moe\'s Sedan', 'WWII Vehicle', 'Limo', 'Malibu Stacy Car', 'Book Burning Van', 'Skinner\'s Sedan', 'Donut Truck', 'Nerd Car', 'Clown Car', 'Kremlin', 'Tractor', Krusty\'s Limo', 'Curator', Longhorn', 'El Carro Loco', 'Hover Car', 'Car Built For Homer', 'Police Car', Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', 'Chase Sedan', '70\'s Sports Car', 'Open Wheel Race Car', 'Mr. Burns\' Limo','Zombie Car', Hover Bike', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Knight Boat', 'ATV', 'Planet Hype 50\'s Car', 'Taxi', 'Sedan B', 'Sports Car B', 'Sports Car A', 'Compact Car', 'SUV', 'Ghost Ship', 'Sedan A', 'Station Wagon','Cell Phone Car', 'WWII Vehicle W// Rocket', 'Ferrini - Black'])}",
         "id": 122647
     },
     {
@@ -2893,7 +2893,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122648
     },
     {
@@ -2902,7 +2902,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, Large)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 1, Large)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122649
     },
     {
@@ -2911,7 +2911,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 1, Large)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 1, Large)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122650
     },
     {
@@ -2920,7 +2920,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122651
     },
     {
@@ -2929,7 +2929,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Sedan', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Kremlin', 'Tractor', 'Curator', 'Longhorn', 'El Carro Loco', 'Car Built For Homer', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70's Sports Car', 'Open Wheel Race Car', 'Mr. Burns' Limo', 'Zombie Car', 'Hover Bike', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Knight Boat', 'ATV', 'Planet Hype 50's Car', Sedan B', 'Sports Car B', 'Sports Car A', 'Compact Car', 'Hallo Hearse' ,'Ghost Ship', 'Sedan A', 'Station Wagon', 'Ferrini - Black']}",
+        "requires": "{jumpsRequired(Homer, 0, none)} AND {waspCarReq(Homer, ['Family Sedan', 'Electaurus', 'Surveillance Van', 'Honor Roller', 'Moe\'s Sedan', 'Limo', 'Malibu Stacy Car', 'Nerd Car', 'Kremlin', 'Tractor', 'Curator', 'Longhorn', 'El Carro Loco', 'Car Built For Homer', 'Ferrini - Red', '36 Stutz Bearcat', 'Bandit', 'Globex Super Villain Car', '70\'s Sports Car', 'Open Wheel Race Car', 'Mr. Burns\' Limo', 'Zombie Car', 'Hover Bike', 'Hearse', 'Speed Rocket', 'Monorail Car', 'Knight Boat', 'ATV', 'Planet Hype 50\'s Car', Sedan B', 'Sports Car B', 'Sports Car A', 'Compact Car', 'Hallo Hearse' ,'Ghost Ship', 'Sedan A', 'Station Wagon', 'Ferrini - Black'])}",
         "id": 122652
     },
     {
@@ -2938,7 +2938,7 @@ location_table = [
         "category": [
             "Level 7 WASP"
         ],
-        "requires": "{defJumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all']}",
+        "requires": "{jumpsRequired(Homer, 2, none)} AND {waspCarReq(Homer, ['all'])}",
         "id": 122653
     },
     {

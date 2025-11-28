@@ -84,26 +84,42 @@ def set_rules(world: SimpsonsHitAndRunWorld, multiworld: MultiWorld, player: int
         if requires_list == "":
             return True
 
-        for item in re.findall(r'\{(\w+)\(([^)]*)\)\}', requires_list):
-            func_name = item[0]
-            func_args = item[1].split(",")
-            if func_args == ['']:
-                func_args.pop()
+        for func_name, arg_str in re.findall(r'\{(\w+)\(([^)]*)\)\}', requires_list):
+            arg_str = arg_str.strip()
 
-            func = globals().get(func_name)
+            # Parse arguments based on the function
+            if func_name == "waspCarReq":
+                # waspCarReq(Character, badcars_list_or_flag)
+                if "," in arg_str:
+                    first, rest = arg_str.split(",", 1)
+                    func_args = [first.strip(), rest.strip()]
+                else:
+                    # e.g. waspCarReq(Homer) – shouldn't happen, but be defensive
+                    func_args = [arg_str.strip()]
+            elif func_name == "jumpsRequired":
+                # jumpsRequired(Character, jumps, carsize)
+                func_args = [p.strip() for p in arg_str.split(",") if p.strip() != ""]
+            else:
+                # Fallback: old behavior, but stripped
+                func_args = [p.strip() for p in arg_str.split(",") if p.strip() != ""]
 
-            if func is None:
-                func = getattr(Rules, func_name, None)
-
+            func = globals().get(func_name) or getattr(Rules, func_name, None)
             if not callable(func):
                 raise ValueError(f"Invalid function `{func_name}` in {area}.")
 
             result = func(world, multiworld, state, player, *func_args)
-            if isinstance(result, bool):
-                requires_list = requires_list.replace("{" + func_name + "(" + item[1] + ")}", "1" if result else "0")
-            else:
-                requires_list = requires_list.replace("{" + func_name + "(" + item[1] + ")}", str(result))
 
+            # Replace the original {func(...)} with the result / boolean
+            replacement = None
+            if isinstance(result, bool):
+                replacement = "1" if result else "0"
+            else:
+                replacement = str(result)
+
+            requires_list = requires_list.replace(
+                "{" + func_name + "(" + arg_str + ")}",
+                replacement
+            )
 
         # parse user written statement into list of each item
         for item in re.findall(r'\|[^|]+\|', requires_list):
