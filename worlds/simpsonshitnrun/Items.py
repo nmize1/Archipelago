@@ -927,35 +927,35 @@ item_table = [
         "count": 1,
         "name": "Vote Quimby Truck",
         "category": ["Cars", "Traffic", "Filler", "Level 5 Cars", "Large Cars"],
-        "id": 121904,
+        "id": 121934,
         "progression": False
     },
     {
         "count": 1,
         "name": "Ambulance",
         "category": ["Cars", "Traffic", "Filler", "Level 5 Cars", "Large Cars"],
-        "id": 121905,
+        "id": 121935,
         "progression": False
     },
     {
         "count": 1,
         "name": "Sports Car B",
         "category": ["Cars", "Traffic", "Filler", "Level 2 Cars", "Level 5 Cars", "Small Cars"],
-        "id": 121906,
+        "id": 121936,
         "progression": False
     },
     {
         "count": 1,
         "name": "Itchy and Scratchy Movie Truck",
         "category": ["Cars", "Traffic", "Filler", "Level 6 Cars", "Large Cars"],
-        "id": 121907,
+        "id": 121937,
         "progression": False
     },
     {
         "count": 1,
         "name": "Burns Armored Truck",
         "category": ["Cars", "Traffic", "Filler", "Level 6 Cars", "Large Cars"],
-        "id": 121908,
+        "id": 121938, #highest id because accidental id dupes
         "progression": False
     },
     {
@@ -1133,7 +1133,7 @@ item_table = [
         "name": "Audi TT",
         "category": ["Cars", "Level Any Cars", "Small Cars"],
         "useful": True,
-        "id": 121933, #highest id
+        "id": 121933,
         "progression": False
     }
 ]
