@@ -138,31 +138,71 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     else:
         raise OptionError("Levelsanity option not recognized.")
 
-    if world.options.shuffleebrake == False:
-        itemNamesToStart.extend(["Homer E-Brake", "Bart E-Brake", "Lisa E-Brake", "Marge E-Brake", "Apu E-Brake"])
-        itemNamesToRemove.extend(["Homer E-Brake", "Bart E-Brake", "Lisa E-Brake", "Marge E-Brake", "Apu E-Brake"])
+    ALL_CHARS = frozenset({"Homer", "Bart", "Lisa", "Marge", "Apu"})
 
-    if world.options.moverandomizer == False:
-        itemNamesToStart.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack"])
-        itemNamesToRemove.extend(["Homer Attack", "Bart Attack", "Lisa Attack", "Marge Attack", "Apu Attack"])
-        for i in range(2):
-            itemNamesToStart.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
-                                      "Marge Progressive Jump", "Apu Progressive Jump"])
-            itemNamesToRemove.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
-                                      "Marge Progressive Jump", "Apu Progressive Jump"])
+    if "None" in world.options.shuffleebrake.value:
+        world.options.shuffleebrake.value = set()
 
-    if world.options.startjumplevel > 0 and world.options.moverandomizer == True:
+    elif "All" in world.options.shuffleebrake.value:
+        world.options.shuffleebrake.value = ALL_CHARS.copy()
+
+    for c in ALL_CHARS - world.options.shuffleebrake.value:
+        itemNamesToStart.append(f"{c} E-Brake")
+        itemNamesToRemove.append(f"{c} E-Brake")
+
+    if "None" in world.options.shuffleattack.value:
+        world.options.shuffleattack.value = set()
+
+    elif "All" in world.options.shuffleattack.value:
+        world.options.shuffleattack.value = ALL_CHARS.copy()
+
+    for c in ALL_CHARS - world.options.shuffleattack.value:
+        itemNamesToStart.append(f"{c} Attack")
+        itemNamesToRemove.append(f"{c} Attack")
+
+    if "None" in world.options.shufflejump.value:
+        world.options.shufflejump.value = set()
+
+    elif "All" in world.options.shufflejump.value:
+        world.options.shufflejump.value = ALL_CHARS.copy()
+
+    for c in world.options.shufflejump.value:
         for i in range(world.options.startjumplevel):
-            itemNamesToStart.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
-                                      "Marge Progressive Jump", "Apu Progressive Jump"])
-            itemNamesToRemove.extend(["Homer Progressive Jump", "Bart Progressive Jump", "Lisa Progressive Jump",
-                                      "Marge Progressive Jump", "Apu Progressive Jump"])
+            itemNamesToStart.append(f"{c} Progressive Jump")
+            itemNamesToRemove.append(f"{c} Progressive Jump")
 
-    if world.options.shufflegagfinder == False:
-        itemNamesToRemove.extend(["Homer Gagfinder", "Bart Gagfinder", "Lisa Gagfinder", "Marge Gagfinder", "Apu Gagfinder"])
+    for c in ALL_CHARS - world.options.shufflejump.value:
+        for i in range(2):
+            itemNamesToStart.append(f"{c} Progressive Jump")
+            itemNamesToRemove.append(f"{c} Progressive Jump")
 
-    if world.options.shufflecheckeredflags == False:
-        itemNamesToRemove.extend(["Homer Checkered Flag", "Bart Checkered Flag", "Lisa Checkered Flag", "Marge Checkered Flag", "Apu Checkered Flag"])
+    if "None" in world.options.shufflegagfinder.value:
+        world.options.shufflegagfinder.value = set()
+
+    elif "All" in world.options.shufflegagfinder.value:
+        world.options.shufflegagfinder.value = ALL_CHARS.copy()
+
+    for c in ALL_CHARS - world.options.shufflegagfinder.value:
+        itemNamesToRemove.append(f"{c} Gagfinder")
+
+    if "None" in world.options.shufflecheckeredflags.value:
+        world.options.shufflecheckeredflags.value = set()
+
+    elif "All" in world.options.shufflecheckeredflags.value:
+        world.options.shufflecheckeredflags.value = ALL_CHARS.copy()
+
+    for c in ALL_CHARS - world.options.shufflecheckeredflags.value:
+        itemNamesToRemove.append(f"{c} Checkered Flag")
+
+    if "None" in world.options.shuffleforward.value:
+        world.options.shuffleforward.value = set()
+
+    elif "All" in world.options.shuffleforward.value:
+        world.options.shuffleforward.value = ALL_CHARS.copy()
+
+    for c in ALL_CHARS - world.options.shuffleforward.value:
+        itemNamesToStart.append(f"{c} Forward")
+        itemNamesToRemove.append(f"{c} Forward")
 
     if world.options.wasplogic == 0:
         itemNamesToRemove.extend(["Homer Frink-o-Matic Wasp Bumper", "Bart Frink-o-Matic Wasp Bumper", "Lisa Frink-o-Matic Wasp Bumper",

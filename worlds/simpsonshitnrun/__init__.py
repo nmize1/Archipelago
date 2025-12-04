@@ -182,7 +182,15 @@ class SimpsonsHitAndRunWorld(World):
                 self.mission_locks = passthrough["missionlockdic"]
                 self.progcars = passthrough["progcars"]
 
+        if "None" in self.options.earlyforward.value:
+            self.options.earlyforward.value = set()
 
+        elif "All" in self.options.earlyforward.value:
+            self.options.earlyforward.value = {"Homer", "Bart", "Lisa", "Marge", "Apu"}
+
+        for c in self.options.earlyforward.value:
+            if c in self.options.shuffleforward.value:
+                self.multiworld.local_early_items[self.player][f"{c} Forward"] = 1
 
     @classmethod
     def stage_assert_generate(cls, multiworld) -> None:

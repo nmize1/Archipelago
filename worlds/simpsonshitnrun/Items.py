@@ -955,7 +955,7 @@ item_table = [
         "count": 1,
         "name": "Burns Armored Truck",
         "category": ["Cars", "Traffic", "Filler", "Level 6 Cars", "Large Cars"],
-        "id": 121938, #highest id because accidental id dupes
+        "id": 121938,
         "progression": False
     },
     {
@@ -1135,7 +1135,42 @@ item_table = [
         "useful": True,
         "id": 121933,
         "progression": False
-    }
+    },
+    {
+        "count": 1,
+        "name": "Homer Forward",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121938
+    },
+    {
+        "count": 1,
+        "name": "Bart Forward",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121939
+    },
+    {
+        "count": 1,
+        "name": "Lisa Forward",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121940
+    },
+    {
+        "count": 1,
+        "name": "Marge Forward",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121941
+    },
+    {
+        "count": 1,
+        "name": "Apu Forward",
+        "category": ["Moves"],
+        "progression": True,
+        "id": 121942 #highest id
+    },
 ]
 
 for item in item_table:

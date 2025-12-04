@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from Options import (Toggle, Choice, Range, PerGameCommonOptions, DeathLink)
+from Options import (Toggle, Choice, Range, OptionSet, PerGameCommonOptions, DeathLink)
+
+VALID_CHAR_KEYS = ["Homer", "Bart", "Lisa", "Marge", "Apu", "All", "None"]
 
 class FillerTrapPercent(Range):
     """How many fillers will be replaced with traps. 0 means no additional traps, 100 means all fillers are traps."""
@@ -39,51 +41,78 @@ class ShuffleStartingCar(Toggle):
     display_name = "Shuffle Starting Car"
     default = True
 
-class MoveRando(Toggle):
-    """Choose whether to shuffle moves into the item pool.
-       Moves that are shuffled are Double Jump and Attack for each character.
-       These have logical implications for wasp and card collection
-       as well as L7M4 requiring Homer Double Jump.
-       """
+class ShuffleAttack(OptionSet):
+    """Choose whether to add Attack to the pool for each character.
+       Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+    """
 
-    default = True
-    display_name = "Move Randomizer"
+    default = frozenset({"All"})
+    valid_keys = VALID_CHAR_KEYS
+    display_name = "Shuffle Attack"
+
+class ShuffleJump(OptionSet):
+    """Choose whether to add Jump to the pool for each character.
+       Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+    """
+
+    default = frozenset({"All"})
+    valid_keys = VALID_CHAR_KEYS
+    display_name = "Shuffle Jump"
 
 class StartingJumpLevel(Range):
     """Choose how many Progressive Jump items to start with for each character.
-       This option is always 2 if MoveRando is False. CARD LOGIC IS CURRENTLY INCORRECT
-       IF STARTING WITH 0 JUMPS"""
+       Characters who aren't included in ShuffleJump will start with Progressive Jump Level 2.
+    """
     display_name = "Starting Jump Level"
     range_start = 0
     range_end = 2
     default = 1
 
-class ShuffleGagfinder(Toggle):
-    """If enabled, add a Gagfinder to the pool for each Character that will be
-       required to unlock gags as that character. If disabled, gags will instead
-       be locked until you receive their Level.
+class ShuffleGagfinder(OptionSet):
+    """Choose whether to add a Gagfinder to the pool for each Character that will be required to
+       unlock gags as that character. Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+       If None, gags will instead be locked until you receive their Level.
        """
 
-    default = True
+    default = frozenset({"All"})
+    valid_keys = VALID_CHAR_KEYS
     display_name = "Shuffle Gagfinder"
 
-class ShuffleCheckeredFlags(Toggle):
-    """If enabled, add a Checkered Flag to the pool for each Character that will be
-       required to unlock races as that character. If disabled, races will instead
-       be locked until you receive their Level.
+class ShuffleCheckeredFlags(OptionSet):
+    """Choose whether to add a Checkered Flag to the pool for each Character that will be required to
+       unlock races as that character. Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+       If None, races will instead be locked until you receive their Level.
        """
 
-    default = True
+    default = frozenset({"All"})
+    valid_keys = VALID_CHAR_KEYS
     display_name = "Shuffle Checkered Flags"
 
-class ShuffleEBrakes(Toggle):
-    """Choose whether to shuffle ability to use the E-Brake
-       for each character into the item pool. *WARNING* This is not
-       considered in logic and has not been heavily tested.
-       It may create unreasonably hard seeds.
+class ShuffleForward(OptionSet):
+    """Choose whether to shuffle the ability to move forward or drive forward for each character into the item pool.
+       Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+       **THIS COULD CREATE VERY DIFFICULT SEEDS**
+    """
+
+    default = frozenset({"None"})
+    valid_keys = VALID_CHAR_KEYS
+    display_name = "Shuffle Forward"
+
+class EarlyForward(OptionSet):
+    """If enabled and forward is shuffled, try to place each specified character's Forward item early.
+       Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None. Does nothing if the character's forward isn't shuffled.
+    """
+
+    default = frozenset({"All"})
+    valid_keys = VALID_CHAR_KEYS
+    display_name = "Early Forward"
+
+class ShuffleEBrakes(OptionSet):
+    """Choose whether to shuffle ability to use the E-Brake for each character into the item pool.
        """
 
-    default = True
+    default = frozenset({"All"})
+    valid_keys = VALID_CHAR_KEYS
     display_name = "Shuffle E-Brake"
 
 class EnableWaspPercent(Toggle):
@@ -177,10 +206,12 @@ class ShopHintPolicy(Choice):
     """Choose the level of hints sent when speaking to Gil for the first time on a level
        All: Hint all items in Gil's shop
        OnlyProg: Only hint progression items in Gil's shop
+       None: No shop hints will be created
     """
     display_name = "Shop Hint Policy"
     option_all = 0
     option_onlyprog = 1
+    option_none = 2
 
 class ShopScaleMod(Range):
     """The multiplier for shop costs per levels
@@ -225,11 +256,14 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     goal: Goal
     levelsanity: LevelSanity
     startingcarshuffle: ShuffleStartingCar
-    moverandomizer: MoveRando
+    shuffleattack: ShuffleAttack
+    shufflejump: ShuffleJump
     startjumplevel: StartingJumpLevel
     shufflegagfinder: ShuffleGagfinder
     shufflecheckeredflags: ShuffleCheckeredFlags
     shuffleebrake: ShuffleEBrakes
+    shuffleforward: ShuffleForward
+    earlyforward: EarlyForward
     EnableWaspPercent: EnableWaspPercent
     wasppercent: WaspPercent
     EnableCardPercent: EnableCardPercent

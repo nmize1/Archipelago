@@ -164,6 +164,34 @@ def waspCarReq(world: World, multiworld: MultiWorld, state: CollectionState, pla
     return ret
 
 
+def CheckSetForCharacter(world: World, multiworld: MultiWorld, state: CollectionState, player: int, option: str, character: str):
+    chars = getattr(world.options, option).value
+
+    if chars is None:
+        return False
+
+    if len(chars) == 0:
+        return False
+
+    if "All" in chars:
+        return True
+
+    return character in chars
+
+def CheckSetForNotCharacter(world: World, multiworld: MultiWorld, state: CollectionState, player: int, option: str, character: str):
+    chars = getattr(world.options, option).value
+
+    if chars is None:
+        return True
+
+    if len(chars) == 0:
+        return True
+
+    if "All" in chars:
+        return False
+
+    return character not in chars
+
 # Rule to expose the can_reach_location core function
 def canReachLocation(world: World, multiworld: MultiWorld, state: CollectionState, player: int, location: str):
     """Can the player reach the given location?"""
