@@ -162,7 +162,7 @@ class SimpsonsHitAndRunWorld(World):
         return slot_data
 
     def generate_early(self) -> None:
-        if self.options.cardlogic != 0:
+        if self.options.cardlogic == 2:
             raise OptionError("Chosen cardlogic level is not implemented.")
 
         if hasattr(self.multiworld, "re_gen_passthrough"):

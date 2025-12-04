@@ -159,7 +159,7 @@ class CardLogic(Choice):
                 Note that the card on Level 6 that requires the Itchy and Scratchy Truck will still require it if ShuffleCards is false.
        Cars: Cars are considered in whether you can reach a card.
        Glitched: Glitches and speedrunning tricks are considered in whether you can reach a card.
-       ***CURRENTLY ONLY CARLESS LOGIC LEVEL IS SUPPORTED, OTHER OPTIONS WILL RAISE AN ERROR AND FAIL GENERATION"""
+       ***CURRENTLY GLITCHED LOGIC LEVEL IS NOT SUPPORTED AND WILL RAISE AN ERROR AND FAIL GENERATION"""
 
     display_name = "Card Logic"
     option_carless = 0

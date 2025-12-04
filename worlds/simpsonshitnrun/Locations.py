@@ -56,6 +56,8 @@ location_table = [
         "category": [
             "Level 1 Mission"
         ],
+
+        "requires": "|Homer Progressive Jump:1| OR |Itchy and Scratchy Movie Truck|",
         "id": 122290
     },
     {
@@ -184,7 +186,7 @@ location_table = [
         "category": [
             "Level 2 Mission"
         ],
-        "requires": "|Mr. Plow| AND |Bart Progressive Jump:2|",
+        "requires": "|Mr. Plow| AND (|Bart Progressive Jump:1| OR |Itchy and Scratchy Movie Truck|)",
         "id": 122305
     },
     {
@@ -288,7 +290,7 @@ location_table = [
         "category": [
             "Level 3 Mission"
         ],
-        "requires": "",
+        "requires": "|Family Sedan| OR |Electaurus| OR |Pickup Truck| OR |Plow King| OR |Duff Truck| OR |Surveillance Van| OR |Honor Roller| OR |Moe\'s Sedan| OR |WWII Vehicle| OR |Mr. Plow| OR |Limo| OR |Fire Truck| OR |Malibu Stacy Car| OR |Book Burning Van| OR |Skinner\'s Sedan| OR |School Bus| OR |Donut Truck| OR |Nerd Car| OR |Canyonero| OR |Clown Car| OR |Kermlin| OR |Tractor| OR |Krusty\'s Limo| OR |Curator| OR |Longhorn| OR |El Carro Loco| OR |Hover Car| OR |Car Built for Homer| OR |Police Car| OR |Cola Truck| OR |Ferrini - Red| OR |36 Stutz Bearcat| OR |Bandit| OR |Globex Super Villain Car| OR |Chase Sedan| OR |70\'s Sports Car| OR |Open Wheel Race Car| OR |Mr. Burns\' Limo| OR |Zombie Car| OR |Hover Bike| OR |Hearse| OR |Speed Rocket| OR |Monorail Car| OR |Knight Boat| OR |ATV| OR |Obliteratatron Big Wheel Truck| OR |Planet Hype 50\'s Car| OR |Mini School Bus| OR |Glass Truck| OR |Minivan| OR |Pizza Van| OR |Taxi| OR |Sedan B| OR |Fish Van| OR |Nuclear Waste Truck| OR |Ambulance| OR |Sports Car B| OR |Itchy and Scratchy Movie Truck| OR |Sports Car A| OR |Compact Car| OR |SUV| OR |Hallo Hearse| OR |Coffin Car| OR |Ghost Ship| OR |Sedan A| OR |Station Wagon| OR |Ice Cream Truck| OR |Cell Phone Car A| OR |Cube Van| OR |Milk Truck| OR |Nonuplets Minivan| OR |WWII Vehicle w/Rocket| OR |Ferrini - Black|",
         "id": 122317
     },
     {
@@ -375,7 +377,7 @@ location_table = [
         "category": [
             "Level 4 Mission"
         ],
-        "requires": "|Marge - Police| AND |Marge Progressive Jump:2|",
+        "requires": "|Marge - Police| AND |Marge Progressive Jump:1|",
         "id": 122327
     },
     {
@@ -549,6 +551,7 @@ location_table = [
         "category": [
             "Level 6 Mission"
         ],
+        "requires": "|Bart Progressive Jump:1| OR |Itchy and Scratchy Movie Truck|",
         "id": 122347
     },
     {
@@ -617,6 +620,7 @@ location_table = [
         "category": [
             "Level 7 Mission"
         ],
+        "requires": "|Homer Progressive Jump:1|",
         "id": 122355
     },
     {
@@ -652,7 +656,7 @@ location_table = [
         "category": [
             "Level 7 Mission"
         ],
-        "requires": "",
+        "requires": "|Homer Progressive Jump:2|",
         "id": 122359
     },
     {
