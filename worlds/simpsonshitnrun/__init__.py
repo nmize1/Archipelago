@@ -208,7 +208,6 @@ class SimpsonsHitAndRunWorld(World):
                     int(49 * (self.options.missionlocks / 100))
                 )
                 missions = self.random.sample(range(1, 50), len(carlocks))
-                print(len(self.mission_locks))
                 self.mission_locks = dict(zip(missions, carlocks))
 
             level_bases = {
@@ -480,9 +479,36 @@ class SimpsonsHitAndRunWorld(World):
         slot_data["progcars"] = self.progcars
         slot_data["VerifyID"] = f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}"
 
+        slot_data["ingamehints"] = self.get_ingame_hints() if self.options.extrahintpolicy else "No hints"
+
         slot_data = after_fill_slot_data(slot_data, self, self.multiworld, self.player)
 
         return slot_data
+
+    def get_ingame_hints(self):
+        igh = {}
+
+        for item in self.progcars:
+            try:
+                loc = self.multiworld.find_item(item["name"], self.player)
+
+            except StopIteration:
+                pass
+
+            igh[item["id"]] = (loc.address, loc.player)
+
+        for _, item in self.mission_locks.items():
+            itemName = self.vehicle_item_to_vehicle[item]
+            item = item_name_to_item[itemName]
+            try:
+                loc = self.multiworld.find_item(item["name"], self.player)
+
+            except StopIteration:
+                pass
+
+            igh[item["id"]] = (loc.address, loc.player)
+
+        return igh
 
     def generate_output(self, output_directory: str):
         filename = f"{self.multiworld.get_out_file_name_base(self.player)}_SHAR"
@@ -527,8 +553,9 @@ class SimpsonsHitAndRunWorld(World):
 
                 loc = self.location_name_to_location[self.location_id_to_name[id_number]]
 
-                spoiler_handle.write(f"{m}: {loc["name"]} requires {item["name"]}\n")
-
+                loc_name = loc["name"]
+                item_name = item["name"]
+                spoiler_handle.write(f"{m}: {loc_name} requires {item_name}\n")
 
     ###
     # Non-standard AP world methods

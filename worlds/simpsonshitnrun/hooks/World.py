@@ -98,7 +98,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     itemNamesToStart = []
 
     cars = {
-        1: ["Family Sedan", "Pickup Truck", "Plow King", "Electaurus", "Surveilance Van", "Duff Truck", "Speed Rocket"],
+        1: ["Family Sedan", "Pickup Truck", "Plow King", "Electaurus", "Surveillance Van", "Duff Truck", "Speed Rocket"],
         2: ["Honor Roller", "WWII Vehicle", "Mr. Plow", "Moe's Sedan", "Limo", "Fire Truck", "Monorail Car"],
         3: ["Malibu Stacy Car", "Skinner's Sedan", "School Bus", "Book Burning Van", "Nerd Car", "Donut Truck",
             "Knight Boat"],

@@ -2911,8 +2911,8 @@
       "Y": 32.54769,
       "Z": 458.634,
       "Desc": "(LVL 5) CARD - Police Station",
-      "carless": "{JumpsRequired(Apu, 2, none)}",
-      "car": "{JumpsRequired(Apu, 1, Medium)}",
+      "carless": "{jumpsRequired(Apu, 2, none)}",
+      "car": "{jumpsRequired(Apu, 1, Medium)}",
       "glitched": ""
     },
     {

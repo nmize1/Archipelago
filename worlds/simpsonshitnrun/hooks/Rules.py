@@ -136,6 +136,9 @@ def waspCarReq(world: World, multiworld: MultiWorld, state: CollectionState, pla
         except:
             badcars = [badcars]
 
+    if badcars is None:
+        badcars = []
+
     cars = [
         "Ambulance", "Longhorn", "ATV", "Ferrini - Red", "El Carro Loco", "Book Burning Van", "36 Stutz Bearcat",
         "Burns Armored Truck", "Car Built For Homer", "Armored Truck", "Ferrini - Black", "Bonestorm Truck",
@@ -151,17 +154,23 @@ def waspCarReq(world: World, multiworld: MultiWorld, state: CollectionState, pla
         "Police Car", "Tractor", "Zombie Car"
     ]
 
-    if badcars != ["all"]:
-        parts = [f"|{car}|" for car in cars if car not in badcars]
-        ret = " OR ".join(parts)
-        if world.options.wasplogic == 1:
-            ret = f"(|{character} Frink-o-Matic Wasp Bumper| AND ({ret})) OR "
+    if badcars == ["all"]:
+        allowed = []  # no car requirement
     else:
-        ret = ""
+        allowed = [f"|{car}|" for car in cars if car not in badcars]
 
-    ret = f"{ret}|{character} Attack|"
+    car_logic = " OR ".join(allowed) if allowed else ""
 
-    return ret
+    if world.options.wasplogic == 1:
+        if car_logic:
+            car_logic = f"(|{character} Frink-o-Matic Wasp Bumper| AND ({car_logic}))"
+        else:
+            car_logic = f"|{character} Frink-o-Matic Wasp Bumper|"
+
+    if car_logic:
+        return f"{car_logic} OR |{character} Attack|"
+    else:
+        return f"|{character} Attack|"
 
 
 def CheckSetForCharacter(world: World, multiworld: MultiWorld, state: CollectionState, player: int, option: str, character: str):

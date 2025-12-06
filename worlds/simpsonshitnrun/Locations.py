@@ -728,7 +728,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{waspCarReq(Homer,[''])}",
+        "requires": "{waspCarReq(Homer,[])}",
         "id": 122367
     },
     {
@@ -836,7 +836,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[''])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[])}",
         "id": 122379
     },
     {
@@ -845,7 +845,7 @@ location_table = [
         "category": [
             "Level 1 WASP"
         ],
-        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[''])}",
+        "requires": "{jumpsRequired(Homer, 1, none)} AND {waspCarReq(Homer,[])}",
         "id": 122380
     },
     {
@@ -1214,7 +1214,7 @@ location_table = [
         "category": [
             "Level 2 WASP"
         ],
-        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,[''])}",
+        "requires": "{jumpsRequired(Bart, 0, none)} AND {waspCarReq(Bart,[])}",
         "id": 122427
     },
     {
@@ -1826,7 +1826,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[])}",
         "id": 122509
     },
     {
@@ -1835,7 +1835,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[])}",
         "id": 122510
     },
     {
@@ -1862,7 +1862,7 @@ location_table = [
         "category": [
             "Level 4 WASP"
         ],
-        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[''])}",
+        "requires": "{jumpsRequired(Marge, 0, none)} AND {waspCarReq(Marge,[])}",
         "id": 122513
     },
     {

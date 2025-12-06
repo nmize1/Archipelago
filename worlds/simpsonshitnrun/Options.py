@@ -202,6 +202,14 @@ class MaxShopPrice(Range):
     range_end = 500
     default = 300
 
+class ShopScaleMod(Range):
+    """The multiplier for shop costs per levels
+       L2 costs = L1 * multiplier, L3 = L1 * 2(multiplier), etc"""
+    display_name = "Shop Price Level Scale Multiplier"
+    range_start = 1
+    range_end = 5
+    default = 2
+
 class ShopHintPolicy(Choice):
     """Choose the level of hints sent when speaking to Gil for the first time on a level
        All: Hint all items in Gil's shop
@@ -213,13 +221,10 @@ class ShopHintPolicy(Choice):
     option_onlyprog = 1
     option_none = 2
 
-class ShopScaleMod(Range):
-    """The multiplier for shop costs per levels
-       L2 costs = L1 * multiplier, L3 = L1 * 2(multiplier), etc"""
-    display_name = "Shop Price Level Scale Multiplier"
-    range_start = 1
-    range_end = 5
-    default = 2
+class ExtraHintPolicy(Toggle):
+    """Place extra hints in various places."""
+    default = True
+    display_name = "Extra Hint Policy"
 
 class ShuffleTraffic(Toggle):
     """Randomize traffic per level"""
@@ -276,6 +281,7 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     maxprice: MaxShopPrice
     shopscalemod: ShopScaleMod
     shophintpolicy: ShopHintPolicy
+    extrahintpolicy: ExtraHintPolicy
     shuffletraffic: ShuffleTraffic
     filler_traps: FillerTrapPercent
     eject: EjectTraps
