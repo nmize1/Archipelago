@@ -953,7 +953,7 @@
       "Z": 154.8327,
       "Desc": "(LVL 2) CARD - On Top of Gas Station at Car Wash",
       "carless": "N/A",
-      "car": "|Bart Progressive Jump:2| AND |Itchy and Scratchy Truck|",
+      "car": "{jumpsRequired(Bart, 2, Large)} AND |Itchy and Scratchy Truck|",
       "glitched": ""
     },
     {

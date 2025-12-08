@@ -175,7 +175,8 @@ def waspCarReq(world: World, multiworld: MultiWorld, state: CollectionState, pla
 
 def CheckSetForCharacter(world: World, multiworld: MultiWorld, state: CollectionState, player: int, option: str, character: str):
     chars = getattr(world.options, option).value
-
+    if isinstance(character, str):
+        character = character.strip().strip("'\"")
     if chars is None:
         return False
 
@@ -189,7 +190,8 @@ def CheckSetForCharacter(world: World, multiworld: MultiWorld, state: Collection
 
 def CheckSetForNotCharacter(world: World, multiworld: MultiWorld, state: CollectionState, player: int, option: str, character: str):
     chars = getattr(world.options, option).value
-
+    if isinstance(character, str):
+        character = character.strip().strip("'\"")
     if chars is None:
         return True
 

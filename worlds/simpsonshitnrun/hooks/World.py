@@ -146,7 +146,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     elif "All" in world.options.shuffleebrake.value:
         world.options.shuffleebrake.value = ALL_CHARS.copy()
 
-    for c in ALL_CHARS - world.options.shuffleebrake.value:
+    for c in ALL_CHARS - set(world.options.shuffleebrake.value):
         itemNamesToStart.append(f"{c} E-Brake")
         itemNamesToRemove.append(f"{c} E-Brake")
 
@@ -156,7 +156,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     elif "All" in world.options.shuffleattack.value:
         world.options.shuffleattack.value = ALL_CHARS.copy()
 
-    for c in ALL_CHARS - world.options.shuffleattack.value:
+    for c in ALL_CHARS - set(world.options.shuffleattack.value):
         itemNamesToStart.append(f"{c} Attack")
         itemNamesToRemove.append(f"{c} Attack")
 
@@ -171,7 +171,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
             itemNamesToStart.append(f"{c} Progressive Jump")
             itemNamesToRemove.append(f"{c} Progressive Jump")
 
-    for c in ALL_CHARS - world.options.shufflejump.value:
+    for c in ALL_CHARS - set(world.options.shufflejump.value):
         for i in range(2):
             itemNamesToStart.append(f"{c} Progressive Jump")
             itemNamesToRemove.append(f"{c} Progressive Jump")
@@ -182,7 +182,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     elif "All" in world.options.shufflegagfinder.value:
         world.options.shufflegagfinder.value = ALL_CHARS.copy()
 
-    for c in ALL_CHARS - world.options.shufflegagfinder.value:
+    for c in ALL_CHARS - set(world.options.shufflegagfinder.value):
         itemNamesToRemove.append(f"{c} Gagfinder")
 
     if "None" in world.options.shufflecheckeredflags.value:
@@ -191,7 +191,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     elif "All" in world.options.shufflecheckeredflags.value:
         world.options.shufflecheckeredflags.value = ALL_CHARS.copy()
 
-    for c in ALL_CHARS - world.options.shufflecheckeredflags.value:
+    for c in ALL_CHARS - set(world.options.shufflecheckeredflags.value):
         itemNamesToRemove.append(f"{c} Checkered Flag")
 
     if "None" in world.options.shuffleforward.value:
@@ -200,7 +200,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     elif "All" in world.options.shuffleforward.value:
         world.options.shuffleforward.value = ALL_CHARS.copy()
 
-    for c in ALL_CHARS - world.options.shuffleforward.value:
+    for c in ALL_CHARS - set(world.options.shuffleforward.value):
         itemNamesToStart.append(f"{c} Forward")
         itemNamesToRemove.append(f"{c} Forward")
 

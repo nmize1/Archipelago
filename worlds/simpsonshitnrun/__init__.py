@@ -48,7 +48,7 @@ class SimpsonsHitAndRunWorld(World):
     options_dataclass = SimpsonsHitAndRunOptions
     data_version = 2
     required_client_version = (0, 5, 0)
-    apworld_version = "0.4.1"
+    apworld_version = "0.4.5"
     # These properties are set from the imports of the same name above.
     item_table = item_table
     location_table = location_table # this is likely imported from Data instead of Locations because the Game Complete location should not be in here, but is used for lookups
@@ -181,6 +181,7 @@ class SimpsonsHitAndRunWorld(World):
 
                 self.mission_locks = passthrough["missionlockdic"]
                 self.progcars = passthrough["progcars"]
+
 
         if "None" in self.options.earlyforward.value:
             self.options.earlyforward.value = set()
@@ -498,6 +499,9 @@ class SimpsonsHitAndRunWorld(World):
             igh[item["id"]] = (loc.address, loc.player)
 
         for _, item in self.mission_locks.items():
+            if item == "NO MISSIONLOCKS":
+                continue
+
             itemName = self.vehicle_item_to_vehicle[item]
             item = item_name_to_item[itemName]
             try:
