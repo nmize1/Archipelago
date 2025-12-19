@@ -8,10 +8,13 @@ from typing import Any, Dict, TextIO
 from pathlib import Path
 from typing import Callable, Optional
 from Options import OptionError
+import asyncio
+import typing
+import settings
 
 import Utils
 from worlds.generic.Rules import forbid_items_for_player
-from worlds.LauncherComponents import Component, SuffixIdentifier, components, Type, launch_subprocess
+from worlds.LauncherComponents import Component, SuffixIdentifier, components, Type, launch_subprocess, icon_paths
 
 from .Data import region_table, category_table, meta_table
 from .Meta import world_description, world_webworld, enable_region_diagram
@@ -40,15 +43,73 @@ from .hooks.Data import hook_interpret_slot_data
 
 from .SHARContainer import gen
 
+def get_options():
+    return SimpsonsHitAndRunOptions
+
+def get_world():
+    return SimpsonsHitAndRunWorld
+
+def _launch_shar_client_process():
+    import os, sys, subprocess
+    client_path = os.path.join(os.path.dirname(__file__), "SHARClient.py")
+    subprocess.Popen([sys.executable, client_path])
+
+async def run_client_async(ap_url=None):
+    from .SHARClient import SHARContext
+    ctx = SHARContext()  # lightweight constructor
+    await ctx.initialize()  # tasks can be scheduled safely
+    if ap_url:
+        await ctx.handle_apshar(Path(ap_url))
+    else:
+        await ctx.start()
+
+def run_client(ap_url=None):
+    asyncio.run(run_client_async(ap_url))
+
+
+
+# ---- Component Registration ----
+components.append(
+    Component(
+        "Simpsons Hit & Run Client",
+        func=run_client,
+        component_type=Type.CLIENT,
+        file_identifier=SuffixIdentifier(".apshar"),
+        cli=True,
+        icon="Donut"
+    )
+)
+
+icon_paths["Donut"] = f"ap:{__name__}/icons/Donut.png"
+class SHARSettings(settings.Group):
+    class SHARRandomizerExe(settings.FilePath):
+        """
+        Path to SHARRandomizer.exe to auto-launch.
+        Example: "C:/Program Files (x86)/Vivendi Universal Games/The Simpsons Hit & Run/SHARRandomizer.exe"
+        """
+        description = "Path to SHARRandomizer.exe"
+
+    class LucasLauncherExe(settings.FilePath):
+        """
+        Path to Lucas' Mod Launcher.exe to auto-launch.
+        Can't auto launch straight into running the mod saldy.
+        Example: "C:/Program Files (x86)/Vivendi Universal Games/The Simpsons Hit & Run/Lucas Simpsons Hit & Run Mod Launcher.exe"
+        """
+        description = "Path to Lucas' Mod Launcher.exe"
+
+    sharrandomizer: SHARRandomizerExe = SHARRandomizerExe("")
+    lucas_launcher: LucasLauncherExe = LucasLauncherExe("")
+
 class SimpsonsHitAndRunWorld(World):
     """A 2003 Action Adventure game similar to the GTA series starring the Simpsons"""
     game = "The Simpsons Hit And Run"
     web = world_webworld
 
+    settings: typing.ClassVar[SHARSettings]
     options_dataclass = SimpsonsHitAndRunOptions
     data_version = 2
     required_client_version = (0, 5, 0)
-    apworld_version = "0.4.5"
+    apworld_version = "0.4.3"
     # These properties are set from the imports of the same name above.
     item_table = item_table
     location_table = location_table # this is likely imported from Data instead of Locations because the Game Complete location should not be in here, but is used for lookups

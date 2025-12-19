@@ -177,6 +177,7 @@ def CheckSetForCharacter(world: World, multiworld: MultiWorld, state: Collection
     chars = getattr(world.options, option).value
     if isinstance(character, str):
         character = character.strip().strip("'\"")
+
     if chars is None:
         return False
 
@@ -192,6 +193,7 @@ def CheckSetForNotCharacter(world: World, multiworld: MultiWorld, state: Collect
     chars = getattr(world.options, option).value
     if isinstance(character, str):
         character = character.strip().strip("'\"")
+
     if chars is None:
         return True
 

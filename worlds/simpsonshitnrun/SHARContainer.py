@@ -17,11 +17,11 @@ class SHARContainer(APPlayerContainer):
         self.output_directory = output_directory
         self.file_path = base_path
         container_path = os.path.join(output_directory, base_path)
-        self.patch_file_ending = ".zip"
+        self.patch_file_ending = ".apshar"
         super().__init__(container_path, player, player_name, server)
 
     def write_contents(self, opened_zipfile: zipfile.ZipFile):
-        safe_player = str(self.player).replace(" ", "_")
+        #safe_player = str(self.player).replace(" ", "_")
         filename = f"SHAR.ini"
 
         ini_data = f"[IDENTIFIER]\n"
@@ -51,7 +51,7 @@ class SHARContainer(APPlayerContainer):
         super().write_contents(opened_zipfile)
 
 def gen(output_directory, mod_name, ID, TitleID, card_table, traffic_table, mission_locks, player):
-    mod_dir = os.path.join(output_directory, f"{mod_name}_{Utils.__version__}")
+    mod_dir = os.path.join(output_directory, f"{mod_name}_{Utils.__version__}.apshar")
     mod = SHARContainer(
         ID,
         TitleID,

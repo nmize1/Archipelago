@@ -1736,7 +1736,7 @@
       "X": -412.222,
       "Y": -57.14725,
       "Z": 328.9016,
-      "Desc": "(LVL 3) CARD - Behind Truck",
+      "Desc": "(LVL 3) CARD - Behind Duff Brewery Truck",
       "carless": "",
       "car": "",
       "glitched": ""
@@ -3047,7 +3047,7 @@
       "X": -519.6532,
       "Y": -61.02364,
       "Z": -45.34946,
-      "Desc": "(LVL 6) CARD -Pelican Behind Planet Hype 2",
+      "Desc": "(LVL 6) CARD - Pelican Behind Planet Hype 2",
       "carless": "{jumpsRequired(Bart, 1, none)}",
       "car": "{jumpsRequired(Bart, 0, Small)}",
       "glitched": ""
@@ -3056,7 +3056,7 @@
       "X": -503.3457,
       "Y": -61.39593,
       "Z": -71.87283,
-      "Desc": "(LVL 6) CARD -Planet Hype Outdoor Seating",
+      "Desc": "(LVL 6) CARD - Planet Hype Outdoor Seating",
       "carless": "{jumpsRequired(Bart, 1, none)}",
       "car": "{jumpsRequired(Bart, 1, none)}",
       "glitched": ""
@@ -3119,7 +3119,7 @@
       "X": -385.4505,
       "Y": -61.33961,
       "Z": -123.318,
-      "Desc": "(LVL 6) CARD - Deck by Squidport Pedestrian Entrance",
+      "Desc": "(LVL 6) CARD - Deck by Squidport Pedestrian Entrance 2",
       "carless": "{jumpsRequired(Bart, 1, none)}",
       "car": "{jumpsRequired(Bart, 0, Medium)}",
       "glitched": ""
@@ -3272,7 +3272,7 @@
       "X": 16.8557,
       "Y": 7.803857,
       "Z": 55.20058,
-      "Desc": "(LVL 6) CARD - Behind Krusty BUrger Across From Android's Dungeon",
+      "Desc": "(LVL 6) CARD - Behind Krusty Burger Across From Android's Dungeon",
       "carless": "",
       "car": "",
       "glitched": ""
@@ -3497,7 +3497,7 @@
       "X": 70.30876,
       "Y": -16.47322,
       "Z": 335.0244,
-      "Desc": "(LVL 6) CARD - Boar's Head at Kamp Krusty ",
+      "Desc": "(LVL 6) CARD - Boar's Head at Kamp Krusty",
       "carless": "{jumpsRequired(Bart, 1, none)}",
       "car": "{jumpsRequired(Bart, 1, none)}",
       "glitched": ""
@@ -3533,7 +3533,7 @@
       "X": -412.222,
       "Y": -57.14725,
       "Z": 328.9016,
-      "Desc": "(LVL 6) CARD - Behind Truck",
+      "Desc": "(LVL 6) CARD - Behind Duff Brewery Truck",
       "carless": "",
       "car": "",
       "glitched": ""
