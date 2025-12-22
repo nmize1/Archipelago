@@ -23,7 +23,6 @@ class SHARContext(CommonContext):
     game = "The Simpsons Hit And Run"
 
     def __init__(self):
-        # Minimal constructor, no async tasks
         super().__init__()
         self._initialized = False
 
