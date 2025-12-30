@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from Options import (Toggle, Choice, Range, OptionSet, PerGameCommonOptions, DeathLink)
+
+from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle, OptionGroup
 
 VALID_CHAR_KEYS = ["Homer", "Bart", "Lisa", "Marge", "Apu", "All", "None"]
 
@@ -18,21 +19,20 @@ class Goal(Choice):
     option_goal_final_missionl7m7 = 2
     option_goal_wasps_and_cards_collected = 3
 
+class LockLevels(Toggle):
+    """Choose whether levels are accessible in Free Roam before finding their respective level item.
+        """
+    display_name = "Lock Levels"
+    default = True
 
-class LevelSanity(Choice):
-    """Choose how you want missions to be sent in the multiworld. Levels logically
-       require the level access item and at least 1 car from that level or higher.
-       You're guaranteed to start with a level and it's default car with either option.
-       Linear will add progressive levels to the pool. You'll start with Level 1 and
-       the Family Sedan, then get the next level each time you receive a progressive
-       level item. Levels will add levels to the pool. You'll start the game with
-       a random level and it's required items and receive levels from the multiworld.
+class ShuffleLevels(Toggle):
+    """Choose how you want Levels to be received.
+       If shuffled, 6 Level X items will be shuffled into the item pool which will allow access to that level's missions
+       Otherwise, 6 Progressive Level items will be shuffled into the item pool, allowing you to access levels in the vanilla order.
        Regardless of your choice, missions can be played in any order on an unlocked level.
        """
-    display_name = "Levelsanity"
-    option_linear = 0
-    option_levels = 1
-    default = 1
+    display_name = "Shuffle Levels"
+    default = True
 
 class ShuffleStartingCar(Toggle):
     """Choose whether to shuffle starting car between available cars from your starting level.
@@ -115,6 +115,15 @@ class ShuffleEBrakes(OptionSet):
     valid_keys = VALID_CHAR_KEYS
     display_name = "Shuffle E-Brake"
 
+class ShuffleBumpers(OptionSet):
+    """Choose whether to shuffle Frink-o-Matic Wasp Bumpers into the item pool.
+       Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+    """
+
+    default = frozenset({"All"})
+    valid_keys = VALID_CHAR_KEYS
+    display_name = "Early Forward"
+
 class EnableWaspPercent(Toggle):
     """Whether to include Wasps in goal requirements.
        This setting is always treated as true if your
@@ -151,35 +160,6 @@ class ShuffleCards(Toggle):
 
     default = True
     display_name = "Shuffle Cards"
-
-class CardLogic(Choice):
-    """Choose logic level for cards.
-       Carless: Cars are not considered at all in this logic level and cards that cannot be reached without them
-                are not available locations for ShuffleCards.
-                Note that the card on Level 6 that requires the Itchy and Scratchy Truck will still require it if ShuffleCards is false.
-       Cars: Cars are considered in whether you can reach a card.
-       Glitched: Glitches and speedrunning tricks are considered in whether you can reach a card.
-       ***CURRENTLY GLITCHED LOGIC LEVEL IS NOT SUPPORTED AND WILL RAISE AN ERROR AND FAIL GENERATION"""
-
-    display_name = "Card Logic"
-    option_carless = 0
-    option_cars = 1
-    option_glitched = 2
-    default = 0
-
-class WaspLogic(Choice):
-    """Choose logic level for wasps.
-       Strict: Wasps cannot be broken with cars and logically require Attack items.
-       Unlockable: Adds a "Frink-o-Matic Wasp Bumper" item for each character that allows them to break wasps with cars.
-                   Wasps logically require the bumper and a car that can reach them or Attack items.
-       Cars: Wasps logically require a car that can reach them or Attack items.
-       Open: Wasps logically require Attack items but can be broken with cars."""
-
-    display_name = "Wasp Logic"
-    option_strict = 0
-    option_unlockable = 1
-    option_cars = 2
-    option_open = 3
 
 class AddMissionLocks(Range):
     """Add car requirements to a percentage of missions"""
@@ -257,9 +237,10 @@ class TrafficTraps(Toggle):
     display_name = "Enable Traffic Traps"
 
 @dataclass
-class SimpsonsHitAndRunOptions(PerGameCommonOptions):
+class SimpsonsHitNRunOptions(PerGameCommonOptions):
     goal: Goal
-    levelsanity: LevelSanity
+    locklevels: LockLevels
+    shufflelevels: ShuffleLevels
     startingcarshuffle: ShuffleStartingCar
     shuffleattack: ShuffleAttack
     shufflejump: ShuffleJump
@@ -267,6 +248,7 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     shufflegagfinder: ShuffleGagfinder
     shufflecheckeredflags: ShuffleCheckeredFlags
     shuffleebrake: ShuffleEBrakes
+    shufflebumpers: ShuffleBumpers
     shuffleforward: ShuffleForward
     earlyforward: EarlyForward
     EnableWaspPercent: EnableWaspPercent
@@ -274,8 +256,6 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     EnableCardPercent: EnableCardPercent
     cardpercent: CardPercent
     shufflecards: ShuffleCards
-    cardlogic: CardLogic
-    wasplogic: WaspLogic
     missionlocks: AddMissionLocks
     minprice: MinShopPrice
     maxprice: MaxShopPrice
@@ -291,4 +271,21 @@ class SimpsonsHitAndRunOptions(PerGameCommonOptions):
     traffictrap: TrafficTraps
 
 
-SimpsonsHitAndRunOptions = SimpsonsHitAndRunOptions
+option_groups = [
+    OptionGroup(
+        "Shuffles",
+        [ShuffleLevels, ShuffleStartingCar, ShuffleAttack, ShuffleJump, StartingJumpLevel, ShuffleGagfinder, ShuffleCheckeredFlags, ShuffleEBrakes, ShuffleForward, EarlyForward, ShuffleCards],
+    ),
+    OptionGroup(
+        "Goals",
+        [Goal, EnableWaspPercent, WaspPercent, EnableCardPercent, CardPercent],
+    ),
+    OptionGroup(
+        "Gameplay Changes",
+        [AddMissionLocks, MinShopPrice, MaxShopPrice, ShopScaleMod, ShopHintPolicy, ExtraHintPolicy, ShuffleTraffic],
+    ),
+    OptionGroup(
+        "Traps",
+        [EjectTraps, DuffTraps, LaunchTraps, HNRTraps, TrafficTraps, FillerTrapPercent],
+    )
+]

@@ -1,76 +1,97 @@
-from BaseClasses import Entrance, MultiWorld, Region
-from .Helpers import is_category_enabled, is_location_enabled
-from .Data import region_table
-from .Locations import SimpsonsHitAndRunLocation, location_name_to_location
-from worlds.AutoWorld import World
-from .hooks.Regions import before_region_table_processed
-import json
-import pkgutil
+from __future__ import annotations
 
-if not region_table:
-    region_table = {}
+from typing import TYPE_CHECKING
 
-regionMap = { **region_table }
-starting_regions = [ name for name in regionMap if "starting" in regionMap[name].keys() and regionMap[name]["starting"] ]
+from BaseClasses import Entrance, Region
 
-if len(starting_regions) == 0:
-    starting_regions = region_table.keys() # the Manual region connects to all user-defined regions automatically if you specify no starting regions
+if TYPE_CHECKING:
+    from .world import SimpsonsHitNRunWorld
 
-regionMap["Manual"] = {
-    "requires": [],
-    "connects_to": starting_regions
-}
 
-regionMap = before_region_table_processed(regionMap)
+def create_and_connect_regions(world: SimpsonsHitNRunWorld) -> None:
+    create_all_regions(world)
+    connect_regions(world)
 
-def create_regions(world: World, multiworld: MultiWorld, player: int):
-    # Create regions and assign locations to each region
-    for region in regionMap:
-        if "connects_to" not in regionMap[region]:
-            exit_array = None
+def create_all_regions(world: SimpsonsHitNRunWorld) -> None:
+    regions = [Region("Hub", world.player, world.multiworld)]
+
+    for i in range(7):
+        regions += [Region(f"Level {i + 1}", world.player, world.multiworld),
+                    Region(f"Level {i + 1} Missions", world.player, world.multiworld),
+                    Region(f"Level {i + 1} Races", world.player, world.multiworld),
+                    Region(f"Level {i + 1} Wasps", world.player, world.multiworld),
+                    Region(f"Level {i + 1} Cards", world.player, world.multiworld),
+                    Region(f"Level {i + 1} Gags", world.player, world.multiworld),
+                    Region(f"Level {i + 1} Shops", world.player, world.multiworld)]
+
+    world.multiworld.regions += regions
+
+def connect_regions(world: SimpsonsHitNRunWorld) -> None:
+    characters = ["Homer", "Bart", "Lisa", "Marge", "Apu", "Bart", "Homer"]
+
+    hub = world.get_region("Hub")
+
+    level_regions = [world.get_region("Level 1"), world.get_region("Level 2"), world.get_region("Level 3"),
+                     world.get_region("Level 4"), world.get_region("Level 5"), world.get_region("Level 6"),
+                     world.get_region("Level 7")]
+
+    level_mission_regions = [world.get_region("Level 1 Missions"), world.get_region("Level 2 Missions"),
+                             world.get_region("Level 3 Missions"),
+                             world.get_region("Level 4 Missions"), world.get_region("Level 5 Missions"),
+                             world.get_region("Level 6 Missions"), world.get_region("Level 7 Missions")]
+
+    level_race_regions = [world.get_region("Level 1 Races"), world.get_region("Level 2 Races"),
+                          world.get_region("Level 3 Races"),
+                          world.get_region("Level 4 Races"), world.get_region("Level 5 Races"),
+                          world.get_region("Level 6 Races"), world.get_region("Level 7 Races")]
+
+    level_wasp_regions = [world.get_region("Level 1 Wasps"), world.get_region("Level 2 Wasps"),
+                          world.get_region("Level 3 Wasps"),
+                          world.get_region("Level 4 Wasps"), world.get_region("Level 5 Wasps"),
+                          world.get_region("Level 6 Wasps"), world.get_region("Level 7 Wasps")]
+
+    level_card_regions = [world.get_region("Level 1 Cards"), world.get_region("Level 2 Cards"),
+                          world.get_region("Level 3 Cards"),
+                          world.get_region("Level 4 Cards"), world.get_region("Level 5 Cards"),
+                          world.get_region("Level 6 Cards"), world.get_region("Level 7 Cards")]
+
+    level_gag_regions = [world.get_region("Level 1 Gags"), world.get_region("Level 2 Gags"),
+                         world.get_region("Level 3 Gags"),
+                         world.get_region("Level 4 Gags"), world.get_region("Level 5 Gags"),
+                         world.get_region("Level 6 Gags"), world.get_region("Level 7 Gags")]
+
+    level_shop_regions = [world.get_region("Level 1 Shops"), world.get_region("Level 2 Shops"),
+                          world.get_region("Level 3 Shops"),
+                          world.get_region("Level 4 Shops"), world.get_region("Level 5 Shops"),
+                          world.get_region("Level 6 Shops"), world.get_region("Level 7 Shops")]
+
+    for i in range(7):
+        level_num = i + 1
+        character = characters[i]
+
+        if world.options.locklevels:
+            hub.connect(level_regions[i], f"Hub to Level {level_num}", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
+                                                                                                          state.has("Progressive Level", world.player, num))
         else:
-            exit_array = regionMap[region]["connects_to"] or None
+            hub.connect(level_regions[i], f"Hub to Level {level_num}")
 
-        # safeguard for bad value at the end
-        if not exit_array:
-            exit_array = None
+        level_regions[i].connect(level_mission_regions[i], f"Level {level_num} to Missions", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
+                                                                                                                              state.has("Progressive Level", world.player, num))
 
-        locations = []
+        if "All" in world.options.shufflecheckeredflags or (character in world.options.shufflecheckeredflags and "None" not in world.options.shufflecheckeredflags):
+            level_regions[i].connect(level_race_regions[i], f"Level {level_num} to Races", lambda state, char=character: state.has(f"{char} Checkered Flag", world.player))
+        else:
+            level_regions[i].connect(level_race_regions[i], f"Level {level_num} to Races", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
+                                                                                                                              state.has("Progressive Level", world.player, num))
 
-        for location in world.location_table:
-            if "region" in location and location["region"] == region:
-                if is_location_enabled(multiworld, player, location):
-                    locations.append(location["name"])
+        level_regions[i].connect(level_wasp_regions[i], f"Level {level_num} to Wasps")
 
-        new_region = create_region(world, multiworld, player, region, locations, exit_array)
-        multiworld.regions += [new_region]
+        level_regions[i].connect(level_card_regions[i], f"Level {level_num} to Cards")
 
-    menu = create_region(world, multiworld, player, "Menu", None, ["Manual"])
-    multiworld.regions += [menu]
-    menuConn = multiworld.get_entrance("MenuToManual", player)
-    menuConn.connect(multiworld.get_region("Manual", player))
+        if "All" in world.options.shufflegagfinder or (character in world.options.shufflegagfinder and "None" not in world.options.shufflegagfinder):
+            level_regions[i].connect(level_gag_regions[i], f"Level {level_num} to Gags", lambda state, char=character: state.has(f"{char} Gagfinder", world.player))
+        else:
+            level_regions[i].connect(level_gag_regions[i], f"Level {level_num} to Gags", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
+                                                                                                                            state.has("Progressive Level", world.player, num))
 
-    # Link regions together
-    for region in regionMap:
-        if "connects_to" in regionMap[region] and regionMap[region]["connects_to"]:
-            for linkedRegion in regionMap[region]["connects_to"]:
-                connection = multiworld.get_entrance(getConnectionName(region, linkedRegion), player)
-                connection.connect(multiworld.get_region(linkedRegion, player))
-
-def create_region(world: World, multiworld: MultiWorld, player: int, name: str, locations=None, exits=None):
-    ret = Region(name, player, multiworld)
-
-    if locations:
-        for location in locations:
-            loc_id = world.location_name_to_id.get(location, 0)
-            locationObj = SimpsonsHitAndRunLocation(player, location, loc_id, ret)
-            if location_name_to_location[location].get('prehint'):
-                world.options.start_location_hints.value.add(location)
-            ret.locations.append(locationObj)
-    if exits:
-        for exit in exits:
-            ret.exits.append(Entrance(player, getConnectionName(name, exit), ret))
-    return ret
-
-def getConnectionName(entranceName: str, exitName: str):
-    return entranceName + "To" + exitName
+        level_regions[i].connect(level_shop_regions[i], f"Level {level_num} to Shops", lambda state, idx=i: state.has("Progressive Wallet Upgrade", world.player, idx))

@@ -1,1205 +1,335 @@
-from BaseClasses import Item
-from .Data import item_table
-from .hooks.Items import before_item_table_processed
+from __future__ import annotations
 
-item_table = before_item_table_processed(item_table)
+from dataclasses import dataclass, field
+from typing import TYPE_CHECKING
 
-######################
-# Generate item lookups
-######################
+from BaseClasses import Item, ItemClassification
+import re
+from . import rules
 
-item_id_to_name: dict[int, str] = {}
-item_name_to_item: dict[str, dict] = {}
-item_name_groups: dict[str, str] = {}
-advancement_item_names: set[str] = set()
-lastItemId = -1
+if TYPE_CHECKING:
+    from .world import SimpsonsHitNRunWorld
 
-# Replaced manual code with hardcoded ids which are preferable for editing later.
-# Need to clean up the rest of the manual stuff that isn't needed anymore.
-# id starts at Simpsons' first air date
-item_table = [
-    {
-        "count": 1,
-        "name": "Homer - Casual",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121789,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Homer - Muumuu",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121790,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Homer - Chosen One",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121791,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bart - Tall",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121792,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bart - Football",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121793,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bart - Ninja",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121794,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Lisa - Cool",
-        "category": ["Progression"],
-        "progression": True,
-        "id": 121795
-    },
-    {
-        "count": 1,
-        "name": "Lisa - Floreda",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121796,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Lisa - Hockey",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121797,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Marge - Classy",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121798,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Marge - Inmate",
-        "category": ["Progression"],
-        "progression": True,
-        "id": 121799
-    },
-    {
-        "count": 1,
-        "name": "Marge - Police",
-        "category": ["Progression"],
-        "progression": True,
-        "id": 121800
-    },
-    {
-        "count": 1,
-        "name": "Apu - American",
-        "category": ["Progression"],
-        "progression": True,
-        "id": 121801
-    },
-    {
-        "count": 1,
-        "name": "Apu - Army",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121802,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Apu - B-sharps",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121803,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bart - Hugo",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121804,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bart - Cadet",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121805,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bart - Bartman",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121806,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Homer - Dirty",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121807,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Homer - Evil",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121808,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Homer - Donut",
-        "category": ["Filler"],
-        "useful": True,
-        "id": 121809,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Family Sedan",
-        "category": ["Level 1 Cars", "Cars", "Small Cars"],
-        "progression": False,
-        "useful": True,
-        "id": 121810
-    },
-    {
-        "count": 1,
-        "name": "Plow King",
-        "category": ["Progression", "Level 1 Cars", "Cars", "Large Cars"],
-        "progression": True,
-        "id": 121811
-    },
-    {
-        "count": 1,
-        "name": "Duff Truck",
-        "category": ["Cars", "Level 1 Cars", "Large Cars"],
-        "useful": True,
-        "id": 121812,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Surveillance Van",
-        "category": ["Cars", "Level 1 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121813,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Pickup Truck",
-        "category": ["Cars", "Level 1 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121814,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Electaurus",
-        "category": ["Cars", "Level 1 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121815,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Mr. Plow",
-        "category": ["Progression", "Level 2 Cars", "Cars", "Medium Cars"],
-        "progression": True,
-        "id": 121816
-    },
-    {
-        "count": 1,
-        "name": "Limo",
-        "category": ["Cars", "Level 2 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121817,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Fire Truck",
-        "category": ["Cars", "Level 2 Cars", "Large Cars"],
-        "useful": True,
-        "id": 121818,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "WWII Vehicle",
-        "category": ["Cars", "Level 2 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121819,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Moe's Sedan",
-        "category": ["Cars", "Level 2 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121820,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "School Bus",
-        "category": ["Progression", "Level 3 Cars", "Large Cars"],
-        "progression": True,
-        "id": 121821
-    },
-    {
-        "count": 1,
-        "name": "Donut Truck",
-        "category": ["Cars", "Level 3 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121822,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Nerd Car",
-        "category": ["Cars", "Level 3 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121823,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Skinner's Sedan",
-        "category": ["Cars", "Level 3 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121824,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Book Burning Van",
-        "category": ["Cars", "Level 3 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121825,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Tractor",
-        "category": ["Cars", "Level 4 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121826,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Curator",
-        "category": ["Cars", "Level 4 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121827,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Krusty's Limo",
-        "category": ["Cars", "Level 4 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121828,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Kremlin",
-        "category": ["Cars", "Level 4 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121829,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Clown Car",
-        "category": ["Cars", "Level 4 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121830,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Car Built For Homer",
-        "category": ["Progression", "Level 5 Cars", "Small Cars"],
-        "progression": True,
-        "id": 121831
-    },
-    {
-        "count": 1,
-        "name": "Cola Truck",
-        "category": ["Cars", "Level 5 Cars", "Large Cars"],
-        "useful": True,
-        "id": 121832,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Police Car",
-        "category": ["Cars", "Level 5 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121833,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Hover Car",
-        "category": ["Cars", "Level 5 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121834,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "El Carro Loco",
-        "category": ["Cars", "Level 5 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121835,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Globex Super Villain Car",
-        "category": ["Progression", "Level 6 Cars", "Cars", "Small Cars"],
-        "progression": True,
-        "id": 121836
-    },
-    {
-        "count": 1,
-        "name": "Armored Truck",
-        "category": ["Cars", "Level 6 Cars", "Large Cars"],
-        "useful": True,
-        "id": 121837,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Chase Sedan",
-        "category": ["Cars", "Level 6 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121838,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bandit",
-        "category": ["Cars", "Level 6 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121839,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "36 Stutz Bearcat",
-        "category": ["Cars", "Level 6 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121840,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Zombie Car",
-        "category": ["Progression", "Level 7 Cars", "Cars", "Small Cars"],
-        "progression": True,
-        "id": 121841
-    },
-    {
-        "count": 1,
-        "name": "Hearse",
-        "category": ["Cars", "Level 7 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121842,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Mr. Burns' Limo",
-        "category": ["Cars", "Level 7 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121843,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Hover Bike",
-        "category": ["Cars", "Level 7 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121844,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Open Wheel Race Car",
-        "category": ["Cars", "Level 7 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121845,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Honor Roller",
-        "category": ["Cars", "Level 2 Cars", "Small Cars"],
-        "progression": False,
-        "useful": True,
-        "id": 121846
-    },
-    {
-        "count": 1,
-        "name": "Malibu Stacy Car",
-        "category": ["Cars", "Level 3 Cars", "Small Cars"],
-        "progression": False,
-        "useful": True,
-        "id": 121847
-    },
-    {
-        "count": 1,
-        "name": "Canyonero",
-        "category": ["Cars", "Level 4 Cars", "Medium Cars"],
-        "progression": False,
-        "useful": True,
-        "id": 121848
-    },
-    {
-        "count": 1,
-        "name": "Longhorn",
-        "category": ["Cars", "Level 5 Cars", "Small Cars"],
-        "progression": False,
-        "useful": True,
-        "id": 121849
-    },
-    {
-        "count": 1,
-        "name": "Ferrini - Red",
-        "category": ["Cars", "Level 6 Cars", "Small Cars"],
-        "progression": False,
-        "useful": True,
-        "id": 121850
-    },
-    {
-        "count": 1,
-        "name": "70's Sports Car",
-        "category": ["Cars", "Level 7 Cars", "Small Cars"],
-        "progression": False,
-        "useful": True,
-        "id": 121851
-    },
-    {
-        "count": 20,
-        "name": "Launch",
-        "category": ["Filler"],
-        "trap": True,
-        "id": 121852,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Level 1",
-        "category": ["Level"],
-        "progression": True,
-        "id": 121853
-    },
-    {
-        "count": 1,
-        "name": "Level 2",
-        "category": ["Level"],
-        "progression": True,
-        "id": 121854
-    },
-    {
-        "count": 1,
-        "name": "Level 3",
-        "category": ["Level"],
-        "progression": True,
-        "id": 121855
-    },
-    {
-        "count": 1,
-        "name": "Level 4",
-        "category": ["Level"],
-        "progression": True,
-        "id": 121856
-    },
-    {
-        "count": 1,
-        "name": "Level 5",
-        "category": ["Level"],
-        "progression": True,
-        "id": 121857
-    },
-    {
-        "count": 1,
-        "name": "Level 6",
-        "category": ["Level"],
-        "progression": True,
-        "id": 121858
-    },
-    {
-        "count": 1,
-        "name": "Level 7",
-        "category": ["Level"],
-        "progression": True,
-        "id": 121859
-    },
-    {
-        "count": 1,
-        "name": "Homer Attack",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121860
-    },
-    {
-        "count": 1,
-        "name": "Bart Attack",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121861
-    },
-    {
-        "count": 1,
-        "name": "Lisa Attack",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121862
-    },
-    {
-        "count": 1,
-        "name": "Marge Attack",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121863
-    },
-    {
-        "count": 1,
-        "name": "Apu Attack",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121864
-    },
-    {
-        "count": 2,
-        "name": "Homer Progressive Jump",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121865
-    },
-    {
-        "count": 2,
-        "name": "Bart Progressive Jump",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121866
-    },
-    {
-        "count": 2,
-        "name": "Lisa Progressive Jump",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121867
-    },
-    {
-        "count": 2,
-        "name": "Marge Progressive Jump",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121868
-    },
-    {
-        "count": 2,
-        "name": "Apu Progressive Jump",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121869
-    },
-    {
-        "count": 1,
-        "name": "Homer E-Brake",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121870
-    },
-    {
-        "count": 1,
-        "name": "Bart E-Brake",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121871
-    },
-    {
-        "count": 1,
-        "name": "Lisa E-Brake",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121872
-    },
-    {
-        "count": 1,
-        "name": "Marge E-Brake",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121873
-    },
-    {
-        "count": 1,
-        "name": "Apu E-Brake",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121874
-    },
-    {
-        "count": 1,
-        "name": "Homer Checkered Flag",
-        "category": ["Races"],
-        "progression": True,
-        "id": 121890
-    },
-    {
-        "count": 1,
-        "name": "Bart Checkered Flag",
-        "category": ["Races"],
-        "progression": True,
-        "id": 121891
-    },
-    {
-        "count": 1,
-        "name": "Lisa Checkered Flag",
-        "category": ["Races"],
-        "progression": True,
-        "id": 121892
-    },
-    {
-        "count": 1,
-        "name": "Marge Checkered Flag",
-        "category": ["Races"],
-        "progression": True,
-        "id": 121893
-    },
-    {
-        "count": 1,
-        "name": "Apu Checkered Flag",
-        "category": ["Races"],
-        "progression": True,
-        "id": 121894
-    },
-    {
-        "count": 1,
-        "name": "Homer Gagfinder",
-        "category": ["Gags"],
-        "progression": True,
-        "id": 121895
-    },
-    {
-        "count": 1,
-        "name": "Bart Gagfinder",
-        "category": ["Gags"],
-        "progression": True,
-        "id": 121896
-    },
-    {
-        "count": 1,
-        "name": "Lisa Gagfinder",
-        "category": ["Gags"],
-        "progression": True,
-        "id": 121897
-    },
-    {
-        "count": 1,
-        "name": "Marge Gagfinder",
-        "category": ["Gags"],
-        "progression": True,
-        "id": 121898
-    },
-    {
-        "count": 1,
-        "name": "Apu Gagfinder",
-        "category": ["Gags"],
-        "progression": True,
-        "id": 121899
-    },
-    {
-        "count": 50,
-        "name": "Wrench",
-        "category": ["Filler"],
-        "filler": True,
-        "id": 121875,
-        "progression": False
-    },
-    {
-        "count": 40,
-        "name": "Hit N Run Reset",
-        "category": ["Filler"],
-        "id": 121876,
-        "progression": False
-    },
-    {
-        "count": 30,
-        "name": "10 Coins",
-        "category": ["Filler"],
-        "id": 121877,
-        "progression": False
-    },
-    {
-        "count": 20,
-        "name": "Hit N Run",
-        "category": ["Filler"],
-        "trap": True,
-        "id": 121878,
-        "progression": False
-    },
-    {
-        "count": 20,
-        "name": "Duff Trap",
-        "category": ["Filler"],
-        "trap": True,
-        "id": 121879,
-        "progression": False
-    },
-    {
-        "count": 20,
-        "name": "Eject",
-        "category": ["Filler"],
-        "trap": True,
-        "id": 121889,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Speed Rocket",
-        "category": ["Cars", "Level 1 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121880,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Monorail Car",
-        "category": ["Cars", "Level 2 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121881,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Knight Boat",
-        "category": ["Cars", "Level 3 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121882,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "ATV",
-        "category": ["Cars", "Level 4 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121883,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Obliteratatron Big Wheel Truck",
-        "category": ["Cars", "Level 5 Cars", "Extra Large Cars"],
-        "useful": True,
-        "id": 121884,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Planet Hype 50's Car",
-        "category": ["Cars", "Level 6 Cars", "Small Cars"],
-        "useful": True,
-        "id": 121885,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "R/C Buggy",
-        "category": ["Cars", "Level 1 Cars", "Extra Small Cars"],
-        "useful": True,
-        "id": 121886,
-        "progression": False
-    },
-    {
-        "count": 6,
-        "name": "Progressive Wallet Upgrade",
-        "category": ["Progression"],
-        "id": 121887,
-        "progression": True
-    },
-    {
-        "count": 6,
-        "name": "Progressive Level",
-        "category": ["Progression"],
-        "id": 121888,
-        "progression": True
-    },
-    {
-        "count": 1,
-        "name": "Mini School Bus",
-        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars", "Large Cars"],
-        "id": 121900,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Glass Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars", "Medium Cars"],
-        "id": 121901,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Minivan",
-        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars", "Medium Cars"],
-        "id": 121902,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Pizza Van",
-        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars", "Medium Cars"],
-        "id": 121903,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Taxi",
-        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars", "Small Cars"],
-        "id": 121904,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Sedan B",
-        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars", "Small Cars"],
-        "id": 121905,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Fish Van",
-        "category": ["Cars", "Traffic", "Filler", "Level 3 Cars", "Medium Cars"],
-        "id": 121906,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Garbage Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level 4 Cars", "Large Cars"],
-        "id": 121907,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Nuclear Waste Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level 4 Cars", "Medium Cars"],
-        "id": 121908,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Vote Quimby Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level 5 Cars", "Large Cars"],
-        "id": 121934,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Ambulance",
-        "category": ["Cars", "Traffic", "Filler", "Level 5 Cars", "Large Cars"],
-        "id": 121935,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Sports Car B",
-        "category": ["Cars", "Traffic", "Filler", "Level 2 Cars", "Level 5 Cars", "Small Cars"],
-        "id": 121936,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Itchy and Scratchy Movie Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level 6 Cars", "Large Cars"],
-        "id": 121937,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Burns Armored Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level 6 Cars", "Large Cars"],
-        "id": 121938,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Pickup",
-        "category": ["Cars", "Traffic", "Filler", "Level 1 Cars", "Level 3 Cars", "Level 6 Cars", "Medium Cars"],
-        "id": 121909,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Sports Car A",
-        "category": ["Cars", "Traffic", "Filler", "Level 3 Cars", "Small Cars"],
-        "id": 121910,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Compact Car",
-        "category": ["Cars", "Traffic", "Filler", "Level 3 Cars", "Level 4 Cars", "Level 6 Cars", "Small Cars"],
-        "id": 121911,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "SUV",
-        "category": ["Cars", "Traffic", "Filler", "Level 4 Cars", "Level 5 Cars", "Small Cars"],
-        "id": 121912,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Hallo Hearse",
-        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars", "Small Cars"],
-        "id": 121913,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Coffin Car",
-        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars", "Small Cars"],
-        "id": 121914,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Ghost Ship",
-        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars", "Small Cars"],
-        "id": 121915,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Witch's Broom",
-        "category": ["Cars", "Traffic", "Filler", "Level 7 Cars", "Small Cars"],
-        "id": 121916,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Sedan A",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Small Cars"],
-        "id": 121917,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Station Wagon",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Small Cars"],
-        "id": 121918,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Ice Cream Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Large Cars"],
-        "id": 121919,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Bonestorm Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Large Cars"],
-        "id": 121920,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Cell Phone Car",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Small Cars"],
-        "id": 121921,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Milk Truck",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Large Cars"],
-        "id": 121922,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Nonuplets Minivan",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Medium Cars"],
-        "id": 121923,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Ferrini - Black",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Small Cars"],
-        "id": 121924,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Homer Frink-o-Matic Wasp Bumper",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121925
-    },
-    {
-        "count": 1,
-        "name": "Bart Frink-o-Matic Wasp Bumper",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121926
-    },
-    {
-        "count": 1,
-        "name": "Lisa Frink-o-Matic Wasp Bumper",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121927
-    },
-    {
-        "count": 1,
-        "name": "Marge Frink-o-Matic Wasp Bumper",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121928
-    },
-    {
-        "count": 1,
-        "name": "Apu Frink-o-Matic Wasp Bumper",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121929
-    },
-    {
-        "count": 20,
-        "name": "Traffic Trap",
-        "category": ["Filler"],
-        "trap": True,
-        "id": 121930,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Cube Van",
-        "category": ["Cars", "Traffic", "Filler", "Level Any Cars", "Large Cars"],
-        "id": 121931,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "WWII Vehicle W/ Rocket",
-        "category": ["Cars", "Level 7 Cars", "Medium Cars"],
-        "useful": True,
-        "id": 121932,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Audi TT",
-        "category": ["Cars", "Level Any Cars", "Small Cars"],
-        "useful": True,
-        "id": 121933,
-        "progression": False
-    },
-    {
-        "count": 1,
-        "name": "Homer Forward",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121938
-    },
-    {
-        "count": 1,
-        "name": "Bart Forward",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121939
-    },
-    {
-        "count": 1,
-        "name": "Lisa Forward",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121940
-    },
-    {
-        "count": 1,
-        "name": "Marge Forward",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121941
-    },
-    {
-        "count": 1,
-        "name": "Apu Forward",
-        "category": ["Moves"],
-        "progression": True,
-        "id": 121942 #highest id
-    },
-]
+@dataclass
+class ItemDef:
+    # Item info
+    id: int
+    type: ItemClassification
+    # Info needed if the item is a car
+    is_car: bool = False
+    level: list[int] = field(default_factory=list)
+    size: str = ""
 
-for item in item_table:
-    item_name = item["name"]
-    item_id_to_name[item["id"]] = item_name
-    item_name_to_item[item_name] = item
+ITEM_DEFS = {
+    "Homer - Casual": ItemDef(121789, ItemClassification.filler),
+    "Homer - Muumuu": ItemDef(121790, ItemClassification.filler),
+    "Homer - Chosen One": ItemDef(121791, ItemClassification.filler),
+    "Bart - Tall": ItemDef(121792, ItemClassification.filler),
+    "Bart - Football": ItemDef(121793, ItemClassification.filler),
+    "Bart - Ninja": ItemDef(121794, ItemClassification.filler),
+    "Lisa - Cool": ItemDef(121795, ItemClassification.progression),
+    "Lisa - Floreda": ItemDef(121796, ItemClassification.filler),
+    "Lisa - Hockey": ItemDef(121797, ItemClassification.filler),
+    "Marge - Classy": ItemDef(121798, ItemClassification.filler),
+    "Marge - Inmate": ItemDef(121799, ItemClassification.progression),
+    "Marge - Police": ItemDef(121800, ItemClassification.progression),
+    "Apu - American": ItemDef(121801, ItemClassification.progression),
+    "Apu - Army": ItemDef(121802, ItemClassification.filler),
+    "Apu - B-sharps": ItemDef(121803, ItemClassification.filler),
+    "Bart - Hugo": ItemDef(121804, ItemClassification.filler),
+    "Bart - Cadet": ItemDef(121805, ItemClassification.filler),
+    "Bart - Bartman": ItemDef(121806, ItemClassification.filler),
+    "Homer - Dirty": ItemDef(121807, ItemClassification.filler),
+    "Homer - Evil": ItemDef(121808, ItemClassification.filler),
+    "Homer - Donut": ItemDef(121809, ItemClassification.filler),
 
-    if item["id"] is not None:
-        lastItemId = max(lastItemId, item["id"])
+    "Family Sedan": ItemDef(121810, ItemClassification.useful, True, [1], "Small"),
+    "Plow King": ItemDef(121811, ItemClassification.progression, True, [1], "Large"),
+    "Duff Truck": ItemDef(121812, ItemClassification.useful, True, [1], "Large"),
+    "Surveillance Van": ItemDef(121813, ItemClassification.useful, True, [1], "Medium"),
+    "Pickup Truck": ItemDef(121814, ItemClassification.useful, True, [1], "Medium"),
+    "Electaurus": ItemDef(121815, ItemClassification.useful, True, [1], "Small"),
 
-    for c in item.get("category", []):
-        if c not in item_name_groups:
-            item_name_groups[c] = []
-        item_name_groups[c].append(item_name)
+    "Mr. Plow": ItemDef(121816, ItemClassification.progression, True, [2], "Medium"),
+    "Limo": ItemDef(121817, ItemClassification.useful, True, [2], "Small"),
+    "Fire Truck": ItemDef(121818, ItemClassification.useful, True, [2], "Large"),
+    "WWII Vehicle": ItemDef(121819, ItemClassification.useful, True, [2], "Medium"),
+    "Moe's Sedan": ItemDef(121820, ItemClassification.useful, True, [2], "Small"),
 
-    for v in item.get("value", {}).keys():
-        group_name = f"has_{v.lower().strip()}_value"
-        if group_name not in item_name_groups:
-            item_name_groups[group_name] = []
-        item_name_groups[group_name].append(item_name)
+    "School Bus": ItemDef(121821, ItemClassification.progression, True, [3], "Large"),
+    "Donut Truck": ItemDef(121822, ItemClassification.useful, True, [3], "Medium"),
+    "Nerd Car": ItemDef(121823, ItemClassification.useful, True, [3], "Small"),
+    "Skinner's Sedan": ItemDef(121824, ItemClassification.useful, True, [3], "Medium"),
+    "Book Burning Van": ItemDef(121825, ItemClassification.useful, True, [3], "Medium"),
 
-item_id_to_name[None] = "__Victory__"
-item_name_to_id = {name: id for id, name in item_id_to_name.items()}
+    "Tractor": ItemDef(121826, ItemClassification.useful, True, [4], "Medium"),
+    "Curator": ItemDef(121827, ItemClassification.useful, True, [4], "Small"),
+    "Krusty's Limo": ItemDef(121828, ItemClassification.useful, True, [4], "Small"),
+    "Kremlin": ItemDef(121829, ItemClassification.useful, True, [4], "Small"),
+    "Clown Car": ItemDef(121830, ItemClassification.useful, True, [4], "Small"),
+
+    "Car Built For Homer": ItemDef(121831, ItemClassification.progression, True, [5], "Small"),
+    "Cola Truck": ItemDef(121832, ItemClassification.useful, True, [5], "Large"),
+    "Police Car": ItemDef(121833, ItemClassification.useful, True, [5], "Small"),
+    "Hover Car": ItemDef(121834, ItemClassification.useful, True, [5], "Small"),
+    "El Carro Loco": ItemDef(121835, ItemClassification.useful, True, [5], "Small"),
+
+    "Globex Super Villain Car": ItemDef(121836, ItemClassification.progression, True, [6], "Small"),
+    "Armored Truck": ItemDef(121837, ItemClassification.useful, True, [6], "Large"),
+    "Chase Sedan": ItemDef(121838, ItemClassification.useful, True, [6], "Small"),
+    "Bandit": ItemDef(121839, ItemClassification.useful, True, [6], "Small"),
+    "36 Stutz Bearcat": ItemDef(121840, ItemClassification.useful, True, [6], "Small"),
+
+    "Zombie Car": ItemDef(121841, ItemClassification.progression, True, [7], "Small"),
+    "Hearse": ItemDef(121842, ItemClassification.useful, True, [7], "Small"),
+    "Mr. Burns' Limo": ItemDef(121843, ItemClassification.useful, True, [7], "Medium"),
+    "Hover Bike": ItemDef(121844, ItemClassification.useful, True, [7], "Small"),
+    "Open Wheel Race Car": ItemDef(121845, ItemClassification.useful, True, [7], "Small"),
+
+    "Honor Roller": ItemDef(121846, ItemClassification.useful, True, [2], "Small"),
+    "Malibu Stacy Car": ItemDef(121847, ItemClassification.useful, True, [3], "Small"),
+    "Canyonero": ItemDef(121848, ItemClassification.useful, True, [4], "Medium"),
+    "Longhorn": ItemDef(121849, ItemClassification.useful, True, [5], "Small"),
+    "Ferrini - Red": ItemDef(121850, ItemClassification.useful, True, [6], "Small"),
+    "70's Sports Car": ItemDef(121851, ItemClassification.useful, True, [7], "Small"),
+
+    "Launch": ItemDef(121852, ItemClassification.trap),
+    "Level 1": ItemDef(121853, ItemClassification.progression),
+    "Level 2": ItemDef(121854, ItemClassification.progression),
+    "Level 3": ItemDef(121855, ItemClassification.progression),
+    "Level 4": ItemDef(121856, ItemClassification.progression),
+    "Level 5": ItemDef(121857, ItemClassification.progression),
+    "Level 6": ItemDef(121858, ItemClassification.progression),
+    "Level 7": ItemDef(121859, ItemClassification.progression),
+
+    "Homer Attack": ItemDef(121860, ItemClassification.progression),
+    "Bart Attack": ItemDef(121861, ItemClassification.progression),
+    "Lisa Attack": ItemDef(121862, ItemClassification.progression),
+    "Marge Attack": ItemDef(121863, ItemClassification.progression),
+    "Apu Attack": ItemDef(121864, ItemClassification.progression),
+
+    "Homer Progressive Jump": ItemDef(121865, ItemClassification.progression),
+    "Bart Progressive Jump": ItemDef(121866, ItemClassification.progression),
+    "Lisa Progressive Jump": ItemDef(121867, ItemClassification.progression),
+    "Marge Progressive Jump": ItemDef(121868, ItemClassification.progression),
+    "Apu Progressive Jump": ItemDef(121869, ItemClassification.progression),
+
+    "Homer E-Brake": ItemDef(121870, ItemClassification.progression),
+    "Bart E-Brake": ItemDef(121871, ItemClassification.progression),
+    "Lisa E-Brake": ItemDef(121872, ItemClassification.progression),
+    "Marge E-Brake": ItemDef(121873, ItemClassification.progression),
+    "Apu E-Brake": ItemDef(121874, ItemClassification.progression),
+
+    "Wrench": ItemDef(121875, ItemClassification.filler),
+    "Hit N Run Reset": ItemDef(121876, ItemClassification.filler),
+    "10 Coins": ItemDef(121877, ItemClassification.filler),
+    "Hit N Run": ItemDef(121878, ItemClassification.trap),
+    "Duff Trap": ItemDef(121879, ItemClassification.trap),
+
+    "Speed Rocket": ItemDef(121880, ItemClassification.useful, True, [1], "Small"),
+    "Monorail Car": ItemDef(121881, ItemClassification.useful, True, [2], "Medium"),
+    "Knight Boat": ItemDef(121882, ItemClassification.useful, True, [3], "Small"),
+    "ATV": ItemDef(121883, ItemClassification.useful, True, [4], "Small"),
+    "Obliteratatron Big Wheel Truck": ItemDef(121884, ItemClassification.useful, True, [5], "Extra Large"),
+    "Planet Hype 50's Car": ItemDef(121885, ItemClassification.useful, True, [6], "Small"),
+    "R/C Buggy": ItemDef(121886, ItemClassification.useful, True, [7], "Extra Small"),
+
+    "Progressive Wallet Upgrade": ItemDef(121887, ItemClassification.progression),
+    "Progressive Level": ItemDef(121888, ItemClassification.progression),
+
+    "Eject": ItemDef(121889, ItemClassification.trap),
+
+    "Homer Checkered Flag": ItemDef(121890, ItemClassification.progression),
+    "Bart Checkered Flag": ItemDef(121891, ItemClassification.progression),
+    "Lisa Checkered Flag": ItemDef(121892, ItemClassification.progression),
+    "Marge Checkered Flag": ItemDef(121893, ItemClassification.progression),
+    "Apu Checkered Flag": ItemDef(121894, ItemClassification.progression),
+
+    "Homer Gagfinder": ItemDef(121895, ItemClassification.progression),
+    "Bart Gagfinder": ItemDef(121896, ItemClassification.progression),
+    "Lisa Gagfinder": ItemDef(121897, ItemClassification.progression),
+    "Marge Gagfinder": ItemDef(121898, ItemClassification.progression),
+    "Apu Gagfinder": ItemDef(121899, ItemClassification.progression),
+
+    "Mini School Bus": ItemDef(121900, ItemClassification.filler, True, [1], "Large"),
+    "Glass Truck": ItemDef(121901, ItemClassification.filler, True, [1], "Medium"),
+    "Minivan": ItemDef(121902, ItemClassification.filler, True, [1], "Medium"),
+    "Pizza Van": ItemDef(121903, ItemClassification.filler, True, [2], "Medium"),
+    "Taxi": ItemDef(121904, ItemClassification.filler, True, [2], "Small"),
+    "Sedan B": ItemDef(121905, ItemClassification.filler, True, [2], "Small"),
+    "Fish Van": ItemDef(121906, ItemClassification.filler, True, [3], "Medium"),
+    "Garbage Truck": ItemDef(121907, ItemClassification.filler, True, [4], "Large"),
+    "Nuclear Waste Truck": ItemDef(121908, ItemClassification.filler, True, [4], "Medium"),
+    "Pickup": ItemDef(121909, ItemClassification.filler, True, [1, 3, 6], "Medium"),
+    "Sports Car A": ItemDef(121910, ItemClassification.filler, True, [3], "Small"),
+    "Compact Car": ItemDef(121911, ItemClassification.filler, True, [3, 4, 6], "Small"),
+    "SUV": ItemDef(121912, ItemClassification.filler, True, [4, 5], "Small"),
+    "Hallo Hearse": ItemDef(121913, ItemClassification.filler, True, [7], "Small"),
+    "Coffin Car": ItemDef(121914, ItemClassification.filler, True, [7], "Small"),
+    "Ghost Ship": ItemDef(121915, ItemClassification.filler, True, [7], "Small"),
+    "Witch Broom": ItemDef(121916, ItemClassification.filler, True, [7], "Small"),
+    "Sedan A": ItemDef(121917, ItemClassification.filler, True, [8], "Small"),
+    "Station Wagon": ItemDef(121918, ItemClassification.filler, True, [8], "Small"),
+    "Ice Cream Truck": ItemDef(121919, ItemClassification.filler, True, [8], "Large"),
+    "Bonestorm Truck": ItemDef(121920, ItemClassification.filler, True, [8], "Large"),
+    "Cell Phone Car": ItemDef(121921, ItemClassification.filler, True, [8], "Small"),
+    "Milk Truck": ItemDef(121922, ItemClassification.filler, True, [8], "Large"),
+    "Nonuplets Minivan": ItemDef(121923, ItemClassification.filler, True, [8], "Medium"),
+    "Ferrini - Black": ItemDef(121924, ItemClassification.filler, True, [8], "Small"),
+
+    "Homer Frink-o-Matic Wasp Bumper": ItemDef(121925, ItemClassification.progression),
+    "Bart Frink-o-Matic Wasp Bumper": ItemDef(121926, ItemClassification.progression),
+    "Lisa Frink-o-Matic Wasp Bumper": ItemDef(121927, ItemClassification.progression),
+    "Marge Frink-o-Matic Wasp Bumper": ItemDef(121928, ItemClassification.progression),
+    "Apu Frink-o-Matic Wasp Bumper": ItemDef(121929, ItemClassification.progression),
+
+    "Traffic Trap": ItemDef(121930, ItemClassification.trap),
+    "Cube Van": ItemDef(121931, ItemClassification.filler, True, [8], "Large"),
+    "WWII Vehicle W\ Rocket": ItemDef(121932, ItemClassification.useful),
+    "Audi TT": ItemDef(121933, ItemClassification.useful, True, [8], "Small"),
+    "Vote Quimby Truck": ItemDef(121934, ItemClassification.useful, True, [5], "Large"),
+    "Ambulance": ItemDef(121935, ItemClassification.useful, True, [5], "Large"),
+    "Sports Car B": ItemDef(121936, ItemClassification.useful, True, [2, 5], "Small"),
+    "Itchy and Scratchy Movie Truck": ItemDef(121937, ItemClassification.progression, True, [6], "Large"),
+    "Burns Armored Truck": ItemDef(121938, ItemClassification.progression, True, [6], "Large"),
+
+    "Homer Forward": ItemDef(121939, ItemClassification.progression),
+    "Bart Forward": ItemDef(121940, ItemClassification.progression),
+    "Lisa Forward": ItemDef(121941, ItemClassification.progression),
+    "Marge Forward": ItemDef(121942, ItemClassification.progression),
+    "Apu Forward": ItemDef(121943, ItemClassification.progression),
+}
 
 
-######################
-# Item classes
-######################
+ITEM_NAME_TO_ID = {name: item.id for name, item in ITEM_DEFS.items()}
+DEFAULT_ITEM_CLASSIFICATIONS = {name: item.type for name, item in ITEM_DEFS.items()}
+prog_cars = []
 
-
-class SimpsonsHitAndRunItem(Item):
+class SimpsonsHitNRunItem(Item):
     game = "Simpsons Hit and Run"
+
+def get_random_filler_item_name(world: SimpsonsHitNRunWorld) -> str:
+    trap_items = [name for name, item in ITEM_DEFS.items() if item.type == ItemClassification.trap]
+    filler_items = ["Wrench", "Hit N Run Reset", "10 Coins"]
+    if world.random.randint(0, 99) < world.options.filler_traps:
+        return world.random.choice(trap_items)
+    else:
+        return world.random.choice(filler_items)
+
+def create_item_with_correct_classification(world: SimpsonsHitNRunWorld, name: str, make_prog: bool = False) -> SimpsonsHitNRunItem:
+    classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
+
+    if make_prog:
+        classification = ItemClassification.progression
+
+    return SimpsonsHitNRunItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
+
+def create_all_items(world: SimpsonsHitNRunWorld) -> None:
+    characters = {"Homer", "Bart", "Lisa", "Marge", "Apu"}
+
+    def get_character(name: str) -> str | None:
+        first_word = name.split()[0]
+        return first_word if first_word in characters else None
+
+    for i in range(1, 8):
+        cars = [name for name, item in ITEM_DEFS.items() if item.is_car and (i in item.level or 8 in item.level)]
+        prog_cars.append(world.random.choice(cars))
+
+    for size in ("Small", "Medium", "Large"):
+        cars = [name for name, item in ITEM_DEFS.items() if item.is_car and item.size == size]
+        prog_cars.append(world.random.choice(cars))
+
+    # Missionlocks
+    num_locks = int(49 * (world.options.missionlocks / 100))
+    pattern = re.compile(r'^\(L([1-7])M([1-7])\)\s+.+')
+    mission_locked = world.random.sample([loc.name for loc in world.get_locations() if pattern.match(loc.name)], num_locks)
+    chosen_cars = world.random.sample(rules.any_car, num_locks)
+
+    for mission, car in zip(mission_locked, chosen_cars):
+        rules.missionlockdict[mission] = car
+        prog_cars.append(car)
+
+    itempool: list[Item] = []
+
+    keyword_to_option = {
+        "Jump": "shufflejump",
+        "Attack": "shuffleattack",
+        "Gagfinder": "shufflegagfinder",
+        "Flag": "shufflecheckeredflags",
+        "Brake": "shuffleebrake",
+        "Forward": "shuffleforward",
+        "Bumper": "shufflebumpers"
+    }
+
+    # add items to itempool, make sure there's at least one car for each level and of each size marked prog, only add moves if they're shuffled
+    for name, item_def in ITEM_DEFS.items():
+        if name in prog_cars:
+            itempool.append(world.create_item(name, True))
+        else:
+            char = get_character(name)
+            skip = False
+
+            for keyword, option_attr in keyword_to_option.items():
+                if keyword in name:
+                    option_value = getattr(world.options, option_attr)
+                    if "None" in option_value or (char is not None and char not in option_value and "All" not in option_value):
+                        skip = True
+                        world.push_precollected(world.create_item(name))
+                        if "Jump" in name:
+                            world.push_precollected(world.create_item(name))
+                    break
+
+            if "Level" in name:
+                if ("Progressive" in name) == world.options.shufflelevels:
+                    skip = True
+
+            if skip:
+                continue
+
+            if "Progressive" in name:
+                # 2 jumps, so create 1 more
+                if "Jump" in name:
+                    itempool.append(world.create_item(name))
+
+                # 6 wallets, so create 5 more
+                # 6 level items, so create 5 more
+                elif "Wallet" in name or "Level" in name:
+                    for i in range(5):
+                        itempool.append(world.create_item(name))
+
+
+            itempool.append(world.create_item(name))
+
+    start_items = []
+
+    if world.options.shufflelevels:
+        start_level = world.random.randint(1,7)
+        world.push_precollected(world.create_item(f"Level {start_level}"))
+        start_items.append(f"Level {start_level}")
+    else:
+        start_level = 1
+        world.push_precollected(world.create_item("Progressive Level"))
+        # don't put in start items because we only made enough earlier counting this one
+
+    if world.options.startingcarshuffle:
+        cars = [name for name, item in ITEM_DEFS.items() if item.is_car and (start_level in item.level or 8 in item.level)]
+        start_car = world.create_item(world.random.choice(cars))
+        world.push_precollected(start_car)
+        start_items.append(start_car.name)
+    else:
+        start_cars = ["Family Sedan", "Honor Roller", "Malibu Stacy Car", "Canyonero", "Longhorn", "Ferrini - Red", "70's Sports Car"]
+        start_car = world.create_item(start_cars[start_level - 1])
+        world.push_precollected(start_car)
+        start_items.append(start_car.name)
+
+    itempool = [item for item in itempool if item.name not in start_items]
+
+    num_items = len(itempool)
+
+    num_unfilled_locs = len(world.multiworld.get_unfilled_locations(world.player))
+
+    needed_filler = num_unfilled_locs - num_items
+    itempool += [world.create_filler() for _ in range(needed_filler)]
+
+    world.multiworld.itempool += itempool
+
