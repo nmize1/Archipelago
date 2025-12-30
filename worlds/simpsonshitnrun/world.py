@@ -1,9 +1,10 @@
 from collections.abc import Mapping
-from typing import Any
+from typing import Any, Dict
 
 from Options import PerGameCommonOptions
 from worlds.AutoWorld import World
 from . import items, locations, options, regions, rules, web_world
+from BaseClasses import MultiWorld
 
 class SimpsonsHitNRunWorld(World):
     """A 2003 Action Adventure game similar to the GTA series starring the Simpsons"""
@@ -17,7 +18,14 @@ class SimpsonsHitNRunWorld(World):
     item_name_to_id = items.ITEM_NAME_TO_ID
 
     origin_region_name = "Hub"
-    apworld_version = "0.5.0"
+
+    missionlockdict: Dict[str, str]
+    apworld_version: str
+    def __init__(self, multiworld: MultiWorld, player: int):
+        super().__init__(multiworld, player)
+        self.missionlockdict = {}
+        self.apworld_version = "0.5.0"
+
 
     def create_regions(self) -> None:
         regions.create_and_connect_regions(self)
@@ -47,7 +55,7 @@ class SimpsonsHitNRunWorld(World):
 
         slot_data["card_locations"] = [locations.LOCATION_NAME_TO_ID[name] for level in locations.card_table for name in level]
 
-        slot_data["missionlockdic"] = rules.missionlockdict
+        slot_data["missionlockdic"] = self.missionlockdict
         slot_data["progcars"] = items.prog_cars
         slot_data["VerifyID"] = f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}"
 
@@ -66,7 +74,7 @@ class SimpsonsHitNRunWorld(World):
 
             igh[items.ITEM_NAME_TO_ID[item]] = (loc.address, loc.player)
 
-        for _, item in rules.missionlockdict.items():
+        for _, item in self.missionlockdict.items():
             if item == "NO MISSIONLOCKS":
                 continue
 
