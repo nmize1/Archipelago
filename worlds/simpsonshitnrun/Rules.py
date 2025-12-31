@@ -8,8 +8,6 @@ from worlds.generic.Rules import add_rule, set_rule
 if TYPE_CHECKING:
     from .world import SimpsonsHitNRunWorld
 
-missionlockdict = {} # for patch file
-
 # RC Car excluded because it can't be used for hitting wasps reliably and is too small to consider for jumps
 # Obliteratatron excluded because its wheels make it impossible to use for spawning on top of car strats, and it'd be too complicated to consider in logic (for now anyway)
 small_cars = ["Family Sedan", "Electaurus", "Honor Roller", "Moe's Sedan", "Limo", "Malibu Stacy Car", "Nerd Car", "Clown Car", "Kremlin", "Krusty's Limo", "Curator",
@@ -82,7 +80,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     set_rule(world.get_location("(L7BM) Flaming Tires"), lambda state: state.has("Homer Progressive Jump", world.player))
 
     # Mission Locks
-    for mission, car in missionlockdict.items():
+    for mission, car in world.missionlockdict.items():
         add_rule(world.get_location(mission), lambda state, car=car: state.has(car, world.player))
 
     # Wasps

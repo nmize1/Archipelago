@@ -4,12 +4,6 @@ from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle, Opti
 
 VALID_CHAR_KEYS = ["Homer", "Bart", "Lisa", "Marge", "Apu", "All", "None"]
 
-class FillerTrapPercent(Range):
-    """How many fillers will be replaced with traps. 0 means no additional traps, 100 means all fillers are traps."""
-    display_name = "Filler Traps"
-    range_end = 100
-
-
 class Goal(Choice):
     """Choose your victory condition."""
     display_name = "Goal"
@@ -235,6 +229,12 @@ class TrafficTraps(Toggle):
     """Whether to include Traffic traps in the item pool."""
     default = True
     display_name = "Enable Traffic Traps"
+
+class FillerTrapPercent(Range):
+    """How many fillers will be replaced with traps. 0 means no additional traps, 100 means all fillers are traps.
+       These traps are IN ADDITION to any enabled traps above, though it won't add trap types that have been disabled."""
+    display_name = "Filler Traps"
+    range_end = 100
 
 @dataclass
 class SimpsonsHitNRunOptions(PerGameCommonOptions):

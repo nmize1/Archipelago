@@ -5,8 +5,8 @@ from typing import TYPE_CHECKING
 
 from BaseClasses import Item, ItemClassification
 import re
-from . import rules
 
+from . import rules
 if TYPE_CHECKING:
     from .world import SimpsonsHitNRunWorld
 
@@ -209,7 +209,15 @@ class SimpsonsHitNRunItem(Item):
     game = "Simpsons Hit and Run"
 
 def get_random_filler_item_name(world: SimpsonsHitNRunWorld) -> str:
-    trap_items = [name for name, item in ITEM_DEFS.items() if item.type == ItemClassification.trap]
+    trap_option_map = {
+        "Eject": world.options.eject,
+        "Duff Trap": world.options.duff,
+        "Launch": world.options.launch,
+        "Hit N Run": world.options.hnr,
+        "Traffic Trap": world.options.traffictrap,
+    }
+
+    trap_items = [name for name, item in ITEM_DEFS.items() if item.type == ItemClassification.trap and trap_option_map.get(name, True)]
     filler_items = ["Wrench", "Hit N Run Reset", "10 Coins"]
     if world.random.randint(0, 99) < world.options.filler_traps:
         return world.random.choice(trap_items)
@@ -246,7 +254,7 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
     chosen_cars = world.random.sample(rules.any_car, num_locks)
 
     for mission, car in zip(mission_locked, chosen_cars):
-        rules.missionlockdict[mission] = car
+        world.missionlockdict[mission] = car
         prog_cars.append(car)
 
     itempool: list[Item] = []
@@ -277,14 +285,16 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
                         world.push_precollected(world.create_item(name))
                         if "Jump" in name:
                             world.push_precollected(world.create_item(name))
+
+                    if "Jump" in name:
+                        for i in range(world.options.startjumplevel):
+                            skip = True
+                            world.push_precollected(world.create_item(name))
                     break
 
             if "Level" in name:
                 if ("Progressive" in name) == world.options.shufflelevels:
                     skip = True
-
-            if skip:
-                continue
 
             if "Progressive" in name:
                 # 2 jumps, so create 1 more
@@ -297,8 +307,21 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
                     for i in range(5):
                         itempool.append(world.create_item(name))
 
+            trap_option_map = {
+                "Eject": world.options.eject,
+                "Duff Trap": world.options.duff,
+                "Launch": world.options.launch,
+                "Hit N Run": world.options.hnr,
+                "Traffic Trap": world.options.traffictrap,
+            }
 
-            itempool.append(world.create_item(name))
+            if name in trap_option_map and not trap_option_map[name]:
+                skip = True
+
+            if skip:
+                continue
+            else:
+                itempool.append(world.create_item(name))
 
     start_items = []
 
@@ -309,16 +332,16 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
     else:
         start_level = 1
         world.push_precollected(world.create_item("Progressive Level"))
-        # don't put in start items because we only made enough earlier counting this one
+        # don't put in start_items because we only made enough earlier counting this one
 
     if world.options.startingcarshuffle:
         cars = [name for name, item in ITEM_DEFS.items() if item.is_car and (start_level in item.level or 8 in item.level)]
-        start_car = world.create_item(world.random.choice(cars))
+        start_car = world.create_item(world.random.choice(cars), True)
         world.push_precollected(start_car)
         start_items.append(start_car.name)
     else:
         start_cars = ["Family Sedan", "Honor Roller", "Malibu Stacy Car", "Canyonero", "Longhorn", "Ferrini - Red", "70's Sports Car"]
-        start_car = world.create_item(start_cars[start_level - 1])
+        start_car = world.create_item(start_cars[start_level - 1], True)
         world.push_precollected(start_car)
         start_items.append(start_car.name)
 

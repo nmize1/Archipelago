@@ -5,6 +5,8 @@ from Options import PerGameCommonOptions
 from worlds.AutoWorld import World
 from . import items, locations, options, regions, rules, web_world
 from BaseClasses import MultiWorld
+from .options import SimpsonsHitNRunOptions
+
 
 class SimpsonsHitNRunWorld(World):
     """A 2003 Action Adventure game similar to the GTA series starring the Simpsons"""
@@ -25,7 +27,6 @@ class SimpsonsHitNRunWorld(World):
         super().__init__(multiworld, player)
         self.missionlockdict = {}
         self.apworld_version = "0.5.0"
-
 
     def create_regions(self) -> None:
         regions.create_and_connect_regions(self)
