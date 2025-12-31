@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-
+import json
 from BaseClasses import ItemClassification, Location
 
 from . import items
@@ -9,9 +9,12 @@ from . import items
 import re
 
 if TYPE_CHECKING:
-    from .world import SimpsonsHitNRunWorld
+    from .world import SimpsonsHitNRunWorld, Card
 
-card_table = [] # for patch file
+with open("Data/cards.json", "r") as f:
+    card_info = json.load(f)
+
+cards_by_name = {card["Desc"] : card for card in card_info}
 
 LOCATION_NAME_TO_ID = {
     # Level 1 Missions
@@ -963,8 +966,7 @@ def create_regular_locations(world: SimpsonsHitNRunWorld):
         else:
             lvl_card_locs = lvl_card_locs[:7]
 
-        card_table.append(lvl_card_locs)
-
+        fill_card_table(world, i, lvl_card_locs)
         level_card_regions[i].add_locations(get_location_names_with_ids(lvl_card_locs), SimpsonsHitNRunLocation)
 
         lvl_wasp_locs = [
@@ -991,3 +993,20 @@ def create_regular_locations(world: SimpsonsHitNRunWorld):
 def create_events(world: SimpsonsHitNRunWorld) -> None:
     # Don't need this for now.
     pass
+
+def fill_card_table(world: SimpsonsHitNRunWorld, level: int, chosen_cards: list[str]):
+    for i, name in enumerate(chosen_cards):
+        data = cards_by_name[name]
+        gameid = level * 10 + (i + 1)
+
+        world.card_table.append(
+            Card(
+                id = LOCATION_NAME_TO_ID[name],
+                name = name,
+                gameid = gameid,
+                x = data["X"],
+                y = data["Y"],
+                z = data["Z"]
+            )
+        )
+

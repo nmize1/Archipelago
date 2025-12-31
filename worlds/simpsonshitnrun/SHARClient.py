@@ -12,15 +12,15 @@ import ctypes
 from ctypes import wintypes
 from pathlib import Path
 import worlds
-from . import SimpsonsHitAndRunWorld
+from . import SimpsonsHitNRunWorld
 
 try:
-    from . import settings, SimpsonsHitAndRunOptions
+    from . import settings, SimpsonsHitNRunOptions
 except ImportError:
     import settings
 
 class SHARContext(CommonContext):
-    game = "The Simpsons Hit And Run"
+    game = "Simpsons Hit And Run"
 
     def __init__(self):
         super().__init__()
@@ -54,7 +54,7 @@ class SHARContext(CommonContext):
         print("[SHARClient] Initializing SHARContext asynchronously...")
 
         # Load options from host.yaml
-        opts = SimpsonsHitAndRunWorld.settings
+        opts = SimpsonsHitNRunWorld.settings
         documents_path = get_documents_folder()
 
         # Default extraction path
