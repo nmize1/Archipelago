@@ -818,7 +818,7 @@
       "X": 102.2679672,
       "Y": -9.124046326,
       "Z": 298.6075439,
-      "Desc": "(LVL 3) CARD - Beside Broken Bridge "
+      "Desc": "(LVL 3) CARD - Beside Broken Bridge"
     },
     {
       "X": -574.4821,
@@ -2168,7 +2168,7 @@
       "X": 162.2277,
       "Y": -4.13788,
       "Z": -106.4636,
-      "Desc": "(LVL 6) CARD - Green Building Across from Skinner"
+      "Desc": "(LVL 6) CARD - Green Building Across From Principal Skinner"
     },
     {
       "X": 174.4207,
@@ -2519,6 +2519,12 @@
       "Y": 5.036113,
       "Z": -601.6844,
       "Desc": "(LVL 7) CARD - Dumpster Behind Krusty Burger Near School"
+    },
+    {
+      "X": 72.79824,
+      "Y": 4.244248,
+      "Z": -685.7712,
+      "Desc": "(LVL 7) CARD - Deli Near School"
     },
     {
       "X": 72.79824,

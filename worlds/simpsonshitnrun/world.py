@@ -1,22 +1,12 @@
 from collections.abc import Mapping
 from typing import Any, Dict
 
-from dataclasses import dataclass
-from Options import PerGameCommonOptions
+from Options import PerGameCommonOptions, OptionError
 from worlds.AutoWorld import World
 from . import items, locations, options, regions, rules, web_world
 from BaseClasses import MultiWorld
 from .options import SimpsonsHitNRunOptions
 from .SHARContainer import gen
-
-@dataclass
-class Card:
-    id: int
-    name: str
-    gameid: int
-    x: float
-    y: float
-    z: float
 
 class SimpsonsHitNRunWorld(World):
     """A 2003 Action Adventure game similar to the GTA series starring the Simpsons"""
@@ -30,16 +20,34 @@ class SimpsonsHitNRunWorld(World):
     item_name_to_id = items.ITEM_NAME_TO_ID
 
     origin_region_name = "Hub"
+    ut_can_gen_without_yaml = True
 
     apworld_version: str
     missionlockdict: Dict[str, str]
-    card_table: list[Card]
+    card_table: list[locations.Card]
     def __init__(self, multiworld: MultiWorld, player: int):
         super().__init__(multiworld, player)
         self.apworld_version = "0.5.0"
         self.missionlockdict = {}
         self.card_table = []
 
+    def generate_early(self) -> None:
+        if hasattr(self.multiworld, "re_gen_passthrough"):
+            if self.game in self.multiworld.re_gen_passthrough:
+                print("Getting UT slot data.")
+                passthrough = self.multiworld.re_gen_passthrough[self.game]
+
+                for key in vars(self.options):
+                    if key in passthrough:
+                        option = getattr(self.options, key)
+                        print(f"{key} : {option}")
+                        if hasattr(option, "value"):
+                            value = passthrough[key]
+                            option.value = value
+                            print(f"{key} : {option} : {value}")
+
+                self.missionlockdict = passthrough["missionlockdic"]
+                items.prog_cars = passthrough["progcars"]
 
     def create_regions(self) -> None:
         regions.create_and_connect_regions(self)
@@ -67,12 +75,10 @@ class SimpsonsHitNRunWorld(World):
                 continue
             slot_data[option_key] = getattr(self.options, option_key).value
 
-        slot_data["card_locations"] = [locations.LOCATION_NAME_TO_ID[name] for level in self.card_table for name in level]
-
+        slot_data["card_locations"] = [ card.id for card in self.card_table ]
         slot_data["missionlockdic"] = self.missionlockdict
         slot_data["progcars"] = items.prog_cars
         slot_data["VerifyID"] = f"AP-{self.multiworld.seed_name}-P{self.player}-{self.multiworld.get_file_safe_player_name(self.player)}"
-
         slot_data["ingamehints"] = self.get_ingame_hints() if self.options.extrahintpolicy else "No hints"
 
         return slot_data
@@ -93,7 +99,7 @@ class SimpsonsHitNRunWorld(World):
             f"AP-{self.multiworld.seed_name}-P{self.player}",
             self.card_table,
             traffic_table,
-            self.mission_locks,
+            self.missionlockdict,
             self.player
         )
 

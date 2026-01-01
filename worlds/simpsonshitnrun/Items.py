@@ -185,7 +185,7 @@ ITEM_DEFS = {
 
     "Traffic Trap": ItemDef(121930, ItemClassification.trap),
     "Cube Van": ItemDef(121931, ItemClassification.filler, True, [8], "Large"),
-    "WWII Vehicle W\ Rocket": ItemDef(121932, ItemClassification.useful),
+    "WWII Vehicle W\\ Rocket": ItemDef(121932, ItemClassification.useful),
     "Audi TT": ItemDef(121933, ItemClassification.useful, True, [8], "Small"),
     "Vote Quimby Truck": ItemDef(121934, ItemClassification.useful, True, [5], "Large"),
     "Ambulance": ItemDef(121935, ItemClassification.useful, True, [5], "Large"),
@@ -219,7 +219,7 @@ def get_random_filler_item_name(world: SimpsonsHitNRunWorld) -> str:
 
     trap_items = [name for name, item in ITEM_DEFS.items() if item.type == ItemClassification.trap and trap_option_map.get(name, True)]
     filler_items = ["Wrench", "Hit N Run Reset", "10 Coins"]
-    if world.random.randint(0, 99) < world.options.filler_traps:
+    if world.random.randint(0, 99) < world.options.filler_traps and trap_items:
         return world.random.choice(trap_items)
     else:
         return world.random.choice(filler_items)

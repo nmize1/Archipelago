@@ -11,7 +11,7 @@ class Goal(Choice):
     option_goal_all_missions_complete = 0
     option_goal_all_story_missions_complete = 1
     option_goal_final_missionl7m7 = 2
-    option_goal_wasps_and_cards_collected = 3
+    #option_goal_wasps_and_cards_collected = 3
 
 class LockLevels(Toggle):
     """Choose whether levels are accessible in Free Roam before finding their respective level item.
@@ -162,6 +162,14 @@ class AddMissionLocks(Range):
     range_start = 0
     range_end = 100
 
+class AdjustMissionTimers(Range):
+    """Increase mission timers by the chosen percentage.
+       For example, if a mission has a timer of 1:00 and the chosen value is 50, then the mission will have a timer of 1:30"""
+
+    display_name = "Adjust Mission Timers"
+    range_start = 0
+    range_end = 100
+
 class MinShopPrice(Range):
     """The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead."""
     display_name = "Min Shop Price"
@@ -257,6 +265,7 @@ class SimpsonsHitNRunOptions(PerGameCommonOptions):
     cardpercent: CardPercent
     shufflecards: ShuffleCards
     missionlocks: AddMissionLocks
+    missiontimers: AdjustMissionTimers
     minprice: MinShopPrice
     maxprice: MaxShopPrice
     shopscalemod: ShopScaleMod

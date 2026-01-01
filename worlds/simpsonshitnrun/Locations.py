@@ -1,20 +1,29 @@
 from __future__ import annotations
-
 from typing import TYPE_CHECKING
 import json
 from BaseClasses import ItemClassification, Location
-
-from . import items
-
 import re
+from pathlib import Path
+from dataclasses import dataclass
 
 if TYPE_CHECKING:
-    from .world import SimpsonsHitNRunWorld, Card
+    from .world import SimpsonsHitNRunWorld
 
-with open("Data/cards.json", "r") as f:
+with open(Path(__file__).parent / "Data" / "cards.json", encoding="utf-8") as f:
     card_info = json.load(f)
 
-cards_by_name = {card["Desc"] : card for card in card_info}
+@dataclass
+class Card:
+    id: int
+    name: str
+    gameid: int
+    x: float
+    y: float
+    z: float
+
+cards_by_name = {}
+
+cards_by_name = { card["Desc"]: card for level_cards in card_info.values() for card in level_cards }
 
 LOCATION_NAME_TO_ID = {
     # Level 1 Missions
@@ -785,7 +794,7 @@ LOCATION_NAME_TO_ID = {
     "(L7M4) There's Something About Monty": 122358,
     "(L7M5) Alien \"Auto\"topsy Part 1": 122359,
     "(L7M6) Alien \"Auto\"topsy Part 2": 122360,
-    "(L7M7) Alien \"Auto\"topsy Part 3": 122361,
+    #"(L7M7) Alien \"Auto\"topsy Part 3": 122361,
     "(L7BM) Flaming Tires": 122362,
     "(LVL 7) Talk to Graveyard Zombie": 122685,
 
@@ -997,7 +1006,7 @@ def create_events(world: SimpsonsHitNRunWorld) -> None:
 def fill_card_table(world: SimpsonsHitNRunWorld, level: int, chosen_cards: list[str]):
     for i, name in enumerate(chosen_cards):
         data = cards_by_name[name]
-        gameid = level * 10 + (i + 1)
+        gameid = (level + 1) * 10 + (i + 1)
 
         world.card_table.append(
             Card(

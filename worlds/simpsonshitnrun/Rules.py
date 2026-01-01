@@ -16,7 +16,7 @@ small_cars = ["Family Sedan", "Electaurus", "Honor Roller", "Moe's Sedan", "Limo
               "Taxi", "Sedan B", "Sports Car B", "Sports Car A", "Compact Car", "SUV", "Hallo Hearse", "Coffin Car", "Witch Broom", "Ghost Ship", "Sedan A", "Station Wagon",
               "Cell Phone Car", "Ferrini - Black"]
 medium_cars = ["Pickup Truck", "Surveillance Van", "WWII Vehicle", "Mr. Plow", "Book Burning Van", "Skinner's Sedan", "Donut Truck", "Canyonero", "Tractor", "Mr. Burns' Limo",
-               "Monorail Car", "Glass Truck", "Minivan", "Pizza Van", "Fish Van", "Nuclear Waste Truck", "Pickup", "Nonuplets Minivan", "WWII Vehicle W\ Rocket"]
+               "Monorail Car", "Glass Truck", "Minivan", "Pizza Van", "Fish Van", "Nuclear Waste Truck", "Pickup", "Nonuplets Minivan", "WWII Vehicle W\\ Rocket"]
 large_cars = ["Plow King", "Duff Truck", "Fire Truck", "School Bus", "Cola Truck", "Armored Truck", "Mini School Bus", "Garbage Truck", "Vote Quimby Truck", "Ambulance",
               "Itchy and Scratchy Movie Truck", "Burns Armored Truck", "Ice Cream Truck", "Bonestorm Truck", "Cube Van", "Milk Truck"]
 any_car = small_cars + medium_cars + large_cars
@@ -64,7 +64,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                  "Itchy and Scratchy Movie Truck", "Sports Car A", "Compact Car", "SUV",
                                                                                                  "Hallo Hearse", "Coffin Car", "Ghost Ship", "Sedan A", "Station Wagon",
                                                                                                  "Ice Cream Truck", "Cell Phone Car A", "Cube Van", "Milk Truck",
-                                                                                                 "Nonuplets Minivan", "WWII Vehicle w/Rocket", "Ferrini - Black"), world.player))
+                                                                                                 "Nonuplets Minivan", "WWII Vehicle W\\ Rocket", "Ferrini - Black"), world.player))
     set_rule(world.get_location("(L4M3) Ketchup Logic"), lambda state: state.has("Marge - Inmate", world.player))
     set_rule(world.get_location("(L4M6) The Cola Wars"), lambda state: state.has_all(("Marge - Police", "Marge Progressive Jump"), world.player))
     set_rule(world.get_location("(L4BM) Beached Love"), lambda state: state.has("Marge Progressive Jump", world.player))
@@ -245,7 +245,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                                   "Mr. Burns' Limo", "Zombie Car", "Hover Bike", "Hearse", "Knight Boat", "ATV",
                                                                                                                   "Planet Hype 50's Car", "Taxi", "Sedan B", "Nuclear Waste Truck", "Sports Car B",
                                                                                                                   "Sports Car A", "Compact Car", "SUV", "Hallo Hearse", "Coffin Car", "Ghost Ship",
-                                                                                                                  "Sedan A", "Station Wagon", "Cell Phone Car", "Milk Truck", "WWII Vehicle W/ Rocket",
+                                                                                                                  "Sedan A", "Station Wagon", "Cell Phone Car", "Milk Truck", "WWII Vehicle W\\ Rocket",
                                                                                                                   "Ferrini - Black"], 0))
 
 
@@ -371,7 +371,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                                "Malibu Stacy Car", "Nerd Car", "Curator", "Longhorn", "Ferrini - Red",
                                                                                                                "36 Stutz Bearcat", "Bandit", "Globex Super Villain Car", "70's Sports Car",
                                                                                                                "Open Wheel Race Car", "Hover Bike", "ATV", "Planet Hype 50's Car", "Compact Car",
-                                                                                                               "Coffin Car", "Ghost Ship", "WWII Vehicle W/ Rocket", "Ferrini - Black"],
+                                                                                                               "Coffin Car", "Ghost Ship", "WWII Vehicle W\\ Rocket", "Ferrini - Black"],
                                                                                                               0))
         set_rule(world.get_location("(LVL 5) WASP - Steps of Town Hall"), lambda state: can_break_wasp(world, state, "Apu", any_car_wasps,
                                                                                                        ["Malibu Stacy Car", "Curator", "Longhorn", "Ferrini - Red",
@@ -389,13 +389,13 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                   "Mr. Burns' Limo", "Zombie Car", "Hover Bike", "Hearse", "Speed Rocket", "Monorail Car",
                                                                                                   "Knight Boat", "ATV", "Planet Hype 50's Car", "Vote Quimby Truck", "Sports Car B",
                                                                                                   "Sports Car A", "Compact Car", "Coffin Car", "Ghost Ship", "Station Wagon", "Cell Phone Car",
-                                                                                                  "WWII Vehicle W/ Rocket", "Ferrini - Black"],
+                                                                                                  "WWII Vehicle W\\ Rocket", "Ferrini - Black"],
                                                                                                  1))
         set_rule(world.get_location("(LVL 5) WASP - Police Station Steps"), lambda state: can_break_wasp(world, state, "Apu", any_car_wasps,
                                                                                                        ["WWII Vehicle", "Malibu Stacy Car", "Donut Truck", "Nerd Car",
                                                                                                         "Clown Car", "Tractor", "Curator", "36 Stutz Bearcat", "70's Sports Car",
                                                                                                         "Zombie Car", "Hover Bike", "ATV", "Planet Hype 50's Car", "Mini School Bus",
-                                                                                                        "Vote Quimby Truck", "Coffin Car", "Ghost Ship", "WWII Vehicle W/ Rocket", "Ferrini - Black"],
+                                                                                                        "Vote Quimby Truck", "Coffin Car", "Ghost Ship", "WWII Vehicle W\\ Rocket", "Ferrini - Black"],
                                                                                                        0))
         set_rule(world.get_location("(LVL 5) WASP - Under Giant Purple Beams 1"), lambda state: can_break_wasp(world, state, "Apu", any_car_wasps,
                                                                                                          ["Electaurus", "Malibu Stacy Car", "Curator", "Longhorn", "El Carro Loco",
@@ -459,7 +459,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                       "Longhorn", "El Carro Loco", "Car Built For Homer", "Police Car", "Ferrini - Red",
                                                                                                       "36 Stutz Bearcat", "Bandit", "Globex Super Villain Car", "Chase Sedan", "70's Sports Car",
                                                                                                       "Open Wheel Race Car", "Mr. Burns' Limo", "Zombie Car", "Hover Bike", "Hearse", "ATV",
-                                                                                                     "Sports Car A", "Coffin Car", "Ghost Ship", "WWII Vehicle W/ Rocket", "Ferrini - Black"],
+                                                                                                     "Sports Car A", "Coffin Car", "Ghost Ship", "WWII Vehicle W\\ Rocket", "Ferrini - Black"],
                                                                                                      0))
         set_rule(world.get_location("(LVL 6) WASP - Globex Ship Crane"), lambda state: can_break_wasp(world, state, "Bart", any_car_wasps,
                                                                                                       ["Moe's Sedan", "Malibu Stacy Car", "Open Wheel Race Car", "Hover Bike",
@@ -483,7 +483,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                 "Longhorn", "El Carro Loco", "Hover Car", "Car Built For Homer", "Police Car", "Ferrini - Red",
                                                                                                 "36 Stutz Bearcat", "Bandit", "Globex Super Villain Car", "Chase Sedan", "70's Sports Car",
                                                                                                 "Open Wheel Race Car", "Mr. Burns' Limo", "Zombie Car", "Hearse", "ATV", "Ghost Ship",
-                                                                                                "WWII Vehicle W/ Rocket", "Ferrini - Black"],
+                                                                                                "WWII Vehicle W\\ Rocket", "Ferrini - Black"],
                                                                                                0))
 
 
@@ -542,7 +542,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                                    "Chase Sedan", "70's Sports Car", "Open Wheel Race Car", "Mr. Burn's' Limo", "Zombie Car",
                                                                                                                    "Hover Bike", "Hearse", "Speed Rocket", "Monorail Car", "Knight Boat", "ATV", "Planet Hype 50's Car",
                                                                                                                    "Taxi", "Sedan B", "Sports Car B", "Sports Car A", "Compact Car", "SUV", "Ghost Ship", "Sedan A",
-                                                                                                                   "Station Wagon", "Cell Phone Car", "WWII Vehicle W/ Rocket", "Ferrini - Black"],
+                                                                                                                   "Station Wagon", "Cell Phone Car", "WWII Vehicle W\\ Rocket", "Ferrini - Black"],
                                                                                                                   0))
         set_rule(world.get_location("(LVL 7) WASP - Power Plant Parking lot"), lambda state: can_break_wasp(world, state, "Homer", any_car_wasps,
                                                                                                      ["Family Sedan", "Electaurus", "Surveillance Van", "Honor Roller", "Moe's Sedan",
@@ -910,11 +910,12 @@ def set_completion_condition(world: SimpsonsHitNRunWorld) -> None:
         # final mission
         world.multiworld.completion_condition[world.player] = lambda state: can_reach_wasps_count(world, state) > wasps and \
                                                                             can_reach_cards_count(world, state) > cards and \
-                                                                            state.can_reach_location("(L7M7) Alien \"Auto\"topsy Part 3", world.player)
-    elif world.options.goal == 3:
+                                                                            state.can_reach_region(f"Level 7 Missions", world.player)
+    #probably scrapping
+    #elif world.options.goal == 3:
         # wasp & cards only
-        world.multiworld.completion_condition[world.player] = lambda state: can_reach_wasps_count(world, state) > wasps and \
-                                                                            can_reach_cards_count(world, state) > cards
+    #    world.multiworld.completion_condition[world.player] = lambda state: can_reach_wasps_count(world, state) > wasps and \
+    #                                                                        can_reach_cards_count(world, state) > cards
 
 def can_reach_cards_count(world: SimpsonsHitNRunWorld, state: CollectionState) -> int:
     count = 0

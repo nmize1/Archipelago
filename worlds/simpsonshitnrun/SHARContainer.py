@@ -48,8 +48,8 @@ class SHARContainer(APPlayerContainer):
             ini_data += "Car=NO MISSIONLOCKS\n\n"
         else:
             for mission, car in self.mission_locks.items():
-                level = int(mission[1])
-                mission_num = int(mission[3])
+                level = int(mission[2])
+                mission_num = int(mission[4])
                 mnum = (level - 1) * 7 + mission_num
 
                 ini_data += "[MISSIONLOCK]\n"
