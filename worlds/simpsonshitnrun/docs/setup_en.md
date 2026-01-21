@@ -1,7 +1,7 @@
 # Required Software
 
 - Simpsons Hit And Run PC release
-- [Lucas' Mod Manager](https://modbakery.donutteam.com/releases/view/6)
+- [Lucas' Mod Launcher](https://modbakery.donutteam.com/releases/view/6)
 - [Archipelago](https://archipelago.gg/) (Latest release [here](https://github.com/ArchipelagoMW/Archipelago/releases/latest).)
 - The latest release of the [client/memory manager and the lmlm mod](https://github.com/nmize1/AP-SHARRandomizer/releases/latest)
 - The latest release of the [apworld](https://github.com/nmize1/Archipelago/releases/latest).
