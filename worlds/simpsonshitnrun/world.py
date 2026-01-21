@@ -44,21 +44,17 @@ class SimpsonsHitNRunWorld(World):
             if self.game in self.multiworld.re_gen_passthrough:
                 print("Getting UT slot data.")
                 passthrough = self.multiworld.re_gen_passthrough[self.game]
-                print(passthrough)
                 for key in vars(self.options):
                     if key in passthrough:
                         option = getattr(self.options, key)
-                        print(f"{key} : {option}")
                         if hasattr(option, "value"):
                             value = passthrough[key]
                             option.value = value
-                            print(f"{key} : {option} : {value}")
 
-                self.card_table = passthrough
                 self.missionlockdict = passthrough["missionlockdic"]
-                items.prog_cars = passthrough["progcars"]
+                self.prog_cars = passthrough["progcars"]
 
-                self.card_table = locations.fill_card_table_by_id(passthrough["card_locations"])
+                locations.fill_card_table_by_id(self, passthrough["card_locations"])
 
 
     def create_regions(self) -> None:

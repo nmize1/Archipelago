@@ -85,8 +85,15 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
         add_rule(world.get_location(mission), lambda state, locked_car=car: state.has(locked_car, world.player))
 
     # Gags
+    set_rule(world.get_location("(LVL 1) GAG - Tank in Front of Power Plant"), lambda state: state.has("Homer Progressive Jump", world.player) or\
+                                                                                             state.has_any((medium_cars + large_cars), world.player))
+    set_rule(world.get_location("(LVL 2) GAG - Rat's Milk Machine atop Legitimate Businessman's Roof"), lambda state: state.has("Bart Progressive Jump", world.player))
+    set_rule(world.get_location("(LVL 4) GAG - Tank in Front of Power Plant"), lambda state: state.has("Marge Progressive Jump", world.player) or \
+                                                                                             state.has_any((medium_cars + large_cars), world.player))
     set_rule(world.get_location("(LVL 4) GAG - Krusty Lamp (Bart's Room)"), lambda state: state.has("Marge Progressive Jump", world.player))
     set_rule(world.get_location("(LVL 7) GAG - Krusty Lamp (Bart's Room)"), lambda state: state.has("Homer Progressive Jump", world.player))
+    set_rule(world.get_location("(LVL 7) GAG - Tank in Front of Power Plant"), lambda state: state.has("Homer Progressive Jump", world.player) or \
+                                                                                             state.has_any((medium_cars + large_cars) , world.player))
 
     # Wasps
     # L1

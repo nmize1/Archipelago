@@ -517,7 +517,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 4) GAG - Simpsons Fire Breathing Tiki": 122531,
     "(LVL 4) GAG - Krusty Lamp (Bart's Room)": 122532,
     "(LVL 4) GAG - Flanders Bomb Shelter": 122533,
-    "(LVL 4) GAG - Tank Outside Power Plant": 122534,
+    "(LVL 4) GAG - Tank in Front of Power Plant": 122534,
     "(LVL 4) GAG - Homer's Workstation Meltdown": 122535,
     "(LVL 4) GAG - School Fire Extinguisher ": 122536,
     "(LVL 4) GAG - School Fire Alarm": 122537,
@@ -892,7 +892,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 7) GAG - Clown Bed (Bart's Room)": 122665,
     "(LVL 7) GAG - Flanders Bomb Shelter": 122666,
     "(LVL 7) GAG - Blue House Haunted Swing": 122667,
-    "(LVL 7) GAG - Tank in Power Plant Parking lot": 122668,
+    "(LVL 7) GAG - Tank in Front of Power Plant": 122668,
     "(LVL 7) GAG - Frozen Man in Kwik-E-Mart": 122669,
     "(LVL 7) GAG - Silent Alarm in Kwik-E-Mart": 122670,
     "(LVL 7) GAG - Squishee Machine in Kwik-E-Mart": 122671,
@@ -1028,7 +1028,7 @@ def fill_card_table_by_id(world: SimpsonsHitNRunWorld, card_locations: list[int]
         world.card_table.append(
             Card(
                 id=card_id,
-                name=data["name"],
+                name=data["Desc"],
                 gameid=i + 1, #this doesn't really matter for UT
                 x=data["X"],
                 y=data["Y"],
