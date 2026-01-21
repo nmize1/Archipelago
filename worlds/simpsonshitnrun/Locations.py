@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 import json
+from importlib import resources
 from BaseClasses import ItemClassification, Location
 import re
 from pathlib import Path
@@ -9,7 +10,7 @@ from dataclasses import dataclass
 if TYPE_CHECKING:
     from .world import SimpsonsHitNRunWorld
 
-with open(Path(__file__).parent / "Data" / "cards.json", encoding="utf-8") as f:
+with resources.files(__package__).joinpath("Data/cards.json").open("r", encoding="utf-8") as f:
     card_info = json.load(f)
 
 @dataclass
@@ -21,9 +22,8 @@ class Card:
     y: float
     z: float
 
-cards_by_name = {}
-
 cards_by_name = { card["Desc"]: card for level_cards in card_info.values() for card in level_cards }
+
 
 LOCATION_NAME_TO_ID = {
     # Level 1 Missions
@@ -170,7 +170,7 @@ LOCATION_NAME_TO_ID = {
     # Level 2 Cards
     "(LVL 2) CARD - Statue": 122752,
     "(LVL 2) CARD - Roof Across Monkey Building": 122753,
-    "(LVL 2) CARD - Legitimate Businessman’s Roof 1": 122754,
+    "(LVL 2) CARD - Legitimate Businessman’s Roof": 122754,
     "(LVL 2) CARD - Car Wash": 122755,
     "(LVL 2) CARD - Train Wagon": 122756,
     "(LVL 2) CARD - Alleyway Behind Krusty Burger": 122757,
@@ -288,7 +288,7 @@ LOCATION_NAME_TO_ID = {
     "(L3M4) Operation Hellfish": 122314,
     "(L3M5) Slithery Sleuthing": 122315,
     "(L3M6) Fishy Deals": 122316,
-    "(L3M7) The Old Pirate of the Sea": 122317,
+    "(L3M7) The Old Pirate and the Sea": 122317,
     "(L3BM) Princi-Pal": 122318,
     "(LVL 3) Talk to Otto": 122681,
 
@@ -794,7 +794,7 @@ LOCATION_NAME_TO_ID = {
     "(L7M4) There's Something About Monty": 122358,
     "(L7M5) Alien \"Auto\"topsy Part 1": 122359,
     "(L7M6) Alien \"Auto\"topsy Part 2": 122360,
-    #"(L7M7) Alien \"Auto\"topsy Part 3": 122361,
+    "(L7M7) Alien \"Auto\"topsy Part 3": 122361,
     "(L7BM) Flaming Tires": 122362,
     "(LVL 7) Talk to Graveyard Zombie": 122685,
 
@@ -804,7 +804,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 7) Checkpoint Race": 122365,
 
     # Level 7 Cards
-    "(LVL 7) CARD - Flanders’ Bomb Shelter": 123087,
+    "(LVL 7) CARD - Flanders Bomb Shelter": 123087,
     "(LVL 7) CARD - Blue House Haunted Playground": 123088,
     "(LVL 7) CARD - School Playground": 123089,
     "(LVL 7) CARD - Atop of Lard Lad": 123090,
@@ -890,7 +890,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 7) GAG - Simpsons Fire Breathing Tiki": 122663,
     "(LVL 7) GAG - Krusty Lamp (Bart's Room)": 122664,
     "(LVL 7) GAG - Clown Bed (Bart's Room)": 122665,
-    "(LVL 7) GAG - Flanders' Bomb Shelter": 122666,
+    "(LVL 7) GAG - Flanders Bomb Shelter": 122666,
     "(LVL 7) GAG - Blue House Haunted Swing": 122667,
     "(LVL 7) GAG - Tank in Power Plant Parking lot": 122668,
     "(LVL 7) GAG - Frozen Man in Kwik-E-Mart": 122669,
@@ -909,6 +909,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 7) Shop Check 5": 122677,
     "(LVL 7) Shop Check 6": 122678,
 }
+LOCATION_ID_TO_NAME = {v: k for k, v in LOCATION_NAME_TO_ID.items()}
 
 class SimpsonsHitNRunLocation(Location):
     game = "Simpsons Hit and Run"
@@ -970,7 +971,7 @@ def create_regular_locations(world: SimpsonsHitNRunWorld):
             name for name in LOCATION_NAME_TO_ID
             if re.match(rf"^\(LVL {level_num}\) CARD - .+", name)
         ]
-        if world.options.shufflecards:
+        if world.options.Shuffle_Cards:
             lvl_card_locs = world.random.sample(lvl_card_locs, 7)
         else:
             lvl_card_locs = lvl_card_locs[:7]
@@ -1019,3 +1020,18 @@ def fill_card_table(world: SimpsonsHitNRunWorld, level: int, chosen_cards: list[
             )
         )
 
+#For use by UT
+def fill_card_table_by_id(world: SimpsonsHitNRunWorld, card_locations: list[int]):
+    for i, card_id in enumerate(card_locations):
+        data = cards_by_name[LOCATION_ID_TO_NAME[card_id]]
+
+        world.card_table.append(
+            Card(
+                id=card_id,
+                name=data["name"],
+                gameid=i + 1, #this doesn't really matter for UT
+                x=data["X"],
+                y=data["Y"],
+                z=data["Z"],
+            )
+        )

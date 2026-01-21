@@ -1,6 +1,10 @@
 from worlds.LauncherComponents import Component, SuffixIdentifier, components, Type, icon_paths
 import asyncio
 from pathlib import Path
+try:
+    from . import settings
+except ImportError:
+    import settings
 
 def run_client(ap_url=None):
     asyncio.run(run_client_async(ap_url))
@@ -32,3 +36,22 @@ components.append(
         icon="Donut"
     )
 )
+
+class SHARSettings(settings.Group):
+    class SHARRandomizerExe(settings.FilePath):
+        """
+        Path to SHARRandomizer.exe to auto-launch.
+        Example: "C:/Program Files (x86)/Vivendi Universal Games/The Simpsons Hit & Run/AP/SHARRandomizerFrontend.exe"
+        """
+        description = "Path to SHARRandomizerFrontend.exe"
+
+    class LucasLauncherExe(settings.FilePath):
+        """
+        Path to Lucas' Mod Launcher.exe to auto-launch.
+        Can't auto launch straight into running the mod saldy.
+        Example: "C:/Program Files (x86)/Vivendi Universal Games/The Simpsons Hit & Run/Lucas Simpsons Hit & Run Mod Launcher.exe"
+        """
+        description = "Path to Lucas' Mod Launcher.exe"
+
+    sharrandomizer: SHARRandomizerExe = SHARRandomizerExe("")
+    lucas_launcher: LucasLauncherExe = LucasLauncherExe("")

@@ -5,7 +5,7 @@ import zipfile
 from worlds.Files import APPlayerContainer
 
 class SHARContainer(APPlayerContainer):
-    game: str = "Simpsons Hit And Run"
+    game: str = "Simpsons Hit and Run"
 
     def __init__(self, ID, TitleID, card_table, traffic_table, mission_locks, base_path: str, output_directory: str,
                  player=None, player_name: str = "", server: str = ""):

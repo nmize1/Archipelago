@@ -69,7 +69,7 @@ def connect_regions(world: SimpsonsHitNRunWorld) -> None:
         level_num = i + 1
         character = characters[i]
 
-        if world.options.locklevels:
+        if world.options.Lock_Levels:
             hub.connect(level_regions[i], f"Hub to Level {level_num}", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
                                                                                                           state.has("Progressive Level", world.player, num))
         else:
@@ -78,7 +78,7 @@ def connect_regions(world: SimpsonsHitNRunWorld) -> None:
         level_regions[i].connect(level_mission_regions[i], f"Level {level_num} to Missions", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
                                                                                                                               state.has("Progressive Level", world.player, num))
 
-        if "All" in world.options.shufflecheckeredflags or (character in world.options.shufflecheckeredflags and "None" not in world.options.shufflecheckeredflags):
+        if "All" in world.options.Shuffle_Checkered_Flags or (character in world.options.Shuffle_Checkered_Flags and "None" not in world.options.Shuffle_Checkered_Flags):
             level_regions[i].connect(level_race_regions[i], f"Level {level_num} to Races", lambda state, char=character: state.has(f"{char} Checkered Flag", world.player))
         else:
             level_regions[i].connect(level_race_regions[i], f"Level {level_num} to Races", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
@@ -88,10 +88,10 @@ def connect_regions(world: SimpsonsHitNRunWorld) -> None:
 
         level_regions[i].connect(level_card_regions[i], f"Level {level_num} to Cards")
 
-        if "All" in world.options.shufflegagfinder or (character in world.options.shufflegagfinder and "None" not in world.options.shufflegagfinder):
+        if "All" in world.options.Shuffle_Gagfinder or (character in world.options.Shuffle_Gagfinder and "None" not in world.options.Shuffle_Gagfinder):
             level_regions[i].connect(level_gag_regions[i], f"Level {level_num} to Gags", lambda state, char=character: state.has(f"{char} Gagfinder", world.player))
         else:
             level_regions[i].connect(level_gag_regions[i], f"Level {level_num} to Gags", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
                                                                                                                             state.has("Progressive Level", world.player, num))
 
-        level_regions[i].connect(level_shop_regions[i], f"Level {level_num} to Shops", lambda state, idx=i: state.has("Progressive Wallet Upgrade", world.player, idx))
+        level_regions[i].connect(level_shop_regions[i], f"Level {level_num} to Shops", lambda state, num=level_num: state.has("Progressive Wallet Level", world.player, num))

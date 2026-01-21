@@ -252,7 +252,7 @@ class HKWorld(World):
 
         # check for any goal that godhome events are relevant to
         all_event_names = event_names.copy()
-        if self.options.Goal in [Goal.option_godhome, Goal.option_godhome_flower, Goal.option_any]:
+        if self.options.ISTicket in [Goal.option_godhome, Goal.option_godhome_flower, Goal.option_any]:
             from .GodhomeData import godhome_event_names
             all_event_names.update(set(godhome_event_names))
 
@@ -480,7 +480,7 @@ class HKWorld(World):
     def set_rules(self):
         multiworld = self.multiworld
         player = self.player
-        goal = self.options.Goal
+        goal = self.options.ISTicket
         if goal == Goal.option_hollowknight:
             multiworld.completion_condition[player] = lambda state: _hk_can_beat_thk(state, player)
         elif goal == Goal.option_siblings:
@@ -506,7 +506,7 @@ class HKWorld(World):
 
     @classmethod
     def stage_pre_fill(cls, multiworld: "MultiWorld"):
-        worlds = [world for world in multiworld.get_game_worlds(cls.game) if world.options.Goal in ["any", "grub_hunt"]]
+        worlds = [world for world in multiworld.get_game_worlds(cls.game) if world.options.ISTicket in ["any", "grub_hunt"]]
         if worlds:
             grubs = [item for item in multiworld.get_items() if item.name == "Grub"]
         all_grub_players = [

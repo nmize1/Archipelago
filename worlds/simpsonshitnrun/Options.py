@@ -1,21 +1,60 @@
 from dataclasses import dataclass
-
-from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle, OptionGroup
+from schema import Schema, And, SchemaError
+from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle, OptionGroup, OptionError
+from worlds.simpsonshitnrun.items import item_name_groups
 
 VALID_CHAR_KEYS = ["Homer", "Bart", "Lisa", "Marge", "Apu", "All", "None"]
 
-class Goal(Choice):
-    """Choose your victory condition."""
-    display_name = "Goal"
+class OptionSetNoEmpty(OptionSet):
+    schema = Schema(And(set[str], len))
+
+class ISTicket(Choice):
+    """Goal is watching the Itchy and Scratchy film at the Aztec Theater in Level 3.
+       You'll receive the Ticket when you complete the requirements chosen."""
+    display_name = "Itchy and Scratchy Ticket Requirement"
     default = 0
-    option_goal_all_missions_complete = 0
-    option_goal_all_story_missions_complete = 1
-    option_goal_final_missionl7m7 = 2
-    #option_goal_wasps_and_cards_collected = 3
+    option_missions_complete = 0
+    option_story_missions_complete = 1
+    option_final_mission_L7M7 = 2
+    option_cars_collected = 3
+
+class WaspAmount(Range):
+    """ Number of Wasps additionally required to gain the Itchy and Scratchy ticket. There are 20 per level."""
+    display_name = "Required Wasp Percent"
+    range_start = 0
+    range_end = 140
+    default = 70
+
+class CardAmount(Range):
+    """Number of Cards additionally required to gain the Itchy and Scratchy ticket. There are 7 per level."""
+    display_name = "Required Card Percent"
+    range_start = 0
+    range_end = 49
+    default = 25
+
+class RequiredMissionLevels(OptionSetNoEmpty):
+    """If the ticket requires missions or story missions, choose which level's missions are required.
+       Missions in other levels may still unlock required items.
+       Has no effect if the ticket doesn't require missions.
+       Valid options are 1, 2, 3, 4, 5, 6, 7, or All."""
+    default = frozenset({"All"})
+    valid_keys = ["1", "2", "3", "4", "5", "6", "7", "All"]
+    display_name = "Required Mission Levels"
+
+class EarlyLevel(Toggle):
+    """If enabled, attempt to place at least one of your required levels in an early location."""
+    display_name = "Early Level Item"
+    default = True
+
+class CarAmount(Range):
+    """If the ticket requires cars collected, choose the amount of cars required."""
+    display_name = "Required Car Amount"
+    range_start = 0
+    range_end = 81
+    default = 50
 
 class LockLevels(Toggle):
-    """Choose whether levels are accessible in Free Roam before finding their respective level item.
-        """
+    """If enabled, levels are will be inaccessible to Free Roam until you receive their respective Level item."""
     display_name = "Lock Levels"
     default = True
 
@@ -84,6 +123,7 @@ class ShuffleCheckeredFlags(OptionSet):
 
 class ShuffleForward(OptionSet):
     """Choose whether to shuffle the ability to move forward or drive forward for each character into the item pool.
+       Characters not chosen won't have a forward in the item pool and will always be able to move forward.
        Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
        **THIS COULD CREATE VERY DIFFICULT SEEDS**
     """
@@ -103,6 +143,8 @@ class EarlyForward(OptionSet):
 
 class ShuffleEBrakes(OptionSet):
     """Choose whether to shuffle ability to use the E-Brake for each character into the item pool.
+       Characters not chosen will always be able to use the E-Brake.
+       Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
        """
 
     default = frozenset({"All"})
@@ -111,42 +153,20 @@ class ShuffleEBrakes(OptionSet):
 
 class ShuffleBumpers(OptionSet):
     """Choose whether to shuffle Frink-o-Matic Wasp Bumpers into the item pool.
+       Characters not chosen won't have a Wasp Bumper in the item pool and *WILL NOT* be able to break wasps with cars.
        Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
     """
 
-    default = frozenset({"All"})
+    default = frozenset({"None"})
     valid_keys = VALID_CHAR_KEYS
     display_name = "Early Forward"
 
-class EnableWaspPercent(Toggle):
-    """Whether to include Wasps in goal requirements.
-       This setting is always treated as true if your
-       goal is Goal: Wasps and Cards Collected!"""
+class StartWithBumpers(Toggle):
+    """If true, add all enabled Wasp Bumpers to the start inventory.
+       If you want more granular control of this, use the generic start inventory."""
 
-    default = True
-    display_name = "Enable Wasp Requirements"
-
-class WaspPercent(Range):
-    """ Percent of Wasps required to goal if Wasp Requirements is enabled."""
-    display_name = "Required Wasp Percent"
-    range_start = 10
-    range_end = 100
-    default = 50
-
-class EnableCardPercent(Toggle):
-    """Whether to include Cards in goal requirements.
-       This setting is always treated as true if your
-       goal is Goal: Wasps and Cards Collected!"""
-
-    default = True
-    display_name = "Enable Card Requirements"
-
-class CardPercent(Range):
-    """Percent of Cards required to goal if Card Requirements is enabled."""
-    display_name = "Required Card Percent"
-    range_start = 10
-    range_end = 100
-    default = 50
+    display_name = "Start With Bumpers"
+    default = False
 
 class ShuffleCards(Toggle):
     """Randomize card locations. This option adds several possible locations for
@@ -192,6 +212,16 @@ class ShopScaleMod(Range):
     range_end = 5
     default = 2
 
+class StartingWalletLevel(Range):
+    """Choose how many Progressive Wallet Levels to start with.
+       Level 1 shops are in logic with 1 level, level 2 with 2, etc.
+       Your coin cap = MaxShopPrice * WalletLevel * ShopScaleMod and is unlimited at Wallet Level 7
+    """
+    display_name = "Starting Jump Level"
+    range_start = 0
+    range_end = 7
+    default = 1
+
 class ShopHintPolicy(Choice):
     """Choose the level of hints sent when speaking to Gil for the first time on a level
        All: Hint all items in Gil's shop
@@ -208,10 +238,30 @@ class ExtraHintPolicy(Toggle):
     default = True
     display_name = "Extra Hint Policy"
 
+class FillerWrenchEfficiency(Range):
+    """Percentage damage a filler wrench item will repair your cars."""
+    display_name = "Filler Wrench Efficiency"
+    default = 10
+    range_start = 0
+    range_end = 100
+
+class FillerHitNRunResetEfficiency(Range):
+    """Percentage a filler Hit N Run Reset item will lower your Hit N Run meter."""
+    display_name = "Filler Hit N Run Reset Efficiency"
+    default = 10
+    range_start = 0
+    range_end = 100
+
 class ShuffleTraffic(Toggle):
-    """Randomize traffic per level"""
+    """Randomize traffic per level. Cars that are usually used as traffic in that level plus the starting car of the next level are unable to be chosen for their level."""
     default = True
     display_name = "Shuffle Traffic"
+
+class TrafficBlacklist(OptionSet):
+    """Block cars from appearing as traffic. There must be at least 35 cars available to shuffle.
+    If there are less than 5 cars available for any level after applying the blacklist, then traffic will not be shuffled."""
+    display_name = "Traffic Blacklist"
+    valid_keys = list(item_name_groups['cars'])
 
 class EjectTraps(Toggle):
     """Whether to include Eject traps in the item pool."""
@@ -246,48 +296,54 @@ class FillerTrapPercent(Range):
 
 @dataclass
 class SimpsonsHitNRunOptions(PerGameCommonOptions):
-    goal: Goal
-    locklevels: LockLevels
-    shufflelevels: ShuffleLevels
-    startingcarshuffle: ShuffleStartingCar
-    shuffleattack: ShuffleAttack
-    shufflejump: ShuffleJump
-    startjumplevel: StartingJumpLevel
-    shufflegagfinder: ShuffleGagfinder
-    shufflecheckeredflags: ShuffleCheckeredFlags
-    shuffleebrake: ShuffleEBrakes
-    shufflebumpers: ShuffleBumpers
-    shuffleforward: ShuffleForward
-    earlyforward: EarlyForward
-    EnableWaspPercent: EnableWaspPercent
-    wasppercent: WaspPercent
-    EnableCardPercent: EnableCardPercent
-    cardpercent: CardPercent
-    shufflecards: ShuffleCards
-    missionlocks: AddMissionLocks
-    missiontimers: AdjustMissionTimers
-    minprice: MinShopPrice
-    maxprice: MaxShopPrice
-    shopscalemod: ShopScaleMod
-    shophintpolicy: ShopHintPolicy
-    extrahintpolicy: ExtraHintPolicy
-    shuffletraffic: ShuffleTraffic
-    filler_traps: FillerTrapPercent
-    eject: EjectTraps
-    duff: DuffTraps
-    launch: LaunchTraps
-    hnr: HNRTraps
-    traffictrap: TrafficTraps
+    Itchy_And_Scratchy_Ticket_Requirement: ISTicket
+    Wasp_Amount: WaspAmount
+    Card_Amount: CardAmount
+    Required_Mission_Levels: RequiredMissionLevels
+    Car_Amount: CarAmount
+    Lock_Levels: LockLevels
+    Early_Level: EarlyLevel
+    Shuffle_Levels: ShuffleLevels
+    Starting_Car_Shuffle: ShuffleStartingCar
+    Shuffle_Attack: ShuffleAttack
+    Shuffle_Jump: ShuffleJump
+    Start_Jump_Level: StartingJumpLevel
+    Shuffle_Gagfinder: ShuffleGagfinder
+    Shuffle_Checkered_Flags: ShuffleCheckeredFlags
+    Shuffle_EBrakes: ShuffleEBrakes
+    Shuffle_Bumpers: ShuffleBumpers
+    Start_With_Bumpers: StartWithBumpers
+    Shuffle_Forward: ShuffleForward
+    Early_Forward: EarlyForward
+    Shuffle_Cards: ShuffleCards
+    Mission_Locks: AddMissionLocks
+    Mission_Timers: AdjustMissionTimers
+    Min_Shop_Price: MinShopPrice
+    Max_Shop_Price: MaxShopPrice
+    Shop_Scale_Modifier: ShopScaleMod
+    Start_Wallet_Level: StartingWalletLevel
+    Shop_Hint_Policy: ShopHintPolicy
+    Extra_Hint_Policy: ExtraHintPolicy
+    Filler_Wrench_Efficiency: FillerWrenchEfficiency
+    Filler_HitNRun_Reset_Efficiency: FillerHitNRunResetEfficiency
+    Shuffle_Traffic: ShuffleTraffic
+    Traffic_Blacklist: TrafficBlacklist
+    Filler_Traps: FillerTrapPercent
+    Enable_Eject_Traps: EjectTraps
+    Enable_Duff_Traps: DuffTraps
+    Enable_Launch_Traps: LaunchTraps
+    Enable_HitNRun_Traps: HNRTraps
+    Enable_Traffic_Traps: TrafficTraps
 
 
 option_groups = [
     OptionGroup(
         "Shuffles",
-        [ShuffleLevels, ShuffleStartingCar, ShuffleAttack, ShuffleJump, StartingJumpLevel, ShuffleGagfinder, ShuffleCheckeredFlags, ShuffleEBrakes, ShuffleForward, EarlyForward, ShuffleCards],
+        [ShuffleLevels, ShuffleStartingCar, ShuffleAttack, ShuffleJump, StartingJumpLevel, ShuffleGagfinder, ShuffleBumpers, StartWithBumpers, ShuffleCheckeredFlags, ShuffleEBrakes, ShuffleForward, EarlyForward, ShuffleCards],
     ),
     OptionGroup(
         "Goals",
-        [Goal, EnableWaspPercent, WaspPercent, EnableCardPercent, CardPercent],
+        [ISTicket, WaspAmount, CardAmount, RequiredMissionLevels, CarAmount],
     ),
     OptionGroup(
         "Gameplay Changes",
