@@ -55,7 +55,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                  "Limo", "Fire Truck", "Malibu Stacy Car", "Book Burning Van", "Skinner's Sedan",
                                                                                                  "School Bus", "Donut Truck", "Nerd Car", "Canyonero", "Clown Car", "Kermlin",
                                                                                                  "Tractor", "Krusty's Limo", "Curator", "Longhorn", "El Carro Loco", "Hover Car",
-                                                                                                 "Car Built for Homer", "Police Car", "Cola Truck", "Ferrini - Red",
+                                                                                                 "Car Built For Homer", "Police Car", "Cola Truck", "Ferrini - Red",
                                                                                                  "36 Stutz Bearcat", "Bandit", "Globex Super Villain Car", "Chase Sedan",
                                                                                                  "70's Sports Car", "Open Wheel Race Car", "Mr. Burns' Limo", "Zombie Car",
                                                                                                  "Hover Bike", "Hearse", "Speed Rocket", "Monorail Car", "Knight Boat", "ATV",
@@ -64,7 +64,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                  "Nuclear Waste Truck", "Ambulance", "Sports Car B",
                                                                                                  "Itchy and Scratchy Movie Truck", "Sports Car A", "Compact Car", "SUV",
                                                                                                  "Hallo Hearse", "Coffin Car", "Ghost Ship", "Sedan A", "Station Wagon",
-                                                                                                 "Ice Cream Truck", "Cell Phone Car A", "Cube Van", "Milk Truck",
+                                                                                                 "Ice Cream Truck", "Cell Phone Car", "Cube Van", "Milk Truck",
                                                                                                  "Nonuplets Minivan", "WWII Vehicle W\\ Rocket", "Ferrini - Black"), world.player))
     set_rule(world.get_location("(L4M3) Ketchup Logic"), lambda state: state.has("Marge - Inmate", world.player))
     set_rule(world.get_location("(L4M6) The Cola Wars"), lambda state: state.has_all(("Marge - Police", "Marge Progressive Jump"), world.player))
@@ -314,7 +314,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                                                 "Garbage Truck", "Nuclear Waste Truck", "Vote Quimby Truck", "Ambulance",
                                                                                                                                 "Sports Car B", "Itchy and Scratchy Movie Truck", "Burns Armored Truck",
                                                                                                                                 "Pickup", "Sports Car A", "Compact Car", "SUV", "Hallo Hearse", "Sedan A",
-                                                                                                                                "Station Wagon", "Ice Cream Truck", "Cell Phone Car A", "Cube Van",
+                                                                                                                                "Station Wagon", "Ice Cream Truck", "Cell Phone Car", "Cube Van",
                                                                                                                                 "Milk Truck", "Nonuplets Minivan", "Obliteratatron Big Wheel Truck"],
                                                                                                                      0))
     set_rule(world.get_location("(LVL 4) WASP - Mr. Burns Library"), lambda state: can_break_wasp(world, state, "Marge", any_car_wasps,
@@ -329,7 +329,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                          "Garbage Truck", "Nuclear Waste Truck", "Vote Quimby Truck", "Ambulance",
                                                                                                          "Sports Car B", "Itchy and Scratchy Movie Truck", "Burns Armored Truck",
                                                                                                          "Pickup", "Sports Car A", "Compact Car", "SUV", "Hallo Hearse", "Sedan A",
-                                                                                                         "Station Wagon", "Ice Cream Truck", "Cell Phone Car A", "Cube Van",
+                                                                                                         "Station Wagon", "Ice Cream Truck", "Cell Phone Car", "Cube Van",
                                                                                                          "Milk Truck", "Nonuplets Minivan", "Obliteratatron Big Wheel Truck"],
                                                                                                         0))
     set_rule(world.get_location("(LVL 4) WASP - Outside of Homer's Workstation"), lambda state: can_break_wasp(world, state, "Marge", any_car_wasps, [], 0))
@@ -828,9 +828,8 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     set_rule_if_location_exists(world, "(LVL 6) CARD - Above Street BallPit House", lambda state: state.has("Bart Progressive Jump", world.player, 2) and \
                                                                                                                 state.has_any(medium_cars + large_cars, world.player))
     set_rule_if_location_exists(world, "(LVL 6) CARD - Planet Hype Sign", lambda state: state.has("Bart Progressive Jump", world.player))
-    set_rule_if_location_exists(world, "(LVL 6) CARD - Atop Front of Boat", lambda state: state.has("Bart Progressive Jump", world.player, 2))
+    set_rule_if_location_exists(world, "(LVL 6) CARD - Atop Front of Boat", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 6) CARD - Hidden in Bush Next to Kamp Krusty Well Exit", lambda state: state.has("Bart Progressive Jump", world.player))
-    set_rule_if_location_exists(world, "(LVL 6) CARD - Broken Bridge", lambda state: state.has_any(any_car, world.player))
     set_rule_if_location_exists(world, "(LVL 6) CARD - Planet Hype Outdoor Seating", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 6) CARD - Deck by Squidport Pedestrian Entrance 1", lambda state: state.has("Bart Progressive Jump", world.player) or \
                                                                                                                              state.has_any((medium_cars + large_cars), world.player))
@@ -863,12 +862,10 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                                 state.has_any(large_cars, world.player))
     set_rule_if_location_exists(world, "(LVL 6) CARD - Captain Chum 'N' Stuff", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 6) CARD - Upper Casino Entrance", lambda state: state.has("Bart Progressive Jump", world.player))
-    set_rule_if_location_exists(world, "(LVL 6) CARD - Duff Blimp", lambda state: (state.has("Bart Progressive Jump", world.player) and \
-                                                                                                 state.has_any(large_cars, world.player)) or\
-                                                                                                 state.has("Bart Progressive Jump", world.player, 2))
+    set_rule_if_location_exists(world, "(LVL 6) CARD - Duff Blimp", lambda state: state.has("Bart Progressive Jump", world.player, 2))
 
     # L7
-    set_rule_if_location_exists(world, "(LVL 7) CARD - Flanders’ Bomb Shelter", lambda state: state.has("Homer Progressive Jump", world.player))
+    set_rule_if_location_exists(world, "(LVL 7) CARD - Flanders Bomb Shelter", lambda state: state.has("Homer Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 7) CARD - Blue House Haunted Playground", lambda state: state.has("Homer Progressive Jump", world.player) or \
                                                                                                                    state.has_any((medium_cars + large_cars), world.player))
     set_rule_if_location_exists(world, "(LVL 7) CARD - School Playground", lambda state: state.has("Homer Progressive Jump", world.player))
