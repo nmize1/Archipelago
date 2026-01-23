@@ -302,7 +302,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 3) CARD - Above Bowling": 122822,
     "(LVL 3) CARD - Atop Lighthouse": 122823,
     "(LVL 3) CARD - Edge of Globex Ship": 122824,
-    "(LVL 3) CARD - Balcony of Krusty Studio": 122825,
+    "(LVL 3) CARD - Krusty Studio Balcony": 122825,
     "(LVL 3) CARD - Platforming Below Dam Railing": 122826,
     "(LVL 3) CARD - Beside Broken Bridge": 122827,
     "(LVL 3) CARD - Behind Lighthouse": 122828,
