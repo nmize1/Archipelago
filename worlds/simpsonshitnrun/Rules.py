@@ -512,13 +512,13 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     #    set_rule(world.get_location("(LVL 6) WASP - Lighthouse"), lambda state: state.has("Bart Attack", world.player))
 
     # L7
-    set_rule(world.get_location("(LVL 7) WASP - Blue House Haunted Playground"), lambda state: state.has_(("Homer Attack", "Homer Progressive Jump"), world.player))
+    set_rule(world.get_location("(LVL 7) WASP - Blue House Haunted Playground"), lambda state: state.has_all(("Homer Attack", "Homer Progressive Jump"), world.player))
     set_rule(world.get_location("(LVL 7) WASP - Simpsons' Backyard"), lambda state: (state.has("Homer Attack", world.player) and state.has_any(medium_cars + large_cars, world.player)) or \
                                                                                      state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
     set_rule(world.get_location("(LVL 7) WASP - Flanders' Backyard"), lambda state: state.has("Homer Attack", world.player))
     set_rule(world.get_location("(LVL 7) WASP - Wiggums' Backyard"), lambda state: (state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player) or \
                                                                                    (state.has_any(medium_cars + large_cars, world.player) and \
-                                                                                    state.has("Homer Attack"), world.player)))
+                                                                                    state.has("Homer Attack", world.player))))
     set_rule(world.get_location("(LVL 7) WASP - Atop of Kwik-E-Mart"), lambda state: state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
     set_rule(world.get_location("(LVL 7) WASP - Atop of Gasoline"), lambda state: state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
     set_rule(world.get_location("(LVL 7) WASP - Lard Lad Rooftop"), lambda state: (state.has("Homer Attack", world.player) and state.has_any(medium_cars + large_cars, world.player)) or \
@@ -578,7 +578,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     set_rule_if_location_exists(world, "(LVL 1) CARD - Kwik-E-Mart Roof", lambda state: state.has("Homer Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 1) CARD - Wiggum's Backyard", lambda state: (state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player) or \
                                                                                                        (state.has_any(medium_cars + large_cars, world.player) and \
-                                                                                                        state.has("Homer Attack"), world.player)))
+                                                                                                        state.has("Homer Attack", world.player))))
     set_rule_if_location_exists(world, "(LVL 1) CARD - Above StoneCutters Table", lambda state: state.has("Homer Progressive Jump", world.player, 2))
     set_rule_if_location_exists(world, "(LVL 1) CARD - Highest Platform in Power Plant", lambda state: state.has("Homer Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 1) CARD - Trailer Park", lambda state: (state.has("Homer Progressive Jump", world.player) and \
@@ -632,7 +632,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     # L2
     set_rule_if_location_exists(world, "(LVL 2) CARD - Statue", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Roof Across Monkey Building", lambda state: state.has("Bart Progressive Jump", world.player))
-    set_rule_if_location_exists(world, "(LVL 2) CARD - Legitimate Businessman’s Roof", lambda state: state.has("Bart Progressive Jump", world.player))
+    set_rule_if_location_exists(world, "(LVL 2) CARD - Legitimate Businessman's Roof", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Car Wash", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Train Wagon", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Fountain At Stadium", lambda state: state.has_all(("Bart Progressive Jump", "Itchy and Scratchy Movie Truck"), world.player) or \

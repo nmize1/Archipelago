@@ -134,8 +134,8 @@ class SimpsonsHitNRunWorld(World):
         for name, item in ITEM_DEFS.items():
             if not item.is_car:
                 continue
-            if name not in LEVEL_LOCKED_TRAFFIC:
-                continue
+            #if name not in LEVEL_LOCKED_TRAFFIC:
+            #    continue
 
             for level in item.level:
                 level_blacklists[level].add(item.internal_id)

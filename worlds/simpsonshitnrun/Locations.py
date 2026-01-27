@@ -170,7 +170,7 @@ LOCATION_NAME_TO_ID = {
     # Level 2 Cards
     "(LVL 2) CARD - Statue": 122752,
     "(LVL 2) CARD - Roof Across Monkey Building": 122753,
-    "(LVL 2) CARD - Legitimate Businessman’s Roof": 122754,
+    "(LVL 2) CARD - Legitimate Businessman's Roof": 122754,
     "(LVL 2) CARD - Car Wash": 122755,
     "(LVL 2) CARD - Train Wagon": 122756,
     "(LVL 2) CARD - Alleyway Behind Krusty Burger": 122757,
