@@ -27,6 +27,11 @@ class SimpsonsHitNRunWorld(World):
     car_name_to_internal_id = items.car_name_to_internal_id
 
     origin_region_name = "Hub"
+
+    @staticmethod
+    def interpret_slot_data(slot_data: Dict[str, Any]) -> Dict[str, Any]:
+        return slot_data
+
     ut_can_gen_without_yaml = True
 
     apworld_version: str
@@ -100,8 +105,8 @@ class SimpsonsHitNRunWorld(World):
 
         slot_data["costs"] = [
             self.random.randint(
-                min * (1 if level == 1 else (level - 1) * scale),
-                max * (1 if level == 1 else (level - 1) * scale)
+                min * (1 if level == 1 else (level * scale)),
+                max * (1 if level == 1 else (level * scale))
             )
             for level in range(1, 8)
             for _ in range(6)

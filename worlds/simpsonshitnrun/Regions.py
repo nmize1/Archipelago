@@ -94,4 +94,4 @@ def connect_regions(world: SimpsonsHitNRunWorld) -> None:
             level_regions[i].connect(level_gag_regions[i], f"Level {level_num} to Gags", lambda state, num=level_num: state.has(f"Level {num}", world.player) or \
                                                                                                                             state.has("Progressive Level", world.player, num))
 
-        level_regions[i].connect(level_shop_regions[i], f"Level {level_num} to Shops", lambda state, num=level_num: state.has("Progressive Wallet Level", world.player, num))
+        level_regions[i].connect(level_shop_regions[i], f"Level {level_num} to Shops", lambda state, num=level_num: state.has("Progressive Wallet Upgrade", world.player, num))

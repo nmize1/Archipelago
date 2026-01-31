@@ -139,7 +139,7 @@ ITEM_DEFS = {
     "Planet Hype 50's Car": ItemDef(121885, ItemClassification.progression_skip_balancing, True, [6], "Small", "hype_v"),
     "R/C Buggy": ItemDef(121886, ItemClassification.progression_skip_balancing, True, [7], "Extra Small", "dune_v"),
 
-    "Progressive Wallet Level": ItemDef(121887, ItemClassification.progression, always_exists=False),
+    "Progressive Wallet Upgrade": ItemDef(121887, ItemClassification.progression, always_exists=False),
     "Progressive Level": ItemDef(121888, ItemClassification.progression, always_exists=False),
 
     "Eject": ItemDef(121889, ItemClassification.trap, always_exists=False),
@@ -322,9 +322,9 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
 
     for i in range(1, 8):
         if i <= world.options.Start_Wallet_Level:
-            world.push_precollected(world.create_item("Progressive Wallet Level"))
+            world.push_precollected(world.create_item("Progressive Wallet Upgrade"))
         else:
-            itempool.append(world.create_item("Progressive Wallet Level"))
+            itempool.append(world.create_item("Progressive Wallet Upgrade"))
 
     trap_option_map = {
         "Eject": world.options.Enable_Eject_Traps,
