@@ -2,6 +2,7 @@ from collections.abc import Mapping
 from collections import defaultdict
 from typing import Any, Dict, ClassVar
 
+
 from Options import PerGameCommonOptions, OptionError
 from worlds.AutoWorld import World
 from . import items, locations, options, regions, rules, web_world
@@ -192,4 +193,8 @@ class SimpsonsHitNRunWorld(World):
 
         return igh
 
-
+    def write_spoiler(self, spoiler_handle):
+        if self.options.Mission_Locks:
+            spoiler_handle.write("\nMission Locks:\n")
+            for i, (m, c) in enumerate(sorted(self.missionlockdict.items(), key=lambda item: (int(item[0][2]), int(item[0][4]))), start=1):
+                spoiler_handle.write(f"{i}: {m} requires {c}\n")

@@ -20,14 +20,14 @@ class ISTicket(Choice):
 
 class WaspAmount(Range):
     """ Number of Wasps additionally required to gain the Itchy and Scratchy ticket. There are 20 per level."""
-    display_name = "Required Wasp Percent"
+    display_name = "Required Wasp Amount"
     range_start = 0
     range_end = 140
     default = 70
 
 class CardAmount(Range):
     """Number of Cards additionally required to gain the Itchy and Scratchy ticket. There are 7 per level."""
-    display_name = "Required Card Percent"
+    display_name = "Required Card Amount"
     range_start = 0
     range_end = 49
     default = 25
@@ -159,7 +159,7 @@ class ShuffleBumpers(OptionSet):
 
     default = frozenset({"None"})
     valid_keys = VALID_CHAR_KEYS
-    display_name = "Early Forward"
+    display_name = "Shuffle Bumpers"
 
 class StartWithBumpers(Toggle):
     """If true, add all enabled Wasp Bumpers to the start inventory.
@@ -217,7 +217,7 @@ class StartingWalletLevel(Range):
        Level 1 shops are in logic with 1 level, level 2 with 2, etc.
        Your coin cap = MaxShopPrice * WalletLevel * ShopScaleMod and is unlimited at Wallet Level 7
     """
-    display_name = "Starting Jump Level"
+    display_name = "Starting Wallet Level"
     range_start = 0
     range_end = 7
     default = 1

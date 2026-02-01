@@ -867,7 +867,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 7) WASP - Blue House Backyard": 122635,
     "(LVL 7) WASP - Simpsons' Backyard": 122636,
     "(LVL 7) WASP - Flanders' Backyard": 122637,
-    "(LVL 7) WASP - Wiggums' Backyard": 122638,
+    "(LVL 7) WASP - Wiggum's Backyard": 122638,
     "(LVL 7) WASP - Atop of Kwik-E-Mart": 122639,
     "(LVL 7) WASP - Atop of Gasoline": 122640,
     "(LVL 7) WASP - Lard Lad Rooftop": 122641,
@@ -972,7 +972,13 @@ def create_regular_locations(world: SimpsonsHitNRunWorld):
             if re.match(rf"^\(LVL {level_num}\) CARD - .+", name)
         ]
         if world.options.Shuffle_Cards:
-            lvl_card_locs = world.random.sample(lvl_card_locs, 7)
+            if not hasattr(world.multiworld, "generation_is_fake"):
+                lvl_card_locs = world.random.sample(lvl_card_locs, 7)
+            else:
+                lvl_card_locs = [
+                    [card.name for card in world.card_table[i * 7:(i + 1) * 7]]
+                    for i in range(7)
+                ]
         else:
             lvl_card_locs = lvl_card_locs[:7]
 
@@ -999,6 +1005,7 @@ def create_regular_locations(world: SimpsonsHitNRunWorld):
         ]
 
         level_shop_regions[i].add_locations(get_location_names_with_ids(lvl_shop_locs), SimpsonsHitNRunLocation)
+
 
 def create_events(world: SimpsonsHitNRunWorld) -> None:
     # Don't need this for now.

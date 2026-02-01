@@ -281,13 +281,14 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
     # *and* encourage different cars to be important in different playthroughs
 
     # Missionlocks
-    num_locks = int(49 * (world.options.Mission_Locks / 100))
-    pattern = re.compile(r'^\(L([1-7])M([1-7])\)\s+.+')
-    mission_locked = world.random.sample([loc.name for loc in world.get_locations() if pattern.match(loc.name)], num_locks)
-    chosen_cars = world.random.sample(rules.any_car, num_locks)
-    for mission, car in zip(mission_locked, chosen_cars):
-        world.missionlockdict[mission] = car
-        world.prog_cars.append(car)
+    if not hasattr(world.multiworld, "generation_is_fake"):
+        num_locks = int(49 * (world.options.Mission_Locks / 100))
+        pattern = re.compile(r'^\(L([1-7])M([1-7])\)\s+.+')
+        mission_locked = world.random.sample([loc.name for loc in world.get_locations() if pattern.match(loc.name)], num_locks)
+        chosen_cars = world.random.sample(rules.any_car, num_locks)
+        for mission, car in zip(mission_locked, chosen_cars):
+            world.missionlockdict[mission] = car
+            world.prog_cars.append(car)
 
     itempool: list[Item] = []
 
