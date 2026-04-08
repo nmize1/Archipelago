@@ -98,7 +98,7 @@ ITEM_DEFS = {
     "Ferrini - Red": ItemDef(121850, ItemClassification.progression_skip_balancing, True, [6], "Small", "bart_v"),
     "70's Sports Car": ItemDef(121851, ItemClassification.progression_skip_balancing, True, [7], "Small", "homer_v"),
 
-    "Launch": ItemDef(121852, ItemClassification.trap),
+    "Launch": ItemDef(121852, ItemClassification.trap, always_exist=False),
     "Level 1": ItemDef(121853, ItemClassification.progression, always_exists=False),
     "Level 2": ItemDef(121854, ItemClassification.progression, always_exists=False),
     "Level 3": ItemDef(121855, ItemClassification.progression, always_exists=False),

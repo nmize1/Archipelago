@@ -49,7 +49,7 @@ class EarlyLevel(Toggle):
 class CarAmount(Range):
     """If the ticket requires cars collected, choose the amount of cars required."""
     display_name = "Required Car Amount"
-    range_start = 0
+    range_start = 10
     range_end = 81
     default = 50
 
@@ -205,8 +205,9 @@ class MaxShopPrice(Range):
     default = 300
 
 class ShopScaleMod(Range):
-    """The multiplier for shop costs per levels
-       L2 costs = L1 * multiplier, L3 = L1 * 2(multiplier), etc"""
+    """The multiplier for shop costs per levels. For each level after L1, min and max will be multiplied by level number and this multiplier.
+       L2 = Min/Max * Mod * 2, L3 = Min/Max * Mod * 3, etc.
+    """
     display_name = "Shop Price Level Scale Multiplier"
     range_start = 1
     range_end = 5

@@ -438,7 +438,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     # L6
     set_rule(world.get_location("(LVL 6) WASP - Observatory 1"), lambda state: state.has("Bart Attack", world.player))
     set_rule(world.get_location("(LVL 6) WASP - Observatory 2"), lambda state: state.has("Bart Attack", world.player))
-    set_rule(world.get_location("(LVL 6) WASP - Kamp Krusty 1"), lambda state: state.has("Bart Attack", world.player))
+    set_rule(world.get_location("(LVL 6) WASP - Kamp Krusty 1"), lambda state: state.has_all(("Bart Progressive Jump", "Bart Attack"), world.player))
     set_rule(world.get_location("(LVL 6) WASP - Kamp Krusty 2"), lambda state: state.has("Bart Attack", world.player))
     set_rule(world.get_location("(LVL 6) WASP - Broken Railing Below Dam"), lambda state: state.has_all(("Bart Progressive Jump", "Bart Attack"), world.player))
     set_rule(world.get_location("(LVL 6) WASP - Broken Railing Exit"), lambda state: state.has_all(("Bart Progressive Jump", "Bart Attack"), world.player))
@@ -522,8 +522,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                     state.has("Homer Attack", world.player))))
     set_rule(world.get_location("(LVL 7) WASP - Atop of Kwik-E-Mart"), lambda state: state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
     set_rule(world.get_location("(LVL 7) WASP - Atop of Gasoline"), lambda state: state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
-    set_rule(world.get_location("(LVL 7) WASP - Lard Lad Rooftop"), lambda state: (state.has("Homer Attack", world.player) and state.has_any(medium_cars + large_cars, world.player)) or \
-                                                                                    state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
+    set_rule(world.get_location("(LVL 7) WASP - Lard Lad Rooftop"), lambda state: state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
     set_rule(world.get_location("(LVL 7) WASP - Krusty Burger Rooftop"), lambda state: state.has("Homer Attack", world.player))
     set_rule(world.get_location("(LVL 7) WASP - School Playground"), lambda state: state.has_all(("Homer Progressive Jump", "Homer Attack"), world.player))
     set_rule(world.get_location("(LVL 7) WASP - The One Being Abducted"), lambda state: state.has("Homer Attack", world.player))

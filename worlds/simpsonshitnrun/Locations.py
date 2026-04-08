@@ -898,8 +898,8 @@ LOCATION_NAME_TO_ID = {
     "(LVL 7) GAG - Squishee Machine in Kwik-E-Mart": 122671,
     "(LVL 7) GAG - ATM in Kwik-E-Mart": 122672,
     "(LVL 7) GAG - Arcade Cabinet in Kwik-E-Mart": 122673,
-    "(LVL 7) GAG - School Fire Extinguisher": 122674,
-    "(LVL 7) GAG - School Fire Alarm": 122675,
+    "(LVL 7) GAG - School Fire Alarm": 122674,
+    "(LVL 7) GAG - School Fire Extinguisher": 122675,
 
     # Level 7 Shops
     "(LVL 7) Shop Check 1": 122631,
