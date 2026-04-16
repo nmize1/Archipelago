@@ -940,7 +940,7 @@ def set_completion_condition(world: SimpsonsHitNRunWorld) -> None:
         # num cars
         world.multiworld.completion_condition[world.player] = lambda state: can_reach_type_count(world, state, "WASP") >= wasps and \
                                                                             can_reach_type_count(world, state, "CARD") >= cards and \
-                                                                            state.has_group("cars", world.player, cars)
+                                                                            state.has_group("Cars", world.player, cars)
 
 def can_reach_type_count(world: SimpsonsHitNRunWorld, state: CollectionState, type: str) -> int:
     count = 0
