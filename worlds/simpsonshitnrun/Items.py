@@ -98,7 +98,7 @@ ITEM_DEFS = {
     "Ferrini - Red": ItemDef(121850, ItemClassification.progression_skip_balancing, True, [6], "Small", "bart_v"),
     "70's Sports Car": ItemDef(121851, ItemClassification.progression_skip_balancing, True, [7], "Small", "homer_v"),
 
-    "Launch": ItemDef(121852, ItemClassification.trap, always_exist=False),
+    "Launch": ItemDef(121852, ItemClassification.trap, always_exists=False),
     "Level 1": ItemDef(121853, ItemClassification.progression, always_exists=False),
     "Level 2": ItemDef(121854, ItemClassification.progression, always_exists=False),
     "Level 3": ItemDef(121855, ItemClassification.progression, always_exists=False),
@@ -212,7 +212,30 @@ DEFAULT_ITEM_CLASSIFICATIONS = {name: item.type for name, item in ITEM_DEFS.item
 car_name_to_internal_id = {name: item.internal_id for name, item in ITEM_DEFS.items() if item.is_car}
 
 item_name_groups = {
-    "cars": {name for name, item in ITEM_DEFS.items() if item.is_car}
+    "Cars": {name for name, item in ITEM_DEFS.items() if item.is_car},
+    "Traps": {name for name, item in ITEM_DEFS.items() if item.type == ItemClassification.trap},
+    "Progression": {name for name, item in ITEM_DEFS.items() if item.type == ItemClassification.progression or item.type == ItemClassification.progression_skip_balancing},
+    **{
+        f"{character} Costumes": {
+            name for name in ITEM_DEFS
+            if f"{character} - " in name
+        }
+        for character in ["Homer", "Bart", "Lisa", "Marge", "Apu"]
+    },
+    **{
+        f"{character} Unlocks": {
+            name for name in ITEM_DEFS
+            if name.startswith(character) and f"{character} - " not in name
+        }
+        for character in ["Homer", "Bart", "Lisa", "Marge", "Apu"]
+    },
+    "Jumps": {name for name in ITEM_DEFS if "Jump" in name},
+    "Attacks": {name for name in ITEM_DEFS if "Attack" in name},
+    "Bumpers": {name for name in ITEM_DEFS if "Bumper" in name},
+    "Gagfinders": {name for name in ITEM_DEFS if "Gagfinder" in name},
+    "Flags": {name for name in ITEM_DEFS if "Flag" in name},
+    "E-Brakes": {name for name in ITEM_DEFS if "E-Brake" in name},
+    "Forwards": {name for name in ITEM_DEFS if "Forward" in name},
 }
 
 class SimpsonsHitNRunItem(Item):

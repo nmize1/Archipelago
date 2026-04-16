@@ -262,7 +262,7 @@ class TrafficBlacklist(OptionSet):
     """Block cars from appearing as traffic. There must be at least 35 cars available to shuffle.
     If there are less than 5 cars available for any level after applying the blacklist, then traffic will not be shuffled."""
     display_name = "Traffic Blacklist"
-    valid_keys = list(item_name_groups['cars'])
+    valid_keys = list(item_name_groups['Cars'])
 
 class EjectTraps(Toggle):
     """Whether to include Eject traps in the item pool."""
