@@ -23,6 +23,8 @@ class SimpsonsHitNRunWorld(World):
 
     location_name_to_id = locations.LOCATION_NAME_TO_ID
     item_name_to_id = items.ITEM_NAME_TO_ID
+
+    location_name_groups = locations.location_name_groups
     item_name_groups = items.item_name_groups
 
     car_name_to_internal_id = items.car_name_to_internal_id

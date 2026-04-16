@@ -911,6 +911,37 @@ LOCATION_NAME_TO_ID = {
 }
 LOCATION_ID_TO_NAME = {v: k for k, v in LOCATION_NAME_TO_ID.items()}
 
+location_name_groups = {
+    group_name: group_set
+    for level in range(1, 8)
+    for group_name, group_set in {
+        f"Level {level} Missions": {
+            name for name in LOCATION_NAME_TO_ID
+            if name.startswith(f"(L{level}M") or name.startswith(f"(L{level}BM)")
+        },
+        f"Level {level} Races": {
+            name for name in LOCATION_NAME_TO_ID
+            if name.startswith(f"(LVL {level})") and "Race" in name
+        },
+        f"Level {level} Cards": {
+            name for name in LOCATION_NAME_TO_ID
+            if name.startswith(f"(LVL {level}) CARD")
+        },
+        f"Level {level} Wasps": {
+            name for name in LOCATION_NAME_TO_ID
+            if name.startswith(f"(LVL {level}) WASP")
+        },
+        f"Level {level} Gags": {
+            name for name in LOCATION_NAME_TO_ID
+            if name.startswith(f"(LVL {level}) GAG")
+        },
+        f"Level {level} Shops": {
+            name for name in LOCATION_NAME_TO_ID
+            if name.startswith(f"(LVL {level}) Shop")
+        },
+    }.items()
+}
+
 class SimpsonsHitNRunLocation(Location):
     game = "Simpsons Hit and Run"
 

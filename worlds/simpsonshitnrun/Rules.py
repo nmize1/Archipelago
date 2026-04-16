@@ -930,23 +930,17 @@ def set_completion_condition(world: SimpsonsHitNRunWorld) -> None:
         # all missions or story missions
         world.multiworld.completion_condition[world.player] = lambda state: can_reach_type_count(world, state, "WASP") >= wasps and \
                                                                             can_reach_type_count(world, state, "CARD") >= cards and \
-                                                                            can_reach_missions(world, state) and \
-                                                                            ((state.has("Level 3", world.player) or state.has("Progressive Level", world.player, 3)) \
-                                                                            if world.options.Lock_Levels else True)
+                                                                            can_reach_missions(world, state)
     elif world.options.Itchy_And_Scratchy_Ticket_Requirement == 2:
         # final mission
         world.multiworld.completion_condition[world.player] = lambda state: can_reach_type_count(world, state, "WASP") >= wasps and \
                                                                             can_reach_type_count(world, state, "CARD") >= cards and \
-                                                                            state.can_reach_region(f"Level 7 Missions", world.player) and \
-                                                                            ((state.has("Level 3", world.player) or state.has("Progressive Level", world.player, 3)) \
-                                                                            if world.options.Lock_Levels else True)
+                                                                            state.can_reach_region(f"Level 7 Missions", world.player)
     elif world.options.Itchy_And_Scratchy_Ticket_Requirement == 3:
         # num cars
         world.multiworld.completion_condition[world.player] = lambda state: can_reach_type_count(world, state, "WASP") >= wasps and \
                                                                             can_reach_type_count(world, state, "CARD") >= cards and \
-                                                                            state.has_group("cars", world.player, cars) and \
-                                                                            ((state.has("Level 3", world.player) or state.has("Progressive Level", world.player, 3)) \
-                                                                            if world.options.Lock_Levels else True)
+                                                                            state.has_group("cars", world.player, cars)
 
 def can_reach_type_count(world: SimpsonsHitNRunWorld, state: CollectionState, type: str) -> int:
     count = 0
