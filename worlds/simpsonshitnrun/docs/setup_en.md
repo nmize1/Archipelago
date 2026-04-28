@@ -50,10 +50,6 @@ Note: You can also self host an Archipelago game server, but that's outside the 
 - Enjoy!
 
 # Optional Extra Steps
-- Use the Text Client in the Archipelago launcher and connect with the same info used to connect in SHARRandomizer.exe. This will give you a better list of all items sent/received, an optional chat with other players in the multiworld, and an interface to use for hints.
-
-OR
-
 - Use Universal Tracker as a Text Client and a tracker to help identify in logic checks.
   - Download tracker.apworld from the pins in this [channel](https://discord.com/channels/731205301247803413/1367270230635839539).
   - Double click it and restart Archipelago Launcher (the same as when you installed simpsonshitnrun.apworld)
