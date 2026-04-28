@@ -16,7 +16,7 @@
 
 - Open ArchipelagoLauncher.exe in the Archipelago folder created when you ran the AP setup
 - Search for and click Generate Template Yamls which will open a folder full of yamls
-- Find The Simpsons Hit and Run.yaml and edit it to your liking.
+- Find Simpsons Hit and Run.yaml and edit it to your liking.
 - Save your edited .yaml in Archipelago/Players which is 1 folder up from the template yaml folder that opened.
 - Optionally add more yamls for other players or other games you want to play. The multiworld will have 1 slot per yaml included here.
 - In the AP Launcher again, search for and click Generate
@@ -42,9 +42,9 @@ Note: You can also self host an Archipelago game server, but that's outside the 
 - Finally, extract SHARRandomizer.zip where ever you'd like.
 
 # Connecting and Playing
-- Download the patch file from your room.
+- Download the .apshar patch file from your room.
 - Open the SHAR Client in the AP launcher
-  - On first launch, 3 file select prompts will open asking for the patch file, SHARRandomizerFrontend.exe, and Lucas' Mod Launcher 
+  - On first launch, 3 file select prompts will open asking for SHARRandomizerFrontend.exe, Lucas' Mod Launcher, and the patch file 
   - On subsequent launches, it will just ask for the patch file. If you need to change the paths to the executables, you can do so in your host.yaml in the root of your AP install.
 - Enter your connection info in SHARRandomizerFrontend.exe
 - Enjoy!
