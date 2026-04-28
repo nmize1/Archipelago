@@ -5,7 +5,7 @@
 - [Archipelago](https://archipelago.gg/) (Latest release [here](https://github.com/ArchipelagoMW/Archipelago/releases/latest).)
 - The latest release of the [client/memory manager and the lmlm mod](https://github.com/nmize1/AP-SHARRandomizer/releases/latest)
 - The latest release of the [apworld](https://github.com/nmize1/Archipelago/releases/latest).
-- [.NET 8 (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (**NOT x64**)
+- [.NET 10 (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) (**NOT x64**)
 
 # AP Setup 
 
