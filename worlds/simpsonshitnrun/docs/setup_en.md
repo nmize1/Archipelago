@@ -44,9 +44,9 @@ Note: You can also self host an Archipelago game server, but that's outside the 
 # Connecting and Playing
 - Download the patch file from your room.
 - Open the SHAR Client in the AP launcher
-  - On first launch, 3 file select prompts will open asking for the patch file, SHARRandomizer.exe, and Lucas' Mod Launcher 
+  - On first launch, 3 file select prompts will open asking for the patch file, SHARRandomizerFrontend.exe, and Lucas' Mod Launcher 
   - On subsequent launches, it will just ask for the patch file. If you need to change the paths to the executables, you can do so in your host.yaml in the root of your AP install.
-- Enter your connection info in SHARRandomizer.exe
+- Enter your connection info in SHARRandomizerFrontend.exe
 - Enjoy!
 
 # Optional Extra Steps
