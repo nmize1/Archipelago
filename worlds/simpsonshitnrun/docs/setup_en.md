@@ -37,6 +37,7 @@ Note: You can also self host an Archipelago game server, but that's outside the 
 - Check [here](https://docs.donutteam.com/docs/lucasmodlauncher/mods/installing-mods) for more help installing mods.
   
 - Under the "Settings" tab of the mod launcher, there are several optional mods. Don't enable anything that changes gameplay, but graphical changes or setting changes are fine.
+  Logic expects you to play between 60 and 150 fps.
 - Install .NET 10 from the link above. Make sure to install the **x86** version. The site will default to x64 as that's more modern, but SHAR needs x86.
 
 - Finally, extract SHARRandomizer.zip where ever you'd like.
