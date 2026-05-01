@@ -547,9 +547,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 5) Talk to Homer": 122683,
 
     # Level 5 Races
-    "(LVL 5) Checkpoint Race": 122341,
+    "(LVL 5) Checkpoint Race": 122343,
     "(LVL 5) Circuit Race": 122342,
-    "(LVL 5) Time Trial Race": 122343,
+    "(LVL 5) Time Trial Race": 122341,
 
     # Level 5 Cards
     "(LVL 5) CARD - Construction Crane Platforming": 122951,

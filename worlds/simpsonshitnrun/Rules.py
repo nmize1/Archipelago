@@ -942,9 +942,16 @@ def can_reach_type_count(world: SimpsonsHitNRunWorld, state: CollectionState, ty
 
 def can_reach_missions(world: SimpsonsHitNRunWorld, state: CollectionState) -> bool:
     if "All" in world.options.Required_Mission_Levels:
-        return all(state.can_reach_region(f"Level {i} Missions", world.player) for i in range(1,8))
+        levels = range(1, 8)
     else:
-        return all(state.can_reach_region(f"Level {i} Missions", world.player) for i in world.options.Required_Mission_Levels)
+        levels = world.options.Required_Mission_Levels
+
+    for i in levels:
+        for loc in world.get_region(f"Level {i} Missions").locations:
+            if not state.can_reach_location(loc.name, world.player):
+                return False
+
+    return True
 
 def can_break_wasp(world: SimpsonsHitNRunWorld, state: CollectionState, character: str, any_car_wasps: list[str], bad_cars: list[str], jumps: int = 1) -> bool:
     return (state.has(f"{character} Progressive Jump", world.player, jumps) and state.has(f"{character} Attack", world.player)) or \

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from schema import Schema, And, SchemaError
 from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle, OptionGroup, OptionError
-from worlds.simpsonshitnrun.items import item_name_groups
+from .items import item_name_groups
 
 VALID_CHAR_KEYS = ["Homer", "Bart", "Lisa", "Marge", "Apu", "All", "None"]
 

@@ -42,7 +42,7 @@ class SimpsonsHitNRunWorld(World):
     card_table: list[locations.Card]
     def __init__(self, multiworld: MultiWorld, player: int):
         super().__init__(multiworld, player)
-        self.apworld_version = "0.5.2"
+        self.apworld_version = "0.5.4"
         self.missionlockdict = {}
         self.card_table = []
         self.prog_cars = []
@@ -60,7 +60,7 @@ class SimpsonsHitNRunWorld(World):
                             option.value = value
 
                 self.missionlockdict = passthrough["missionlockdic"]
-                self.prog_cars = passthrough["progcars"]
+                self.prog_cars = list(passthrough["progcars"])
 
                 locations.fill_card_table_by_id(self, passthrough["card_locations"])
 
