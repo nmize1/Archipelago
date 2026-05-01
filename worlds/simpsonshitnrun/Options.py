@@ -9,7 +9,7 @@ class OptionSetNoEmpty(OptionSet):
     schema = Schema(And(set[str], len))
 
 class ISTicket(Choice):
-    """Goal is watching the Itchy and Scratchy film at the Aztec Theater in Level 3.
+    """Goal is watching the Itchy and Scratchy film in the Lobby.
        You'll receive the Ticket when you complete the requirements chosen."""
     display_name = "Itchy and Scratchy Ticket Requirement"
     default = 0

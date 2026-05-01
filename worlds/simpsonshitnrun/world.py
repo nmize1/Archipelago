@@ -42,7 +42,7 @@ class SimpsonsHitNRunWorld(World):
     card_table: list[locations.Card]
     def __init__(self, multiworld: MultiWorld, player: int):
         super().__init__(multiworld, player)
-        self.apworld_version = "0.5.0"
+        self.apworld_version = "0.5.2"
         self.missionlockdict = {}
         self.card_table = []
         self.prog_cars = []

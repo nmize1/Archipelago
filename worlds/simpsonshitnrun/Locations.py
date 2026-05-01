@@ -1006,10 +1006,7 @@ def create_regular_locations(world: SimpsonsHitNRunWorld):
             if not hasattr(world.multiworld, "generation_is_fake"):
                 lvl_card_locs = world.random.sample(lvl_card_locs, 7)
             else:
-                lvl_card_locs = [
-                    [card.name for card in world.card_table[i * 7:(i + 1) * 7]]
-                    for i in range(7)
-                ]
+                lvl_card_locs = [card.name for card in world.card_table[i * 7:(i + 1) * 7]]
         else:
             lvl_card_locs = lvl_card_locs[:7]
 

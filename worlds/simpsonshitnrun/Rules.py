@@ -621,8 +621,9 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     set_rule_if_location_exists(world, "(LVL 2) CARD - Statue", lambda state: state.has("Bart Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Roof Across Monkey Building", lambda state: state.has_any(("Bart Progressive Jump", "Itchy and Scratchy Movie Truck"), world.player))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Legitimate Businessman's Roof", lambda state: state.has("Bart Progressive Jump", world.player))
-    set_rule_if_location_exists(world, "(LVL 2) CARD - Car Wash", lambda state: state.has("Bart Progressive Jump", world.player) and \
-                                                                                              state.has_any(large_cars, world.player))
+    set_rule_if_location_exists(world, "(LVL 2) CARD - Car Wash", lambda state: (state.has("Bart Progressive Jump", world.player) and \
+                                                                                               state.has_any(large_cars, world.player) or \
+                                                                                               state.has("Bart Progressive Jump", world.player, 2)))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Train Wagon", lambda state: state.has("Bart Progressive Jump", world.player, 2))
     set_rule_if_location_exists(world, "(LVL 2) CARD - Fountain At Stadium", lambda state: state.has_all(("Bart Progressive Jump", "Itchy and Scratchy Movie Truck"), world.player) or \
                                                                                                          state.has("Bart Progressive Jump", world.player, 2))

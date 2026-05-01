@@ -266,7 +266,7 @@ def create_item_with_correct_classification(world: SimpsonsHitNRunWorld, name: s
     return SimpsonsHitNRunItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
 
 def create_all_items(world: SimpsonsHitNRunWorld) -> None:
-    characters = {"Homer", "Bart", "Lisa", "Marge", "Apu"}
+    characters = ["Homer", "Bart", "Lisa", "Marge", "Apu"]
 
     def add_per_options(item_name: str, option: OptionSet, itempool: list[Item], count: int = 1, start_count: int = 0, always_add: bool = True):
         # Create the item if and only if the character has it shuffled,
@@ -275,9 +275,9 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
         if "None" in option:
             shuffled = []
         elif "All" in option:
-            shuffled = list(characters)
+            shuffled = sorted(characters)
         else:
-            shuffled = list(option.value)
+            shuffled = sorted(option.value)
         unshuffled = [c for c in characters if c not in shuffled]
 
         for c in shuffled:
