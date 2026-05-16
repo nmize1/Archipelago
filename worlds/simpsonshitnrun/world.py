@@ -11,6 +11,7 @@ from .items import car_name_to_internal_id, ITEM_DEFS
 from .components import SHARSettings
 from .options import SimpsonsHitNRunOptions
 from .SHARContainer import gen
+from .web_world import SimpsonsHitNRunWebWorld
 
 class SimpsonsHitNRunWorld(World):
     """A 2003 Action Adventure game similar to the GTA series starring the Simpsons"""
@@ -30,6 +31,8 @@ class SimpsonsHitNRunWorld(World):
     car_name_to_internal_id = items.car_name_to_internal_id
 
     origin_region_name = "Hub"
+
+    web = SimpsonsHitNRunWebWorld()
 
     @staticmethod
     def interpret_slot_data(slot_data: Dict[str, Any]) -> Dict[str, Any]:
