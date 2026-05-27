@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from schema import Schema, And, SchemaError
-from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle, OptionGroup, OptionError
-from .items import item_name_groups
+from Options import Choice, OptionSet, PerGameCommonOptions, Range, Toggle, OptionGroup, OptionError, DeathLinkMixin
+from .Items import item_name_groups
 
 VALID_CHAR_KEYS = ["Homer", "Bart", "Lisa", "Marge", "Apu", "All", "None"]
 
@@ -296,7 +296,7 @@ class FillerTrapPercent(Range):
     range_end = 100
 
 @dataclass
-class SimpsonsHitNRunOptions(PerGameCommonOptions):
+class SimpsonsHitNRunOptions(DeathLinkMixin, PerGameCommonOptions):
     Itchy_And_Scratchy_Ticket_Requirement: ISTicket
     Wasp_Amount: WaspAmount
     Card_Amount: CardAmount

@@ -1,7 +1,7 @@
 from BaseClasses import Tutorial
 from worlds.AutoWorld import WebWorld
 
-from .options import option_groups
+from .Options import option_groups
 
 class SimpsonsHitNRunWebWorld(WebWorld):
     game = "Simpsons Hit and Run"

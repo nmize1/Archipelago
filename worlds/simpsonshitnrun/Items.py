@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 from BaseClasses import Item, ItemClassification
 import re
 
-from . import rules
+from . import Rules
 from Options import OptionSet
 
 if TYPE_CHECKING:
@@ -308,7 +308,7 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
         num_locks = int(49 * (world.options.Mission_Locks / 100))
         pattern = re.compile(r'^\(L([1-7])M([1-7])\)\s+.+')
         mission_locked = world.random.sample([loc.name for loc in world.get_locations() if pattern.match(loc.name)], num_locks)
-        chosen_cars = world.random.sample(rules.any_car, num_locks)
+        chosen_cars = world.random.sample(Rules.any_car, num_locks)
         for mission, car in zip(mission_locked, chosen_cars):
             world.missionlockdict[mission] = car
             world.prog_cars.append(car)

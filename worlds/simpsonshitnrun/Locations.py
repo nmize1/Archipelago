@@ -10,7 +10,7 @@ from dataclasses import dataclass
 if TYPE_CHECKING:
     from .world import SimpsonsHitNRunWorld
 
-with resources.files(__package__).joinpath("Data/cards.json").open("r", encoding="utf-8") as f:
+with resources.files(__package__).joinpath("data/cards.json").open("r", encoding="utf-8") as f:
     card_info = json.load(f)
 
 @dataclass

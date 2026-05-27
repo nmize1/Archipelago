@@ -5,29 +5,30 @@ from typing import Any, Dict, ClassVar
 
 from Options import PerGameCommonOptions, OptionError
 from worlds.AutoWorld import World
-from . import items, locations, options, regions, rules, web_world
+from . import Items, Locations, Options, Regions, Rules, web_world
 from BaseClasses import MultiWorld
-from .items import car_name_to_internal_id, ITEM_DEFS
+from .Items import car_name_to_internal_id, ITEM_DEFS
 from .components import SHARSettings
-from .options import SimpsonsHitNRunOptions
+from .Options import SimpsonsHitNRunOptions
 from .SHARContainer import gen
 
 class SimpsonsHitNRunWorld(World):
     """A 2003 Action Adventure game similar to the GTA series starring the Simpsons"""
 
     game = "Simpsons Hit and Run"
+    web = web_world.SimpsonsHitNRunWebWorld()
 
-    options_dataclass = options.SimpsonsHitNRunOptions
-    options: options.SimpsonsHitNRunOptions
+    options_dataclass = Options.SimpsonsHitNRunOptions
+    options: Options.SimpsonsHitNRunOptions
     settings: ClassVar[SHARSettings]
 
-    location_name_to_id = locations.LOCATION_NAME_TO_ID
-    item_name_to_id = items.ITEM_NAME_TO_ID
+    location_name_to_id = Locations.LOCATION_NAME_TO_ID
+    item_name_to_id = Items.ITEM_NAME_TO_ID
 
-    location_name_groups = locations.location_name_groups
-    item_name_groups = items.item_name_groups
+    location_name_groups = Locations.location_name_groups
+    item_name_groups = Items.item_name_groups
 
-    car_name_to_internal_id = items.car_name_to_internal_id
+    car_name_to_internal_id = Items.car_name_to_internal_id
 
     origin_region_name = "Hub"
 
@@ -39,7 +40,7 @@ class SimpsonsHitNRunWorld(World):
 
     apworld_version: str
     missionlockdict: Dict[str, str]
-    card_table: list[locations.Card]
+    card_table: list[Locations.Card]
     def __init__(self, multiworld: MultiWorld, player: int):
         super().__init__(multiworld, player)
         self.apworld_version = "0.5.4"
@@ -62,24 +63,24 @@ class SimpsonsHitNRunWorld(World):
                 self.missionlockdict = passthrough["missionlockdic"]
                 self.prog_cars = list(passthrough["progcars"])
 
-                locations.fill_card_table_by_id(self, passthrough["card_locations"])
+                Locations.fill_card_table_by_id(self, passthrough["card_locations"])
 
 
     def create_regions(self) -> None:
-        regions.create_and_connect_regions(self)
-        locations.create_all_locations(self)
+        Regions.create_and_connect_regions(self)
+        Locations.create_all_locations(self)
 
     def set_rules(self) -> None:
-        rules.set_all_rules(self)
+        Rules.set_all_rules(self)
 
     def create_items(self) -> None:
-        items.create_all_items(self)
+        Items.create_all_items(self)
 
-    def create_item(self, name: str, make_prog: bool = False) -> items.SimpsonsHitNRunItem:
-        return items.create_item_with_correct_classification(self, name, make_prog)
+    def create_item(self, name: str, make_prog: bool = False) -> Items.SimpsonsHitNRunItem:
+        return Items.create_item_with_correct_classification(self, name, make_prog)
 
     def get_filler_item_name(self) -> str:
-        return items.get_random_filler_item_name(self)
+        return Items.get_random_filler_item_name(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
         slot_data = {}
@@ -180,7 +181,7 @@ class SimpsonsHitNRunWorld(World):
             except StopIteration:
                 continue
 
-            igh[items.ITEM_NAME_TO_ID[item]] = (loc.address, loc.player)
+            igh[Items.ITEM_NAME_TO_ID[item]] = (loc.address, loc.player)
 
         for _, item in self.missionlockdict.items():
             if item == "NO MISSIONLOCKS":
@@ -191,7 +192,7 @@ class SimpsonsHitNRunWorld(World):
             except StopIteration:
                 continue
 
-            igh[items.ITEM_NAME_TO_ID[item]] = (loc.address, loc.player)
+            igh[Items.ITEM_NAME_TO_ID[item]] = (loc.address, loc.player)
 
         return igh
 
