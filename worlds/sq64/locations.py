@@ -4,9 +4,6 @@ from typing import TYPE_CHECKING
 
 from BaseClasses import ItemClassification, Location
 
-from . import items
-from ..simpsonshitnrun.locations import create_regular_locations
-
 if TYPE_CHECKING:
     from .world import SQ64World
 
