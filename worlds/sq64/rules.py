@@ -96,6 +96,7 @@ def set_all_location_rules(world: SQ64World) -> None:
 
     world.set_rule(l1_boss_life, can_double_jump & can_wall_jump & can_extend_jump)
     world.set_rule(l1_2d_life, can_ground_pound & can_jump & can_wall_jump & can_l1_portal & can_extend_jump)
+
     world.set_rule(l1_2d_slime_1, can_ground_pound & can_jump & can_wall_jump & can_l1_portal & can_extend_jump)
     world.set_rule(l1_2d_slime_2, can_ground_pound & can_jump & can_wall_jump & can_l1_portal & can_extend_jump)
     world.set_rule(l1_2d_slime_3, can_ground_pound & can_jump & can_wall_jump & can_l1_portal & can_extend_jump)
@@ -107,7 +108,6 @@ def set_all_location_rules(world: SQ64World) -> None:
     world.set_rule(l1_cave_flying_5, can_jump & can_glide & can_l1_portal)
     world.set_rule(l1_cave_flying_6, can_jump & can_glide & can_l1_portal)
 
-    world.set_rule()
 
 def set_completion_condition(world: SQ64World) -> None:
     star_count = Has("Star", FromOption(StarsToGoal))

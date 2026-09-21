@@ -38,9 +38,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 1) Talk to Barney": 122679,
 
     # Level 1 Races
-    "(LVL 1) Time Trial Race": 122297,
-    "(LVL 1) Circuit Race": 122298,
-    "(LVL 1) Checkpoint Race": 122299,
+    "(LVL 1) RACE - Time Trial Race": 122297,
+    "(LVL 1) RACE - Circuit Race": 122298,
+    "(LVL 1) RACE - Checkpoint Race": 122299,
 
     # Level 1 Cards
     "(LVL 1) CARD - Simpsons' Backyard": 122692,
@@ -163,9 +163,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 2) Talk to Homer": 122680,
 
     # Level 2 Races
-    "(LVL 2) Time Trial Race": 122308,
-    "(LVL 2) Circuit Race": 122309,
-    "(LVL 2) Checkpoint Race": 122310,
+    "(LVL 2) RACE - Time Trial Race": 122308,
+    "(LVL 2) RACE - Circuit Race": 122309,
+    "(LVL 2) RACE - Checkpoint Race": 122310,
 
     # Level 2 Cards
     "(LVL 2) CARD - Jebediah Statue": 122752,
@@ -204,7 +204,6 @@ LOCATION_NAME_TO_ID = {
     "(LVL 2) CARD - Behind Herman's Military Antiques": 122785,
     "(LVL 2) CARD - Above Street Near Helter Shelter": 122786,
     "(LVL 2) CARD - DMV Sign": 122787,
-    "(LVL 2) CARD - DMV Light Pole": 122788,
     "(LVL 2) CARD - Above Street Between DMV and Trainyard": 122789,
     "(LVL 2) CARD - Between Trains": 122790,
     "(LVL 2) CARD - Above Train Crossing": 122791,
@@ -293,9 +292,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 3) Talk to Otto": 122681,
 
     # Level 3 Races
-    "(LVL 3) Time Trial Race": 122319,
-    "(LVL 3) Circuit Race": 122320,
-    "(LVL 3) Checkpoint Race": 122321,
+    "(LVL 3) RACE - Time Trial Race": 122319,
+    "(LVL 3) RACE - Circuit Race": 122320,
+    "(LVL 3) RACE - Checkpoint Race": 122321,
 
     # Level 3 Cards
     "(LVL 3) CARD - Android's Dungeon Rooftop": 122821,
@@ -419,9 +418,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 4) Talk to Willie": 122682,
 
     # Level 4 Races
-    "(LVL 4) Checkpoint Race": 122330,
-    "(LVL 4) Circuit Race": 122331,
-    "(LVL 4) Time Trial Race": 122332,
+    "(LVL 4) RACE - Checkpoint Race": 122330,
+    "(LVL 4) RACE - Circuit Race": 122331,
+    "(LVL 4) RACE - Time Trial Race": 122332,
 
     # Level 4 Cards
     "(LVL 4) CARD - Between Gas Station and Lard Lad's": 122888,
@@ -547,9 +546,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 5) Talk to Homer": 122683,
 
     # Level 5 Races
-    "(LVL 5) Checkpoint Race": 122343,
-    "(LVL 5) Circuit Race": 122342,
-    "(LVL 5) Time Trial Race": 122341,
+    "(LVL 5) RACE - Checkpoint Race": 122343,
+    "(LVL 5) RACE - Circuit Race": 122342,
+    "(LVL 5) RACE - Time Trial Race": 122341,
 
     # Level 5 Cards
     "(LVL 5) CARD - Construction Crane Platforming": 122951,
@@ -588,7 +587,6 @@ LOCATION_NAME_TO_ID = {
     "(LVL 5) CARD - Behind Herman's Military Antiques": 122984,
     "(LVL 5) CARD - Above Street Near Helter Shelter": 122985,
     "(LVL 5) CARD - DMV Sign": 122986,
-    "(LVL 5) CARD - DMV Light Pole": 122987,
     "(LVL 5) CARD - Above Street Between DMV and Trainyard": 122988,
     "(LVL 5) CARD - Between Trains": 122989,
     "(LVL 5) CARD - Above Train Crossing": 122990,
@@ -671,9 +669,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 6) Talk to Kearney": 122684,
 
     # Level 6 Races
-    "(LVL 6) Checkpoint Race": 122352,
-    "(LVL 6) Time Trial Race": 122353,
-    "(LVL 6) Circuit Race": 122354,
+    "(LVL 6) RACE - Checkpoint Race": 122352,
+    "(LVL 6) RACE - Time Trial Race": 122353,
+    "(LVL 6) RACE - Circuit Race": 122354,
 
     # Level 6 Cards
     "(LVL 6) CARD - Above Street by Ball Pit Gag": 123020,
@@ -707,7 +705,7 @@ LOCATION_NAME_TO_ID = {
     "(LVL 6) CARD - Stairs Near Krusty and Friends Billboard": 123048,
     "(LVL 6) CARD - Short Wall Down the Street from Gas Station": 123049,
     "(LVL 6) CARD - Concrete Mixer at Gas Station": 123050,
-    "(LVL 6) CARD - Green Building Across From Principal Skinner": 123051,
+    "(LVL 6) CARD - Green Building Near Lumber King Billboard": 123051,
     "(LVL 6) CARD - Lumber King Billboard": 123052,
     "(LVL 6) CARD - Park Across From Android's Dungeon": 123053,
     "(LVL 6) CARD - Behind Krusty Burger Across From Android's Dungeon": 123054,
@@ -799,9 +797,9 @@ LOCATION_NAME_TO_ID = {
     "(LVL 7) Talk to Graveyard Zombie": 122685,
 
     # Level 7 Races
-    "(LVL 7) Time Trial Race": 122363,
-    "(LVL 7) Circuit Race": 122364,
-    "(LVL 7) Checkpoint Race": 122365,
+    "(LVL 7) RACE - Time Trial Race": 122363,
+    "(LVL 7) RACE - Circuit Race": 122364,
+    "(LVL 7) RACE - Checkpoint Race": 122365,
 
     # Level 7 Cards
     "(LVL 7) CARD - Flanders Bomb Shelter": 123087,
@@ -921,7 +919,7 @@ location_name_groups = {
         },
         f"Level {level} Races": {
             name for name in LOCATION_NAME_TO_ID
-            if name.startswith(f"(LVL {level})") and "Race" in name
+            if name.startswith(f"(LVL {level}) RACE")
         },
         f"Level {level} Cards": {
             name for name in LOCATION_NAME_TO_ID
@@ -993,7 +991,7 @@ def create_regular_locations(world: SimpsonsHitNRunWorld):
 
         lvl_race_locs = [
             name for name in LOCATION_NAME_TO_ID
-            if re.match(rf"^\(LVL {level_num}\).*Race$", name)
+            if re.match(rf"^\(LVL {level_num}\) RACE - .+", name)
         ]
 
         level_race_regions[i].add_locations(get_location_names_with_ids(lvl_race_locs), SimpsonsHitNRunLocation)

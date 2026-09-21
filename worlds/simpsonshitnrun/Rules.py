@@ -376,7 +376,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                                                 "Garbage Truck", "Nuclear Waste Truck", "Vote Quimby Truck", "Ambulance",
                                                                                                                                 "Sports Car B", "Itchy and Scratchy Movie Truck", "Burns Armored Truck",
                                                                                                                                 "Pickup", "Sports Car A", "Compact Car", "SUV", "Hallo Hearse", "Sedan A",
-                                                                                                                                "Station Wagon", "Ice Cream Truck", "Cell Phone Car", "Cube Van",
+                                                                                                                                "Station Wagon", "Ice Cream Truck", "Cell Phone Car", "Cube Van", "Bonestorm Truck",
                                                                                                                                 "Milk Truck", "Nonuplets Minivan", "Obliteratatron Big Wheel Truck"],
                                                                                                                      0))
     set_rule(world.get_location("(LVL 4) WASP - Burns Mansion Library"), lambda state: can_break_wasp(world, state, "Marge", any_car_wasps,
@@ -391,7 +391,7 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
                                                                                                          "Garbage Truck", "Nuclear Waste Truck", "Vote Quimby Truck", "Ambulance",
                                                                                                          "Sports Car B", "Itchy and Scratchy Movie Truck", "Burns Armored Truck",
                                                                                                          "Pickup", "Sports Car A", "Compact Car", "SUV", "Hallo Hearse", "Sedan A",
-                                                                                                         "Station Wagon", "Ice Cream Truck", "Cell Phone Car", "Cube Van",
+                                                                                                         "Station Wagon", "Ice Cream Truck", "Cell Phone Car", "Cube Van", "Bonestorm Truck",
                                                                                                          "Milk Truck", "Nonuplets Minivan", "Obliteratatron Big Wheel Truck"],
                                                                                                         0))
     set_rule(world.get_location("(LVL 4) WASP - In Trailer Park"), lambda state: can_break_wasp(world, state, "Marge", any_car_wasps, ["Open Wheel Race Car"], 0))
@@ -1131,7 +1131,7 @@ def can_break_wasp(world: SimpsonsHitNRunWorld, state: CollectionState, characte
             world.player))
 
 def get_cars_by_height(car: str, jumps: int, driving: bool, wall: bool):
-    print(car)
+    #print(car)
 
     if driving:
         cars = car_names_by_driving_height
@@ -1146,11 +1146,11 @@ def get_cars_by_height(car: str, jumps: int, driving: bool, wall: bool):
 
     for i, name in enumerate(cars):
         if name == car:
-            print(cars[i:])
+            #print(cars[i:])
             return cars[i:]
 
-    print(cars)
-    print(car + " failed")
+    #print(cars)
+    #print(car + " failed")
     return []
 
 

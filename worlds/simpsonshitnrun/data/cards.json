@@ -579,12 +579,6 @@
       "Desc": "(LVL 2) CARD - DMV Sign"
     },
     {
-      "X": -267.6559,
-      "Y": 14.2319,
-      "Z": 385.8924,
-      "Desc": "(LVL 2) CARD - DMV Light Pole"
-    },
-    {
       "X": -235.8823,
       "Y": 12.47628,
       "Z": 268.4548,
@@ -1779,12 +1773,6 @@
       "Desc": "(LVL 5) CARD - DMV Sign"
     },
     {
-      "X": -267.6559,
-      "Y": 14.2319,
-      "Z": 385.8924,
-      "Desc": "(LVL 5) CARD - DMV Light Pole"
-    },
-    {
       "X": -2.307083,
       "Y": -20,
       "Z": -198.4165,
@@ -2168,7 +2156,7 @@
       "X": 162.2277,
       "Y": -4.13788,
       "Z": -106.4636,
-      "Desc": "(LVL 6) CARD - Green Building Across From Principal Skinner"
+      "Desc": "(LVL 6) CARD - Green Building Near Lumber King Billboard"
     },
     {
       "X": 174.4207,
