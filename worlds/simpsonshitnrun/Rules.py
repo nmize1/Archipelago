@@ -755,7 +755,8 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     set_rule_if_location_exists(world, "(LVL 3) CARD - Above Bowlarama", lambda state: state.has("Lisa Progressive Jump", world.player, 2))
     set_rule_if_location_exists(world, "(LVL 3) CARD - Atop Lighthouse", lambda state: state.has("Lisa Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 3) CARD - Krusty Studio Balcony", lambda state: state.has("Lisa Progressive Jump", world.player, 2) or \
-                                                                                                           state.has_any(get_cars_by_height("Hallo Hearse", 1, False, False), world.player))
+                                                                                                          (state.has_any(get_cars_by_height("Hallo Hearse", 1, False, False), world.player) and \
+                                                                                                           state.has("Lisa Progressive Jump", world.player)))
     set_rule_if_location_exists(world, "(LVL 3) CARD - Beside Broken Bridge", lambda state: state.has("Lisa Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 3) CARD - Edge of Globex Ship", lambda state: state.has("Lisa Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 3) CARD - Planet Hype Outdoor Seating", lambda state: state.has("Lisa Progressive Jump", world.player))
@@ -820,7 +821,8 @@ def set_all_location_rules(world: SimpsonsHitNRunWorld) -> None:
     set_rule_if_location_exists(world, "(LVL 4) CARD - Simpsons' Tree House", lambda state: state.has("Marge Progressive Jump", world.player) or \
                                                                                                    state.has_any(["R/C Buggy", "ATV", "Hover Bike", "Witch Broom", "Coffin Car"], world.player))
     set_rule_if_location_exists(world, "(LVL 4) CARD - End of Trailer Park", lambda state: (state.has("Marge Progressive Jump", world.player, 2))  or \
-                                                                                                 state.has_any(get_cars_by_height("Ferrini - Red", 1, False, False), world.player))
+                                                                                                          state.has_any(get_cars_by_height("Ferrini - Red", 1, False, False), world.player) and \
+                                                                                                          state.has("Marge Progressive Jump", world.player))
     set_rule_if_location_exists(world, "(LVL 4) CARD - Above Road Near Drain Pipe", lambda state: ((state.has("Marge Progressive Jump", world.player) and \
                                                                                                                  state.has_any(large_cars, world.player)) or \
                                                                                                                  state.has("Marge Progressive Jump", world.player, 2)))

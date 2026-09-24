@@ -396,6 +396,6 @@ def create_all_items(world: SimpsonsHitNRunWorld) -> None:
         world.multiworld.early_items[world.player][f"{character} Forward"] = 1
 
     if world.options.Early_Level:
-        levels = ["1", "2", "3", "4", "5", "6", "7"] if "All" in world.options.Required_Mission_Levels else list(world.options.Required_Mission_Levels)
+        levels = ["1", "2", "3", "4", "5", "6", "7"] if "All" in world.options.Required_Mission_Levels else sorted(world.options.Required_Mission_Levels)
         level = world.random.choice(levels)
         world.multiworld.early_items[world.player][f"Level {level}"] = 1
